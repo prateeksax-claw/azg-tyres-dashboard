@@ -1,37 +1,50 @@
 import type { CSSProperties } from 'react'
 import { dashboardData, money, pct } from '../lib/dashboard-data'
 
-type Tone = 'blue' | 'green' | 'amber' | 'red' | 'gold' | 'cyan' | 'brand'
+type Tone = 'brand' | 'blue' | 'green' | 'amber' | 'red' | 'gold' | 'cyan' | 'dark'
 
-type SalesAction = {
-  severity: number
-  issue: string
-  owner: string
-  subject: string
-  impact: number
-  action: string
+function toneFor(value: number, good = 75, warn = 45): Tone {
+  if (value >= good) return 'green'
+  if (value >= warn) return 'amber'
+  return 'red'
 }
 
-function KpiCard({ title, value, subtitle, tone = 'blue' }: { title: string; value: string; subtitle: string; tone?: Tone }) {
+function StatCard({ label, value, caption, tone = 'blue' }: { label: string; value: string; caption: string; tone?: Tone }) {
   return (
-    <section className={`kpi-card ${tone}`}>
-      <div className="kpi-label">{title}</div>
-      <div className="kpi-value">{value}</div>
-      <div className="kpi-subtitle">{subtitle}</div>
-    </section>
+    <article className={`stat-card ${tone}`}>
+      <span>{label}</span>
+      <strong>{value}</strong>
+      <small>{caption}</small>
+    </article>
   )
 }
 
-function SeverityBadge({ value }: { value: number }) {
-  return <span className={`severity severity-${value}`}>{value}</span>
+function RunwayBar({ label, value, target, tone = 'brand' }: { label: string; value: number; target: number; tone?: Tone }) {
+  const percent = target > 0 ? value / target * 100 : 0
+  return (
+    <div className="runway-row">
+      <div>
+        <span>{label}</span>
+        <strong>{money(value)}</strong>
+      </div>
+      <div className="runway-track">
+        <i className={tone} style={{ width: `${Math.min(Math.max(percent, 2), 100)}%` }} />
+      </div>
+      <b>{pct(percent)}</b>
+    </div>
+  )
 }
 
-function ProgressBar({ value, tone = 'blue' }: { value: number; tone?: 'blue' | 'gold' | 'green' | 'red' }) {
+function MiniBar({ value, max, tone = 'brand' }: { value: number; max: number; tone?: Tone }) {
   return (
-    <i className={`progress ${tone}`}>
-      <b style={{ width: `${Math.min(Math.max(value, 3), 100)}%` }} />
+    <i className="mini-bar">
+      <b className={tone} style={{ width: `${Math.min(Math.max(max ? value / max * 100 : 0, 3), 100)}%` }} />
     </i>
   )
+}
+
+function Badge({ tone, children }: { tone: Tone; children: React.ReactNode }) {
+  return <span className={`badge ${tone}`}>{children}</span>
 }
 
 export default function Page() {
@@ -39,261 +52,279 @@ export default function Page() {
   const ctx = data.context
   const bridge = data.command_center.shortfall_bridge
   const gp = data.command_center.gp_mtd
-  const achievement = Number(bridge.actual_sales) / Number(bridge.budget_amount) * 100
-  const projectionAchievement = Number(bridge.actual_sales) / Number(bridge.projected_amount) * 100
-  const pipeline = Number(bridge.lpo_amount) + Number(bridge.confirmed_amount)
 
-  const topSalesmen = data.salesman_leaderboard.slice(0, 9)
-  const topProducts = data.product_mix_top.slice(0, 8)
-  const customerWatch = [...data.customer_top]
-    .filter((row) => Number(row.projected_amount || 0) > 0)
-    .sort((a, b) => Number(b.expectation_amount || 0) - Number(a.expectation_amount || 0))
-    .slice(0, 8)
-  const topGrowthCustomers = data.customer_top.slice(0, 6)
-  const gpAlerts = data.gp_alerts_top.slice(0, 5)
+  const actualSales = Number(bridge.actual_sales || 0)
+  const budget = Number(bridge.budget_amount || 0)
+  const projection = Number(bridge.projected_amount || 0)
+  const pipeline = Number(bridge.lpo_amount || 0) + Number(bridge.confirmed_amount || 0)
+  const budgetGap = Number(bridge.shortfall_to_budget || 0)
+  const projectionGap = Number(bridge.shortfall_to_projection || 0)
+  const dailyRequired = Number(bridge.daily_required_for_budget || 0)
+  const budgetAchievement = budget > 0 ? actualSales / budget * 100 : 0
+  const projectionAchievement = projection > 0 ? actualSales / projection * 100 : 0
+  const committedCoverage = budget > 0 ? (actualSales + pipeline) / budget * 100 : 0
 
-  const maxSales = Math.max(...topSalesmen.map((row) => Number(row.actual_sales || 0)), 1)
+  const topSalesmen = [...data.salesman_leaderboard]
+    .sort((a, b) => Number(b.actual_sales || 0) - Number(a.actual_sales || 0))
+    .slice(0, 6)
+  const maxSalesmanSales = Math.max(...topSalesmen.map((row) => Number(row.actual_sales || 0)), 1)
+
+  const regionTotal = data.region_current.reduce((sum, row) => sum + Number(row.revenue_ex_vat || 0), 0)
+  const topProducts = data.product_mix_top.slice(0, 7)
   const maxProduct = Math.max(...topProducts.map((row) => Number(row.revenue_ex_vat || 0)), 1)
 
-  const salesActions: SalesAction[] = [
-    ...[...topSalesmen]
-      .sort((a, b) => Number(b.budget_shortfall || 0) - Number(a.budget_shortfall || 0))
-      .slice(0, 4)
-      .map((row) => ({
-        severity: Number(row.budget_shortfall) > 500000 ? 5 : Number(row.budget_shortfall) > 250000 ? 4 : 3,
-        issue: 'Budget shortfall',
-        owner: row.salesman,
-        subject: 'Sales run-rate',
-        impact: Number(row.budget_shortfall || 0),
-        action: `Needs ${money(row.required_daily_run_rate)} daily billing pace`,
-      })),
-    ...customerWatch.slice(0, 4).map((row) => ({
-      severity: Number(row.expectation_amount) > 100000 ? 5 : 4,
-      issue: 'Projection gap',
-      owner: row.salesman,
-      subject: row.customer_name,
-      impact: Number(row.expectation_amount || 0),
-      action: 'Lock LPO / confirmed billing date',
-    })),
-    ...gpAlerts.slice(0, 4).map((row) => ({
-      severity: Number(row.severity || 3),
-      issue: row.alert_type,
-      owner: row.salesman,
-      subject: `${row.customer_name} · ${row.product_group}`,
-      impact: Math.abs(Number(row.gross_profit || row.costed_revenue || 0)),
-      action: 'Review pricing and GP leakage',
-    })),
-  ].slice(0, 10)
+  const projectionWatch = [...data.customer_top]
+    .filter((row) => Number(row.projected_amount || 0) > 0)
+    .sort((a, b) => Number(b.expectation_amount || 0) - Number(a.expectation_amount || 0))
+    .slice(0, 5)
+
+  const marginWatch = data.gp_alerts_top.slice(0, 4)
+  const topCustomers = data.customer_top.slice(0, 5)
 
   return (
-    <div className="shell">
-      <aside className="sidebar">
-        <div className="brand-lockup">
+    <div className="dashboard-shell">
+      <aside className="command-rail">
+        <div className="rail-logo">
           <img src="/brand/al-zaabi-logo-light.png" alt="Al Zaabi Group" />
-          <span>Tyres Division</span>
+          <span>TYRES DIVISION</span>
         </div>
-        <nav className="nav-list" aria-label="Dashboard sections">
-          {['Executive Command', 'Sales & Targets', 'Region', 'Salesman', 'Product Mix', 'Customer 360', 'GP & Margin', 'Projection', 'Action Center'].map((item, index) => (
-            <a key={item} className={index === 0 ? 'active' : ''} href="#">
-              <span>{['🏁', '📈', '🗺️', '👥', '🛞', '🏢', '💰', '🎯', '⚡'][index]}</span>
+        <nav aria-label="Dashboard sections">
+          {['Command', 'Targets', 'Region', 'Salesman', 'Product', 'Customer', 'GP', 'Projection'].map((item, idx) => (
+            <a href="#" className={idx === 0 ? 'active' : ''} key={item}>
+              <span>{['🏁', '🎯', '🗺️', '👥', '🛞', '🏢', '💰', '📈'][idx]}</span>
               {item}
             </a>
           ))}
         </nav>
-        <div className="side-card">
+        <div className="rail-footer">
           <img src="/brand/al-zaabi-tyre-icon.png" alt="Tyres" />
-          <strong>Sales + GP cockpit</strong>
-          <small>Targets, projection and margin command view</small>
+          <strong>Executive sales cockpit</strong>
+          <small>Sales · GP · Targets · Projection</small>
         </div>
       </aside>
 
-      <main className="main-canvas">
-        <header className="topbar">
-          <div className="title-lockup">
+      <main className="command-page">
+        <header className="command-header">
+          <div className="header-brand">
             <img src="/brand/al-zaabi-logo-dark.png" alt="Al Zaabi Group" />
             <div>
-              <p className="eyebrow">Tyres Division Dashboard</p>
-              <h1>Executive Command Center</h1>
+              <p>Al Zaabi Group</p>
+              <h1>Tyres Executive Command</h1>
             </div>
           </div>
-          <div className="filter-row">
-            <span>As of {ctx.as_of_date}</span>
+          <div className="header-actions">
             <span>{ctx.month_key}</span>
+            <span>As of {ctx.as_of_date}</span>
             <span>All Regions</span>
-            <span>All Salesmen</span>
+            <button>Export</button>
           </div>
         </header>
 
-        <section className="verdict-card">
-          <div className="verdict-copy">
-            <p className="eyebrow inverse">Management verdict</p>
-            <h2>
-              Sales <strong>{money(bridge.actual_sales)}</strong> · GP <strong>{pct(gp.gp_pct)}</strong> · Budget gap <strong>{money(bridge.shortfall_to_budget)}</strong>
-            </h2>
+        <section className="hero-command">
+          <div className="hero-copy">
+            <Badge tone={toneFor(budgetAchievement)}>Budget achievement {pct(budgetAchievement)}</Badge>
+            <h2>{money(actualSales)} sales with {pct(gp.gp_pct)} GP</h2>
             <p>
-              Projection achievement is {pct(projectionAchievement)} with {money(pipeline)} in LPO/confirmed sales pipeline. Required sales run-rate is {money(bridge.daily_required_for_budget)} per day for the remaining {ctx.days_remaining_month} days.
+              Budget gap is <strong>{money(budgetGap)}</strong>. Projection achievement is <strong>{pct(projectionAchievement)}</strong>, with <strong>{money(pipeline)}</strong> in LPO / confirmed sales pipeline.
             </p>
+            <div className="hero-pills">
+              <span>Required pace <b>{money(dailyRequired)}/day</b></span>
+              <span>{ctx.days_remaining_month} days left</span>
+              <span>Committed coverage <b>{pct(committedCoverage)}</b></span>
+            </div>
           </div>
-          <div className="verdict-meter" style={{ '--meter': `${Math.min(Math.max(achievement, 0), 100)}%` } as CSSProperties}>
-            <span>{pct(achievement)}</span>
-            <small>Budget achievement</small>
+          <div className="hero-gauge" style={{ '--meter': `${Math.min(Math.max(budgetAchievement, 0), 100)}%` } as CSSProperties}>
+            <div>
+              <strong>{pct(budgetAchievement)}</strong>
+              <span>of budget</span>
+            </div>
           </div>
         </section>
 
-        <section className="kpi-grid">
-          <KpiCard title="MTD Sales" value={money(bridge.actual_sales)} subtitle="Ex-VAT billing through as-of date" tone="green" />
-          <KpiCard title="Budget Achievement" value={pct(achievement)} subtitle={`Budget ${money(bridge.budget_amount)}`} tone="brand" />
-          <KpiCard title="GP %" value={pct(gp.gp_pct)} subtitle={`Gross profit ${money(gp.gross_profit)}`} tone="gold" />
-          <KpiCard title="Projection Achievement" value={pct(projectionAchievement)} subtitle={`Projection ${money(bridge.projected_amount)}`} tone="cyan" />
-          <KpiCard title="Sales Pipeline" value={money(pipeline)} subtitle="LPO + confirmed sales only" tone="blue" />
-          <KpiCard title="Daily Sales Required" value={money(bridge.daily_required_for_budget)} subtitle={`${ctx.days_remaining_month} days remaining`} tone="red" />
+        <section className="stat-strip">
+          <StatCard label="MTD Sales" value={money(actualSales)} caption="Ex-VAT billing" tone="green" />
+          <StatCard label="Gross Profit" value={money(gp.gross_profit)} caption={`GP ${pct(gp.gp_pct)}`} tone="gold" />
+          <StatCard label="Budget Gap" value={money(budgetGap)} caption="Remaining to official target" tone="red" />
+          <StatCard label="Projection Gap" value={money(projectionGap)} caption="Customer-wise planning gap" tone="amber" />
+          <StatCard label="Sales Pipeline" value={money(pipeline)} caption="LPO + confirmed" tone="blue" />
+          <StatCard label="Daily Pace" value={money(dailyRequired)} caption="Required run-rate" tone="brand" />
         </section>
 
-        <section className="content-grid top-grid">
-          <div className="panel bridge-panel">
-            <div className="panel-heading">
+        <section className="command-grid command-grid-primary">
+          <article className="board-card target-runway">
+            <div className="section-head">
               <div>
-                <p className="eyebrow">Sales shortfall bridge</p>
-                <h3>Budget → projection → achieved → pipeline → gap</h3>
+                <p>Target runway</p>
+                <h3>How far we are from the month target</h3>
               </div>
-              <span className="status-pill danger">Action required</span>
+              <Badge tone="brand">Sales focus</Badge>
             </div>
-            <div className="bridge-chart">
-              <div className="bridge-step budget"><small>Budget</small><strong>{money(bridge.budget_amount)}</strong></div>
-              <div className="bridge-step projection"><small>Projection</small><strong>{money(bridge.projected_amount)}</strong></div>
-              <div className="bridge-step achieved"><small>Achieved</small><strong>{money(bridge.actual_sales)}</strong></div>
-              <div className="bridge-step pipeline"><small>LPO + Confirmed</small><strong>{money(pipeline)}</strong></div>
-              <div className="bridge-step gap"><small>Remaining Gap</small><strong>{money(bridge.shortfall_to_budget)}</strong></div>
+            <RunwayBar label="Actual vs Budget" value={actualSales} target={budget} tone="brand" />
+            <RunwayBar label="Actual vs Projection" value={actualSales} target={projection} tone="gold" />
+            <RunwayBar label="Committed vs Budget" value={actualSales + pipeline} target={budget} tone="blue" />
+            <div className="runway-callout">
+              <strong>{money(dailyRequired)}</strong>
+              <span>daily sales pace needed to close official budget gap</span>
             </div>
-          </div>
+          </article>
 
-          <div className="panel insight-panel">
-            <p className="eyebrow">Region sales pulse</p>
-            <div className="region-list">
-              {data.region_current.map((region) => (
-                <div className="region-pill" key={region.region}>
-                  <span>{region.region}</span>
-                  <strong>{money(region.revenue_ex_vat)}</strong>
-                  <small>{region.active_customers} active customers</small>
-                </div>
-              ))}
+          <article className="board-card sales-bridge-card">
+            <div className="section-head">
+              <div>
+                <p>Sales bridge</p>
+                <h3>Budget → achieved → committed → gap</h3>
+              </div>
             </div>
-            <p className="eyebrow product-heading">Product / category mix</p>
-            <div className="product-list">
+            <div className="sales-bridge">
+              <div className="bridge-node budget"><span>Budget</span><strong>{money(budget)}</strong></div>
+              <div className="bridge-node achieved"><span>Achieved</span><strong>{money(actualSales)}</strong></div>
+              <div className="bridge-node pipeline"><span>Pipeline</span><strong>{money(pipeline)}</strong></div>
+              <div className="bridge-node gap"><span>Open Gap</span><strong>{money(budgetGap)}</strong></div>
+            </div>
+          </article>
+        </section>
+
+        <section className="command-grid command-grid-secondary">
+          <article className="board-card region-card">
+            <div className="section-head">
+              <div>
+                <p>Region sales pulse</p>
+                <h3>Contribution by market</h3>
+              </div>
+            </div>
+            <div className="region-tile-grid">
+              {data.region_current.map((region) => {
+                const share = regionTotal ? Number(region.revenue_ex_vat) / regionTotal * 100 : 0
+                return (
+                  <div className="region-tile" key={region.region}>
+                    <span>{region.region}</span>
+                    <strong>{money(region.revenue_ex_vat)}</strong>
+                    <small>{pct(share)} share · {region.active_customers} customers</small>
+                    <MiniBar value={share} max={100} tone="brand" />
+                  </div>
+                )
+              })}
+            </div>
+          </article>
+
+          <article className="board-card product-card">
+            <div className="section-head">
+              <div>
+                <p>Product / category mix</p>
+                <h3>Where the sales are coming from</h3>
+              </div>
+            </div>
+            <div className="mix-list">
               {topProducts.map((product) => (
-                <div className="product-row" key={`${product.product_group}-${product.product}`}>
+                <div className="mix-row" key={`${product.product_group}-${product.product}`}>
                   <div>
                     <strong>{product.product_group}</strong>
                     <small>{product.derived_category} · GP {pct(product.gp_pct)}</small>
                   </div>
                   <span>{money(product.revenue_ex_vat)}</span>
-                  <ProgressBar tone="gold" value={Number(product.revenue_ex_vat) / maxProduct * 100} />
+                  <MiniBar value={Number(product.revenue_ex_vat)} max={maxProduct} tone="gold" />
                 </div>
               ))}
             </div>
+          </article>
+        </section>
+
+        <section className="board-card salesman-command-card">
+          <div className="section-head">
+            <div>
+              <p>Salesman command matrix</p>
+              <h3>Sales, achievement, GP%, and gap by owner</h3>
+            </div>
+            <Badge tone="blue">Top 6 by sales</Badge>
+          </div>
+          <div className="salesman-card-grid">
+            {topSalesmen.map((row) => {
+              const ach = Number(row.budget_achievement_pct || 0)
+              return (
+                <article className="salesman-card" key={row.salesman}>
+                  <div className="salesman-topline">
+                    <strong>{row.salesman}</strong>
+                    <Badge tone={toneFor(ach)}>{pct(ach)}</Badge>
+                  </div>
+                  <b>{money(row.actual_sales)}</b>
+                  <MiniBar value={Number(row.actual_sales)} max={maxSalesmanSales} tone="blue" />
+                  <div className="salesman-metrics">
+                    <span>GP {pct(row.gp_pct)}</span>
+                    <span>Gap {money(row.budget_shortfall)}</span>
+                    <span>Pace {money(row.required_daily_run_rate)}</span>
+                  </div>
+                </article>
+              )
+            })}
           </div>
         </section>
 
-        <section className="wide-scroll-section">
-          <div className="panel leaderboard-panel">
-            <div className="panel-heading">
+        <section className="command-grid command-grid-lower">
+          <article className="board-card watch-card">
+            <div className="section-head">
               <div>
-                <p className="eyebrow">Salesman performance</p>
-                <h3>Actual sales, target achievement, GP%, and shortfall</h3>
-              </div>
-              <span className="status-pill">Top owners</span>
-            </div>
-            <div className="table-wrap">
-              <table className="leaderboard">
-                <thead><tr><th>Salesman</th><th>Actual Sales</th><th>Budget</th><th>Ach%</th><th>GP%</th><th>Shortfall</th><th>Daily Required</th></tr></thead>
-                <tbody>
-                  {topSalesmen.map((row) => (
-                    <tr key={row.salesman}>
-                      <td><strong>{row.salesman}</strong><ProgressBar value={Number(row.actual_sales) / maxSales * 100} /></td>
-                      <td>{money(row.actual_sales)}</td>
-                      <td>{money(row.budget_amount)}</td>
-                      <td>{pct(row.budget_achievement_pct)}</td>
-                      <td>{pct(row.gp_pct)}</td>
-                      <td>{money(row.budget_shortfall)}</td>
-                      <td>{money(row.required_daily_run_rate)}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        <section className="content-grid lower-grid">
-          <div className="panel customer-panel">
-            <div className="panel-heading">
-              <div>
-                <p className="eyebrow">Customer performance watch</p>
-                <h3>Projection gaps and low-GP watchlist</h3>
+                <p>Customer projection watch</p>
+                <h3>Largest sales gaps to close</h3>
               </div>
             </div>
-            <div className="customer-watch-list">
-              {customerWatch.map((row) => {
-                const achieved = Number(row.projected_amount) > 0 ? Number(row.mtd_sales) / Number(row.projected_amount) * 100 : 0
+            <div className="watch-list">
+              {projectionWatch.map((row) => {
+                const achieved = Number(row.projected_amount) ? Number(row.mtd_sales) / Number(row.projected_amount) * 100 : 0
                 return (
-                  <div className="customer-card" key={`${row.salesman}-${row.customer_name}`}>
+                  <div className="watch-row" key={`${row.salesman}-${row.customer_name}`}>
                     <div>
                       <strong>{row.customer_name}</strong>
                       <small>{row.salesman} · GP {pct(row.gp_pct)}</small>
                     </div>
-                    <div className="customer-metrics">
-                      <span>{money(row.mtd_sales)} sales</span>
-                      <span>{money(row.projected_amount)} projection</span>
-                      <span>{money(row.expectation_amount)} gap</span>
-                    </div>
-                    <ProgressBar tone={achieved >= 70 ? 'green' : achieved >= 35 ? 'gold' : 'red'} value={achieved} />
+                    <span>{money(row.expectation_amount)}</span>
+                    <MiniBar value={achieved} max={100} tone={toneFor(achieved)} />
                   </div>
                 )
               })}
             </div>
-          </div>
+          </article>
 
-          <div className="panel action-panel">
-            <div className="panel-heading">
+          <article className="board-card watch-card">
+            <div className="section-head">
               <div>
-                <p className="eyebrow">Sales / GP action center</p>
-                <h3>Priority actions for closing target gap</h3>
+                <p>GP watch</p>
+                <h3>Margin leakage requiring review</h3>
               </div>
             </div>
-            <table className="actions-table">
-              <thead><tr><th>Sev</th><th>Issue</th><th>Owner</th><th>Subject</th><th>Impact</th></tr></thead>
-              <tbody>
-                {salesActions.map((row, idx) => (
-                  <tr key={`${row.issue}-${row.owner}-${idx}`}>
-                    <td><SeverityBadge value={row.severity} /></td>
-                    <td><strong>{row.issue}</strong><span>{row.action}</span></td>
-                    <td>{row.owner}</td>
-                    <td>{row.subject}</td>
-                    <td>{money(row.impact)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+            <div className="watch-list compact">
+              {marginWatch.map((row) => (
+                <div className="watch-row" key={`${row.customer_name}-${row.product}`}>
+                  <div>
+                    <strong>{row.customer_name}</strong>
+                    <small>{row.product_group} · {row.salesman}</small>
+                  </div>
+                  <span>{pct(row.gp_pct)}</span>
+                  <Badge tone={Number(row.gp_pct) < 0 ? 'red' : 'amber'}>{row.alert_type}</Badge>
+                </div>
+              ))}
+            </div>
+          </article>
 
-        <section className="panel growth-panel">
-          <div className="panel-heading">
-            <div>
-              <p className="eyebrow">Top customer sales contribution</p>
-              <h3>Clean customer view for management drilldown</h3>
-            </div>
-          </div>
-          <div className="growth-grid">
-            {topGrowthCustomers.map((row) => (
-              <div className="growth-card" key={`${row.salesman}-${row.customer_name}`}>
-                <span>{row.salesman}</span>
-                <strong>{row.customer_name}</strong>
-                <b>{money(row.mtd_sales)}</b>
-                <small>GP {pct(row.gp_pct)} · Projection {money(row.projected_amount)}</small>
+          <article className="board-card customer-rank-card">
+            <div className="section-head">
+              <div>
+                <p>Top customer sales</p>
+                <h3>Clean contribution view</h3>
               </div>
-            ))}
-          </div>
+            </div>
+            <div className="customer-rank-list">
+              {topCustomers.map((row, index) => (
+                <div className="rank-row" key={`${row.customer_name}-${row.salesman}`}>
+                  <em>{index + 1}</em>
+                  <div>
+                    <strong>{row.customer_name}</strong>
+                    <small>{row.salesman} · GP {pct(row.gp_pct)}</small>
+                  </div>
+                  <span>{money(row.mtd_sales)}</span>
+                </div>
+              ))}
+            </div>
+          </article>
         </section>
       </main>
     </div>
