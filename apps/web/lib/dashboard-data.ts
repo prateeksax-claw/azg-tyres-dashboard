@@ -1,4 +1,4 @@
-import sample from '../../../mock-data/dashboard_sample_redacted.json'
+import sample from '../../../mock-data/dashboard_actual_snapshot.json'
 
 export type KpiContext = {
   as_of_date: string

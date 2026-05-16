@@ -59,8 +59,9 @@ function WaterfallBar({ label, value, max, tone }: { label: string; value: numbe
   )
 }
 
-function RegionMapAsset({ index }: { index: number }) {
-  return <div className={`region-map-asset map-art-${index}`} aria-hidden="true" />
+function RegionMapAsset({ index, region }: { index: number; region: string }) {
+  const files = ['abudhabi', 'dubai', 'alain', 'sharjah']
+  return <img className="region-map-asset" src={`/generated/azg-uae-region-${files[index]}.png`} alt={`${region} region map`} />
 }
 
 export default function Page() {
@@ -108,6 +109,18 @@ export default function Page() {
     .filter((row) => Number(row.projected_amount || 0) > 0)
     .sort((a, b) => Number(b.projected_amount || 0) - Number(a.projected_amount || 0))
     .slice(0, 3)
+  const largestGapOwner = [...data.salesman_leaderboard].sort((a, b) => Number(b.budget_shortfall || 0) - Number(a.budget_shortfall || 0))[0]
+  const projectionWatch = [...data.customer_top]
+    .filter((row) => Number(row.projected_amount || 0) > 0)
+    .map((row) => ({ ...row, progress: Number(row.mtd_sales || 0) / Math.max(Number(row.projected_amount || 0), 1) * 100 }))
+    .sort((a, b) => a.progress - b.progress)[0]
+  const gpLeak = [...data.gp_alerts_top].sort((a, b) => Number(a.gp_pct || 0) - Number(b.gp_pct || 0))[0]
+  const actionItems = [
+    `Run-rate required: ${compactMoney(runRate)} per day for ${ctx.days_remaining_month} days`,
+    `${largestGapOwner?.salesman || 'Top owner'}: close ${compactMoney(Number(largestGapOwner?.budget_shortfall || 0))} budget gap`,
+    `${projectionWatch?.customer_name || 'Projection watch'}: projection progress ${Math.round(Number(projectionWatch?.progress || 0))}%`,
+    `${gpLeak?.salesman || 'GP watch'}: ${gpLeak?.product_group || 'margin'} GP at ${safePct(Number(gpLeak?.gp_pct || 0))}`,
+  ]
 
   const kpis: Kpi[] = [
     { icon: '▥', label: 'MTD Sales', value: compactMoney(sales), basis: 'vs Budget', delta: `${safePct(budgetAch - 100)}`, tone: 'blue' },
@@ -137,7 +150,7 @@ export default function Page() {
         <header className="top-ribbon">
           <h1>Al Zaabi Group — Tyres Division Executive Command Center</h1>
           <div className="filter-row">
-            <button>▣ May 1 – May 12</button><button>May 2026</button><button>All Regions</button><button>All Salesmen</button><label>Search Customer... <span>⌕</span></label><button className="export">⇩ Export</button>
+            <button>▣ May 1 – May {ctx.day_of_month}</button><button>May 2026</button><button>All Regions</button><button>All Salesmen</button><label>Search Customer... <span>⌕</span></label><button className="export">⇩ Export</button>
           </div>
         </header>
 
@@ -174,7 +187,7 @@ export default function Page() {
                 const share = regionTotal ? region.sales / regionTotal * 100 : 0
                 return (
                   <div className="region-tile" key={region.name}>
-                    <RegionMapAsset index={i} />
+                    <RegionMapAsset index={i} region={region.name} />
                     <p><span>●</span> Sales <b>{compactMoney(region.sales)}</b></p>
                     <p><span>●</span> Target % <b>{Math.round(share)}%</b></p>
                     <p><span>●</span> GP % <b>{safePct(gpPct + (i - 1) * 0.7)}</b></p>
@@ -213,10 +226,7 @@ export default function Page() {
           <article className="card action-card">
             <h3>Action Center</h3>
             <ul>
-              <li><b>◎</b><span>Push PCR fleet deals in Abu Dhabi</span></li>
-              <li><b>◉</b><span>Recover GP on TBR discounting</span></li>
-              <li><b>♟</b><span>Focus top 10 target accounts before month-end</span></li>
-              <li><b>↗</b><span>Accelerate confirmed pipeline conversion</span></li>
+              {actionItems.map((item, index) => <li key={item}><b>{['◎', '◉', '♟', '↗'][index]}</b><span>{item}</span></li>)}
             </ul>
           </article>
         </section>
