@@ -70,3 +70,15 @@ Fix in Cloudflare Pages project settings:
 - Deploy command: blank / none
 
 Then retry deployment.
+
+
+## Basic Auth protection
+
+The repo includes `functions/_middleware.ts`, which protects the Pages site with HTTP Basic Auth. Set these Cloudflare Pages environment variables before exposing real data:
+
+```txt
+DASHBOARD_BASIC_USER=<username>
+DASHBOARD_BASIC_PASS=<strong password>
+```
+
+If these variables are missing, the site returns HTTP 503 instead of rendering publicly. See `docs/basic-auth-setup.md`.
