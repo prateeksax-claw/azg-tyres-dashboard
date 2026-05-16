@@ -4,9 +4,12 @@
   "version": "0.1.0",
   "packageManager": "npm@10.9.4",
   "scripts": {
-    "lint": "echo 'lint scaffold pending'",
-    "typecheck": "echo 'typecheck scaffold pending'",
-    "build": "echo 'build scaffold pending'"
+    "dev:web": "npm run dev -w @azg-tyres/web",
+    "build": "npm run build -w @azg-tyres/web",
+    "typecheck": "npm run typecheck -w @azg-tyres/web",
+    "lint": "npm run lint -w @azg-tyres/web",
+    "test:api": "python3 -m pytest apps/api/tests",
+    "check:secrets": "python3 scripts/check_tracked_files.py"
   },
   "workspaces": [
     "apps/*",

@@ -15,248 +15,248 @@
     "shortfall_bridge": {
       "as_of_date": "2026-05-16",
       "month_key": "2026-05",
-      "budget_amount": 6903750.0,
-      "projected_amount": 5987805.0,
-      "actual_sales": 2294741.56,
-      "lpo_amount": 448885.0,
-      "confirmed_amount": 801580.0,
-      "expectation_amount": 2184705.0,
-      "shortfall_to_budget": 4609008.4399999995,
-      "shortfall_to_projection": 3693063.44,
-      "daily_required_for_budget": 307267.2293333333,
-      "daily_required_for_projection": 246204.22933333332
+      "budget_amount": 5039700,
+      "projected_amount": 4371100,
+      "actual_sales": 1675200,
+      "lpo_amount": 327700,
+      "confirmed_amount": 585200,
+      "expectation_amount": 1594800,
+      "shortfall_to_budget": 3364600,
+      "shortfall_to_projection": 2695900,
+      "daily_required_for_budget": 224300,
+      "daily_required_for_projection": 179700
     },
     "gp_mtd": {
-      "costed_revenue": 2198318.5599999996,
-      "gross_profit": 487017.24999999994,
+      "costed_revenue": 1604800,
+      "gross_profit": 355500,
       "gp_pct": 22.154079889131264,
-      "uncosted_revenue": 90840.0
+      "uncosted_revenue": 66300
     },
     "collections_mtd": {
-      "bank_receipts": 3141477.7,
-      "journal_adjustments": 227502.95,
-      "total_collections": 3368980.6500000004
+      "bank_receipts": 2293300,
+      "journal_adjustments": 166100,
+      "total_collections": 2459400
     },
     "ar_current": {
-      "outstanding_amount": 2103832739.7000065,
-      "overdue_amount": 2005135885.5500047
+      "outstanding_amount": 1535797900,
+      "overdue_amount": 1463749200
     }
   },
   "monthly_trend": [
     {
       "month_key": "2025-05",
-      "revenue_ex_vat": 5044716.68
+      "revenue_ex_vat": 3682600
     },
     {
       "month_key": "2025-06",
-      "revenue_ex_vat": 4829759.529999999
+      "revenue_ex_vat": 3525700
     },
     {
       "month_key": "2025-07",
-      "revenue_ex_vat": 5273771.08
+      "revenue_ex_vat": 3849900
     },
     {
       "month_key": "2025-08",
-      "revenue_ex_vat": 5137936.08
+      "revenue_ex_vat": 3750700
     },
     {
       "month_key": "2025-09",
-      "revenue_ex_vat": 5104672.12
+      "revenue_ex_vat": 3726400
     },
     {
       "month_key": "2025-10",
-      "revenue_ex_vat": 6242861.950000001
+      "revenue_ex_vat": 4557300
     },
     {
       "month_key": "2025-11",
-      "revenue_ex_vat": 5145292.96
+      "revenue_ex_vat": 3756100
     },
     {
       "month_key": "2025-12",
-      "revenue_ex_vat": 4798332.390000001
+      "revenue_ex_vat": 3502800
     },
     {
       "month_key": "2026-01",
-      "revenue_ex_vat": 4882691.07
+      "revenue_ex_vat": 3564400
     },
     {
       "month_key": "2026-02",
-      "revenue_ex_vat": 4725342.35
+      "revenue_ex_vat": 3449500
     },
     {
       "month_key": "2026-03",
-      "revenue_ex_vat": 5372724.26
+      "revenue_ex_vat": 3922100
     },
     {
       "month_key": "2026-04",
-      "revenue_ex_vat": 5199300.700000001
+      "revenue_ex_vat": 3795500
     },
     {
       "month_key": "2026-05",
-      "revenue_ex_vat": 2294741.5599999996
+      "revenue_ex_vat": 1675200
     }
   ],
   "salesman_leaderboard": [
     {
       "salesman": "SM-01",
-      "budget_amount": 750000.0,
-      "actual_sales": 547977.76,
+      "budget_amount": 547500,
+      "actual_sales": 400000,
       "budget_achievement_pct": 73.06370133333333,
-      "budget_shortfall": 202022.24,
-      "required_daily_run_rate": 13468.149333333333,
-      "gross_profit": 105319.08,
+      "budget_shortfall": 147500,
+      "required_daily_run_rate": 9800,
+      "gross_profit": 76900,
       "gp_pct": 21.01515498832144
     },
     {
       "salesman": "SM-02",
-      "budget_amount": 1050000.0,
-      "actual_sales": 459775.0,
+      "budget_amount": 766500,
+      "actual_sales": 335600,
       "budget_achievement_pct": 43.78809523809524,
-      "budget_shortfall": 590225.0,
-      "required_daily_run_rate": 39348.333333333336,
-      "gross_profit": 108372.0,
+      "budget_shortfall": 430900,
+      "required_daily_run_rate": 28700,
+      "gross_profit": 79100,
       "gp_pct": 23.570659561742158
     },
     {
       "salesman": "SM-03",
-      "budget_amount": 750000.0,
-      "actual_sales": 358520.0,
+      "budget_amount": 547500,
+      "actual_sales": 261700,
       "budget_achievement_pct": 47.80266666666667,
-      "budget_shortfall": 391480.0,
-      "required_daily_run_rate": 26098.666666666668,
-      "gross_profit": 62705.0,
+      "budget_shortfall": 285800,
+      "required_daily_run_rate": 19100,
+      "gross_profit": 45800,
       "gp_pct": 18.7784499281265
     },
     {
       "salesman": "SM-04",
-      "budget_amount": 1260000.0,
-      "actual_sales": 323724.0,
+      "budget_amount": 919800,
+      "actual_sales": 236300,
       "budget_achievement_pct": 25.69238095238095,
-      "budget_shortfall": 936276.0,
-      "required_daily_run_rate": 62418.4,
-      "gross_profit": 70365.41,
+      "budget_shortfall": 683500,
+      "required_daily_run_rate": 45600,
+      "gross_profit": 51400,
       "gp_pct": 21.83471005138644
     },
     {
       "salesman": "SM-05",
-      "budget_amount": 761250.0,
-      "actual_sales": 178796.6,
+      "budget_amount": 555700,
+      "actual_sales": 130500,
       "budget_achievement_pct": 23.487238095238098,
-      "budget_shortfall": 582453.4,
-      "required_daily_run_rate": 38830.22666666667,
-      "gross_profit": 45531.7,
+      "budget_shortfall": 425200,
+      "required_daily_run_rate": 28300,
+      "gross_profit": 33200,
       "gp_pct": 25.62905065165043
     },
     {
       "salesman": "SM-06",
-      "budget_amount": 630000.0,
-      "actual_sales": 113398.09,
+      "budget_amount": 459900,
+      "actual_sales": 82800,
       "budget_achievement_pct": 17.999696825396825,
-      "budget_shortfall": 516601.91000000003,
-      "required_daily_run_rate": 34440.12733333334,
-      "gross_profit": 28027.09,
+      "budget_shortfall": 377100,
+      "required_daily_run_rate": 25100,
+      "gross_profit": 20500,
       "gp_pct": 24.715663200323746
     },
     {
       "salesman": "SM-07",
-      "budget_amount": 450000.0,
-      "actual_sales": 106038.1,
+      "budget_amount": 328500,
+      "actual_sales": 77400,
       "budget_achievement_pct": 23.56402222222222,
-      "budget_shortfall": 343961.9,
-      "required_daily_run_rate": 22930.793333333335,
-      "gross_profit": 24261.059999999998,
+      "budget_shortfall": 251100,
+      "required_daily_run_rate": 16700,
+      "gross_profit": 17700,
       "gp_pct": 22.879568758776323
     },
     {
       "salesman": "SM-08",
-      "budget_amount": 472500.0,
-      "actual_sales": 94730.0,
+      "budget_amount": 344900,
+      "actual_sales": 69200,
       "budget_achievement_pct": 20.04867724867725,
-      "budget_shortfall": 377770.0,
-      "required_daily_run_rate": 25184.666666666668,
-      "gross_profit": 24626.4,
+      "budget_shortfall": 275800,
+      "required_daily_run_rate": 18400,
+      "gross_profit": 18000,
       "gp_pct": 25.996410851894865
     },
     {
       "salesman": "SM-09",
-      "budget_amount": 275000.0,
-      "actual_sales": 47740.0,
+      "budget_amount": 200800,
+      "actual_sales": 34900,
       "budget_achievement_pct": 17.36,
-      "budget_shortfall": 227260.0,
-      "required_daily_run_rate": 15150.666666666666,
-      "gross_profit": 5512.0,
+      "budget_shortfall": 165900,
+      "required_daily_run_rate": 11100,
+      "gross_profit": 4000,
       "gp_pct": 23.415463041631266
     },
     {
       "salesman": "SM-10",
-      "budget_amount": 26250.0,
-      "actual_sales": 38222.1,
+      "budget_amount": 19200,
+      "actual_sales": 27900,
       "budget_achievement_pct": 145.608,
-      "budget_shortfall": 0.0,
-      "required_daily_run_rate": 0.0,
-      "gross_profit": 8302.599999999999,
+      "budget_shortfall": 0,
+      "required_daily_run_rate": 0,
+      "gross_profit": 6100,
       "gp_pct": 21.233130701420126
     },
     {
       "salesman": "SM-11",
-      "budget_amount": 26250.0,
-      "actual_sales": 16700.0,
+      "budget_amount": 19200,
+      "actual_sales": 12200,
       "budget_achievement_pct": 63.61904761904762,
-      "budget_shortfall": 9550.0,
-      "required_daily_run_rate": 636.6666666666666,
-      "gross_profit": 2750.0,
+      "budget_shortfall": 7000,
+      "required_daily_run_rate": 500,
+      "gross_profit": 2000,
       "gp_pct": 16.46706586826347
     },
     {
       "salesman": "SM-12",
-      "budget_amount": 52500.0,
-      "actual_sales": 5255.0,
+      "budget_amount": 38300,
+      "actual_sales": 3800,
       "budget_achievement_pct": 10.00952380952381,
-      "budget_shortfall": 47245.0,
-      "required_daily_run_rate": 3149.6666666666665,
-      "gross_profit": 320.0,
+      "budget_shortfall": 34500,
+      "required_daily_run_rate": 2300,
+      "gross_profit": 200,
       "gp_pct": 5.184705119896306
     },
     {
       "salesman": "SM-13",
-      "budget_amount": 125000.0,
-      "actual_sales": 0.0,
+      "budget_amount": 91200,
+      "actual_sales": 0,
       "budget_achievement_pct": 0.0,
-      "budget_shortfall": 125000.0,
-      "required_daily_run_rate": 8333.333333333334,
-      "gross_profit": 0.0,
+      "budget_shortfall": 91200,
+      "required_daily_run_rate": 6100,
+      "gross_profit": 0,
       "gp_pct": null
     },
     {
       "salesman": "SM-14",
-      "budget_amount": 125000.0,
-      "actual_sales": 0.0,
+      "budget_amount": 91200,
+      "actual_sales": 0,
       "budget_achievement_pct": 0.0,
-      "budget_shortfall": 125000.0,
-      "required_daily_run_rate": 8333.333333333334,
-      "gross_profit": 0.0,
+      "budget_shortfall": 91200,
+      "required_daily_run_rate": 6100,
+      "gross_profit": 0,
       "gp_pct": null
     },
     {
       "salesman": "SM-15",
-      "budget_amount": 150000.0,
-      "actual_sales": 0.0,
+      "budget_amount": 109500,
+      "actual_sales": 0,
       "budget_achievement_pct": 0.0,
-      "budget_shortfall": 150000.0,
-      "required_daily_run_rate": 10000.0,
-      "gross_profit": 0.0,
+      "budget_shortfall": 109500,
+      "required_daily_run_rate": 7300,
+      "gross_profit": 0,
       "gp_pct": null
     }
   ],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 1230600.79,
+      "revenue_ex_vat": 898300,
       "active_customers": 83
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 1064140.77,
+      "revenue_ex_vat": 776800,
       "active_customers": 50
     }
   ],
@@ -267,8 +267,8 @@
       "product_group": "CEAT-TBR",
       "product": "Product-001",
       "qty": 159.0,
-      "revenue_ex_vat": 200485.0,
-      "gross_profit": 33865.28,
+      "revenue_ex_vat": 146400,
+      "gross_profit": 24700,
       "gp_pct": 16.891677681622067
     },
     {
@@ -277,8 +277,8 @@
       "product_group": "BEFRIEND",
       "product": "Product-002",
       "qty": 150.0,
-      "revenue_ex_vat": 166500.0,
-      "gross_profit": 34500.0,
+      "revenue_ex_vat": 121500,
+      "gross_profit": 25200,
       "gp_pct": 20.72072072072072
     },
     {
@@ -287,8 +287,8 @@
       "product_group": "ITR-TBR",
       "product": "Product-003",
       "qty": 120.0,
-      "revenue_ex_vat": 134500.0,
-      "gross_profit": 19900.0,
+      "revenue_ex_vat": 98200,
+      "gross_profit": 14500,
       "gp_pct": 14.79553903345725
     },
     {
@@ -297,8 +297,8 @@
       "product_group": "YARTU",
       "product": "Product-004",
       "qty": 100.0,
-      "revenue_ex_vat": 125000.0,
-      "gross_profit": 32500.0,
+      "revenue_ex_vat": 91200,
+      "gross_profit": 23700,
       "gp_pct": 26.0
     },
     {
@@ -307,8 +307,8 @@
       "product_group": "HOTCURE",
       "product": "Product-005",
       "qty": 190.0,
-      "revenue_ex_vat": 74649.09,
-      "gross_profit": 36649.09,
+      "revenue_ex_vat": 54500,
+      "gross_profit": 26800,
       "gp_pct": 49.09515976685047
     },
     {
@@ -317,8 +317,8 @@
       "product_group": "CEAT-TBR",
       "product": "Product-006",
       "qty": 60.0,
-      "revenue_ex_vat": 72430.0,
-      "gross_profit": 1080.0,
+      "revenue_ex_vat": 52900,
+      "gross_profit": 800,
       "gp_pct": 15.65217391304348
     },
     {
@@ -327,8 +327,8 @@
       "product_group": "VIKRANT",
       "product": "Product-007",
       "qty": 60.0,
-      "revenue_ex_vat": 69900.0,
-      "gross_profit": 12000.0,
+      "revenue_ex_vat": 51000,
+      "gross_profit": 8800,
       "gp_pct": 17.167381974248926
     },
     {
@@ -337,8 +337,8 @@
       "product_group": "ROADSHINE",
       "product": "Product-008",
       "qty": 109.0,
-      "revenue_ex_vat": 69250.0,
-      "gross_profit": 18020.0,
+      "revenue_ex_vat": 50600,
+      "gross_profit": 13200,
       "gp_pct": 26.021660649819495
     },
     {
@@ -347,8 +347,8 @@
       "product_group": "WESTLAKE TBR",
       "product": "Product-009",
       "qty": 46.0,
-      "revenue_ex_vat": 52440.0,
-      "gross_profit": 8740.0,
+      "revenue_ex_vat": 38300,
+      "gross_profit": 6400,
       "gp_pct": 16.666666666666664
     },
     {
@@ -357,8 +357,8 @@
       "product_group": "ITR - OTR",
       "product": "Product-010",
       "qty": 4.0,
-      "revenue_ex_vat": 51800.0,
-      "gross_profit": 11000.0,
+      "revenue_ex_vat": 37800,
+      "gross_profit": 8000,
       "gp_pct": 21.235521235521233
     },
     {
@@ -367,8 +367,8 @@
       "product_group": "ITR - OTR",
       "product": "Product-011",
       "qty": 4.0,
-      "revenue_ex_vat": 50220.0,
-      "gross_profit": 7420.0,
+      "revenue_ex_vat": 36700,
+      "gross_profit": 5400,
       "gp_pct": 14.774990043807248
     },
     {
@@ -377,8 +377,8 @@
       "product_group": "BRIDGESTONE-TBR",
       "product": "Product-012",
       "qty": 30.0,
-      "revenue_ex_vat": 49500.0,
-      "gross_profit": 6750.0,
+      "revenue_ex_vat": 36100,
+      "gross_profit": 4900,
       "gp_pct": 13.636363636363635
     },
     {
@@ -387,8 +387,8 @@
       "product_group": "FIRESTONE-TBR",
       "product": "Product-013",
       "qty": 30.0,
-      "revenue_ex_vat": 49500.0,
-      "gross_profit": 7230.0,
+      "revenue_ex_vat": 36100,
+      "gross_profit": 5300,
       "gp_pct": 14.606060606060606
     },
     {
@@ -397,8 +397,8 @@
       "product_group": "RHINO KING-TBR",
       "product": "Product-014",
       "qty": 48.0,
-      "revenue_ex_vat": 46560.0,
-      "gross_profit": 10224.0,
+      "revenue_ex_vat": 34000,
+      "gross_profit": 7500,
       "gp_pct": 21.95876288659794
     },
     {
@@ -407,8 +407,8 @@
       "product_group": "ROADSHINE",
       "product": "Product-015",
       "qty": 56.0,
-      "revenue_ex_vat": 46160.0,
-      "gross_profit": 9200.0,
+      "revenue_ex_vat": 33700,
+      "gross_profit": 6700,
       "gp_pct": 19.930675909878683
     },
     {
@@ -417,8 +417,8 @@
       "product_group": "LINEMAX",
       "product": "Product-016",
       "qty": 46.0,
-      "revenue_ex_vat": 36200.0,
-      "gross_profit": 9060.0,
+      "revenue_ex_vat": 26400,
+      "gross_profit": 6600,
       "gp_pct": 25.027624309392266
     },
     {
@@ -427,8 +427,8 @@
       "product_group": "YARTU",
       "product": "Product-017",
       "qty": 39.0,
-      "revenue_ex_vat": 31005.0,
-      "gross_profit": 6825.0,
+      "revenue_ex_vat": 22600,
+      "gross_profit": 5000,
       "gp_pct": 22.0125786163522
     },
     {
@@ -437,8 +437,8 @@
       "product_group": "ITR - OTR",
       "product": "Product-018",
       "qty": 4.0,
-      "revenue_ex_vat": 31000.0,
-      "gross_profit": 7000.0,
+      "revenue_ex_vat": 22600,
+      "gross_profit": 5100,
       "gp_pct": 22.58064516129032
     },
     {
@@ -447,8 +447,8 @@
       "product_group": "APTANY",
       "product": "Product-019",
       "qty": 50.0,
-      "revenue_ex_vat": 30000.0,
-      "gross_profit": 9500.0,
+      "revenue_ex_vat": 21900,
+      "gross_profit": 6900,
       "gp_pct": 31.666666666666664
     },
     {
@@ -457,8 +457,8 @@
       "product_group": "POWERTRAC",
       "product": "Product-020",
       "qty": 51.0,
-      "revenue_ex_vat": 29922.5,
-      "gross_profit": 8502.5,
+      "revenue_ex_vat": 21800,
+      "gross_profit": 6200,
       "gp_pct": 28.41507227003091
     },
     {
@@ -467,8 +467,8 @@
       "product_group": "BYG",
       "product": "Product-021",
       "qty": 2.0,
-      "revenue_ex_vat": 26800.0,
-      "gross_profit": 4800.0,
+      "revenue_ex_vat": 19600,
+      "gross_profit": 3500,
       "gp_pct": 17.91044776119403
     },
     {
@@ -477,8 +477,8 @@
       "product_group": "RETREAD",
       "product": "Product-022",
       "qty": 66.0,
-      "revenue_ex_vat": 24965.0,
-      "gross_profit": 15065.0,
+      "revenue_ex_vat": 18200,
+      "gross_profit": 11000,
       "gp_pct": 60.344482275185264
     },
     {
@@ -487,8 +487,8 @@
       "product_group": "BKT - OTR",
       "product": "Product-023",
       "qty": 16.0,
-      "revenue_ex_vat": 24480.0,
-      "gross_profit": 3680.0,
+      "revenue_ex_vat": 17900,
+      "gross_profit": 2700,
       "gp_pct": 15.032679738562091
     },
     {
@@ -497,8 +497,8 @@
       "product_group": "DIAMOND BLACK-TBR",
       "product": "Product-024",
       "qty": 35.0,
-      "revenue_ex_vat": 24150.0,
-      "gross_profit": 4900.0,
+      "revenue_ex_vat": 17600,
+      "gross_profit": 3600,
       "gp_pct": 20.28985507246377
     },
     {
@@ -507,8 +507,8 @@
       "product_group": "ROCK HOLDER",
       "product": "Product-025",
       "qty": 30.0,
-      "revenue_ex_vat": 24000.0,
-      "gross_profit": 4500.0,
+      "revenue_ex_vat": 17500,
+      "gross_profit": 3300,
       "gp_pct": 18.75
     },
     {
@@ -517,8 +517,8 @@
       "product_group": "ITR-TBR",
       "product": "Product-026",
       "qty": 18.0,
-      "revenue_ex_vat": 23850.0,
-      "gross_profit": 0.0,
+      "revenue_ex_vat": 17400,
+      "gross_profit": 0,
       "gp_pct": null
     },
     {
@@ -527,8 +527,8 @@
       "product_group": "V-GLORY",
       "product": "Product-027",
       "qty": 25.0,
-      "revenue_ex_vat": 21350.0,
-      "gross_profit": 4475.0,
+      "revenue_ex_vat": 15600,
+      "gross_profit": 3300,
       "gp_pct": 20.960187353629976
     },
     {
@@ -537,8 +537,8 @@
       "product_group": "TECHKING OTR",
       "product": "Product-028",
       "qty": 12.0,
-      "revenue_ex_vat": 21000.0,
-      "gross_profit": 7200.0,
+      "revenue_ex_vat": 15300,
+      "gross_profit": 5300,
       "gp_pct": 34.285714285714285
     },
     {
@@ -547,8 +547,8 @@
       "product_group": "ITR-TBR",
       "product": "Product-029",
       "qty": 20.0,
-      "revenue_ex_vat": 20950.0,
-      "gross_profit": 4750.0,
+      "revenue_ex_vat": 15300,
+      "gross_profit": 3500,
       "gp_pct": 22.673031026252982
     },
     {
@@ -557,8 +557,8 @@
       "product_group": "ITR - OTR",
       "product": "Product-030",
       "qty": 2.0,
-      "revenue_ex_vat": 20400.0,
-      "gross_profit": 10400.0,
+      "revenue_ex_vat": 14900,
+      "gross_profit": 7600,
       "gp_pct": 50.98039215686274
     }
   ],
@@ -566,552 +566,552 @@
     {
       "salesman": "SM-02",
       "customer_name": "Customer-001",
-      "mtd_sales": 166500.0,
-      "gross_profit": 34500.0,
+      "mtd_sales": 121500,
+      "gross_profit": 25200,
       "gp_pct": 20.72072072072072,
-      "outstanding_amount": 887817.0,
-      "overdue_amount": 887817.0,
-      "projected_amount": 400000.0,
-      "expectation_amount": 233500.0
+      "outstanding_amount": 648100,
+      "overdue_amount": 648100,
+      "projected_amount": 292000,
+      "expectation_amount": 170500
     },
     {
       "salesman": "SM-02",
       "customer_name": "Customer-002",
-      "mtd_sales": 127080.0,
-      "gross_profit": 33010.0,
+      "mtd_sales": 92800,
+      "gross_profit": 24100,
       "gp_pct": 25.975763298709474,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 0,
+      "overdue_amount": 0,
+      "projected_amount": 0,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-01",
       "customer_name": "Customer-003",
-      "mtd_sales": 125870.0,
-      "gross_profit": 18420.0,
+      "mtd_sales": 91900,
+      "gross_profit": 13400,
       "gp_pct": 18.055283277788668,
-      "outstanding_amount": 301870.80000000005,
-      "overdue_amount": 301870.80000000005,
-      "projected_amount": 177670.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 220400,
+      "overdue_amount": 220400,
+      "projected_amount": 129700,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-03",
       "customer_name": "Customer-004",
-      "mtd_sales": 108440.0,
-      "gross_profit": 16955.0,
+      "mtd_sales": 79200,
+      "gross_profit": 12400,
       "gp_pct": 15.635374400590187,
-      "outstanding_amount": 20329.5,
-      "overdue_amount": 20329.5,
-      "projected_amount": 200000.0,
-      "expectation_amount": 91560.0
+      "outstanding_amount": 14800,
+      "overdue_amount": 14800,
+      "projected_amount": 146000,
+      "expectation_amount": 66800
     },
     {
       "salesman": "SM-03",
       "customer_name": "Customer-005",
-      "mtd_sales": 87500.0,
-      "gross_profit": 13930.0,
+      "mtd_sales": 63900,
+      "gross_profit": 10200,
       "gp_pct": 15.920000000000002,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 0,
+      "overdue_amount": 0,
+      "projected_amount": 0,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-04",
       "customer_name": "Customer-006",
-      "mtd_sales": 86760.0,
-      "gross_profit": 21045.0,
+      "mtd_sales": 63300,
+      "gross_profit": 15400,
       "gp_pct": 24.256569847856156,
-      "outstanding_amount": 191875.95,
-      "overdue_amount": 191875.95,
-      "projected_amount": 49430.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 140100,
+      "overdue_amount": 140100,
+      "projected_amount": 36100,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-08",
       "customer_name": "Customer-007",
-      "mtd_sales": 74160.0,
-      "gross_profit": 18232.4,
+      "mtd_sales": 54100,
+      "gross_profit": 13300,
       "gp_pct": 24.585221143473575,
-      "outstanding_amount": 4871381.580000001,
-      "overdue_amount": 4871381.580000001,
-      "projected_amount": 89800.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 3556100,
+      "overdue_amount": 3556100,
+      "projected_amount": 65600,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-01",
       "customer_name": "Customer-008",
-      "mtd_sales": 68513.0,
-      "gross_profit": 12603.0,
+      "mtd_sales": 50000,
+      "gross_profit": 9200,
       "gp_pct": 18.39504911476654,
-      "outstanding_amount": 106995.5,
-      "overdue_amount": 92400.5,
-      "projected_amount": 54000.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 78100,
+      "overdue_amount": 67500,
+      "projected_amount": 39400,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-01",
       "customer_name": "Customer-009",
-      "mtd_sales": 57500.0,
-      "gross_profit": 9750.0,
+      "mtd_sales": 42000,
+      "gross_profit": 7100,
       "gp_pct": 16.956521739130434,
-      "outstanding_amount": 275667.0,
-      "overdue_amount": 260736.0,
-      "projected_amount": 57500.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 201200,
+      "overdue_amount": 190300,
+      "projected_amount": 42000,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-03",
       "customer_name": "Customer-010",
-      "mtd_sales": 53500.0,
-      "gross_profit": 5750.0,
+      "mtd_sales": 39100,
+      "gross_profit": 4200,
       "gp_pct": 10.74766355140187,
-      "outstanding_amount": 1778358.75,
-      "overdue_amount": 1670040.75,
-      "projected_amount": 200000.0,
-      "expectation_amount": 146500.0
+      "outstanding_amount": 1298200,
+      "overdue_amount": 1219100,
+      "projected_amount": 146000,
+      "expectation_amount": 106900
     },
     {
       "salesman": "SM-01",
       "customer_name": "Customer-011",
-      "mtd_sales": 52505.0,
-      "gross_profit": 11845.0,
+      "mtd_sales": 38300,
+      "gross_profit": 8600,
       "gp_pct": 22.559756213693934,
-      "outstanding_amount": 427528.5,
-      "overdue_amount": 427528.5,
-      "projected_amount": 90480.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 312100,
+      "overdue_amount": 312100,
+      "projected_amount": 66100,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-01",
       "customer_name": "Customer-012",
-      "mtd_sales": 52440.0,
-      "gross_profit": 8740.0,
+      "mtd_sales": 38300,
+      "gross_profit": 6400,
       "gp_pct": 16.666666666666664,
-      "outstanding_amount": 1485169.5,
-      "overdue_amount": 1485169.5,
-      "projected_amount": 53000.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 1084200,
+      "overdue_amount": 1084200,
+      "projected_amount": 38700,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-06",
       "customer_name": "Customer-013",
-      "mtd_sales": 51020.0,
-      "gross_profit": 16580.0,
+      "mtd_sales": 37200,
+      "gross_profit": 12100,
       "gp_pct": 32.49705997647981,
-      "outstanding_amount": 3190218.15,
-      "overdue_amount": 3164388.15,
-      "projected_amount": 150000.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 2328900,
+      "overdue_amount": 2310000,
+      "projected_amount": 109500,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-04",
       "customer_name": "Customer-014",
-      "mtd_sales": 49740.0,
-      "gross_profit": 0.0,
+      "mtd_sales": 36300,
+      "gross_profit": 0,
       "gp_pct": null,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 50225.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 0,
+      "overdue_amount": 0,
+      "projected_amount": 36700,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-04",
       "customer_name": "Customer-015",
-      "mtd_sales": 46560.0,
-      "gross_profit": 10224.0,
+      "mtd_sales": 34000,
+      "gross_profit": 7500,
       "gp_pct": 21.95876288659794,
-      "outstanding_amount": 261324.0,
-      "overdue_amount": 261324.0,
-      "projected_amount": 125240.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 190800,
+      "overdue_amount": 190800,
+      "projected_amount": 91400,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-07",
       "customer_name": "Customer-016",
-      "mtd_sales": 45000.0,
-      "gross_profit": 10950.0,
+      "mtd_sales": 32800,
+      "gross_profit": 8000,
       "gp_pct": 24.333333333333336,
-      "outstanding_amount": 952318.5,
-      "overdue_amount": 952318.5,
-      "projected_amount": 45000.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 695200,
+      "overdue_amount": 695200,
+      "projected_amount": 32800,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-03",
       "customer_name": "Customer-017",
-      "mtd_sales": 44480.0,
-      "gross_profit": 6410.0,
+      "mtd_sales": 32500,
+      "gross_profit": 4700,
       "gp_pct": 14.410971223021582,
-      "outstanding_amount": 77805.5,
-      "overdue_amount": 77805.5,
-      "projected_amount": 24000.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 56800,
+      "overdue_amount": 56800,
+      "projected_amount": 17500,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-02",
       "customer_name": "Customer-018",
-      "mtd_sales": 44400.0,
-      "gross_profit": 2000.0,
+      "mtd_sales": 32400,
+      "gross_profit": 1500,
       "gp_pct": 13.88888888888889,
-      "outstanding_amount": 1533.0,
-      "overdue_amount": 1533.0,
-      "projected_amount": 48000.0,
-      "expectation_amount": 3600.0
+      "outstanding_amount": 1100,
+      "overdue_amount": 1100,
+      "projected_amount": 35000,
+      "expectation_amount": 2600
     },
     {
       "salesman": "SM-02",
       "customer_name": "Customer-019",
-      "mtd_sales": 43950.0,
-      "gross_profit": 8100.0,
+      "mtd_sales": 32100,
+      "gross_profit": 5900,
       "gp_pct": 18.43003412969283,
-      "outstanding_amount": 3415718.25,
-      "overdue_amount": 3415718.25,
-      "projected_amount": 31000.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 2493500,
+      "overdue_amount": 2493500,
+      "projected_amount": 22600,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-02",
       "customer_name": "Customer-020",
-      "mtd_sales": 39550.0,
-      "gross_profit": 0.0,
+      "mtd_sales": 28900,
+      "gross_profit": 0,
       "gp_pct": null,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 49900.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 0,
+      "overdue_amount": 0,
+      "projected_amount": 36400,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-01",
       "customer_name": "Customer-021",
-      "mtd_sales": 39230.0,
-      "gross_profit": 3982.3199999999997,
+      "mtd_sales": 28600,
+      "gross_profit": 2900,
       "gp_pct": 17.699199999999998,
-      "outstanding_amount": 1399287.75,
-      "overdue_amount": 1256283.0,
-      "projected_amount": 59480.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 1021500,
+      "overdue_amount": 917100,
+      "projected_amount": 43400,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-05",
       "customer_name": "Customer-022",
-      "mtd_sales": 39000.0,
-      "gross_profit": 9560.0,
+      "mtd_sales": 28500,
+      "gross_profit": 7000,
       "gp_pct": 24.512820512820515,
-      "outstanding_amount": 237972.03000000003,
-      "overdue_amount": 237972.03000000003,
-      "projected_amount": 37000.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 173700,
+      "overdue_amount": 173700,
+      "projected_amount": 27000,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-05",
       "customer_name": "Customer-023",
-      "mtd_sales": 35500.0,
-      "gross_profit": 9600.0,
+      "mtd_sales": 25900,
+      "gross_profit": 7000,
       "gp_pct": 27.042253521126757,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 52000.0,
-      "expectation_amount": 10000.0
+      "outstanding_amount": 0,
+      "overdue_amount": 0,
+      "projected_amount": 38000,
+      "expectation_amount": 7300
     },
     {
       "salesman": "SM-04",
       "customer_name": "Customer-024",
-      "mtd_sales": 34950.0,
-      "gross_profit": 0.0,
+      "mtd_sales": 25500,
+      "gross_profit": 0,
       "gp_pct": null,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 50225.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 0,
+      "overdue_amount": 0,
+      "projected_amount": 36700,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-03",
       "customer_name": "Customer-025",
-      "mtd_sales": 31570.0,
-      "gross_profit": 18470.0,
+      "mtd_sales": 23000,
+      "gross_profit": 13500,
       "gp_pct": 58.504909724421914,
-      "outstanding_amount": 116130.0,
-      "overdue_amount": 93387.0,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 84800,
+      "overdue_amount": 68200,
+      "projected_amount": 0,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-01",
       "customer_name": "Customer-026",
-      "mtd_sales": 30835.0,
-      "gross_profit": 6130.0,
+      "mtd_sales": 22500,
+      "gross_profit": 4500,
       "gp_pct": 19.880006486135883,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 39300.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 0,
+      "overdue_amount": 0,
+      "projected_amount": 28700,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-04",
       "customer_name": "Customer-027",
-      "mtd_sales": 30660.0,
-      "gross_profit": 4870.0,
+      "mtd_sales": 22400,
+      "gross_profit": 3600,
       "gp_pct": 16.67808219178082,
-      "outstanding_amount": 801524.4400000002,
-      "overdue_amount": 801524.4400000002,
-      "projected_amount": 10010.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 585100,
+      "overdue_amount": 585100,
+      "projected_amount": 7300,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-04",
       "customer_name": "Customer-028",
-      "mtd_sales": 26900.0,
-      "gross_profit": 4280.0,
+      "mtd_sales": 19600,
+      "gross_profit": 3100,
       "gp_pct": 15.91078066914498,
-      "outstanding_amount": 16852.5,
-      "overdue_amount": 16852.5,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 12300,
+      "overdue_amount": 12300,
+      "projected_amount": 0,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-01",
       "customer_name": "Customer-029",
-      "mtd_sales": 25700.0,
-      "gross_profit": 4680.0,
+      "mtd_sales": 18800,
+      "gross_profit": 3400,
       "gp_pct": 18.21011673151751,
-      "outstanding_amount": 1042041.0,
-      "overdue_amount": 1042041.0,
-      "projected_amount": 22500.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 760700,
+      "overdue_amount": 760700,
+      "projected_amount": 16400,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-07",
       "customer_name": "Customer-030",
-      "mtd_sales": 25650.0,
-      "gross_profit": 0.0,
+      "mtd_sales": 18700,
+      "gross_profit": 0,
       "gp_pct": null,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 27000.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 0,
+      "overdue_amount": 0,
+      "projected_amount": 19700,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-03",
       "customer_name": "Customer-031",
-      "mtd_sales": 24600.0,
-      "gross_profit": 0.0,
+      "mtd_sales": 18000,
+      "gross_profit": 0,
       "gp_pct": null,
-      "outstanding_amount": 168420.0,
-      "overdue_amount": 168420.0,
-      "projected_amount": 40000.0,
-      "expectation_amount": 15400.0
+      "outstanding_amount": 122900,
+      "overdue_amount": 122900,
+      "projected_amount": 29200,
+      "expectation_amount": 11200
     },
     {
       "salesman": "SM-09",
       "customer_name": "Customer-032",
-      "mtd_sales": 24200.0,
-      "gross_profit": 0.0,
+      "mtd_sales": 17700,
+      "gross_profit": 0,
       "gp_pct": null,
-      "outstanding_amount": 140133.0,
-      "overdue_amount": 140133.0,
-      "projected_amount": 25000.0,
-      "expectation_amount": 8000.0
+      "outstanding_amount": 102300,
+      "overdue_amount": 102300,
+      "projected_amount": 18200,
+      "expectation_amount": 5800
     },
     {
       "salesman": "SM-06",
       "customer_name": "Customer-033",
-      "mtd_sales": 24000.0,
-      "gross_profit": 4500.0,
+      "mtd_sales": 17500,
+      "gross_profit": 3300,
       "gp_pct": 18.75,
-      "outstanding_amount": 847981.0,
-      "overdue_amount": 847981.0,
-      "projected_amount": 50000.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 619000,
+      "overdue_amount": 619000,
+      "projected_amount": 36500,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-05",
       "customer_name": "Customer-034",
-      "mtd_sales": 22205.0,
-      "gross_profit": 6285.0,
+      "mtd_sales": 16200,
+      "gross_profit": 4600,
       "gp_pct": 28.304435937851835,
-      "outstanding_amount": 978962.25,
-      "overdue_amount": 978962.25,
-      "projected_amount": 77750.0,
-      "expectation_amount": 10000.0
+      "outstanding_amount": 714600,
+      "overdue_amount": 714600,
+      "projected_amount": 56800,
+      "expectation_amount": 7300
     },
     {
       "salesman": "SM-04",
       "customer_name": "Customer-035",
-      "mtd_sales": 20970.0,
-      "gross_profit": 5698.0,
+      "mtd_sales": 15300,
+      "gross_profit": 4200,
       "gp_pct": 27.172150691463997,
-      "outstanding_amount": 39721167.29999999,
-      "overdue_amount": 39721167.29999999,
-      "projected_amount": 300050.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 28996500,
+      "overdue_amount": 28996500,
+      "projected_amount": 219000,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-06",
       "customer_name": "Customer-036",
-      "mtd_sales": 20480.0,
-      "gross_profit": 3639.0,
+      "mtd_sales": 15000,
+      "gross_profit": 2700,
       "gp_pct": 17.7685546875,
-      "outstanding_amount": 195688.5,
-      "overdue_amount": 195688.5,
-      "projected_amount": 20000.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 142900,
+      "overdue_amount": 142900,
+      "projected_amount": 14600,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-01",
       "customer_name": "Customer-037",
-      "mtd_sales": 20400.0,
-      "gross_profit": 10400.0,
+      "mtd_sales": 14900,
+      "gross_profit": 7600,
       "gp_pct": 50.98039215686274,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 25000.0,
-      "expectation_amount": 4600.0
+      "outstanding_amount": 0,
+      "overdue_amount": 0,
+      "projected_amount": 18200,
+      "expectation_amount": 3400
     },
     {
       "salesman": "SM-01",
       "customer_name": "Customer-038",
-      "mtd_sales": 16150.0,
-      "gross_profit": 2650.0,
+      "mtd_sales": 11800,
+      "gross_profit": 1900,
       "gp_pct": 16.408668730650156,
-      "outstanding_amount": 107959.72,
-      "overdue_amount": 107959.72,
-      "projected_amount": 16150.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 78800,
+      "overdue_amount": 78800,
+      "projected_amount": 11800,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-01",
       "customer_name": "Customer-039",
-      "mtd_sales": 16050.0,
-      "gross_profit": 4302.0,
+      "mtd_sales": 11700,
+      "gross_profit": 3100,
       "gp_pct": 26.80373831775701,
-      "outstanding_amount": 3343083.1000000006,
-      "overdue_amount": 2965200.6500000013,
-      "projected_amount": 30000.0,
-      "expectation_amount": 31000.0
+      "outstanding_amount": 2440500,
+      "overdue_amount": 2164600,
+      "projected_amount": 21900,
+      "expectation_amount": 22600
     },
     {
       "salesman": "SM-05",
       "customer_name": "Customer-040",
-      "mtd_sales": 15640.0,
-      "gross_profit": 2720.0,
+      "mtd_sales": 11400,
+      "gross_profit": 2000,
       "gp_pct": 18.758620689655174,
-      "outstanding_amount": 12421.5,
-      "overdue_amount": 12421.5,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 9100,
+      "overdue_amount": 9100,
+      "projected_amount": 0,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-11",
       "customer_name": "Customer-041",
-      "mtd_sales": 14900.0,
-      "gross_profit": 2350.0,
+      "mtd_sales": 10900,
+      "gross_profit": 1700,
       "gp_pct": 15.771812080536913,
-      "outstanding_amount": 3860568.5499999993,
-      "overdue_amount": 3860568.5499999993,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 2818200,
+      "overdue_amount": 2818200,
+      "projected_amount": 0,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-05",
       "customer_name": "Customer-042",
-      "mtd_sales": 14818.0,
-      "gross_profit": 3211.1,
+      "mtd_sales": 10800,
+      "gross_profit": 2300,
       "gp_pct": 21.67026589283304,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 35900.0,
-      "expectation_amount": 10000.0
+      "outstanding_amount": 0,
+      "overdue_amount": 0,
+      "projected_amount": 26200,
+      "expectation_amount": 7300
     },
     {
       "salesman": "SM-01",
       "customer_name": "Customer-043",
-      "mtd_sales": 14800.0,
-      "gross_profit": 3960.0,
+      "mtd_sales": 10800,
+      "gross_profit": 2900,
       "gp_pct": 46.26168224299065,
-      "outstanding_amount": 523320.0,
-      "overdue_amount": 523320.0,
-      "projected_amount": 22000.0,
-      "expectation_amount": 7200.0
+      "outstanding_amount": 382000,
+      "overdue_amount": 382000,
+      "projected_amount": 16100,
+      "expectation_amount": 5300
     },
     {
       "salesman": "SM-02",
       "customer_name": "Customer-044",
-      "mtd_sales": 13300.0,
-      "gross_profit": 0.0,
+      "mtd_sales": 9700,
+      "gross_profit": 0,
       "gp_pct": null,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 21000.0,
-      "expectation_amount": 7700.0
+      "outstanding_amount": 0,
+      "overdue_amount": 0,
+      "projected_amount": 15300,
+      "expectation_amount": 5600
     },
     {
       "salesman": "SM-06",
       "customer_name": "Customer-045",
-      "mtd_sales": 12000.0,
-      "gross_profit": 1800.0,
+      "mtd_sales": 8800,
+      "gross_profit": 1300,
       "gp_pct": 15.0,
-      "outstanding_amount": 15456.0,
-      "overdue_amount": 15456.0,
-      "projected_amount": 6300.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 11300,
+      "overdue_amount": 11300,
+      "projected_amount": 4600,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-09",
       "customer_name": "Customer-046",
-      "mtd_sales": 11020.0,
-      "gross_profit": 2632.0,
+      "mtd_sales": 8000,
+      "gross_profit": 1900,
       "gp_pct": 23.883847549909255,
-      "outstanding_amount": 58884.0,
-      "overdue_amount": 58884.0,
-      "projected_amount": 35000.0,
-      "expectation_amount": 3000.0
+      "outstanding_amount": 43000,
+      "overdue_amount": 43000,
+      "projected_amount": 25600,
+      "expectation_amount": 2200
     },
     {
       "salesman": "SM-02",
       "customer_name": "Customer-047",
-      "mtd_sales": 10185.0,
-      "gross_profit": 0.0,
+      "mtd_sales": 7400,
+      "gross_profit": 0,
       "gp_pct": null,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 0,
+      "overdue_amount": 0,
+      "projected_amount": 0,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-04",
       "customer_name": "Customer-048",
-      "mtd_sales": 8440.0,
-      "gross_profit": 1710.0,
+      "mtd_sales": 6200,
+      "gross_profit": 1200,
       "gp_pct": 20.260663507109005,
-      "outstanding_amount": 2101228.25,
-      "overdue_amount": 2101228.25,
-      "projected_amount": 99850.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 1533900,
+      "overdue_amount": 1533900,
+      "projected_amount": 72900,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-07",
       "customer_name": "Customer-049",
-      "mtd_sales": 8400.0,
-      "gross_profit": 2400.0,
+      "mtd_sales": 6100,
+      "gross_profit": 1800,
       "gp_pct": 28.57142857142857,
-      "outstanding_amount": 87412.5,
-      "overdue_amount": 87412.5,
-      "projected_amount": 53000.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 63800,
+      "overdue_amount": 63800,
+      "projected_amount": 38700,
+      "expectation_amount": 0
     },
     {
       "salesman": "SM-10",
       "customer_name": "Customer-050",
-      "mtd_sales": 7791.9,
-      "gross_profit": 1289.4,
+      "mtd_sales": 5700,
+      "gross_profit": 900,
       "gp_pct": 16.379781247221132,
-      "outstanding_amount": 2162238.0900000017,
-      "overdue_amount": 1549746.9300000006,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0
+      "outstanding_amount": 1578400,
+      "overdue_amount": 1131300,
+      "projected_amount": 0,
+      "expectation_amount": 0
     }
   ],
   "gp_alerts_top": [
@@ -1122,10 +1122,10 @@
       "customer_name": "Customer-008",
       "product_group": "SPARE PARTS",
       "product": "Product-031",
-      "costed_revenue": 1151.5,
-      "gross_profit": -663.5,
+      "costed_revenue": 800,
+      "gross_profit": -500,
       "gp_pct": -57.62049500651324,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "NEGATIVE GP",
@@ -1134,10 +1134,10 @@
       "customer_name": "Customer-008",
       "product_group": "SPARE PARTS",
       "product": "Product-032",
-      "costed_revenue": 311.5,
-      "gross_profit": -223.5,
+      "costed_revenue": 200,
+      "gross_profit": -200,
       "gp_pct": -71.74959871589085,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "NEGATIVE GP",
@@ -1146,10 +1146,10 @@
       "customer_name": "Customer-051",
       "product_group": "DEESTONE - PCR",
       "product": "Product-033",
-      "costed_revenue": 560.0,
-      "gross_profit": -20.0,
+      "costed_revenue": 400,
+      "gross_profit": 0,
       "gp_pct": -3.571428571428571,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1158,10 +1158,10 @@
       "customer_name": "Customer-052",
       "product_group": "BKT - OTR",
       "product": "Product-034",
-      "costed_revenue": 2780.0,
-      "gross_profit": 180.0,
+      "costed_revenue": 2000,
+      "gross_profit": 100,
       "gp_pct": 6.474820143884892,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1170,10 +1170,10 @@
       "customer_name": "Customer-053",
       "product_group": "UNITED-TBR",
       "product": "Product-035",
-      "costed_revenue": 3800.0,
-      "gross_profit": 100.0,
+      "costed_revenue": 2800,
+      "gross_profit": 100,
       "gp_pct": 2.631578947368421,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1182,10 +1182,10 @@
       "customer_name": "Customer-054",
       "product_group": "FORTUNE",
       "product": "Product-036",
-      "costed_revenue": 1065.0,
-      "gross_profit": 60.0,
+      "costed_revenue": 800,
+      "gross_profit": 0,
       "gp_pct": 5.633802816901409,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1194,10 +1194,10 @@
       "customer_name": "Customer-055",
       "product_group": "SPARE PARTS",
       "product": "Product-037",
-      "costed_revenue": 2310.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 1700,
+      "gross_profit": 0,
       "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1206,10 +1206,10 @@
       "customer_name": "Customer-055",
       "product_group": "NEXEN-PCR",
       "product": "Product-038",
-      "costed_revenue": 880.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 600,
+      "gross_profit": 0,
       "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1218,10 +1218,10 @@
       "customer_name": "Customer-055",
       "product_group": "SPARE PARTS",
       "product": "Product-039",
-      "costed_revenue": 320.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 200,
+      "gross_profit": 0,
       "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1230,10 +1230,10 @@
       "customer_name": "Customer-055",
       "product_group": "SPARE PARTS",
       "product": "Product-040",
-      "costed_revenue": 170.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 100,
+      "gross_profit": 0,
       "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1242,10 +1242,10 @@
       "customer_name": "Customer-055",
       "product_group": "SPARE PARTS",
       "product": "Product-041",
-      "costed_revenue": 160.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 100,
+      "gross_profit": 0,
       "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1254,10 +1254,10 @@
       "customer_name": "Customer-055",
       "product_group": "SPARE PARTS",
       "product": "Product-042",
-      "costed_revenue": 150.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 100,
+      "gross_profit": 0,
       "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1266,10 +1266,10 @@
       "customer_name": "Customer-055",
       "product_group": "SPARE PARTS",
       "product": "Product-043",
-      "costed_revenue": 130.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 100,
+      "gross_profit": 0,
       "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1278,10 +1278,10 @@
       "customer_name": "Customer-055",
       "product_group": "SPARE PARTS",
       "product": "Product-044",
-      "costed_revenue": 100.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 100,
+      "gross_profit": 0,
       "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1290,10 +1290,10 @@
       "customer_name": "Customer-055",
       "product_group": "SPARE PARTS",
       "product": "Product-045",
-      "costed_revenue": 60.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 0,
+      "gross_profit": 0,
       "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1302,10 +1302,10 @@
       "customer_name": "Customer-055",
       "product_group": "SPARE PARTS",
       "product": "Product-046",
-      "costed_revenue": 52.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 0,
+      "gross_profit": 0,
       "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1314,10 +1314,10 @@
       "customer_name": "Customer-055",
       "product_group": "SPARE PARTS",
       "product": "Product-047",
-      "costed_revenue": 50.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 0,
+      "gross_profit": 0,
       "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1326,10 +1326,10 @@
       "customer_name": "Customer-055",
       "product_group": "SPARE PARTS",
       "product": "Product-048",
-      "costed_revenue": 30.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 0,
+      "gross_profit": 0,
       "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -1338,10 +1338,10 @@
       "customer_name": "Customer-003",
       "product_group": "ITR-TBR",
       "product": "Product-026",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 0,
+      "gross_profit": 0,
       "gp_pct": null,
-      "uncosted_revenue": 23850.0
+      "uncosted_revenue": 17400
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -1350,10 +1350,10 @@
       "customer_name": "Customer-032",
       "product_group": "CEAT-TBR",
       "product": "Product-006",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 0,
+      "gross_profit": 0,
       "gp_pct": null,
-      "uncosted_revenue": 24200.0
+      "uncosted_revenue": 17700
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -1362,10 +1362,10 @@
       "customer_name": "Customer-031",
       "product_group": "CEAT-TBR",
       "product": "Product-006",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 0,
+      "gross_profit": 0,
       "gp_pct": null,
-      "uncosted_revenue": 24600.0
+      "uncosted_revenue": 18000
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -1374,10 +1374,10 @@
       "customer_name": "Customer-027",
       "product_group": "DEESTONE - PCR",
       "product": "Product-049",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 0,
+      "gross_profit": 0,
       "gp_pct": null,
-      "uncosted_revenue": 1460.0
+      "uncosted_revenue": 1100
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -1386,10 +1386,10 @@
       "customer_name": "Customer-021",
       "product_group": "CEAT-TBR",
       "product": "Product-006",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
+      "costed_revenue": 0,
+      "gross_profit": 0,
       "gp_pct": null,
-      "uncosted_revenue": 16730.0
+      "uncosted_revenue": 12200
     },
     {
       "alert_type": "LOW GP",
@@ -1398,10 +1398,10 @@
       "customer_name": "Customer-010",
       "product_group": "ITR-TBR",
       "product": "Product-003",
-      "costed_revenue": 53500.0,
-      "gross_profit": 5750.0,
+      "costed_revenue": 39100,
+      "gross_profit": 4200,
       "gp_pct": 10.74766355140187,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "LOW GP",
@@ -1410,10 +1410,10 @@
       "customer_name": "Customer-056",
       "product_group": "FIRESTONE-TBR",
       "product": "Product-050",
-      "costed_revenue": 7750.0,
-      "gross_profit": 915.0,
+      "costed_revenue": 5700,
+      "gross_profit": 700,
       "gp_pct": 11.806451612903226,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "LOW GP",
@@ -1422,10 +1422,10 @@
       "customer_name": "Customer-057",
       "product_group": "LANDSPIDER",
       "product": "Product-051",
-      "costed_revenue": 4250.0,
-      "gross_profit": 450.0,
+      "costed_revenue": 3100,
+      "gross_profit": 300,
       "gp_pct": 10.588235294117647,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "LOW GP",
@@ -1434,10 +1434,10 @@
       "customer_name": "Customer-027",
       "product_group": "GAZELLE",
       "product": "Product-052",
-      "costed_revenue": 3600.0,
-      "gross_profit": 390.0,
+      "costed_revenue": 2600,
+      "gross_profit": 300,
       "gp_pct": 10.833333333333334,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "LOW GP",
@@ -1446,10 +1446,10 @@
       "customer_name": "Customer-058",
       "product_group": "KUMHO-PCR",
       "product": "Product-053",
-      "costed_revenue": 1638.0,
-      "gross_profit": 158.0,
+      "costed_revenue": 1200,
+      "gross_profit": 100,
       "gp_pct": 9.645909645909647,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "LOW GP",
@@ -1458,10 +1458,10 @@
       "customer_name": "Customer-050",
       "product_group": "NEXEN-PCR",
       "product": "Product-054",
-      "costed_revenue": 1480.0,
-      "gross_profit": 140.0,
+      "costed_revenue": 1100,
+      "gross_profit": 100,
       "gp_pct": 9.45945945945946,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "LOW GP",
@@ -1470,10 +1470,10 @@
       "customer_name": "Customer-050",
       "product_group": "LANDSPIDER",
       "product": "Product-055",
-      "costed_revenue": 1160.0,
-      "gross_profit": 120.0,
+      "costed_revenue": 800,
+      "gross_profit": 100,
       "gp_pct": 10.344827586206897,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "LOW GP",
@@ -1482,10 +1482,10 @@
       "customer_name": "Customer-059",
       "product_group": "VELOX",
       "product": "Product-056",
-      "costed_revenue": 1060.0,
-      "gross_profit": 100.0,
+      "costed_revenue": 800,
+      "gross_profit": 100,
       "gp_pct": 9.433962264150944,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "LOW GP",
@@ -1494,10 +1494,10 @@
       "customer_name": "Customer-057",
       "product_group": "SPARE PARTS",
       "product": "Product-057",
-      "costed_revenue": 100.0,
-      "gross_profit": 10.0,
+      "costed_revenue": 100,
+      "gross_profit": 0,
       "gp_pct": 10.0,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     },
     {
       "alert_type": "LOW GP",
@@ -1506,10 +1506,10 @@
       "customer_name": "Customer-007",
       "product_group": "SPARE PARTS",
       "product": "Product-058",
-      "costed_revenue": 60.0,
-      "gross_profit": 5.0,
+      "costed_revenue": 0,
+      "gross_profit": 0,
       "gp_pct": 8.333333333333332,
-      "uncosted_revenue": 0.0
+      "uncosted_revenue": 0
     }
   ],
   "action_center_top": [
@@ -1519,7 +1519,7 @@
       "owner": "SM-16",
       "customer_name": "Customer-057",
       "product_group": null,
-      "impact_aed": 235582700.4099998,
+      "impact_aed": 171975400,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1529,7 +1529,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-060",
       "product_group": null,
-      "impact_aed": 200043606.8200009,
+      "impact_aed": 146031800,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1539,7 +1539,7 @@
       "owner": "SM-17",
       "customer_name": "Customer-061",
       "product_group": null,
-      "impact_aed": 99585715.81999996,
+      "impact_aed": 72697600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1549,7 +1549,7 @@
       "owner": "SM-12",
       "customer_name": "Customer-057",
       "product_group": null,
-      "impact_aed": 79028107.89999995,
+      "impact_aed": 57690500,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1559,7 +1559,7 @@
       "owner": "SM-12",
       "customer_name": "Customer-062",
       "product_group": null,
-      "impact_aed": 74410079.12000002,
+      "impact_aed": 54319400,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1569,7 +1569,7 @@
       "owner": "SM-18",
       "customer_name": "Customer-063",
       "product_group": null,
-      "impact_aed": 62965233.67999999,
+      "impact_aed": 45964600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1579,7 +1579,7 @@
       "owner": "SM-12",
       "customer_name": "Customer-051",
       "product_group": null,
-      "impact_aed": 57197015.29999997,
+      "impact_aed": 41753800,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1589,7 +1589,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-064",
       "product_group": null,
-      "impact_aed": 48831353.29,
+      "impact_aed": 35646900,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1599,7 +1599,7 @@
       "owner": "SM-04",
       "customer_name": "Customer-035",
       "product_group": null,
-      "impact_aed": 39721167.29999999,
+      "impact_aed": 28996500,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1609,7 +1609,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-065",
       "product_group": null,
-      "impact_aed": 29161640.480000004,
+      "impact_aed": 21288000,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1619,7 +1619,7 @@
       "owner": "SM-19",
       "customer_name": "Customer-057",
       "product_group": null,
-      "impact_aed": 26956130.770000003,
+      "impact_aed": 19678000,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1629,7 +1629,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-066",
       "product_group": null,
-      "impact_aed": 26125710.23999998,
+      "impact_aed": 19071800,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1639,7 +1639,7 @@
       "owner": "SM-17",
       "customer_name": "Customer-067",
       "product_group": null,
-      "impact_aed": 24802810.0,
+      "impact_aed": 18106100,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1649,7 +1649,7 @@
       "owner": "SM-11",
       "customer_name": "Customer-068",
       "product_group": null,
-      "impact_aed": 22828266.72,
+      "impact_aed": 16664600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1659,7 +1659,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-069",
       "product_group": null,
-      "impact_aed": 19983302.5,
+      "impact_aed": 14587800,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1669,7 +1669,7 @@
       "owner": "",
       "customer_name": "Customer-063",
       "product_group": null,
-      "impact_aed": 17915977.06,
+      "impact_aed": 13078700,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1679,7 +1679,7 @@
       "owner": "SM-20",
       "customer_name": "Customer-070",
       "product_group": null,
-      "impact_aed": 17772435.0,
+      "impact_aed": 12973900,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1689,7 +1689,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-071",
       "product_group": null,
-      "impact_aed": 16953913.990000002,
+      "impact_aed": 12376400,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1699,7 +1699,7 @@
       "owner": "SM-21",
       "customer_name": "Customer-072",
       "product_group": null,
-      "impact_aed": 16900620.0,
+      "impact_aed": 12337500,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1709,7 +1709,7 @@
       "owner": "SM-22",
       "customer_name": "Customer-007",
       "product_group": null,
-      "impact_aed": 16611363.479999974,
+      "impact_aed": 12126300,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1719,7 +1719,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-073",
       "product_group": null,
-      "impact_aed": 16601906.0,
+      "impact_aed": 12119400,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1729,7 +1729,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-074",
       "product_group": null,
-      "impact_aed": 14882746.7,
+      "impact_aed": 10864400,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1739,7 +1739,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-075",
       "product_group": null,
-      "impact_aed": 14790496.75,
+      "impact_aed": 10797100,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1749,7 +1749,7 @@
       "owner": "SM-23",
       "customer_name": "Customer-076",
       "product_group": null,
-      "impact_aed": 14752090.429999998,
+      "impact_aed": 10769000,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1759,7 +1759,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-077",
       "product_group": null,
-      "impact_aed": 13284690.0,
+      "impact_aed": 9697800,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1769,7 +1769,7 @@
       "owner": "SM-24",
       "customer_name": "Customer-078",
       "product_group": null,
-      "impact_aed": 13250300.0,
+      "impact_aed": 9672700,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1779,7 +1779,7 @@
       "owner": "SM-24",
       "customer_name": "Customer-079",
       "product_group": null,
-      "impact_aed": 12362850.5,
+      "impact_aed": 9024900,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1789,7 +1789,7 @@
       "owner": "SM-03",
       "customer_name": "Customer-080",
       "product_group": null,
-      "impact_aed": 12000000.0,
+      "impact_aed": 8760000,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1799,7 +1799,7 @@
       "owner": "SM-25",
       "customer_name": "Customer-035",
       "product_group": null,
-      "impact_aed": 11816184.14,
+      "impact_aed": 8625800,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1809,7 +1809,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-081",
       "product_group": null,
-      "impact_aed": 11664032.629999999,
+      "impact_aed": 8514700,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1819,7 +1819,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-068",
       "product_group": null,
-      "impact_aed": 11377558.850000001,
+      "impact_aed": 8305600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1829,7 +1829,7 @@
       "owner": "SM-01",
       "customer_name": "Customer-004",
       "product_group": null,
-      "impact_aed": 10760516.0,
+      "impact_aed": 7855200,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1839,7 +1839,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-082",
       "product_group": null,
-      "impact_aed": 10629528.489999987,
+      "impact_aed": 7759600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1849,7 +1849,7 @@
       "owner": "SM-12",
       "customer_name": "Customer-083",
       "product_group": null,
-      "impact_aed": 10504887.329999996,
+      "impact_aed": 7668600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1859,7 +1859,7 @@
       "owner": "SM-17",
       "customer_name": "Customer-084",
       "product_group": null,
-      "impact_aed": 10420140.0,
+      "impact_aed": 7606700,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1869,7 +1869,7 @@
       "owner": "SM-17",
       "customer_name": "Customer-085",
       "product_group": null,
-      "impact_aed": 9049241.25,
+      "impact_aed": 6605900,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1879,7 +1879,7 @@
       "owner": "SM-17",
       "customer_name": "Customer-086",
       "product_group": null,
-      "impact_aed": 8938534.889999997,
+      "impact_aed": 6525100,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1889,7 +1889,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-087",
       "product_group": null,
-      "impact_aed": 8839767.0,
+      "impact_aed": 6453000,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1899,7 +1899,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-088",
       "product_group": null,
-      "impact_aed": 8770849.93,
+      "impact_aed": 6402700,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1909,7 +1909,7 @@
       "owner": "SM-24",
       "customer_name": "Customer-089",
       "product_group": null,
-      "impact_aed": 8187081.699999997,
+      "impact_aed": 5976600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1919,7 +1919,7 @@
       "owner": "SM-17",
       "customer_name": "Customer-090",
       "product_group": null,
-      "impact_aed": 7952385.0,
+      "impact_aed": 5805200,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1929,7 +1929,7 @@
       "owner": "SM-01",
       "customer_name": "Customer-091",
       "product_group": null,
-      "impact_aed": 7797984.0,
+      "impact_aed": 5692500,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1939,7 +1939,7 @@
       "owner": "SM-21",
       "customer_name": "Customer-092",
       "product_group": null,
-      "impact_aed": 7797266.050000001,
+      "impact_aed": 5692000,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1949,7 +1949,7 @@
       "owner": "SM-04",
       "customer_name": "Customer-093",
       "product_group": null,
-      "impact_aed": 7647397.82,
+      "impact_aed": 5582600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1959,7 +1959,7 @@
       "owner": "SM-17",
       "customer_name": "Customer-094",
       "product_group": null,
-      "impact_aed": 7458697.8400000045,
+      "impact_aed": 5444800,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1969,7 +1969,7 @@
       "owner": "SM-04",
       "customer_name": "Customer-095",
       "product_group": null,
-      "impact_aed": 7275760.0,
+      "impact_aed": 5311300,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1979,7 +1979,7 @@
       "owner": "SM-11",
       "customer_name": "Customer-096",
       "product_group": null,
-      "impact_aed": 6710961.0,
+      "impact_aed": 4899000,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1989,7 +1989,7 @@
       "owner": "SM-17",
       "customer_name": "Customer-097",
       "product_group": null,
-      "impact_aed": 6694041.830000002,
+      "impact_aed": 4886700,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -1999,7 +1999,7 @@
       "owner": "SM-12",
       "customer_name": "Customer-098",
       "product_group": null,
-      "impact_aed": 6600848.1999999955,
+      "impact_aed": 4818600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2009,7 +2009,7 @@
       "owner": "SM-17",
       "customer_name": "Customer-099",
       "product_group": null,
-      "impact_aed": 6398232.849999996,
+      "impact_aed": 4670700,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2019,7 +2019,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-100",
       "product_group": null,
-      "impact_aed": 6189577.220000001,
+      "impact_aed": 4518400,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2029,7 +2029,7 @@
       "owner": "SM-04",
       "customer_name": "Customer-101",
       "product_group": null,
-      "impact_aed": 6181858.449999999,
+      "impact_aed": 4512800,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2039,7 +2039,7 @@
       "owner": "SM-04",
       "customer_name": "Customer-097",
       "product_group": null,
-      "impact_aed": 6181211.6000000015,
+      "impact_aed": 4512300,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2049,7 +2049,7 @@
       "owner": "SM-05",
       "customer_name": "Customer-102",
       "product_group": null,
-      "impact_aed": 6060397.65,
+      "impact_aed": 4424100,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2059,7 +2059,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-103",
       "product_group": null,
-      "impact_aed": 5964266.45,
+      "impact_aed": 4353900,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2069,7 +2069,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-104",
       "product_group": null,
-      "impact_aed": 5955705.0,
+      "impact_aed": 4347700,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2079,7 +2079,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-105",
       "product_group": null,
-      "impact_aed": 5945921.61,
+      "impact_aed": 4340500,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2089,7 +2089,7 @@
       "owner": "SM-26",
       "customer_name": "Customer-106",
       "product_group": null,
-      "impact_aed": 5747208.6,
+      "impact_aed": 4195500,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2099,7 +2099,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-096",
       "product_group": null,
-      "impact_aed": 5684441.5,
+      "impact_aed": 4149600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2109,7 +2109,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-107",
       "product_group": null,
-      "impact_aed": 5660229.779999999,
+      "impact_aed": 4132000,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2119,7 +2119,7 @@
       "owner": "SM-17",
       "customer_name": "Customer-108",
       "product_group": null,
-      "impact_aed": 5490697.799999995,
+      "impact_aed": 4008200,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2129,7 +2129,7 @@
       "owner": "SM-22",
       "customer_name": "Customer-109",
       "product_group": null,
-      "impact_aed": 5374156.53,
+      "impact_aed": 3923100,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2139,7 +2139,7 @@
       "owner": "SM-24",
       "customer_name": "Customer-110",
       "product_group": null,
-      "impact_aed": 5229687.75,
+      "impact_aed": 3817700,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2149,7 +2149,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-111",
       "product_group": null,
-      "impact_aed": 5113457.3,
+      "impact_aed": 3732800,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2159,7 +2159,7 @@
       "owner": "SM-24",
       "customer_name": "Customer-112",
       "product_group": null,
-      "impact_aed": 5035027.0,
+      "impact_aed": 3675600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2169,7 +2169,7 @@
       "owner": "SM-27",
       "customer_name": "Customer-113",
       "product_group": null,
-      "impact_aed": 4935964.819999999,
+      "impact_aed": 3603300,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2179,7 +2179,7 @@
       "owner": "SM-08",
       "customer_name": "Customer-007",
       "product_group": null,
-      "impact_aed": 4871381.580000001,
+      "impact_aed": 3556100,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2189,7 +2189,7 @@
       "owner": "SM-17",
       "customer_name": "Customer-114",
       "product_group": null,
-      "impact_aed": 4791565.700000002,
+      "impact_aed": 3497800,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2199,7 +2199,7 @@
       "owner": "SM-11",
       "customer_name": "Customer-115",
       "product_group": null,
-      "impact_aed": 4772716.75,
+      "impact_aed": 3484100,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2209,7 +2209,7 @@
       "owner": "SM-24",
       "customer_name": "Customer-031",
       "product_group": null,
-      "impact_aed": 4682862.800000001,
+      "impact_aed": 3418500,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2219,7 +2219,7 @@
       "owner": "SM-01",
       "customer_name": "Customer-116",
       "product_group": null,
-      "impact_aed": 4672400.0,
+      "impact_aed": 3410900,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2229,7 +2229,7 @@
       "owner": "SM-24",
       "customer_name": "Customer-117",
       "product_group": null,
-      "impact_aed": 4377300.0,
+      "impact_aed": 3195400,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2239,7 +2239,7 @@
       "owner": "SM-12",
       "customer_name": "Customer-055",
       "product_group": null,
-      "impact_aed": 4368121.349999996,
+      "impact_aed": 3188700,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2249,7 +2249,7 @@
       "owner": "SM-17",
       "customer_name": "Customer-074",
       "product_group": null,
-      "impact_aed": 4196000.38,
+      "impact_aed": 3063100,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2259,7 +2259,7 @@
       "owner": "SM-28",
       "customer_name": "Customer-078",
       "product_group": null,
-      "impact_aed": 4119850.0,
+      "impact_aed": 3007500,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2269,7 +2269,7 @@
       "owner": "SM-17",
       "customer_name": "Customer-118",
       "product_group": null,
-      "impact_aed": 4109237.5,
+      "impact_aed": 2999700,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2279,7 +2279,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-119",
       "product_group": null,
-      "impact_aed": 4099442.75,
+      "impact_aed": 2992600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2289,7 +2289,7 @@
       "owner": "SM-11",
       "customer_name": "Customer-041",
       "product_group": null,
-      "impact_aed": 3860568.5499999993,
+      "impact_aed": 2818200,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2299,7 +2299,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-120",
       "product_group": null,
-      "impact_aed": 3756165.0,
+      "impact_aed": 2742000,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2309,7 +2309,7 @@
       "owner": "SM-01",
       "customer_name": "Customer-121",
       "product_group": null,
-      "impact_aed": 3679450.0,
+      "impact_aed": 2686000,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2319,7 +2319,7 @@
       "owner": "SM-25",
       "customer_name": "Customer-101",
       "product_group": null,
-      "impact_aed": 3652648.870000001,
+      "impact_aed": 2666400,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2329,7 +2329,7 @@
       "owner": "SM-12",
       "customer_name": "Customer-122",
       "product_group": null,
-      "impact_aed": 3523597.7199999914,
+      "impact_aed": 2572200,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2339,7 +2339,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-123",
       "product_group": null,
-      "impact_aed": 3473334.81,
+      "impact_aed": 2535500,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2349,7 +2349,7 @@
       "owner": "SM-02",
       "customer_name": "Customer-019",
       "product_group": null,
-      "impact_aed": 3415718.25,
+      "impact_aed": 2493500,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2359,7 +2359,7 @@
       "owner": "SM-10",
       "customer_name": "Customer-124",
       "product_group": null,
-      "impact_aed": 3321012.079999998,
+      "impact_aed": 2424300,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2369,7 +2369,7 @@
       "owner": "SM-24",
       "customer_name": "Customer-125",
       "product_group": null,
-      "impact_aed": 3269582.99,
+      "impact_aed": 2386800,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2379,7 +2379,7 @@
       "owner": "SM-21",
       "customer_name": "Customer-126",
       "product_group": null,
-      "impact_aed": 3256656.0,
+      "impact_aed": 2377400,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2389,7 +2389,7 @@
       "owner": "SM-29",
       "customer_name": "Customer-127",
       "product_group": null,
-      "impact_aed": 3223536.0,
+      "impact_aed": 2353200,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2399,7 +2399,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-013",
       "product_group": null,
-      "impact_aed": 3164388.15,
+      "impact_aed": 2310000,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2409,7 +2409,7 @@
       "owner": "SM-10",
       "customer_name": "Customer-128",
       "product_group": null,
-      "impact_aed": 3150165.929999999,
+      "impact_aed": 2299600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2419,7 +2419,7 @@
       "owner": "SM-22",
       "customer_name": "Customer-129",
       "product_group": null,
-      "impact_aed": 3111255.54,
+      "impact_aed": 2271200,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2429,7 +2429,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-130",
       "product_group": null,
-      "impact_aed": 3076875.3899999997,
+      "impact_aed": 2246100,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2439,7 +2439,7 @@
       "owner": "SM-30",
       "customer_name": "Customer-064",
       "product_group": null,
-      "impact_aed": 3072777.4799999986,
+      "impact_aed": 2243100,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2449,7 +2449,7 @@
       "owner": "SM-06",
       "customer_name": "Customer-083",
       "product_group": null,
-      "impact_aed": 3018198.120000002,
+      "impact_aed": 2203300,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2459,7 +2459,7 @@
       "owner": "SM-27",
       "customer_name": "Customer-102",
       "product_group": null,
-      "impact_aed": 3007546.04,
+      "impact_aed": 2195500,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2469,7 +2469,7 @@
       "owner": "SM-16",
       "customer_name": "Customer-131",
       "product_group": null,
-      "impact_aed": 3003134.0,
+      "impact_aed": 2192300,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2479,7 +2479,7 @@
       "owner": "SM-01",
       "customer_name": "Customer-039",
       "product_group": null,
-      "impact_aed": 2965200.6500000013,
+      "impact_aed": 2164600,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2489,7 +2489,7 @@
       "owner": "SM-25",
       "customer_name": "Customer-095",
       "product_group": null,
-      "impact_aed": 2837700.0,
+      "impact_aed": 2071500,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2499,7 +2499,7 @@
       "owner": "SM-12",
       "customer_name": "Customer-131",
       "product_group": null,
-      "impact_aed": 2807043.75,
+      "impact_aed": 2049100,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     },
@@ -2509,10 +2509,10 @@
       "owner": "SM-06",
       "customer_name": "Customer-132",
       "product_group": null,
-      "impact_aed": 2789765.1999999993,
+      "impact_aed": 2036500,
       "recommended_action": "Collect overdue amount / verify PDC or committed payment date",
       "required_daily_value": null
     }
   ],
-  "_redaction_note": "Names anonymized; numeric values retained for UI layout testing only."
+  "_redaction_note": "Names anonymized and financial values transformed/rounded for UI layout testing only. Not source-of-truth business data."
 }

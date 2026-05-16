@@ -5,12 +5,14 @@ node_modules/
 venv/
 __pycache__/
 *.pyc
+*.egg-info/
 
 # builds
 .next/
 out/
 dist/
 build/
+*.tsbuildinfo
 .coverage
 .pytest_cache/
 
