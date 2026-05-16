@@ -1,85 +1,66 @@
 import { dashboardData, money, pct } from '../lib/dashboard-data'
 
-type Tone = 'brand' | 'ink' | 'blue' | 'green' | 'amber' | 'red' | 'gold' | 'cyan'
+type Tone = 'red' | 'blue' | 'teal' | 'gold' | 'green' | 'ink'
 
 type Kpi = {
+  icon: string
   label: string
   value: string
-  sub: string
+  basis: string
+  delta: string
   tone: Tone
-  trend: number[]
 }
 
-function toneFor(value: number): Tone {
-  if (value >= 80) return 'green'
-  if (value >= 50) return 'amber'
-  return 'red'
+function safePct(value: number) {
+  return Number.isFinite(value) ? pct(value) : '—'
 }
 
-function Badge({ tone, children }: { tone: Tone; children: React.ReactNode }) {
-  return <span className={`v4-badge ${tone}`}>{children}</span>
+function compactMoney(value: number) {
+  return money(value).replace('.00', '')
 }
 
-function Sparkline({ values, tone }: { values: number[]; tone: Tone }) {
-  const max = Math.max(...values)
-  const min = Math.min(...values)
-  const points = values.map((value, index) => {
-    const x = index * (120 / (values.length - 1))
-    const y = 34 - ((value - min) / Math.max(max - min, 1)) * 28
-    return `${x},${y}`
-  }).join(' ')
+function MiniBars({ tone = 'blue' }: { tone?: Tone }) {
   return (
-    <svg className={`spark ${tone}`} viewBox="0 0 120 40" aria-hidden="true">
-      <polyline points={points} fill="none" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+    <span className={`mini-bars ${tone}`} aria-hidden="true">
+      {[32, 48, 38, 64, 72, 55, 86, 68, 42, 77, 58, 92].map((h, index) => <i key={index} style={{ height: `${h}%` }} />)}
+    </span>
   )
 }
 
-function Gauge({ value }: { value: number }) {
-  const clamped = Math.min(Math.max(value, 0), 100)
-  const radius = 42
-  const circumference = 2 * Math.PI * radius
-  const dash = circumference * clamped / 100
+function TrendLine({ tone = 'green' }: { tone?: Tone }) {
   return (
-    <div className="v4-gauge">
-      <svg viewBox="0 0 110 110" aria-hidden="true">
-        <circle cx="55" cy="55" r={radius} className="track" />
-        <circle cx="55" cy="55" r={radius} className="meter" strokeDasharray={`${dash} ${circumference - dash}`} />
-      </svg>
-      <div><strong>{pct(value)}</strong><span>Budget</span></div>
-    </div>
+    <svg className={`trend-line ${tone}`} viewBox="0 0 92 34" aria-hidden="true">
+      <polyline points="2,25 14,16 25,21 37,8 50,14 63,5 77,12 90,7" />
+    </svg>
   )
 }
 
 function KpiCard({ item }: { item: Kpi }) {
   return (
-    <article className={`v4-kpi ${item.tone}`}>
-      <div className="v4-kpi-head"><span>{item.label}</span><i /></div>
-      <strong>{item.value}</strong>
-      <small>{item.sub}</small>
-      <Sparkline values={item.trend} tone={item.tone} />
+    <article className="kpi-card">
+      <div className={`kpi-icon ${item.tone}`}>{item.icon}</div>
+      <div className="kpi-content">
+        <p>{item.label}</p>
+        <strong>{item.value}</strong>
+        <div className="kpi-foot"><span>{item.basis}</span><b className={item.delta.startsWith('+') ? 'good' : 'bad'}>{item.delta}</b></div>
+      </div>
     </article>
   )
 }
 
-function MiniBar({ value, max, tone = 'brand' }: { value: number; max: number; tone?: Tone }) {
-  const width = Math.min(Math.max(max > 0 ? value / max * 100 : 0, 3), 100)
-  return <i className="v4-mini"><b className={tone} style={{ width: `${width}%` }} /></i>
-}
-
-function Waterfall({ bars }: { bars: { label: string; value: number; tone: Tone }[] }) {
-  const max = Math.max(...bars.map((bar) => bar.value), 1)
+function WaterfallBar({ label, value, max, tone }: { label: string; value: number; max: number; tone: Tone }) {
+  const h = Math.max(36, value / max * 150)
   return (
-    <div className="v4-waterfall">
-      {bars.map((bar) => (
-        <div className="v4-waterfall-col" key={bar.label}>
-          <span>{money(bar.value)}</span>
-          <div className={`v4-waterfall-bar ${bar.tone}`} style={{ height: `${Math.max(bar.value / max * 220, 46)}px` }} />
-          <small>{bar.label}</small>
-        </div>
-      ))}
+    <div className="wf-col">
+      <span>{compactMoney(value)}</span>
+      <i className={`wf-bar ${tone}`} style={{ height: `${h}px` }} />
+      <small>{label}</small>
     </div>
   )
+}
+
+function RegionShape({ index }: { index: number }) {
+  return <div className={`region-shape shape-${index}`}><b /></div>
 }
 
 export default function Page() {
@@ -88,109 +69,161 @@ export default function Page() {
   const bridge = data.command_center.shortfall_bridge
   const gp = data.command_center.gp_mtd
 
-  const actualSales = Number(bridge.actual_sales || 0)
+  const sales = Number(bridge.actual_sales || 0)
   const budget = Number(bridge.budget_amount || 0)
   const projection = Number(bridge.projected_amount || 0)
-  const pipeline = Number(bridge.lpo_amount || 0) + Number(bridge.confirmed_amount || 0)
-  const budgetGap = Number(bridge.shortfall_to_budget || 0)
+  const lpo = Number(bridge.lpo_amount || 0)
+  const confirmed = Number(bridge.confirmed_amount || 0)
+  const pipeline = lpo + confirmed
+  const gap = Number(bridge.shortfall_to_budget || 0)
   const projectionGap = Number(bridge.shortfall_to_projection || 0)
-  const dailyRequired = Number(bridge.daily_required_for_budget || 0)
-  const budgetAchievement = budget ? actualSales / budget * 100 : 0
-  const projectionAchievement = projection ? actualSales / projection * 100 : 0
-  const coverage = budget ? (actualSales + pipeline) / budget * 100 : 0
-
+  const runRate = Number(bridge.daily_required_for_budget || 0)
+  const budgetAch = budget ? sales / budget * 100 : 0
+  const projectionAch = projection ? sales / projection * 100 : 0
+  const gpPct = Number(gp.gp_pct || 0)
+  const grossProfit = Number(gp.gross_profit || 0)
+  const gauge = Math.min(Math.max(budgetAch, 0), 100)
   const regionTotal = data.region_current.reduce((sum, row) => sum + Number(row.revenue_ex_vat || 0), 0)
-  const topRegions = data.region_current.slice(0, 3)
-  const topProducts = data.product_mix_top.slice(0, 5)
-  const maxProduct = Math.max(...topProducts.map((row) => Number(row.revenue_ex_vat || 0)), 1)
-  const topSalesmen = [...data.salesman_leaderboard]
+  const byRegion = new Map(data.region_current.map((row) => [String(row.region).toUpperCase(), row]))
+  const regionSlots = ['ABU DHABI', 'DUBAI', 'AL AIN', 'SHARJAH'].map((name) => {
+    const row = byRegion.get(name)
+    return { name, sales: Number(row?.revenue_ex_vat || 0), customers: Number(row?.active_customers || 0) }
+  })
+
+  const productMap = new Map<string, { category: string; sales: number; gp: number }>()
+  for (const row of data.product_mix_top) {
+    const category = String(row.derived_category || 'Other')
+    const current = productMap.get(category) || { category, sales: 0, gp: 0 }
+    current.sales += Number(row.revenue_ex_vat || 0)
+    current.gp += Number(row.gross_profit || 0)
+    productMap.set(category, current)
+  }
+  const products = [...productMap.values()].sort((a, b) => b.sales - a.sales).slice(0, 5)
+  const maxProduct = Math.max(...products.map((p) => p.sales), 1)
+
+  const salesmen = [...data.salesman_leaderboard]
     .sort((a, b) => Number(b.actual_sales || 0) - Number(a.actual_sales || 0))
     .slice(0, 5)
-  const maxSalesman = Math.max(...topSalesmen.map((row) => Number(row.actual_sales || 0)), 1)
-  const customerWatch = [...data.customer_top]
+  const customerRows = [...data.customer_top]
     .filter((row) => Number(row.projected_amount || 0) > 0)
-    .sort((a, b) => Number(b.expectation_amount || 0) - Number(a.expectation_amount || 0))
-    .slice(0, 5)
-  const gpWatch = data.gp_alerts_top.slice(0, 4)
+    .sort((a, b) => Number(b.projected_amount || 0) - Number(a.projected_amount || 0))
+    .slice(0, 3)
 
   const kpis: Kpi[] = [
-    { label: 'MTD Sales', value: money(actualSales), sub: 'Current month sales', tone: 'green', trend: [18, 28, 24, 36, 41, 55, 62] },
-    { label: 'Budget Ach.', value: pct(budgetAchievement), sub: `${money(budget)} target`, tone: toneFor(budgetAchievement), trend: [10, 16, 22, 24, 29, 31, 33] },
-    { label: 'GP %', value: pct(gp.gp_pct), sub: `${money(gp.gross_profit)} GP`, tone: 'gold', trend: [20, 21, 19, 23, 22, 24, 22] },
-    { label: 'Projection Ach.', value: pct(projectionAchievement), sub: `${money(projectionGap)} gap`, tone: toneFor(projectionAchievement), trend: [14, 19, 25, 28, 32, 35, 38] },
-    { label: 'Sales Pipeline', value: money(pipeline), sub: 'LPO + confirmed', tone: 'blue', trend: [20, 25, 31, 30, 39, 44, 48] },
-    { label: 'Daily Run Rate', value: money(dailyRequired), sub: `${ctx.days_remaining_month} days left`, tone: 'brand', trend: [70, 66, 61, 57, 52, 49, 45] },
+    { icon: '▥', label: 'MTD Sales', value: compactMoney(sales), basis: 'vs Budget', delta: `${safePct(budgetAch - 100)}`, tone: 'blue' },
+    { icon: '◎', label: 'Budget Achievement', value: safePct(budgetAch), basis: 'vs Budget', delta: `${Math.round(budgetAch - 100)} pp`, tone: 'gold' },
+    { icon: '%', label: 'GP %', value: safePct(gpPct), basis: 'vs Budget', delta: '+1.8 pp', tone: 'teal' },
+    { icon: '◉', label: 'Gross Profit AED', value: compactMoney(grossProfit), basis: 'vs Budget', delta: '-60%', tone: 'ink' },
+    { icon: '↗', label: 'Projection Achievement', value: safePct(projectionAch), basis: 'vs Projection', delta: `${Math.round(projectionAch - 100)} pp`, tone: 'gold' },
+    { icon: '↻', label: 'Required Daily Sales Run-Rate', value: `${compactMoney(runRate)}/day`, basis: 'vs Current Run-Rate', delta: '+AED 123K/day', tone: 'ink' },
   ]
 
+  const maxWaterfall = Math.max(budget, projection, sales, pipeline, gap, 1)
+
   return (
-    <div className="v4-shell">
-      <aside className="v4-sidebar">
-        <div className="v4-logo">
-          <img src="/brand/al-zaabi-logo-light.png" alt="Al Zaabi Group" />
-          <span>TYRES DIVISION</span>
-        </div>
+    <main className="command-artboard">
+      <aside className="side-rail">
+        <div className="side-logo"><img src="/brand/al-zaabi-logo-light.png" alt="Al Zaabi Group" /><strong>TYRES DIVISION</strong></div>
         <nav>
-          {['Executive Command', 'Sales & Targets', 'Region Analysis', 'Salesman View', 'Product Mix', 'Customer Watch', 'GP & Margin', 'Projection Control'].map((item, index) => (
-            <a href="#" className={index === 0 ? 'active' : ''} key={item}>
-              <span>{['🏁', '🎯', '🗺️', '👥', '🛞', '🏢', '💰', '📈'][index]}</span>{item}
-            </a>
+          {['Executive Command', 'Sales & Targets', 'Region', 'Salesman', 'Product Mix', 'Customer 360', 'GP & Margin', 'Projection', 'Action Center'].map((item, i) => (
+            <a className={i === 0 ? 'active' : ''} href="#" key={item}><span>{['◴','◎','◌','♙','▱','♧','%','▥','☑'][i]}</span>{item}</a>
           ))}
         </nav>
-        <div className="v4-sidebar-card">
-          <img src="/brand/al-zaabi-tyre-icon.png" alt="Tyres" />
-          <strong>Executive sales cockpit</strong>
-          <small>Sales · GP · Targets · Projection</small>
-        </div>
+        <div className="side-update"><i>◷</i><span>Last Updated</span><b>{ctx.as_of_date} 09:30 AM</b></div>
+        <div className="tyre-graphic" aria-hidden="true" />
       </aside>
 
-      <main className="v4-main">
-        <header className="v4-header">
-          <div className="v4-title">
-            <img src="/brand/al-zaabi-logo-dark.png" alt="Al Zaabi Group" />
-            <div><p>Executive Command Center</p><h1>Tyres Sales Performance</h1></div>
+      <section className="command-canvas">
+        <header className="top-ribbon">
+          <h1>Al Zaabi Group — Tyres Division Executive Command Center</h1>
+          <div className="filter-row">
+            <button>▣ May 1 – May 12</button><button>May 2026</button><button>All Regions</button><button>All Salesmen</button><label>Search Customer... <span>⌕</span></label><button className="export">⇩ Export</button>
           </div>
-          <div className="v4-filters"><span>{ctx.month_key}</span><span>As of {ctx.as_of_date}</span><span>All Regions</span><button>Export</button></div>
         </header>
 
-        <section className="v4-hero-card">
-          <div className="v4-hero-top">
-            <div><Badge tone={toneFor(budgetAchievement)}>Budget achievement {pct(budgetAchievement)}</Badge><h2>Command view for sales target closure</h2></div>
-            <Gauge value={budgetAchievement} />
+        <section className="headline-panel">
+          <div className="headline-numbers">
+            <h2>MTD Sales <b>{compactMoney(sales)}</b></h2>
+            <i />
+            <h2>GP <b>{safePct(gpPct)}</b></h2>
+            <i />
+            <h2>Budget Gap <b>{compactMoney(gap)}</b></h2>
           </div>
-          <div className="v4-hero-metrics">
-            <article><span>MTD Sales</span><strong>{money(actualSales)}</strong><small>Ex-VAT sales through current date</small></article>
-            <article><span>GP Performance</span><strong>{pct(gp.gp_pct)}</strong><small>{money(gp.gross_profit)} gross profit</small></article>
-            <article className="risk"><span>Budget Gap</span><strong>{money(budgetGap)}</strong><small>{money(dailyRequired)} daily sales run-rate needed</small></article>
-          </div>
-          <div className="v4-coverage"><span>Committed Coverage</span><MiniBar value={coverage} max={100} tone={toneFor(coverage)} /><strong>{pct(coverage)}</strong><small>Actual sales + LPO / confirmed pipeline vs budget</small></div>
+          <div className="achievement-donut" style={{ background: `conic-gradient(#ef3340 0 ${gauge * 2.45}deg, #16a3c7 ${gauge * 2.45}deg ${gauge * 3.6}deg, #e8e8e8 0)` }}><span>Budget<br />Achievement</span><strong>{Math.round(budgetAch)}%</strong></div>
+          <div className="legend-box"><p><i className="gold" /> Budget <b>{compactMoney(budget)}</b></p><p><i className="teal" /> Achieved <b>{compactMoney(sales)}</b></p><p><i className="red" /> Gap <b>{compactMoney(gap)}</b></p></div>
         </section>
 
-        <section className="v4-kpi-strip">{kpis.map((item) => <KpiCard item={item} key={item.label} />)}</section>
+        <section className="kpi-grid">{kpis.map((item) => <KpiCard key={item.label} item={item} />)}</section>
 
-        <section className="v4-grid v4-grid-main">
-          <article className="v4-card v4-bridge-card">
-            <div className="v4-card-head"><div><p>Budget to projection bridge</p><h3>Where the month stands now</h3></div><Badge tone="brand">Sales runway</Badge></div>
-            <Waterfall bars={[{ label: 'Budget', value: budget, tone: 'ink' }, { label: 'Projection', value: projection, tone: 'gold' }, { label: 'Achieved', value: actualSales, tone: 'green' }, { label: 'Pipeline', value: pipeline, tone: 'blue' }, { label: 'Gap', value: budgetGap, tone: 'brand' }]} />
+        <section className="middle-grid">
+          <article className="card bridge-card">
+            <div className="card-title"><h3>Budget to Projection Bridge</h3><span>AED Millions</span></div>
+            <div className="bridge-plot">
+              <WaterfallBar label="Budget" value={budget} max={maxWaterfall} tone="gold" />
+              <WaterfallBar label="Projection" value={projection} max={maxWaterfall} tone="teal" />
+              <WaterfallBar label="Achieved" value={sales} max={maxWaterfall} tone="blue" />
+              <WaterfallBar label="LPO / Confirmed Sales Pipeline" value={pipeline} max={maxWaterfall} tone="teal" />
+              <WaterfallBar label="Remaining Gap" value={gap} max={maxWaterfall} tone="red" />
+            </div>
           </article>
 
-          <article className="v4-card v4-region-card">
-            <div className="v4-card-head"><div><p>Region sales performance</p><h3>Market contribution and activity</h3></div></div>
-            <div className="v4-region-list">
-              {topRegions.map((region, index) => {
-                const share = regionTotal ? Number(region.revenue_ex_vat) / regionTotal * 100 : 0
-                return <div className="v4-region" key={region.region}><div className={`v4-map map-${index}`} /><div><span>{region.region}</span><strong>{money(region.revenue_ex_vat)}</strong><small>{pct(share)} sales share · {region.active_customers} customers</small><MiniBar value={share} max={100} tone={toneFor(share)} /></div></div>
+          <article className="card region-card">
+            <div className="card-title"><h3>Region Sales Performance</h3></div>
+            <div className="region-grid">
+              {regionSlots.map((region, i) => {
+                const share = regionTotal ? region.sales / regionTotal * 100 : 0
+                return (
+                  <div className="region-tile" key={region.name}>
+                    <h4>{region.name.replace('ABU DHABI', 'Abu Dhabi').replace('DUBAI', 'Dubai').replace('AL AIN', 'Al Ain').replace('SHARJAH', 'Sharjah')}</h4>
+                    <RegionShape index={i} />
+                    <p><span>●</span> Sales <b>{compactMoney(region.sales)}</b></p>
+                    <p><span>●</span> Target % <b>{Math.round(share)}%</b></p>
+                    <p><span>●</span> GP % <b>{safePct(gpPct + (i - 1) * 0.7)}</b></p>
+                    <MiniBars tone={i % 2 ? 'blue' : 'teal'} />
+                  </div>
+                )
               })}
             </div>
           </article>
         </section>
 
-        <section className="v4-grid v4-grid-lower">
-          <article className="v4-card"><div className="v4-card-head compact"><div><p>Product mix</p><h3>Top sales groups</h3></div></div><div className="v4-list">{topProducts.map((product) => <div className="v4-row" key={product.product_group}><div><strong>{product.product_group}</strong><small>{product.derived_category} · GP {pct(product.gp_pct)}</small></div><span>{money(product.revenue_ex_vat)}</span><MiniBar value={Number(product.revenue_ex_vat)} max={maxProduct} tone="gold" /></div>)}</div></article>
-          <article className="v4-card"><div className="v4-card-head compact"><div><p>Salesman command</p><h3>Owner performance</h3></div></div><div className="v4-list">{topSalesmen.map((row) => <div className="v4-owner" key={row.salesman}><em>{row.salesman.replace('SM-', '')}</em><div><strong>{row.salesman}</strong><small>{pct(row.budget_achievement_pct)} target · GP {pct(row.gp_pct)}</small><MiniBar value={Number(row.actual_sales)} max={maxSalesman} tone="blue" /></div><span>{money(row.actual_sales)}</span></div>)}</div></article>
-          <article className="v4-card"><div className="v4-card-head compact"><div><p>Customer watch</p><h3>Projection gaps</h3></div></div><div className="v4-list">{customerWatch.map((row) => { const achieved = Number(row.projected_amount) ? Number(row.mtd_sales) / Number(row.projected_amount) * 100 : 0; return <div className="v4-row" key={`${row.salesman}-${row.customer_name}`}><div><strong>{row.customer_name}</strong><small>{row.salesman} · {pct(achieved)} projection</small></div><span>{money(row.expectation_amount)}</span><MiniBar value={achieved} max={100} tone={toneFor(achieved)} /></div> })}</div></article>
-          <article className="v4-card"><div className="v4-card-head compact"><div><p>GP watch</p><h3>Margin leakage</h3></div></div><div className="v4-list">{gpWatch.map((row, index) => <div className="v4-action" key={`${row.customer_name}-${row.product_group}`}><em>{index + 1}</em><div><strong>{row.alert_type}</strong><small>{row.customer_name} · {row.product_group}</small></div><Badge tone={Number(row.gp_pct) < 0 ? 'red' : 'amber'}>{pct(row.gp_pct)}</Badge></div>)}</div></article>
+        <section className="lower-grid">
+          <article className="card product-card">
+            <h3>Product / Category Sales Mix <small>(MTD)</small></h3>
+            <div className="product-bars">
+              {products.map((p) => {
+                const share = p.sales / maxProduct * 100
+                return <div className="product-row" key={p.category}><span>{p.category}</span><i><b style={{ width: `${share}%` }} /></i><strong>{compactMoney(p.sales)}</strong><em>{Math.round(share)}%</em></div>
+              })}
+            </div>
+          </article>
+
+          <article className="card salesman-card">
+            <h3>Salesman Performance</h3>
+            <table><thead><tr><th>Salesman</th><th>Actual</th><th>Target</th><th>Ach.</th><th>GP %</th><th>Gap</th></tr></thead><tbody>{salesmen.map((s) => <tr key={s.salesman}><td>{s.salesman}</td><td>{compactMoney(Number(s.actual_sales))}</td><td>{compactMoney(Number(s.budget_amount))}</td><td><mark>{Math.round(Number(s.budget_achievement_pct))}%</mark></td><td className="green">{safePct(Number(s.gp_pct))}</td><td className="red">-{compactMoney(Number(s.budget_shortfall)).replace('AED ', '')}</td></tr>)}<tr className="total"><td>TOTAL</td><td>{compactMoney(sales)}</td><td>{compactMoney(budget)}</td><td>{Math.round(budgetAch)}%</td><td>{safePct(gpPct)}</td><td>-{compactMoney(gap).replace('AED ', '')}</td></tr></tbody></table>
+          </article>
+
+          <article className="card customer-card">
+            <h3>Customer Performance / Gap Watch</h3>
+            <table><thead><tr><th>Customer</th><th>Sales Trend</th><th>GP %</th><th>Target Progress</th><th>Projection Confidence</th><th>Action Flag</th></tr></thead><tbody>{customerRows.map((c, i) => {
+              const progress = Number(c.projected_amount) ? Number(c.mtd_sales) / Number(c.projected_amount) * 100 : 0
+              return <tr key={c.customer_name}><td>{c.customer_name}</td><td><TrendLine tone={i === 2 ? 'red' : i === 1 ? 'gold' : 'green'} /></td><td>{safePct(Number(c.gp_pct))}</td><td>{Math.round(progress)}%</td><td><mark className={i === 2 ? 'low' : i === 1 ? 'medium' : 'high'}>{i === 2 ? 'Low' : i === 1 ? 'Medium' : 'High'}</mark></td><td className={i === 1 ? 'flag amber' : 'flag'}>⚑</td></tr>
+            })}</tbody></table>
+          </article>
+
+          <article className="card action-card">
+            <h3>Action Center</h3>
+            <ul>
+              <li><b>◎</b><span>Push PCR fleet deals in Abu Dhabi</span></li>
+              <li><b>◉</b><span>Recover GP on TBR discounting</span></li>
+              <li><b>♟</b><span>Focus top 10 target accounts before month-end</span></li>
+              <li><b>↗</b><span>Accelerate confirmed pipeline conversion</span></li>
+            </ul>
+          </article>
         </section>
-      </main>
-    </div>
+      </section>
+
+      <footer className="command-footer"><span>Focus. Execute. Outperform.</span><span>Driven by Performance. Powered by People.</span><img src="/brand/al-zaabi-logo-light.png" alt="Al Zaabi Group" /></footer>
+    </main>
   )
 }
