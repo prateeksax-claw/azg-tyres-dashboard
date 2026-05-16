@@ -59,8 +59,8 @@ function WaterfallBar({ label, value, max, tone }: { label: string; value: numbe
   )
 }
 
-function RegionShape({ index }: { index: number }) {
-  return <div className={`region-shape shape-${index}`}><b /></div>
+function RegionMapAsset({ index }: { index: number }) {
+  return <div className={`region-map-asset map-art-${index}`} aria-hidden="true" />
 }
 
 export default function Page() {
@@ -174,8 +174,7 @@ export default function Page() {
                 const share = regionTotal ? region.sales / regionTotal * 100 : 0
                 return (
                   <div className="region-tile" key={region.name}>
-                    <h4>{region.name.replace('ABU DHABI', 'Abu Dhabi').replace('DUBAI', 'Dubai').replace('AL AIN', 'Al Ain').replace('SHARJAH', 'Sharjah')}</h4>
-                    <RegionShape index={i} />
+                    <RegionMapAsset index={i} />
                     <p><span>●</span> Sales <b>{compactMoney(region.sales)}</b></p>
                     <p><span>●</span> Target % <b>{Math.round(share)}%</b></p>
                     <p><span>●</span> GP % <b>{safePct(gpPct + (i - 1) * 0.7)}</b></p>
