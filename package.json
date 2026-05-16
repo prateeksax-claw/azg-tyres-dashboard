@@ -9,10 +9,16 @@
     "typecheck": "npm run typecheck -w @azg-tyres/web",
     "lint": "npm run lint -w @azg-tyres/web",
     "test:api": "python3 -m pytest apps/api/tests",
-    "check:secrets": "python3 scripts/check_tracked_files.py"
+    "check:secrets": "python3 scripts/check_tracked_files.py",
+    "build:web": "npm run build -w @azg-tyres/web",
+    "pages:build": "npm run build -w @azg-tyres/web",
+    "pages:deploy": "npx wrangler pages deploy apps/web/out --project-name=azg-tyres-dashboard"
   },
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "engines": {
+    "node": ">=22"
+  }
 }

@@ -20,8 +20,10 @@ jobs:
         run: npm run check:secrets
       - name: Typecheck
         run: npm run typecheck
-      - name: Build web
-        run: npm run build
+      - name: Build Cloudflare Pages output
+        run: npm run pages:build
+      - name: Verify Pages output
+        run: test -f apps/web/out/index.html
 
   api:
     runs-on: ubuntu-latest
