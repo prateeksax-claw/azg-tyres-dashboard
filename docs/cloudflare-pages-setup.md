@@ -15,6 +15,9 @@ Because this is a monorepo, use repo root as the root directory.
 - Build command: `npm ci && npm run pages:build`
 - Build output directory: `apps/web/out`
 - Node version: `22`
+- Deploy command: **leave blank**
+
+Important: If Cloudflare shows a Deploy command like `npx wrangler deploy`, remove it. This is a Pages project, not a Worker deploy. Pages should upload the static output directory automatically after the build.
 
 The current frontend is a static executive cockpit. The live API will be added behind Cloudflare Tunnel/Access in the next phase.
 
@@ -52,3 +55,18 @@ npm run pages:deploy
 ```
 
 Currently this server needs `wrangler login` or a scoped `CLOUDFLARE_API_TOKEN` before CLI deployment.
+
+
+## Troubleshooting
+
+### Error: Wrangler application detection logic has been run in the root of a workspace
+
+Cause: Cloudflare is running `npx wrangler deploy` as a deploy command. That is wrong for this Git-connected Pages project.
+
+Fix in Cloudflare Pages project settings:
+
+- Build command: `npm ci && npm run pages:build`
+- Build output directory: `apps/web/out`
+- Deploy command: blank / none
+
+Then retry deployment.
