@@ -24,10 +24,13 @@ function Badge({ tone, children }: { tone: Tone; children: React.ReactNode }) {
 function KpiTile({ item }: { item: Kpi }) {
   return (
     <article className={`kpi-tile ${item.tone}`}>
-      <div className="kpi-icon">{item.icon}</div>
-      <span>{item.label}</span>
+      <div className="kpi-topline">
+        <span>{item.label}</span>
+        <i>{item.icon}</i>
+      </div>
       <strong>{item.value}</strong>
       <small>{item.sub}</small>
+      <div className="sparkline" aria-hidden="true"><b /><b /><b /><b /><b /></div>
     </article>
   )
 }
@@ -42,7 +45,7 @@ function MiniBar({ value, max, tone = 'brand' }: { value: number; max: number; t
 }
 
 function WaterfallBar({ label, value, max, tone }: { label: string; value: number; max: number; tone: Tone }) {
-  const height = Math.max(max > 0 ? value / max * 220 : 40, 42)
+  const height = Math.max(max > 0 ? value / max * 210 : 44, 44)
   return (
     <div className="waterfall-item">
       <span>{money(value)}</span>
@@ -75,21 +78,21 @@ export default function Page() {
   const maxProduct = Math.max(...topProducts.map((row) => Number(row.revenue_ex_vat || 0)), 1)
   const topSalesmen = [...data.salesman_leaderboard]
     .sort((a, b) => Number(b.actual_sales || 0) - Number(a.actual_sales || 0))
-    .slice(0, 7)
+    .slice(0, 6)
   const maxSalesman = Math.max(...topSalesmen.map((row) => Number(row.actual_sales || 0)), 1)
   const customerWatch = [...data.customer_top]
     .filter((row) => Number(row.projected_amount || 0) > 0)
     .sort((a, b) => Number(b.expectation_amount || 0) - Number(a.expectation_amount || 0))
-    .slice(0, 6)
+    .slice(0, 5)
   const gpWatch = data.gp_alerts_top.slice(0, 5)
 
   const kpis: Kpi[] = [
-    { label: 'MTD Sales', value: money(actualSales), sub: 'current month billing', icon: '↗', tone: 'green' },
-    { label: 'Budget Ach.', value: pct(budgetAchievement), sub: `${money(budget)} target`, icon: '◎', tone: perfTone(budgetAchievement) },
+    { label: 'MTD Sales', value: money(actualSales), sub: 'Current month ex-VAT', icon: '↗', tone: 'green' },
+    { label: 'Budget Ach.', value: pct(budgetAchievement), sub: `${money(budget)} official target`, icon: '◎', tone: perfTone(budgetAchievement) },
     { label: 'GP %', value: pct(gp.gp_pct), sub: `${money(gp.gross_profit)} gross profit`, icon: '◇', tone: 'gold' },
-    { label: 'Projection Ach.', value: pct(projectionAchievement), sub: `${money(projection)} projection`, icon: '◌', tone: perfTone(projectionAchievement) },
-    { label: 'Sales Pipeline', value: money(pipeline), sub: 'LPO + confirmed', icon: '▰', tone: 'blue' },
-    { label: 'Daily Pace', value: money(dailyRequired), sub: `${ctx.days_remaining_month} days remaining`, icon: '⚑', tone: 'brand' },
+    { label: 'Gross Profit', value: money(gp.gross_profit), sub: 'Costed revenue basis', icon: '◆', tone: 'dark' },
+    { label: 'Projection Ach.', value: pct(projectionAchievement), sub: `${money(projectionGap)} projection gap`, icon: '◌', tone: perfTone(projectionAchievement) },
+    { label: 'Daily Run Rate', value: money(dailyRequired), sub: `${ctx.days_remaining_month} days remaining`, icon: '⚑', tone: 'brand' },
   ]
 
   return (
@@ -131,40 +134,38 @@ export default function Page() {
           </div>
         </header>
 
-        <section className="command-hero">
-          <div className="hero-left">
-            <Badge tone={perfTone(budgetAchievement)}>Budget achievement {pct(budgetAchievement)}</Badge>
-            <h2>{money(actualSales)} Sales</h2>
-            <div className="hero-metrics">
-              <div>
-                <span>GP</span>
-                <strong>{pct(gp.gp_pct)}</strong>
-                <small>{money(gp.gross_profit)}</small>
-              </div>
-              <div>
-                <span>Budget Gap</span>
-                <strong>{money(budgetGap)}</strong>
-                <small>{money(dailyRequired)} / day</small>
-              </div>
-              <div>
-                <span>Projection</span>
-                <strong>{pct(projectionAchievement)}</strong>
-                <small>{money(projectionGap)} gap</small>
-              </div>
+        <section className="hero-board">
+          <div className="hero-board-head">
+            <div>
+              <Badge tone={perfTone(budgetAchievement)}>Budget achievement {pct(budgetAchievement)}</Badge>
+              <h2>Command view for sales target closure</h2>
+            </div>
+            <div className="compact-gauge" style={{ '--meter': `${Math.min(Math.max(budgetAchievement, 0), 100)}%` } as CSSProperties}>
+              <div><strong>{pct(budgetAchievement)}</strong><span>Budget</span></div>
             </div>
           </div>
-          <div className="hero-right">
-            <div className="big-gauge" style={{ '--meter': `${Math.min(Math.max(budgetAchievement, 0), 100)}%` } as CSSProperties}>
-              <div>
-                <strong>{pct(budgetAchievement)}</strong>
-                <span>Budget</span>
-              </div>
-            </div>
-            <div className="coverage-card">
-              <span>Committed Coverage</span>
-              <strong>{pct(coverage)}</strong>
-              <small>Actual + LPO/confirmed vs budget</small>
-            </div>
+          <div className="hero-metric-grid">
+            <article>
+              <span>MTD Sales</span>
+              <strong>{money(actualSales)}</strong>
+              <small>Ex-VAT sales through current date</small>
+            </article>
+            <article>
+              <span>GP Performance</span>
+              <strong>{pct(gp.gp_pct)}</strong>
+              <small>{money(gp.gross_profit)} gross profit</small>
+            </article>
+            <article className="risk">
+              <span>Budget Gap</span>
+              <strong>{money(budgetGap)}</strong>
+              <small>{money(dailyRequired)} daily sales run-rate needed</small>
+            </article>
+          </div>
+          <div className="hero-runway">
+            <span>Committed coverage</span>
+            <MiniBar value={coverage} max={100} tone={perfTone(coverage)} />
+            <strong>{pct(coverage)}</strong>
+            <small>Actual sales + LPO / confirmed pipeline vs budget</small>
           </div>
         </section>
 
@@ -173,13 +174,29 @@ export default function Page() {
         </section>
 
         <section className="dashboard-grid primary-grid">
+          <article className="panel-card bridge-performance">
+            <div className="panel-head">
+              <div>
+                <p>Budget to projection bridge</p>
+                <h3>Where the month stands now</h3>
+              </div>
+              <Badge tone="brand">Sales runway</Badge>
+            </div>
+            <div className="waterfall">
+              <WaterfallBar label="Budget" value={budget} max={waterfallMax} tone="dark" />
+              <WaterfallBar label="Projection" value={projection} max={waterfallMax} tone="gold" />
+              <WaterfallBar label="Achieved" value={actualSales} max={waterfallMax} tone="green" />
+              <WaterfallBar label="Pipeline" value={pipeline} max={waterfallMax} tone="blue" />
+              <WaterfallBar label="Gap" value={budgetGap} max={waterfallMax} tone="brand" />
+            </div>
+          </article>
+
           <article className="panel-card region-performance">
             <div className="panel-head">
               <div>
                 <p>Region sales performance</p>
                 <h3>Market contribution and customer activity</h3>
               </div>
-              <Badge tone="brand">Regional pulse</Badge>
             </div>
             <div className="region-map-grid">
               {data.region_current.map((region, index) => {
@@ -196,22 +213,6 @@ export default function Page() {
                   </div>
                 )
               })}
-            </div>
-          </article>
-
-          <article className="panel-card bridge-performance">
-            <div className="panel-head">
-              <div>
-                <p>Budget to projection bridge</p>
-                <h3>Where the month stands now</h3>
-              </div>
-            </div>
-            <div className="waterfall">
-              <WaterfallBar label="Budget" value={budget} max={waterfallMax} tone="dark" />
-              <WaterfallBar label="Projection" value={projection} max={waterfallMax} tone="gold" />
-              <WaterfallBar label="Achieved" value={actualSales} max={waterfallMax} tone="green" />
-              <WaterfallBar label="Pipeline" value={pipeline} max={waterfallMax} tone="blue" />
-              <WaterfallBar label="Gap" value={budgetGap} max={waterfallMax} tone="brand" />
             </div>
           </article>
         </section>
@@ -277,7 +278,7 @@ export default function Page() {
 
           <article className="panel-card action-panel">
             <div className="panel-head compact">
-              <div><p>Sales / GP actions</p><h3>Priority watchlist</h3></div>
+              <div><p>GP watch</p><h3>Margin leakage</h3></div>
             </div>
             <div className="action-list">
               {gpWatch.map((row, index) => (
