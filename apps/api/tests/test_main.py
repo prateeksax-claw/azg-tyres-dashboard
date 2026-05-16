@@ -16,5 +16,6 @@ def test_command_center_payload():
     assert response.status_code == 200
     payload = response.json()
     assert 'context' in payload
-    assert 'command_center' in payload
+    assert 'sales_command_center' in payload
+    assert 'sales_action_center' in payload
     assert payload['salesman_leaderboard']
