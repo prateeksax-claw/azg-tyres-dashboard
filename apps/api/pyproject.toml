@@ -1,0 +1,14 @@
+[project]
+name = "azg-tyres-dashboard-api"
+version = "0.1.0"
+description = "FastAPI + DuckDB semantic API for AZG Tyres Dashboard"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "duckdb",
+  "pydantic"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
