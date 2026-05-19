@@ -59,9 +59,21 @@ function WaterfallBar({ label, value, max, tone }: { label: string; value: numbe
   )
 }
 
-function RegionMapAsset({ index, region }: { index: number; region: string }) {
-  const files = ['abudhabi', 'dubai', 'alain', 'sharjah']
-  return <img className="region-map-asset" src={`/generated/azg-uae-region-${files[index]}.png`} alt={`${region} region map`} />
+function signedCompactMoney(value: number) {
+  const sign = value >= 0 ? '+' : '-'
+  return `${sign}${compactMoney(Math.abs(value)).replace('AED ', '')}`
+}
+
+function RegionMapAsset({ region }: { region: string }) {
+  const files: Record<string, string> = {
+    'ABU DHABI': 'abudhabi',
+    DUBAI: 'dubai',
+    'AL AIN': 'alain',
+    SHARJAH: 'sharjah',
+  }
+  const file = files[region.toUpperCase()]
+  if (!file) return <div className="region-map-asset region-map-fallback">{region}</div>
+  return <img className="region-map-asset" src={`/generated/azg-uae-region-${file}.png`} alt={`${region} region map`} />
 }
 
 export default function Page() {
@@ -79,17 +91,27 @@ export default function Page() {
   const gap = Number(bridge.shortfall_to_budget || 0)
   const projectionGap = Number(bridge.shortfall_to_projection || 0)
   const runRate = Number(bridge.daily_required_for_budget || 0)
+  const elapsedDays = Math.max(Number(ctx.day_of_month || 0), 1)
+  const daysInMonth = Math.max(Number(ctx.days_in_month || elapsedDays), elapsedDays)
+  const dailyTrend = sales / elapsedDays
+  const eto = dailyTrend * daysInMonth
+  const etoVariance = eto - budget
+  const etoAch = budget ? eto / budget * 100 : 0
   const budgetAch = budget ? sales / budget * 100 : 0
   const projectionAch = projection ? sales / projection * 100 : 0
   const gpPct = Number(gp.gp_pct || 0)
   const grossProfit = Number(gp.gross_profit || 0)
-  const gauge = Math.min(Math.max(budgetAch, 0), 100)
+  const gauge = Math.min(Math.max(etoAch, 0), 100)
   const regionTotal = data.region_current.reduce((sum, row) => sum + Number(row.revenue_ex_vat || 0), 0)
-  const byRegion = new Map(data.region_current.map((row) => [String(row.region).toUpperCase(), row]))
-  const regionSlots = ['ABU DHABI', 'DUBAI', 'AL AIN', 'SHARJAH'].map((name) => {
-    const row = byRegion.get(name)
-    return { name, sales: Number(row?.revenue_ex_vat || 0), customers: Number(row?.active_customers || 0) }
-  })
+  const regionSlots = [...data.region_current]
+    .map((row) => ({
+      name: String(row.region || 'Unmapped Region').toUpperCase(),
+      sales: Number(row.revenue_ex_vat || 0),
+      customers: Number(row.active_customers || 0),
+    }))
+    .filter((region) => region.sales > 0)
+    .sort((a, b) => b.sales - a.sales)
+    .slice(0, 4)
 
   const productMap = new Map<string, { category: string; sales: number; gp: number }>()
   for (const row of data.product_mix_top) {
@@ -103,32 +125,43 @@ export default function Page() {
   const maxProduct = Math.max(...products.map((p) => p.sales), 1)
 
   const salesmen = [...data.salesman_leaderboard]
+    .map((s) => {
+      const actual = Number(s.actual_sales || 0)
+      const budgetAmount = Number(s.budget_amount || 0)
+      const etoClose = actual / elapsedDays * daysInMonth
+      return {
+        ...s,
+        eto_close: etoClose,
+        eto_achievement_pct: budgetAmount ? etoClose / budgetAmount * 100 : 0,
+        eto_variance: etoClose - budgetAmount,
+      }
+    })
     .sort((a, b) => Number(b.actual_sales || 0) - Number(a.actual_sales || 0))
     .slice(0, 5)
   const customerRows = [...data.customer_top]
     .filter((row) => Number(row.projected_amount || 0) > 0)
     .sort((a, b) => Number(b.projected_amount || 0) - Number(a.projected_amount || 0))
     .slice(0, 3)
-  const largestGapOwner = [...data.salesman_leaderboard].sort((a, b) => Number(b.budget_shortfall || 0) - Number(a.budget_shortfall || 0))[0]
+  const largestEtoRisk = [...salesmen].sort((a, b) => Number(a.eto_variance || 0) - Number(b.eto_variance || 0))[0]
   const projectionWatch = [...data.customer_top]
     .filter((row) => Number(row.projected_amount || 0) > 0)
     .map((row) => ({ ...row, progress: Number(row.mtd_sales || 0) / Math.max(Number(row.projected_amount || 0), 1) * 100 }))
     .sort((a, b) => a.progress - b.progress)[0]
   const gpLeak = [...data.gp_alerts_top].sort((a, b) => Number(a.gp_pct || 0) - Number(b.gp_pct || 0))[0]
   const actionItems = [
-    `Run-rate required: ${compactMoney(runRate)} per day for ${ctx.days_remaining_month} days`,
-    `${largestGapOwner?.salesman || 'Top owner'}: close ${compactMoney(Number(largestGapOwner?.budget_shortfall || 0))} budget gap`,
+    `Trend closing ETO: ${compactMoney(eto)} (${signedCompactMoney(etoVariance)} vs budget)`,
+    `${largestEtoRisk?.salesman || 'Top owner'}: ETO risk ${signedCompactMoney(Number(largestEtoRisk?.eto_variance || 0))} vs budget`,
     `${projectionWatch?.customer_name || 'Projection watch'}: projection progress ${Math.round(Number(projectionWatch?.progress || 0))}%`,
     `${gpLeak?.salesman || 'GP watch'}: ${gpLeak?.product_group || 'margin'} GP at ${safePct(Number(gpLeak?.gp_pct || 0))}`,
   ]
 
   const kpis: Kpi[] = [
     { icon: '▥', label: 'MTD Sales', value: compactMoney(sales), basis: 'vs Budget', delta: `${safePct(budgetAch - 100)}`, tone: 'blue' },
-    { icon: '◎', label: 'Budget Achievement', value: safePct(budgetAch), basis: 'vs Budget', delta: `${Math.round(budgetAch - 100)} pp`, tone: 'gold' },
+    { icon: '◎', label: 'ETO vs Budget', value: safePct(etoAch), basis: `Close: ${compactMoney(eto)}`, delta: signedCompactMoney(etoVariance), tone: 'gold' },
     { icon: '%', label: 'GP %', value: safePct(gpPct), basis: 'vs Budget', delta: '+1.8 pp', tone: 'teal' },
     { icon: '◉', label: 'Gross Profit AED', value: compactMoney(grossProfit), basis: 'vs Budget', delta: '-60%', tone: 'ink' },
     { icon: '↗', label: 'Projection Achievement', value: safePct(projectionAch), basis: 'vs Projection', delta: `${Math.round(projectionAch - 100)} pp`, tone: 'gold' },
-    { icon: '↻', label: 'Required Daily Sales Run-Rate', value: `${compactMoney(runRate)}/day`, basis: 'vs Current Run-Rate', delta: '+AED 123K/day', tone: 'ink' },
+    { icon: '↻', label: 'Daily Needed', value: `${compactMoney(runRate)}/day`, basis: `${ctx.days_remaining_month} days left`, delta: `${signedCompactMoney(runRate - dailyTrend)}/day`, tone: 'ink' },
   ]
 
   const maxWaterfall = Math.max(budget, projection, sales, pipeline, gap, 1)
@@ -160,10 +193,10 @@ export default function Page() {
             <i />
             <h2>GP <b>{safePct(gpPct)}</b></h2>
             <i />
-            <h2>Budget Gap <b>{compactMoney(gap)}</b></h2>
+            <h2>ETO Close <b>{compactMoney(eto)}</b></h2>
           </div>
-          <div className="achievement-donut" style={{ background: `conic-gradient(#ef3340 0 ${gauge * 2.45}deg, #16a3c7 ${gauge * 2.45}deg ${gauge * 3.6}deg, #e8e8e8 0)` }}><span>Budget<br />Achievement</span><strong>{Math.round(budgetAch)}%</strong></div>
-          <div className="legend-box"><p><i className="gold" /> Budget <b>{compactMoney(budget)}</b></p><p><i className="teal" /> Achieved <b>{compactMoney(sales)}</b></p><p><i className="red" /> Gap <b>{compactMoney(gap)}</b></p></div>
+          <div className="achievement-donut" style={{ background: `conic-gradient(#ef3340 0 ${gauge * 2.45}deg, #16a3c7 ${gauge * 2.45}deg ${gauge * 3.6}deg, #e8e8e8 0)` }}><span>ETO vs<br />Budget</span><strong>{Math.round(etoAch)}%</strong></div>
+          <div className="legend-box"><p><i className="gold" /> Budget <b>{compactMoney(budget)}</b></p><p><i className="teal" /> MTD Sales <b>{compactMoney(sales)}</b></p><p><i className="red" /> ETO Var. <b>{signedCompactMoney(etoVariance)}</b></p></div>
         </section>
 
         <section className="kpi-grid">{kpis.map((item) => <KpiCard key={item.label} item={item} />)}</section>
@@ -181,13 +214,14 @@ export default function Page() {
           </article>
 
           <article className="card region-card">
-            <div className="card-title"><h3>Region Sales Performance</h3></div>
+            <div className="card-title"><h3>Top Region Sales Performance</h3></div>
             <div className="region-grid">
               {regionSlots.map((region, i) => {
                 const share = regionTotal ? region.sales / regionTotal * 100 : 0
                 return (
                   <div className="region-tile" key={region.name}>
-                    <RegionMapAsset index={i} region={region.name} />
+                    <h4>{region.name}</h4>
+                    <RegionMapAsset region={region.name} />
                     <p><span>●</span> Sales <b>{compactMoney(region.sales)}</b></p>
                     <p><span>●</span> Target % <b>{Math.round(share)}%</b></p>
                     <p><span>●</span> GP % <b>{safePct(gpPct + (i - 1) * 0.7)}</b></p>
@@ -212,7 +246,7 @@ export default function Page() {
 
           <article className="card salesman-card">
             <h3>Salesman Performance</h3>
-            <table><thead><tr><th>Salesman</th><th>Actual</th><th>Target</th><th>Ach.</th><th>GP %</th><th>Gap</th></tr></thead><tbody>{salesmen.map((s) => <tr key={s.salesman}><td>{s.salesman}</td><td>{compactMoney(Number(s.actual_sales))}</td><td>{compactMoney(Number(s.budget_amount))}</td><td><mark>{Math.round(Number(s.budget_achievement_pct))}%</mark></td><td className="green">{safePct(Number(s.gp_pct))}</td><td className="red">-{compactMoney(Number(s.budget_shortfall)).replace('AED ', '')}</td></tr>)}<tr className="total"><td>TOTAL</td><td>{compactMoney(sales)}</td><td>{compactMoney(budget)}</td><td>{Math.round(budgetAch)}%</td><td>{safePct(gpPct)}</td><td>-{compactMoney(gap).replace('AED ', '')}</td></tr></tbody></table>
+            <table><thead><tr><th>Salesman</th><th>Actual</th><th>Budget</th><th>ETO Close</th><th>ETO%</th><th>GP %</th></tr></thead><tbody>{salesmen.map((s) => <tr key={s.salesman}><td>{s.salesman}</td><td>{compactMoney(Number(s.actual_sales))}</td><td>{compactMoney(Number(s.budget_amount))}</td><td>{compactMoney(Number(s.eto_close))}</td><td><mark>{Math.round(Number(s.eto_achievement_pct))}%</mark></td><td className="green">{safePct(Number(s.gp_pct))}</td></tr>)}<tr className="total"><td>TOTAL</td><td>{compactMoney(sales)}</td><td>{compactMoney(budget)}</td><td>{compactMoney(eto)}</td><td>{Math.round(etoAch)}%</td><td>{safePct(gpPct)}</td></tr></tbody></table>
           </article>
 
           <article className="card customer-card">
