@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T21:05:18+04:00",
+  "generated_at": "2026-05-20T21:05:32+04:00",
   "context": {
     "as_of_date": "2026-05-20",
     "month_start": "2026-05-01",
@@ -598,17 +598,6 @@
       "expectation_amount": 0.0
     },
     {
-      "salesman": "BADARAN",
-      "customer_name": "NOOR AL SAHARA GEN CONTRACTING-SOLE PROPRIETORSHIP LLC",
-      "mtd_sales": 166500.0,
-      "gross_profit": 34500.0,
-      "gp_pct": 20.72072072072072,
-      "outstanding_amount": 887817.0,
-      "overdue_amount": 887817.0,
-      "projected_amount": 400000.0,
-      "expectation_amount": 233500.0
-    },
-    {
       "salesman": "VIPIN",
       "customer_name": "DAR AL DHAID BLDG MATERIAL TR",
       "mtd_sales": 166500.0,
@@ -618,6 +607,17 @@
       "overdue_amount": 7647397.82,
       "projected_amount": 150420.0,
       "expectation_amount": 0.0
+    },
+    {
+      "salesman": "BADARAN",
+      "customer_name": "NOOR AL SAHARA GEN CONTRACTING-SOLE PROPRIETORSHIP LLC",
+      "mtd_sales": 166500.0,
+      "gross_profit": 34500.0,
+      "gp_pct": 20.72072072072072,
+      "outstanding_amount": 887817.0,
+      "overdue_amount": 887817.0,
+      "projected_amount": 400000.0,
+      "expectation_amount": 233500.0
     },
     {
       "salesman": "BIJOY",
