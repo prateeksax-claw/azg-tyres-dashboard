@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T12:05:18+04:00",
+  "generated_at": "2026-05-20T12:05:37+04:00",
   "context": {
     "as_of_date": "2026-05-20",
     "month_start": "2026-05-01",
@@ -1346,54 +1346,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "ARUN RAJ",
-      "customer_name": "AL SHIRAA VEHICLE BODY IND LLC",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 16730.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "ARUN RAJ",
-      "customer_name": "POWER INTERNATIONAL LLC",
-      "product_group": "ITR-TBR",
-      "product": "1200R24 *** ITR TM909A TTF",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 23850.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "VIPIN",
-      "customer_name": "INTERNATIONAL MECHANICAL & ELECTRICAL COMPANY WLL",
-      "product_group": "DEESTONE - PCR",
-      "product": "215/70 R 16 DEESTONE",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 1460.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "SOHAIL",
-      "customer_name": "DATE QUICK TRANSPORT L.L.C",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 36700.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "BIJOY",
       "customer_name": "DUBAI READYMIX CONCRETE L.L.C",
       "product_group": "CEAT-TBR",
@@ -1426,6 +1378,54 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 1080.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "ARUN RAJ",
+      "customer_name": "POWER INTERNATIONAL LLC",
+      "product_group": "ITR-TBR",
+      "product": "1200R24 *** ITR TM909A TTF",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 23850.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "ARUN RAJ",
+      "customer_name": "AL SHIRAA VEHICLE BODY IND LLC",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 16730.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "SOHAIL",
+      "customer_name": "DATE QUICK TRANSPORT L.L.C",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 36700.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "INTERNATIONAL MECHANICAL & ELECTRICAL COMPANY WLL",
+      "product_group": "DEESTONE - PCR",
+      "product": "215/70 R 16 DEESTONE",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 1460.0
     },
     {
       "alert_type": "LOW GP",
