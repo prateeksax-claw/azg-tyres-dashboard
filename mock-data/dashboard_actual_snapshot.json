@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T20:05:30+04:00",
+  "generated_at": "2026-05-20T21:05:18+04:00",
   "context": {
     "as_of_date": "2026-05-20",
     "month_start": "2026-05-01",
@@ -304,16 +304,6 @@
       "gp_pct": 20.72072072072072
     },
     {
-      "derived_category": "PCR / LTR",
-      "derived_brand": "YARTU",
-      "product_group": "YARTU",
-      "product": "325/95R24 YARTU TTF",
-      "qty": 100.0,
-      "revenue_ex_vat": 125000.0,
-      "gross_profit": 32500.0,
-      "gp_pct": 26.0
-    },
-    {
       "derived_category": "TBR",
       "derived_brand": "CEAT",
       "product_group": "CEAT-TBR",
@@ -322,6 +312,16 @@
       "revenue_ex_vat": 125000.0,
       "gross_profit": 24000.0,
       "gp_pct": 19.2
+    },
+    {
+      "derived_category": "PCR / LTR",
+      "derived_brand": "YARTU",
+      "product_group": "YARTU",
+      "product": "325/95R24 YARTU TTF",
+      "qty": 100.0,
+      "revenue_ex_vat": 125000.0,
+      "gross_profit": 32500.0,
+      "gp_pct": 26.0
     },
     {
       "derived_category": "PCR / LTR",
