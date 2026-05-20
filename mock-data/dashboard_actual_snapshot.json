@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T14:14:02+04:00",
+  "generated_at": "2026-05-20T15:05:21+04:00",
   "context": {
     "as_of_date": "2026-05-20",
     "month_start": "2026-05-01",
@@ -669,8 +669,8 @@
       "mtd_sales": 74160.0,
       "gross_profit": 18232.4,
       "gp_pct": 24.585221143473575,
-      "outstanding_amount": 4871381.580000001,
-      "overdue_amount": 4871381.580000001,
+      "outstanding_amount": 4871381.58,
+      "overdue_amount": 4871381.58,
       "projected_amount": 89800.0,
       "expectation_amount": 0.0
     },
@@ -867,8 +867,8 @@
       "mtd_sales": 39000.0,
       "gross_profit": 9560.0,
       "gp_pct": 24.512820512820515,
-      "outstanding_amount": 237972.03000000003,
-      "overdue_amount": 237972.03000000003,
+      "outstanding_amount": 237972.03,
+      "overdue_amount": 237972.03,
       "projected_amount": 37000.0,
       "expectation_amount": 0.0
     },
@@ -944,8 +944,8 @@
       "mtd_sales": 30660.0,
       "gross_profit": 4870.0,
       "gp_pct": 16.67808219178082,
-      "outstanding_amount": 801524.4400000002,
-      "overdue_amount": 801524.4400000002,
+      "outstanding_amount": 801524.4400000001,
+      "overdue_amount": 801524.4400000001,
       "projected_amount": 10010.0,
       "expectation_amount": 0.0
     },
@@ -1065,8 +1065,8 @@
       "mtd_sales": 16150.0,
       "gross_profit": 2650.0,
       "gp_pct": 16.408668730650156,
-      "outstanding_amount": 107959.72,
-      "overdue_amount": 107959.72,
+      "outstanding_amount": 107959.71999999999,
+      "overdue_amount": 107959.71999999999,
       "projected_amount": 16150.0,
       "expectation_amount": 0.0
     },
@@ -1109,8 +1109,8 @@
       "mtd_sales": 14900.0,
       "gross_profit": 2350.0,
       "gp_pct": 15.771812080536913,
-      "outstanding_amount": 3860568.5499999993,
-      "overdue_amount": 3860568.5499999993,
+      "outstanding_amount": 3860568.549999999,
+      "overdue_amount": 3860568.549999999,
       "projected_amount": 0.0,
       "expectation_amount": 0.0
     },
