@@ -19,6 +19,20 @@ function compactMoney(value: number) {
   return money(value).replace('.00', '')
 }
 
+function formatGeneratedAt(value: string | null | undefined) {
+  if (!value) return '—'
+  const d = new Date(value)
+  if (Number.isNaN(d.getTime())) return value
+  return new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Asia/Dubai',
+    day: '2-digit',
+    month: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  }).format(d).replace(',', '')
+}
+
 function MiniBars({ tone = 'blue' }: { tone?: Tone }) {
   return (
     <span className={`mini-bars ${tone}`} aria-hidden="true">
@@ -81,6 +95,7 @@ export default function Page() {
   const ctx = data.context
   const bridge = data.command_center.shortfall_bridge
   const gp = data.command_center.gp_mtd
+  const refreshedAt = formatGeneratedAt(String(data.generated_at || ''))
 
   const sales = Number(bridge.actual_sales || 0)
   const budget = Number(bridge.budget_amount || 0)
@@ -175,7 +190,7 @@ export default function Page() {
             <a className={i === 0 ? 'active' : ''} href="#" key={item}><span>{['◴','◎','◌','♙','▱','♧','%','▥','☑'][i]}</span>{item}</a>
           ))}
         </nav>
-        <div className="side-update"><i>◷</i><span>Last Updated</span><b>{ctx.as_of_date} 09:30 AM</b></div>
+        <div className="side-update"><i>◷</i><span>Last Updated</span><b>{refreshedAt} GST</b></div>
         <div className="tyre-graphic" aria-hidden="true" />
       </aside>
 

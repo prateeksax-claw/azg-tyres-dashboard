@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-05-16T15:27:49+04:00",
+  "generated_at": "2026-05-20T10:14:15+04:00",
   "context": {
-    "as_of_date": "2026-05-16",
+    "as_of_date": "2026-05-19",
     "month_start": "2026-05-01",
     "month_end": "2026-05-31",
-    "day_of_month": 16,
+    "day_of_month": 19,
     "days_in_month": 31,
-    "days_remaining_month": 15,
+    "days_remaining_month": 12,
     "month_key": "2026-05",
     "month_num": 5,
     "year_num": 2026
   },
   "command_center": {
     "shortfall_bridge": {
-      "as_of_date": "2026-05-16",
+      "as_of_date": "2026-05-19",
       "month_key": "2026-05",
       "budget_amount": 6903750.0,
       "projected_amount": 5987805.0,
-      "actual_sales": 2294741.56,
+      "actual_sales": 2880505.1399999997,
       "lpo_amount": 448885.0,
       "confirmed_amount": 801580.0,
       "expectation_amount": 2184705.0,
-      "shortfall_to_budget": 4609008.4399999995,
-      "shortfall_to_projection": 3693063.44,
-      "daily_required_for_budget": 307267.2293333333,
-      "daily_required_for_projection": 246204.22933333332
+      "shortfall_to_budget": 4023244.8600000003,
+      "shortfall_to_projection": 3107299.8600000003,
+      "daily_required_for_budget": 335270.405,
+      "daily_required_for_projection": 258941.65500000003
     },
     "gp_mtd": {
-      "costed_revenue": 2198318.5599999996,
-      "gross_profit": 487017.24999999994,
-      "gp_pct": 22.154079889131264,
-      "uncosted_revenue": 90840.0
+      "costed_revenue": 2749582.139999999,
+      "gross_profit": 594465.63,
+      "gp_pct": 21.620217172344603,
+      "uncosted_revenue": 125420.0
     }
   },
   "monthly_trend": [
@@ -84,29 +84,39 @@
     },
     {
       "month_key": "2026-05",
-      "revenue_ex_vat": 2294741.5599999996
+      "revenue_ex_vat": 2880505.14
     }
   ],
   "salesman_leaderboard": [
     {
       "salesman": "ARUN RAJ",
       "budget_amount": 750000.0,
-      "actual_sales": 547977.76,
-      "budget_achievement_pct": 73.06370133333333,
-      "budget_shortfall": 202022.24,
-      "required_daily_run_rate": 13468.149333333333,
-      "gross_profit": 105319.08,
-      "gp_pct": 21.01515498832144
+      "actual_sales": 696387.76,
+      "budget_achievement_pct": 92.85170133333334,
+      "budget_shortfall": 53612.23999999999,
+      "required_daily_run_rate": 4467.686666666666,
+      "gross_profit": 131912.08000000002,
+      "gp_pct": 20.307670442264563
+    },
+    {
+      "salesman": "VIPIN",
+      "budget_amount": 1260000.0,
+      "actual_sales": 578343.0,
+      "budget_achievement_pct": 45.900238095238095,
+      "budget_shortfall": 681657.0,
+      "required_daily_run_rate": 56804.75,
+      "gross_profit": 97616.21,
+      "gp_pct": 17.560567601455705
     },
     {
       "salesman": "BADARAN",
       "budget_amount": 1050000.0,
-      "actual_sales": 459775.0,
-      "budget_achievement_pct": 43.78809523809524,
-      "budget_shortfall": 590225.0,
-      "required_daily_run_rate": 39348.333333333336,
-      "gross_profit": 108372.0,
-      "gp_pct": 23.570659561742158
+      "actual_sales": 494175.0,
+      "budget_achievement_pct": 47.06428571428572,
+      "budget_shortfall": 555825.0,
+      "required_daily_run_rate": 46318.75,
+      "gross_profit": 119742.0,
+      "gp_pct": 24.230687509485506
     },
     {
       "salesman": "BIJOY",
@@ -114,79 +124,69 @@
       "actual_sales": 358520.0,
       "budget_achievement_pct": 47.80266666666667,
       "budget_shortfall": 391480.0,
-      "required_daily_run_rate": 26098.666666666668,
+      "required_daily_run_rate": 32623.333333333332,
       "gross_profit": 62705.0,
       "gp_pct": 18.7784499281265
     },
     {
-      "salesman": "VIPIN",
-      "budget_amount": 1260000.0,
-      "actual_sales": 323724.0,
-      "budget_achievement_pct": 25.69238095238095,
-      "budget_shortfall": 936276.0,
-      "required_daily_run_rate": 62418.4,
-      "gross_profit": 70365.41,
-      "gp_pct": 21.83471005138644
-    },
-    {
       "salesman": "RAJATH KUMAR",
       "budget_amount": 761250.0,
-      "actual_sales": 178796.6,
-      "budget_achievement_pct": 23.487238095238098,
-      "budget_shortfall": 582453.4,
-      "required_daily_run_rate": 38830.22666666667,
-      "gross_profit": 45531.7,
-      "gp_pct": 25.62905065165043
+      "actual_sales": 196226.6,
+      "budget_achievement_pct": 25.77689326765189,
+      "budget_shortfall": 565023.4,
+      "required_daily_run_rate": 47085.28333333333,
+      "gross_profit": 50423.7,
+      "gp_pct": 25.846829049252996
     },
     {
       "salesman": "AL ZAABI",
       "budget_amount": 630000.0,
-      "actual_sales": 113398.09,
-      "budget_achievement_pct": 17.999696825396825,
-      "budget_shortfall": 516601.91000000003,
-      "required_daily_run_rate": 34440.12733333334,
-      "gross_profit": 28027.09,
-      "gp_pct": 24.715663200323746
-    },
-    {
-      "salesman": "DEEPU",
-      "budget_amount": 450000.0,
-      "actual_sales": 106038.1,
-      "budget_achievement_pct": 23.56402222222222,
-      "budget_shortfall": 343961.9,
-      "required_daily_run_rate": 22930.793333333335,
-      "gross_profit": 24261.059999999998,
-      "gp_pct": 22.879568758776323
-    },
-    {
-      "salesman": "NISHIN NIZAR",
-      "budget_amount": 472500.0,
-      "actual_sales": 94730.0,
-      "budget_achievement_pct": 20.04867724867725,
-      "budget_shortfall": 377770.0,
-      "required_daily_run_rate": 25184.666666666668,
-      "gross_profit": 24626.4,
-      "gp_pct": 25.996410851894865
+      "actual_sales": 159648.09,
+      "budget_achievement_pct": 25.340966666666663,
+      "budget_shortfall": 470351.91000000003,
+      "required_daily_run_rate": 39195.9925,
+      "gross_profit": 48717.09,
+      "gp_pct": 30.515297740173402
     },
     {
       "salesman": "SOHAIL",
       "budget_amount": 275000.0,
-      "actual_sales": 47740.0,
-      "budget_achievement_pct": 17.36,
-      "budget_shortfall": 227260.0,
-      "required_daily_run_rate": 15150.666666666666,
-      "gross_profit": 5512.0,
-      "gp_pct": 23.415463041631266
+      "actual_sales": 110090.0,
+      "budget_achievement_pct": 40.03272727272728,
+      "budget_shortfall": 164910.0,
+      "required_daily_run_rate": 13742.5,
+      "gross_profit": 16536.0,
+      "gp_pct": 22.531680065404007
+    },
+    {
+      "salesman": "DEEPU",
+      "budget_amount": 450000.0,
+      "actual_sales": 109012.39,
+      "budget_achievement_pct": 24.224975555555556,
+      "budget_shortfall": 340987.61,
+      "required_daily_run_rate": 28415.634166666667,
+      "gross_profit": 24987.85,
+      "gp_pct": 22.905218228329215
+    },
+    {
+      "salesman": "NISHIN NIZAR",
+      "budget_amount": 472500.0,
+      "actual_sales": 94849.0,
+      "budget_achievement_pct": 20.073862433862434,
+      "budget_shortfall": 377651.0,
+      "required_daily_run_rate": 31470.916666666668,
+      "gross_profit": 24666.9,
+      "gp_pct": 26.006494533416273
     },
     {
       "salesman": "NEWTYRE -OFFICE",
       "budget_amount": 26250.0,
-      "actual_sales": 38222.1,
-      "budget_achievement_pct": 145.608,
+      "actual_sales": 48251.5,
+      "budget_achievement_pct": 183.8152380952381,
       "budget_shortfall": 0.0,
       "required_daily_run_rate": 0.0,
-      "gross_profit": 8302.599999999999,
-      "gp_pct": 21.233130701420126
+      "gross_profit": 11339.499999999998,
+      "gp_pct": 23.59863896028219
     },
     {
       "salesman": "AJOY",
@@ -194,7 +194,7 @@
       "actual_sales": 16700.0,
       "budget_achievement_pct": 63.61904761904762,
       "budget_shortfall": 9550.0,
-      "required_daily_run_rate": 636.6666666666666,
+      "required_daily_run_rate": 795.8333333333334,
       "gross_profit": 2750.0,
       "gp_pct": 16.46706586826347
     },
@@ -204,7 +204,7 @@
       "actual_sales": 5255.0,
       "budget_achievement_pct": 10.00952380952381,
       "budget_shortfall": 47245.0,
-      "required_daily_run_rate": 3149.6666666666665,
+      "required_daily_run_rate": 3937.0833333333335,
       "gross_profit": 320.0,
       "gp_pct": 5.184705119896306
     },
@@ -214,7 +214,7 @@
       "actual_sales": 0.0,
       "budget_achievement_pct": 0.0,
       "budget_shortfall": 125000.0,
-      "required_daily_run_rate": 8333.333333333334,
+      "required_daily_run_rate": 10416.666666666666,
       "gross_profit": 0.0,
       "gp_pct": null
     },
@@ -224,7 +224,7 @@
       "actual_sales": 0.0,
       "budget_achievement_pct": 0.0,
       "budget_shortfall": 125000.0,
-      "required_daily_run_rate": 8333.333333333334,
+      "required_daily_run_rate": 10416.666666666666,
       "gross_profit": 0.0,
       "gp_pct": null
     },
@@ -234,7 +234,7 @@
       "actual_sales": 0.0,
       "budget_achievement_pct": 0.0,
       "budget_shortfall": 150000.0,
-      "required_daily_run_rate": 10000.0,
+      "required_daily_run_rate": 12500.0,
       "gross_profit": 0.0,
       "gp_pct": null
     }
@@ -242,25 +242,35 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 1230600.79,
-      "active_customers": 83
+      "revenue_ex_vat": 1593448.19,
+      "active_customers": 94
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 1064140.77,
-      "active_customers": 50
+      "revenue_ex_vat": 1287056.9500000004,
+      "active_customers": 61
     }
   ],
   "product_mix_top": [
+    {
+      "derived_category": "PCR / LTR",
+      "derived_brand": "ITR",
+      "product_group": "ITR-TBR",
+      "product": "325/95R24 22PR TTF ITR",
+      "qty": 321.0,
+      "revenue_ex_vat": 360000.0,
+      "gross_profit": 53445.0,
+      "gp_pct": 14.845833333333333
+    },
     {
       "derived_category": "TBR",
       "derived_brand": "CEAT",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
-      "qty": 159.0,
-      "revenue_ex_vat": 200485.0,
-      "gross_profit": 33865.28,
-      "gp_pct": 16.891677681622067
+      "qty": 169.0,
+      "revenue_ex_vat": 213485.0,
+      "gross_profit": 36355.28,
+      "gp_pct": 17.029430639154974
     },
     {
       "derived_category": "OTHER TYRES",
@@ -274,16 +284,6 @@
     },
     {
       "derived_category": "PCR / LTR",
-      "derived_brand": "ITR",
-      "product_group": "ITR-TBR",
-      "product": "325/95R24 22PR TTF ITR",
-      "qty": 120.0,
-      "revenue_ex_vat": 134500.0,
-      "gross_profit": 19900.0,
-      "gp_pct": 14.79553903345725
-    },
-    {
-      "derived_category": "PCR / LTR",
       "derived_brand": "YARTU",
       "product_group": "YARTU",
       "product": "325/95R24 YARTU TTF",
@@ -293,24 +293,34 @@
       "gp_pct": 26.0
     },
     {
-      "derived_category": "RETREAD / SERVICE",
-      "derived_brand": "HOTCURE",
-      "product_group": "HOTCURE",
-      "product": "CUSTOMER TYRE - HOTCURE",
-      "qty": 190.0,
-      "revenue_ex_vat": 74649.09,
-      "gross_profit": 36649.09,
-      "gp_pct": 49.09515976685047
-    },
-    {
       "derived_category": "PCR / LTR",
       "derived_brand": "CEAT",
       "product_group": "CEAT-TBR",
       "product": "385/65R22.5 CEAT RD218",
-      "qty": 60.0,
-      "revenue_ex_vat": 72430.0,
-      "gross_profit": 1080.0,
-      "gp_pct": 15.65217391304348
+      "qty": 86.0,
+      "revenue_ex_vat": 104830.0,
+      "gross_profit": 5460.0,
+      "gp_pct": 20.37313432835821
+    },
+    {
+      "derived_category": "OTHER TYRES",
+      "derived_brand": "BYG",
+      "product_group": "BYG",
+      "product": "2400R35 BYG",
+      "qty": 6.0,
+      "revenue_ex_vat": 78600.0,
+      "gross_profit": 12600.0,
+      "gp_pct": 16.030534351145036
+    },
+    {
+      "derived_category": "RETREAD / SERVICE",
+      "derived_brand": "HOTCURE",
+      "product_group": "HOTCURE",
+      "product": "CUSTOMER TYRE - HOTCURE",
+      "qty": 195.0,
+      "revenue_ex_vat": 76899.09,
+      "gross_profit": 37899.09,
+      "gp_pct": 49.2841852874982
     },
     {
       "derived_category": "PCR / LTR",
@@ -331,6 +341,16 @@
       "revenue_ex_vat": 69250.0,
       "gross_profit": 18020.0,
       "gp_pct": 26.021660649819495
+    },
+    {
+      "derived_category": "PCR / LTR",
+      "derived_brand": "FIRESTONE",
+      "product_group": "FIRESTONE-TBR",
+      "product": "325/95R24 FIRESTONE JAPAN",
+      "qty": 34.0,
+      "revenue_ex_vat": 56380.0,
+      "gross_profit": 8474.0,
+      "gp_pct": 15.030152536360411
     },
     {
       "derived_category": "TBR",
@@ -373,14 +393,14 @@
       "gp_pct": 13.636363636363635
     },
     {
-      "derived_category": "PCR / LTR",
-      "derived_brand": "FIRESTONE",
-      "product_group": "FIRESTONE-TBR",
-      "product": "325/95R24 FIRESTONE JAPAN",
-      "qty": 30.0,
-      "revenue_ex_vat": 49500.0,
-      "gross_profit": 7230.0,
-      "gp_pct": 14.606060606060606
+      "derived_category": "RETREAD / SERVICE",
+      "derived_brand": "RETREAD",
+      "product_group": "RETREAD",
+      "product": "CUSTOMER TYRE-RETREAD",
+      "qty": 127.0,
+      "revenue_ex_vat": 47810.0,
+      "gross_profit": 28760.0,
+      "gp_pct": 60.15477933486718
     },
     {
       "derived_category": "TBR",
@@ -401,6 +421,26 @@
       "revenue_ex_vat": 46160.0,
       "gross_profit": 9200.0,
       "gp_pct": 19.930675909878683
+    },
+    {
+      "derived_category": "TBR",
+      "derived_brand": "V",
+      "product_group": "V-GLORY",
+      "product": "1200R24 V-GLORY",
+      "qty": 45.0,
+      "revenue_ex_vat": 40350.0,
+      "gross_profit": 9975.0,
+      "gp_pct": 24.721189591078065
+    },
+    {
+      "derived_category": "TBR",
+      "derived_brand": "ITR",
+      "product_group": "ITR-TBR",
+      "product": "1200R24 20PR TTF ITR",
+      "qty": 36.0,
+      "revenue_ex_vat": 38000.0,
+      "gross_profit": 8840.0,
+      "gp_pct": 23.263157894736842
     },
     {
       "derived_category": "PCR / LTR",
@@ -453,24 +493,34 @@
       "gp_pct": 28.41507227003091
     },
     {
-      "derived_category": "OTHER TYRES",
-      "derived_brand": "BYG",
-      "product_group": "BYG",
-      "product": "2400R35 BYG",
-      "qty": 2.0,
-      "revenue_ex_vat": 26800.0,
-      "gross_profit": 4800.0,
-      "gp_pct": 17.91044776119403
+      "derived_category": "OTR",
+      "derived_brand": "ITR",
+      "product_group": "ITR - OTR",
+      "product": "26.5 R 25 ITR",
+      "qty": 4.0,
+      "revenue_ex_vat": 28750.0,
+      "gross_profit": 6250.0,
+      "gp_pct": 21.73913043478261
     },
     {
-      "derived_category": "RETREAD / SERVICE",
-      "derived_brand": "RETREAD",
-      "product_group": "RETREAD",
-      "product": "CUSTOMER TYRE-RETREAD",
-      "qty": 66.0,
-      "revenue_ex_vat": 24965.0,
-      "gross_profit": 15065.0,
-      "gp_pct": 60.344482275185264
+      "derived_category": "TBR",
+      "derived_brand": "WESTLAKE",
+      "product_group": "WESTLAKE TBR",
+      "product": "1200R24 WESTLAKE AZ272",
+      "qty": 25.0,
+      "revenue_ex_vat": 26600.0,
+      "gross_profit": 1400.0,
+      "gp_pct": 25.0
+    },
+    {
+      "derived_category": "PCR / LTR",
+      "derived_brand": "V",
+      "product_group": "V-GLORY",
+      "product": "315/80R22.5 V-GLORY",
+      "qty": 34.0,
+      "revenue_ex_vat": 24560.0,
+      "gross_profit": 6506.0,
+      "gp_pct": 26.490228013029316
     },
     {
       "derived_category": "OTR",
@@ -483,6 +533,16 @@
       "gp_pct": 15.032679738562091
     },
     {
+      "derived_category": "TBR",
+      "derived_brand": "YOKOHAMA",
+      "product_group": "YOKOHAMA --TBR",
+      "product": "750 R 16 YOKOHAMA - 12-PR",
+      "qty": 42.0,
+      "revenue_ex_vat": 24360.0,
+      "gross_profit": 6720.0,
+      "gp_pct": 27.586206896551722
+    },
+    {
       "derived_category": "PCR / LTR",
       "derived_brand": "DIAMOND BLACK",
       "product_group": "DIAMOND BLACK-TBR",
@@ -491,94 +551,51 @@
       "revenue_ex_vat": 24150.0,
       "gross_profit": 4900.0,
       "gp_pct": 20.28985507246377
-    },
-    {
-      "derived_category": "PCR / LTR",
-      "derived_brand": "ROCK",
-      "product_group": "ROCK HOLDER",
-      "product": "385/65R22.5 ROCK HOLDER",
-      "qty": 30.0,
-      "revenue_ex_vat": 24000.0,
-      "gross_profit": 4500.0,
-      "gp_pct": 18.75
-    },
-    {
-      "derived_category": "TBR",
-      "derived_brand": "ITR",
-      "product_group": "ITR-TBR",
-      "product": "1200R24 *** ITR TM909A TTF",
-      "qty": 18.0,
-      "revenue_ex_vat": 23850.0,
-      "gross_profit": 0.0,
-      "gp_pct": null
-    },
-    {
-      "derived_category": "TBR",
-      "derived_brand": "V",
-      "product_group": "V-GLORY",
-      "product": "1200R24 V-GLORY",
-      "qty": 25.0,
-      "revenue_ex_vat": 21350.0,
-      "gross_profit": 4475.0,
-      "gp_pct": 20.960187353629976
-    },
-    {
-      "derived_category": "OTR",
-      "derived_brand": "TECHKING",
-      "product_group": "TECHKING OTR",
-      "product": "1400 R 20 TECH KING",
-      "qty": 12.0,
-      "revenue_ex_vat": 21000.0,
-      "gross_profit": 7200.0,
-      "gp_pct": 34.285714285714285
-    },
-    {
-      "derived_category": "TBR",
-      "derived_brand": "ITR",
-      "product_group": "ITR-TBR",
-      "product": "1200R24 20PR TTF ITR",
-      "qty": 20.0,
-      "revenue_ex_vat": 20950.0,
-      "gross_profit": 4750.0,
-      "gp_pct": 22.673031026252982
-    },
-    {
-      "derived_category": "OTR",
-      "derived_brand": "ITR",
-      "product_group": "ITR - OTR",
-      "product": "29.5R25 ITR E4/L4",
-      "qty": 2.0,
-      "revenue_ex_vat": 20400.0,
-      "gross_profit": 10400.0,
-      "gp_pct": 50.98039215686274
     }
   ],
   "customer_top": [
+    {
+      "salesman": "ARUN RAJ",
+      "customer_name": "POWER INTERNATIONAL LLC",
+      "mtd_sales": 177670.0,
+      "gross_profit": 26220.0,
+      "gp_pct": 17.04589780262645,
+      "outstanding_amount": 301870.80000000005,
+      "overdue_amount": 301870.80000000005,
+      "projected_amount": 177670.0,
+      "expectation_amount": 0.0
+    },
+    {
+      "salesman": "VIPIN",
+      "customer_name": "DAR AL DHAID BLDG MATERIAL TR",
+      "mtd_sales": 166500.0,
+      "gross_profit": 12000.0,
+      "gp_pct": 7.207207207207207,
+      "outstanding_amount": 8146987.82,
+      "overdue_amount": 7647397.82,
+      "projected_amount": 150420.0,
+      "expectation_amount": 0.0
+    },
     {
       "salesman": "BADARAN",
       "customer_name": "NOOR AL SAHARA GEN CONTRACTING-SOLE PROPRIETORSHIP LLC",
       "mtd_sales": 166500.0,
       "gross_profit": 34500.0,
       "gp_pct": 20.72072072072072,
+      "outstanding_amount": 887817.0,
+      "overdue_amount": 887817.0,
       "projected_amount": 400000.0,
       "expectation_amount": 233500.0
     },
     {
       "salesman": "BADARAN",
       "customer_name": "AL SAHRAA CONTRACTING AND LOGISTICS SERVICES LLC",
-      "mtd_sales": 127080.0,
-      "gross_profit": 33010.0,
-      "gp_pct": 25.975763298709474,
+      "mtd_sales": 153230.0,
+      "gross_profit": 42410.0,
+      "gp_pct": 27.795254948223885,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
       "projected_amount": 0.0,
-      "expectation_amount": 0.0
-    },
-    {
-      "salesman": "ARUN RAJ",
-      "customer_name": "POWER INTERNATIONAL LLC",
-      "mtd_sales": 125870.0,
-      "gross_profit": 18420.0,
-      "gp_pct": 18.055283277788668,
-      "projected_amount": 177670.0,
       "expectation_amount": 0.0
     },
     {
@@ -587,8 +604,21 @@
       "mtd_sales": 108440.0,
       "gross_profit": 16955.0,
       "gp_pct": 15.635374400590187,
+      "outstanding_amount": 20329.5,
+      "overdue_amount": 20329.5,
       "projected_amount": 200000.0,
       "expectation_amount": 91560.0
+    },
+    {
+      "salesman": "VIPIN",
+      "customer_name": "TARGET ENGINEERING CONSTRUCTION COMPANY - SOLE PROPRIETORSH",
+      "mtd_sales": 87810.0,
+      "gross_profit": 21245.0,
+      "gp_pct": 24.194283111262955,
+      "outstanding_amount": 191875.95,
+      "overdue_amount": 191875.95,
+      "projected_amount": 49430.0,
+      "expectation_amount": 0.0
     },
     {
       "salesman": "BIJOY",
@@ -596,16 +626,20 @@
       "mtd_sales": 87500.0,
       "gross_profit": 13930.0,
       "gp_pct": 15.920000000000002,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
       "projected_amount": 0.0,
       "expectation_amount": 0.0
     },
     {
-      "salesman": "VIPIN",
-      "customer_name": "TARGET ENGINEERING CONSTRUCTION COMPANY - SOLE PROPRIETORSH",
-      "mtd_sales": 86760.0,
-      "gross_profit": 21045.0,
-      "gp_pct": 24.256569847856156,
-      "projected_amount": 49430.0,
+      "salesman": "AL ZAABI",
+      "customer_name": "TECHNICAL READYMIX CONCRETE EST TREMIX",
+      "mtd_sales": 75770.0,
+      "gross_profit": 31330.0,
+      "gp_pct": 41.348818793717825,
+      "outstanding_amount": 3190218.15,
+      "overdue_amount": 3164388.15,
+      "projected_amount": 150000.0,
       "expectation_amount": 0.0
     },
     {
@@ -614,6 +648,8 @@
       "mtd_sales": 74160.0,
       "gross_profit": 18232.4,
       "gp_pct": 24.585221143473575,
+      "outstanding_amount": 4871381.580000001,
+      "overdue_amount": 4871381.580000001,
       "projected_amount": 89800.0,
       "expectation_amount": 0.0
     },
@@ -623,7 +659,31 @@
       "mtd_sales": 68513.0,
       "gross_profit": 12603.0,
       "gp_pct": 18.39504911476654,
+      "outstanding_amount": 106995.5,
+      "overdue_amount": 92400.5,
       "projected_amount": 54000.0,
+      "expectation_amount": 0.0
+    },
+    {
+      "salesman": "VIPIN",
+      "customer_name": "AL JABER GROUP L.L.C.",
+      "mtd_sales": 62970.0,
+      "gross_profit": 10098.0,
+      "gp_pct": 24.060042887776984,
+      "outstanding_amount": 39721167.29999999,
+      "overdue_amount": 39721167.29999999,
+      "projected_amount": 300050.0,
+      "expectation_amount": 0.0
+    },
+    {
+      "salesman": "ARUN RAJ",
+      "customer_name": "RUM TRANSPORT LLC",
+      "mtd_sales": 59000.0,
+      "gross_profit": 10295.0,
+      "gp_pct": 17.449152542372882,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
+      "projected_amount": 25200.0,
       "expectation_amount": 0.0
     },
     {
@@ -632,6 +692,8 @@
       "mtd_sales": 57500.0,
       "gross_profit": 9750.0,
       "gp_pct": 16.956521739130434,
+      "outstanding_amount": 275667.0,
+      "overdue_amount": 260736.0,
       "projected_amount": 57500.0,
       "expectation_amount": 0.0
     },
@@ -641,6 +703,8 @@
       "mtd_sales": 53500.0,
       "gross_profit": 5750.0,
       "gp_pct": 10.74766355140187,
+      "outstanding_amount": 1778358.75,
+      "overdue_amount": 1670040.75,
       "projected_amount": 200000.0,
       "expectation_amount": 146500.0
     },
@@ -650,6 +714,8 @@
       "mtd_sales": 52505.0,
       "gross_profit": 11845.0,
       "gp_pct": 22.559756213693934,
+      "outstanding_amount": 427528.5,
+      "overdue_amount": 427528.5,
       "projected_amount": 90480.0,
       "expectation_amount": 0.0
     },
@@ -659,24 +725,41 @@
       "mtd_sales": 52440.0,
       "gross_profit": 8740.0,
       "gp_pct": 16.666666666666664,
+      "outstanding_amount": 1485169.5,
+      "overdue_amount": 1485169.5,
       "projected_amount": 53000.0,
       "expectation_amount": 0.0
     },
     {
-      "salesman": "AL ZAABI",
-      "customer_name": "TECHNICAL READYMIX CONCRETE EST TREMIX",
-      "mtd_sales": 51020.0,
-      "gross_profit": 16580.0,
-      "gp_pct": 32.49705997647981,
-      "projected_amount": 150000.0,
+      "salesman": "VIPIN",
+      "customer_name": "AVERDA ENVIRONMENTAL SERVICES LLC",
+      "mtd_sales": 51427.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
+      "projected_amount": 50225.0,
+      "expectation_amount": 0.0
+    },
+    {
+      "salesman": "BADARAN",
+      "customer_name": "GULF READY MIX LLC",
+      "mtd_sales": 50100.0,
+      "gross_profit": 9390.0,
+      "gp_pct": 18.742514970059883,
+      "outstanding_amount": 3415718.25,
+      "overdue_amount": 3415718.25,
+      "projected_amount": 31000.0,
       "expectation_amount": 0.0
     },
     {
       "salesman": "VIPIN",
       "customer_name": "AVERDA WASTE MANAGEMENT LLC",
-      "mtd_sales": 49740.0,
+      "mtd_sales": 49482.0,
       "gross_profit": 0.0,
       "gp_pct": null,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
       "projected_amount": 50225.0,
       "expectation_amount": 0.0
     },
@@ -686,6 +769,8 @@
       "mtd_sales": 46560.0,
       "gross_profit": 10224.0,
       "gp_pct": 21.95876288659794,
+      "outstanding_amount": 261324.0,
+      "overdue_amount": 261324.0,
       "projected_amount": 125240.0,
       "expectation_amount": 0.0
     },
@@ -695,6 +780,8 @@
       "mtd_sales": 45000.0,
       "gross_profit": 10950.0,
       "gp_pct": 24.333333333333336,
+      "outstanding_amount": 952318.5,
+      "overdue_amount": 952318.5,
       "projected_amount": 45000.0,
       "expectation_amount": 0.0
     },
@@ -704,6 +791,8 @@
       "mtd_sales": 44480.0,
       "gross_profit": 6410.0,
       "gp_pct": 14.410971223021582,
+      "outstanding_amount": 77805.5,
+      "overdue_amount": 77805.5,
       "projected_amount": 24000.0,
       "expectation_amount": 0.0
     },
@@ -713,17 +802,21 @@
       "mtd_sales": 44400.0,
       "gross_profit": 2000.0,
       "gp_pct": 13.88888888888889,
+      "outstanding_amount": 1533.0,
+      "overdue_amount": 1533.0,
       "projected_amount": 48000.0,
       "expectation_amount": 3600.0
     },
     {
-      "salesman": "BADARAN",
-      "customer_name": "GULF READY MIX LLC",
-      "mtd_sales": 43950.0,
-      "gross_profit": 8100.0,
-      "gp_pct": 18.43003412969283,
-      "projected_amount": 31000.0,
-      "expectation_amount": 0.0
+      "salesman": "SOHAIL",
+      "customer_name": "DATE QUICK TRANSPORT L.L.C",
+      "mtd_sales": 39990.0,
+      "gross_profit": 560.0,
+      "gp_pct": 17.02127659574468,
+      "outstanding_amount": 140133.0,
+      "overdue_amount": 140133.0,
+      "projected_amount": 25000.0,
+      "expectation_amount": 8000.0
     },
     {
       "salesman": "BADARAN",
@@ -731,6 +824,8 @@
       "mtd_sales": 39550.0,
       "gross_profit": 0.0,
       "gp_pct": null,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
       "projected_amount": 49900.0,
       "expectation_amount": 0.0
     },
@@ -740,6 +835,8 @@
       "mtd_sales": 39230.0,
       "gross_profit": 3982.3199999999997,
       "gp_pct": 17.699199999999998,
+      "outstanding_amount": 1399287.75,
+      "overdue_amount": 1256283.0,
       "projected_amount": 59480.0,
       "expectation_amount": 0.0
     },
@@ -749,25 +846,31 @@
       "mtd_sales": 39000.0,
       "gross_profit": 9560.0,
       "gp_pct": 24.512820512820515,
+      "outstanding_amount": 237972.03000000003,
+      "overdue_amount": 237972.03000000003,
       "projected_amount": 37000.0,
       "expectation_amount": 0.0
     },
     {
       "salesman": "RAJATH KUMAR",
       "customer_name": "SYNAXIS READYMIX",
-      "mtd_sales": 35500.0,
-      "gross_profit": 9600.0,
-      "gp_pct": 27.042253521126757,
+      "mtd_sales": 36940.0,
+      "gross_profit": 10000.0,
+      "gp_pct": 27.070925825663238,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
       "projected_amount": 52000.0,
       "expectation_amount": 10000.0
     },
     {
       "salesman": "VIPIN",
-      "customer_name": "AVERDA ENVIRONMENTAL SERVICES LLC",
-      "mtd_sales": 34950.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "projected_amount": 50225.0,
+      "customer_name": "NAEL & BIN HARMAL HYDROEXPORT LLC",
+      "mtd_sales": 35870.0,
+      "gross_profit": 8230.0,
+      "gp_pct": 22.943964315584054,
+      "outstanding_amount": 2101228.25,
+      "overdue_amount": 2101228.25,
+      "projected_amount": 99850.0,
       "expectation_amount": 0.0
     },
     {
@@ -776,6 +879,8 @@
       "mtd_sales": 31570.0,
       "gross_profit": 18470.0,
       "gp_pct": 58.504909724421914,
+      "outstanding_amount": 116130.0,
+      "overdue_amount": 93387.0,
       "projected_amount": 0.0,
       "expectation_amount": 0.0
     },
@@ -785,6 +890,8 @@
       "mtd_sales": 30835.0,
       "gross_profit": 6130.0,
       "gp_pct": 19.880006486135883,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
       "projected_amount": 39300.0,
       "expectation_amount": 0.0
     },
@@ -794,6 +901,8 @@
       "mtd_sales": 30660.0,
       "gross_profit": 4870.0,
       "gp_pct": 16.67808219178082,
+      "outstanding_amount": 801524.4400000002,
+      "overdue_amount": 801524.4400000002,
       "projected_amount": 10010.0,
       "expectation_amount": 0.0
     },
@@ -803,6 +912,19 @@
       "mtd_sales": 26900.0,
       "gross_profit": 4280.0,
       "gp_pct": 15.91078066914498,
+      "outstanding_amount": 16852.5,
+      "overdue_amount": 16852.5,
+      "projected_amount": 0.0,
+      "expectation_amount": 0.0
+    },
+    {
+      "salesman": "SOHAIL",
+      "customer_name": "JASBIR JAMMU TRANSPORT BY HEAVY TRUCKS )L.L.C(",
+      "mtd_sales": 26500.0,
+      "gross_profit": 6180.0,
+      "gp_pct": 23.32075471698113,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
       "projected_amount": 0.0,
       "expectation_amount": 0.0
     },
@@ -812,6 +934,8 @@
       "mtd_sales": 25700.0,
       "gross_profit": 4680.0,
       "gp_pct": 18.21011673151751,
+      "outstanding_amount": 1042041.0,
+      "overdue_amount": 1042041.0,
       "projected_amount": 22500.0,
       "expectation_amount": 0.0
     },
@@ -821,6 +945,8 @@
       "mtd_sales": 25650.0,
       "gross_profit": 0.0,
       "gp_pct": null,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
       "projected_amount": 27000.0,
       "expectation_amount": 0.0
     },
@@ -830,17 +956,10 @@
       "mtd_sales": 24600.0,
       "gross_profit": 0.0,
       "gp_pct": null,
+      "outstanding_amount": 168420.0,
+      "overdue_amount": 168420.0,
       "projected_amount": 40000.0,
       "expectation_amount": 15400.0
-    },
-    {
-      "salesman": "SOHAIL",
-      "customer_name": "DATE QUICK TRANSPORT L.L.C",
-      "mtd_sales": 24200.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "projected_amount": 25000.0,
-      "expectation_amount": 8000.0
     },
     {
       "salesman": "AL ZAABI",
@@ -848,25 +967,31 @@
       "mtd_sales": 24000.0,
       "gross_profit": 4500.0,
       "gp_pct": 18.75,
+      "outstanding_amount": 847981.0,
+      "overdue_amount": 847981.0,
       "projected_amount": 50000.0,
       "expectation_amount": 0.0
     },
     {
       "salesman": "RAJATH KUMAR",
       "customer_name": "CARDIFF GENERAL TRANSPORT-LLC-OPC",
-      "mtd_sales": 22205.0,
-      "gross_profit": 6285.0,
-      "gp_pct": 28.304435937851835,
+      "mtd_sales": 23745.0,
+      "gross_profit": 6765.0,
+      "gp_pct": 28.490208464939986,
+      "outstanding_amount": 978962.25,
+      "overdue_amount": 978962.25,
       "projected_amount": 77750.0,
       "expectation_amount": 10000.0
     },
     {
-      "salesman": "VIPIN",
-      "customer_name": "AL JABER GROUP L.L.C.",
-      "mtd_sales": 20970.0,
-      "gross_profit": 5698.0,
-      "gp_pct": 27.172150691463997,
-      "projected_amount": 300050.0,
+      "salesman": "ARUN RAJ",
+      "customer_name": "DUBAI PRECAST LLC",
+      "mtd_sales": 22180.0,
+      "gross_profit": 4328.0,
+      "gp_pct": 19.513074842200183,
+      "outstanding_amount": 121868.25,
+      "overdue_amount": 121868.25,
+      "projected_amount": 25000.0,
       "expectation_amount": 0.0
     },
     {
@@ -875,6 +1000,8 @@
       "mtd_sales": 20480.0,
       "gross_profit": 3639.0,
       "gp_pct": 17.7685546875,
+      "outstanding_amount": 195688.5,
+      "overdue_amount": 195688.5,
       "projected_amount": 20000.0,
       "expectation_amount": 0.0
     },
@@ -884,8 +1011,21 @@
       "mtd_sales": 20400.0,
       "gross_profit": 10400.0,
       "gp_pct": 50.98039215686274,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
       "projected_amount": 25000.0,
       "expectation_amount": 4600.0
+    },
+    {
+      "salesman": "AL ZAABI",
+      "customer_name": "XTRAMIX CONCRETE SOLUTION L.L.C",
+      "mtd_sales": 19000.0,
+      "gross_profit": 5500.0,
+      "gp_pct": 28.947368421052634,
+      "outstanding_amount": 17307975.25,
+      "overdue_amount": 16601906.0,
+      "projected_amount": 50000.0,
+      "expectation_amount": 50000.0
     },
     {
       "salesman": "ARUN RAJ",
@@ -893,6 +1033,8 @@
       "mtd_sales": 16150.0,
       "gross_profit": 2650.0,
       "gp_pct": 16.408668730650156,
+      "outstanding_amount": 107959.72,
+      "overdue_amount": 107959.72,
       "projected_amount": 16150.0,
       "expectation_amount": 0.0
     },
@@ -902,6 +1044,8 @@
       "mtd_sales": 16050.0,
       "gross_profit": 4302.0,
       "gp_pct": 26.80373831775701,
+      "outstanding_amount": 3343083.1000000006,
+      "overdue_amount": 2965200.6500000013,
       "projected_amount": 30000.0,
       "expectation_amount": 31000.0
     },
@@ -911,8 +1055,21 @@
       "mtd_sales": 15640.0,
       "gross_profit": 2720.0,
       "gp_pct": 18.758620689655174,
+      "outstanding_amount": 12421.5,
+      "overdue_amount": 12421.5,
       "projected_amount": 0.0,
       "expectation_amount": 0.0
+    },
+    {
+      "salesman": "BADARAN",
+      "customer_name": "WESTERN BAINOONA GROUP FOR GEN CON L.L.C-SPC",
+      "mtd_sales": 15400.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
+      "projected_amount": 21000.0,
+      "expectation_amount": 7700.0
     },
     {
       "salesman": "AJOY",
@@ -920,6 +1077,8 @@
       "mtd_sales": 14900.0,
       "gross_profit": 2350.0,
       "gp_pct": 15.771812080536913,
+      "outstanding_amount": 3860568.5499999993,
+      "overdue_amount": 3860568.5499999993,
       "projected_amount": 0.0,
       "expectation_amount": 0.0
     },
@@ -929,6 +1088,8 @@
       "mtd_sales": 14818.0,
       "gross_profit": 3211.1,
       "gp_pct": 21.67026589283304,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
       "projected_amount": 35900.0,
       "expectation_amount": 10000.0
     },
@@ -938,71 +1099,10 @@
       "mtd_sales": 14800.0,
       "gross_profit": 3960.0,
       "gp_pct": 46.26168224299065,
+      "outstanding_amount": 523320.0,
+      "overdue_amount": 523320.0,
       "projected_amount": 22000.0,
       "expectation_amount": 7200.0
-    },
-    {
-      "salesman": "BADARAN",
-      "customer_name": "WESTERN BAINOONA GROUP FOR GEN CON L.L.C-SPC",
-      "mtd_sales": 13300.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "projected_amount": 21000.0,
-      "expectation_amount": 7700.0
-    },
-    {
-      "salesman": "AL ZAABI",
-      "customer_name": "ABU DHABI PRECAST L.L.C",
-      "mtd_sales": 12000.0,
-      "gross_profit": 1800.0,
-      "gp_pct": 15.0,
-      "projected_amount": 6300.0,
-      "expectation_amount": 0.0
-    },
-    {
-      "salesman": "SOHAIL",
-      "customer_name": "INTERNATIONAL FOUNDATION GROUP LLC",
-      "mtd_sales": 11020.0,
-      "gross_profit": 2632.0,
-      "gp_pct": 23.883847549909255,
-      "projected_amount": 35000.0,
-      "expectation_amount": 3000.0
-    },
-    {
-      "salesman": "BADARAN",
-      "customer_name": "AL MASAOOD TRUCKS & HEAVY EQUIPMENT LLC",
-      "mtd_sales": 10185.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0
-    },
-    {
-      "salesman": "VIPIN",
-      "customer_name": "NAEL & BIN HARMAL HYDROEXPORT LLC",
-      "mtd_sales": 8440.0,
-      "gross_profit": 1710.0,
-      "gp_pct": 20.260663507109005,
-      "projected_amount": 99850.0,
-      "expectation_amount": 0.0
-    },
-    {
-      "salesman": "DEEPU",
-      "customer_name": "A S G C AUTO REPAIR L.L.C",
-      "mtd_sales": 8400.0,
-      "gross_profit": 2400.0,
-      "gp_pct": 28.57142857142857,
-      "projected_amount": 53000.0,
-      "expectation_amount": 0.0
-    },
-    {
-      "salesman": "NEWTYRE -OFFICE",
-      "customer_name": "CARD CUSTOMER",
-      "mtd_sales": 7791.9,
-      "gross_profit": 1289.4,
-      "gp_pct": 16.379781247221132,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0
     }
   ],
   "gp_alerts_top": [
@@ -1015,7 +1115,8 @@
       "product": "SATA ST01133SC 1inch DRIVE HEAVY DUTY AIR IMPACT WRENCH 400",
       "costed_revenue": 1151.5,
       "gross_profit": -663.5,
-      "gp_pct": -57.62049500651324
+      "gp_pct": -57.62049500651324,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "NEGATIVE GP",
@@ -1026,7 +1127,8 @@
       "product": "SATA ST01119 1/2\" DRIVE AIR IMPACT WRENCH 105 NM",
       "costed_revenue": 311.5,
       "gross_profit": -223.5,
-      "gp_pct": -71.74959871589085
+      "gp_pct": -71.74959871589085,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "NEGATIVE GP",
@@ -1037,7 +1139,8 @@
       "product": "205 R 16 DEESTONE",
       "costed_revenue": 560.0,
       "gross_profit": -20.0,
-      "gp_pct": -3.571428571428571
+      "gp_pct": -3.571428571428571,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1048,7 +1151,8 @@
       "product": "16.9-24 BKT",
       "costed_revenue": 2780.0,
       "gross_profit": 180.0,
-      "gp_pct": 6.474820143884892
+      "gp_pct": 6.474820143884892,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1059,7 +1163,8 @@
       "product": "315/80R22.5 -UNITED",
       "costed_revenue": 3800.0,
       "gross_profit": 100.0,
-      "gp_pct": 2.631578947368421
+      "gp_pct": 2.631578947368421,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1070,7 +1175,8 @@
       "product": "750R16 FORTUNE",
       "costed_revenue": 1065.0,
       "gross_profit": 60.0,
-      "gp_pct": 5.633802816901409
+      "gp_pct": 5.633802816901409,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1081,7 +1187,8 @@
       "product": "R134 AC GAS HONEYWELL",
       "costed_revenue": 2310.0,
       "gross_profit": 0.0,
-      "gp_pct": 0.0
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1092,7 +1199,8 @@
       "product": "275/40R20 NEXEN",
       "costed_revenue": 880.0,
       "gross_profit": 0.0,
-      "gp_pct": 0.0
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1103,7 +1211,8 @@
       "product": "Z3F-STD-HART PISTON ASSY\n",
       "costed_revenue": 320.0,
       "gross_profit": 0.0,
-      "gp_pct": 0.0
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1114,7 +1223,8 @@
       "product": "Z3FN-STD-TP PISTON RING\n",
       "costed_revenue": 170.0,
       "gross_profit": 0.0,
-      "gp_pct": 0.0
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1125,7 +1235,8 @@
       "product": "Z11210-6CA0A BB MOUNTING ENGINE",
       "costed_revenue": 160.0,
       "gross_profit": 0.0,
-      "gp_pct": 0.0
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1136,7 +1247,8 @@
       "product": "Z11220-6CA0A BB MOUNTING ENGINE\n",
       "costed_revenue": 150.0,
       "gross_profit": 0.0,
-      "gp_pct": 0.0
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1147,7 +1259,8 @@
       "product": "Z04111-61052 TKN GASKET FULL\n",
       "costed_revenue": 130.0,
       "gross_profit": 0.0,
-      "gp_pct": 0.0
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1158,7 +1271,8 @@
       "product": "Z11360-6CA0A BB MOUNTING ENGINE\n",
       "costed_revenue": 100.0,
       "gross_profit": 0.0,
-      "gp_pct": 0.0
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1169,7 +1283,8 @@
       "product": "Z3F-STD-TAI MAIN BRARING\n",
       "costed_revenue": 60.0,
       "gross_profit": 0.0,
-      "gp_pct": 0.0
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1180,7 +1295,8 @@
       "product": "Z13711-61020 ROC VALVE ENGINE 2F IN\n",
       "costed_revenue": 52.0,
       "gross_profit": 0.0,
-      "gp_pct": 0.0
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1191,7 +1307,8 @@
       "product": "Z3F-STB-TAI CONNECTING ROD BEARING\n",
       "costed_revenue": 50.0,
       "gross_profit": 0.0,
-      "gp_pct": 0.0
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "CRITICAL LOW GP",
@@ -1202,51 +1319,8 @@
       "product": "Z3F-STD-TAI THRUST WASHER\n",
       "costed_revenue": 30.0,
       "gross_profit": 0.0,
-      "gp_pct": 0.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "ARUN RAJ",
-      "customer_name": "POWER INTERNATIONAL LLC",
-      "product_group": "ITR-TBR",
-      "product": "1200R24 *** ITR TM909A TTF",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "SOHAIL",
-      "customer_name": "DATE QUICK TRANSPORT L.L.C",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "BIJOY",
-      "customer_name": "DUBAI READYMIX CONCRETE L.L.C",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "VIPIN",
-      "customer_name": "INTERNATIONAL MECHANICAL & ELECTRICAL COMPANY WLL",
-      "product_group": "DEESTONE - PCR",
-      "product": "215/70 R 16 DEESTONE",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -1257,7 +1331,80 @@
       "product": "385/65R22.5 CEAT RD218",
       "costed_revenue": 0.0,
       "gross_profit": 0.0,
-      "gp_pct": null
+      "gp_pct": null,
+      "uncosted_revenue": 16730.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "ARUN RAJ",
+      "customer_name": "POWER INTERNATIONAL LLC",
+      "product_group": "ITR-TBR",
+      "product": "1200R24 *** ITR TM909A TTF",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 23850.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "INTERNATIONAL MECHANICAL & ELECTRICAL COMPANY WLL",
+      "product_group": "DEESTONE - PCR",
+      "product": "215/70 R 16 DEESTONE",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 1460.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "SOHAIL",
+      "customer_name": "DATE QUICK TRANSPORT L.L.C",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 36700.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "BIJOY",
+      "customer_name": "DUBAI READYMIX CONCRETE L.L.C",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 24600.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "AL JABER GROUP L.L.C.",
+      "product_group": "WESTLAKE TBR",
+      "product": "1200R24 WESTLAKE AZ272",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 21000.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "NEWTYRE -OFFICE",
+      "customer_name": "X A V EXPERT AUDIO VISUAL EQUIPMENT&ACCESSORIES TRADING &IN",
+      "product_group": "DEESTONE - PCR",
+      "product": "215/70 R 16 DEESTONE",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 1080.0
     },
     {
       "alert_type": "LOW GP",
@@ -1268,7 +1415,8 @@
       "product": "325/95R24 22PR TTF ITR",
       "costed_revenue": 53500.0,
       "gross_profit": 5750.0,
-      "gp_pct": 10.74766355140187
+      "gp_pct": 10.74766355140187,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "LOW GP",
@@ -1279,7 +1427,8 @@
       "product": "1200 R 24 FIRESTONE-20 PR FS598",
       "costed_revenue": 7750.0,
       "gross_profit": 915.0,
-      "gp_pct": 11.806451612903226
+      "gp_pct": 11.806451612903226,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "LOW GP",
@@ -1290,7 +1439,8 @@
       "product": "255/65R17 LAND SPIDER",
       "costed_revenue": 4250.0,
       "gross_profit": 450.0,
-      "gp_pct": 10.588235294117647
+      "gp_pct": 10.588235294117647,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "LOW GP",
@@ -1301,7 +1451,20 @@
       "product": "11R22.5 GAZELLE",
       "costed_revenue": 3600.0,
       "gross_profit": 390.0,
-      "gp_pct": 10.833333333333334
+      "gp_pct": 10.833333333333334,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
+      "salesman": "SOHAIL",
+      "customer_name": "MS ALGHURAIR ENGINEERING L.L.C",
+      "product_group": "TVS-OTR",
+      "product": "10-16.5 TVS - 10PR",
+      "costed_revenue": 2280.0,
+      "gross_profit": 240.0,
+      "gp_pct": 10.526315789473683,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "LOW GP",
@@ -1312,7 +1475,8 @@
       "product": "215/65R17 KUMHO",
       "costed_revenue": 1638.0,
       "gross_profit": 158.0,
-      "gp_pct": 9.645909645909647
+      "gp_pct": 9.645909645909647,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "LOW GP",
@@ -1323,7 +1487,8 @@
       "product": "215/60 R 17 NEXEN",
       "costed_revenue": 1480.0,
       "gross_profit": 140.0,
-      "gp_pct": 9.45945945945946
+      "gp_pct": 9.45945945945946,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "LOW GP",
@@ -1334,7 +1499,8 @@
       "product": "225/45R17 LANDSPIDER",
       "costed_revenue": 1160.0,
       "gross_profit": 120.0,
-      "gp_pct": 10.344827586206897
+      "gp_pct": 10.344827586206897,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "LOW GP",
@@ -1345,7 +1511,8 @@
       "product": "650-10 SOLID LIFT",
       "costed_revenue": 1060.0,
       "gross_profit": 100.0,
-      "gp_pct": 9.433962264150944
+      "gp_pct": 9.433962264150944,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "LOW GP",
@@ -1356,7 +1523,8 @@
       "product": "Z4422A012 CTR RACK END\n",
       "costed_revenue": 100.0,
       "gross_profit": 10.0,
-      "gp_pct": 10.0
+      "gp_pct": 10.0,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "LOW GP",
@@ -1367,8 +1535,9 @@
       "product": "81626416081 TGA 81626416085 DOOR HANDLE LH\n",
       "costed_revenue": 60.0,
       "gross_profit": 5.0,
-      "gp_pct": 8.333333333333332
+      "gp_pct": 8.333333333333332,
+      "uncosted_revenue": 0.0
     }
   ],
-  "_source_note": "Actual Tyres dashboard snapshot sanitized for sales/GP/target/projection executive page; excludes collections, AR, outstanding, overdue, PDC/CDC fields."
+  "_source_note": "Auto-refreshed hourly from Tyres DuckDB semantic layer; compact snapshot for Cloudflare Pages static dashboard."
 }
