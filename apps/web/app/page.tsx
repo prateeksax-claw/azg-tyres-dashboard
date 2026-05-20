@@ -78,6 +78,20 @@ function signedCompactMoney(value: number) {
   return `${sign}${compactMoney(Math.abs(value)).replace('AED ', '')}`
 }
 
+function signedPct(value: number | null | undefined) {
+  if (value === null || value === undefined || Number.isNaN(Number(value))) return '—'
+  const n = Number(value)
+  const sign = n >= 0 ? '+' : '-'
+  return `${sign}${Math.abs(n).toFixed(1)}%`
+}
+
+function signedPp(value: number | null | undefined) {
+  if (value === null || value === undefined || Number.isNaN(Number(value))) return '—'
+  const n = Number(value)
+  const sign = n >= 0 ? '+' : '-'
+  return `${sign}${Math.abs(n).toFixed(1)} pp`
+}
+
 function RegionMapAsset({ region }: { region: string }) {
   const files: Record<string, string> = {
     'ABU DHABI': 'abudhabi',
@@ -140,31 +154,32 @@ export default function Page() {
   const maxProduct = Math.max(...products.map((p) => p.sales), 1)
 
   const salesmen = [...data.salesman_leaderboard]
-    .map((s) => {
-      const actual = Number(s.actual_sales || 0)
-      const budgetAmount = Number(s.budget_amount || 0)
-      const etoClose = actual / elapsedDays * daysInMonth
-      return {
-        ...s,
-        eto_close: etoClose,
-        eto_achievement_pct: budgetAmount ? etoClose / budgetAmount * 100 : 0,
-        eto_variance: etoClose - budgetAmount,
-      }
-    })
+    .filter((s) => Number(s.projection_amount || 0) > 0)
     .sort((a, b) => Number(b.actual_sales || 0) - Number(a.actual_sales || 0))
+  const salesmanSales = salesmen.reduce((sum, s) => sum + Number(s.actual_sales || 0), 0)
+  const salesmanProjection = salesmen.reduce((sum, s) => sum + Number(s.projection_amount || 0), 0)
+  const salesmanProjectionAch = salesmanProjection ? salesmanSales / salesmanProjection * 100 : 0
+  const salesmanEto = salesmen.reduce((sum, s) => sum + Number(s.eto_close || 0), 0)
+  const salesmanEtoVariance = salesmanEto - salesmanProjection
+  const salesmanLastMtdSales = salesmen.reduce((sum, s) => sum + Number(s.last_month_mtd_sales || 0), 0)
+  const salesmanSalesChange = salesmanSales - salesmanLastMtdSales
+  const lastMonthCostedRevenue = salesmen.reduce((sum, s) => sum + Number(s.last_month_costed_revenue || 0), 0)
+  const lastMonthGrossProfit = salesmen.reduce((sum, s) => sum + Number(s.last_month_gross_profit || 0), 0)
+  const totalLastMonthGpPct = lastMonthCostedRevenue ? lastMonthGrossProfit / lastMonthCostedRevenue * 100 : null
+  const totalGpPctChange = totalLastMonthGpPct === null ? null : gpPct - totalLastMonthGpPct
   const customerRows = [...data.customer_top]
     .filter((row) => Number(row.projected_amount || 0) > 0)
     .sort((a, b) => Number(b.projected_amount || 0) - Number(a.projected_amount || 0))
     .slice(0, 3)
-  const largestEtoRisk = [...salesmen].sort((a, b) => Number(a.eto_variance || 0) - Number(b.eto_variance || 0))[0]
+  const largestEtoRisk = [...salesmen].sort((a, b) => Number(a.eto_projection_variance || 0) - Number(b.eto_projection_variance || 0))[0]
   const projectionWatch = [...data.customer_top]
     .filter((row) => Number(row.projected_amount || 0) > 0)
     .map((row) => ({ ...row, progress: Number(row.mtd_sales || 0) / Math.max(Number(row.projected_amount || 0), 1) * 100 }))
     .sort((a, b) => a.progress - b.progress)[0]
   const gpLeak = [...data.gp_alerts_top].sort((a, b) => Number(a.gp_pct || 0) - Number(b.gp_pct || 0))[0]
   const actionItems = [
-    `Trend closing ETO: ${compactMoney(eto)} (${signedCompactMoney(etoVariance)} vs budget)`,
-    `${largestEtoRisk?.salesman || 'Top owner'}: ETO risk ${signedCompactMoney(Number(largestEtoRisk?.eto_variance || 0))} vs budget`,
+    `Trend closing ETO: ${compactMoney(eto)} (${signedCompactMoney(eto - projection)} vs projection)`,
+    `${largestEtoRisk?.salesman || 'Top owner'}: ETO shortfall ${signedCompactMoney(Number(largestEtoRisk?.eto_projection_variance || 0))} vs projection`,
     `${projectionWatch?.customer_name || 'Projection watch'}: projection progress ${Math.round(Number(projectionWatch?.progress || 0))}%`,
     `${gpLeak?.salesman || 'GP watch'}: ${gpLeak?.product_group || 'margin'} GP at ${safePct(Number(gpLeak?.gp_pct || 0))}`,
   ]
@@ -222,23 +237,26 @@ export default function Page() {
               <h3>Salesman Performance — All Salesmen</h3>
             </div>
             <div className="salesman-summary-strip">
-              <span><b>{compactMoney(sales)}</b><small>MTD Sales</small></span>
-              <span><b>{compactMoney(eto)}</b><small>ETO Close</small></span>
-              <span><b>{Math.round(etoAch)}%</b><small>ETO vs Budget</small></span>
+              <span><b>{compactMoney(salesmanSales)}</b><small>MTD Sales</small></span>
+              <span><b>{compactMoney(salesmanProjection)}</b><small>Projection</small></span>
+              <span><b>{signedCompactMoney(salesmanEtoVariance)}</b><small>ETO vs Projection</small></span>
             </div>
           </div>
           <div className="salesman-table-wrap">
             <table>
-              <thead><tr><th>#</th><th>Salesman</th><th>MTD Sales</th><th>Budget</th><th>MTD %</th><th>ETO Close</th><th>ETO %</th><th>ETO Var.</th><th>GP %</th></tr></thead>
+              <thead><tr><th>#</th><th>Salesman</th><th>MTD Sales</th><th>Projection</th><th>MTD %</th><th>ETO Close</th><th>ETO vs Projection</th><th>Last MTD</th><th>Revenue Δ</th><th>GP %</th><th>GP Δ</th></tr></thead>
               <tbody>
                 {salesmen.map((s, index) => {
                   const actual = Number(s.actual_sales || 0)
-                  const budgetAmount = Number(s.budget_amount || 0)
-                  const mtdAch = budgetAmount ? actual / budgetAmount * 100 : 0
-                  const etoVariance = Number(s.eto_variance || 0)
-                  return <tr key={s.salesman}><td>{index + 1}</td><td>{s.salesman}</td><td>{compactMoney(actual)}</td><td>{compactMoney(budgetAmount)}</td><td>{Math.round(mtdAch)}%</td><td>{compactMoney(Number(s.eto_close || 0))}</td><td><mark>{Math.round(Number(s.eto_achievement_pct || 0))}%</mark></td><td className={etoVariance >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(etoVariance)}</td><td className="green">{safePct(Number(s.gp_pct))}</td></tr>
+                  const projectionAmount = Number(s.projection_amount || 0)
+                  const mtdAch = projectionAmount ? actual / projectionAmount * 100 : 0
+                  const etoProjectionVariance = Number(s.eto_projection_variance || 0)
+                  const salesChange = Number(s.sales_change_vs_last_month || 0)
+                  const salesChangePct = Number(s.sales_change_pct_vs_last_month)
+                  const gpChange = Number(s.gp_pct_change)
+                  return <tr key={s.salesman}><td>{index + 1}</td><td>{s.salesman}</td><td>{compactMoney(actual)}</td><td>{compactMoney(projectionAmount)}</td><td>{Math.round(mtdAch)}%</td><td>{compactMoney(Number(s.eto_close || 0))}</td><td className={etoProjectionVariance >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(etoProjectionVariance)}</td><td>{compactMoney(Number(s.last_month_mtd_sales || 0))}</td><td className={salesChange >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(salesChange)} <small>{signedPct(salesChangePct)}</small></td><td className="green">{safePct(Number(s.gp_pct))}</td><td className={gpChange >= 0 ? 'pos' : 'neg'}>{signedPp(gpChange)}</td></tr>
                 })}
-                <tr className="total"><td>—</td><td>TOTAL</td><td>{compactMoney(sales)}</td><td>{compactMoney(budget)}</td><td>{Math.round(budgetAch)}%</td><td>{compactMoney(eto)}</td><td>{Math.round(etoAch)}%</td><td className={etoVariance >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(etoVariance)}</td><td className="green">{safePct(gpPct)}</td></tr>
+                <tr className="total"><td>—</td><td>TOTAL</td><td>{compactMoney(salesmanSales)}</td><td>{compactMoney(salesmanProjection)}</td><td>{Math.round(salesmanProjectionAch)}%</td><td>{compactMoney(salesmanEto)}</td><td className={salesmanEtoVariance >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(salesmanEtoVariance)}</td><td>{compactMoney(salesmanLastMtdSales)}</td><td className={salesmanSalesChange >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(salesmanSalesChange)}</td><td className="green">{safePct(gpPct)}</td><td className={Number(totalGpPctChange || 0) >= 0 ? 'pos' : 'neg'}>{signedPp(totalGpPctChange)}</td></tr>
               </tbody>
             </table>
           </div>
