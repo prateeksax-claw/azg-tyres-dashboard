@@ -152,7 +152,6 @@ export default function Page() {
       }
     })
     .sort((a, b) => Number(b.actual_sales || 0) - Number(a.actual_sales || 0))
-    .slice(0, 5)
   const customerRows = [...data.customer_top]
     .filter((row) => Number(row.projected_amount || 0) > 0)
     .sort((a, b) => Number(b.projected_amount || 0) - Number(a.projected_amount || 0))
@@ -216,6 +215,35 @@ export default function Page() {
 
         <section className="kpi-grid">{kpis.map((item) => <KpiCard key={item.label} item={item} />)}</section>
 
+        <section className="card salesman-spotlight">
+          <div className="salesman-spotlight-head">
+            <div>
+              <p>Primary Execution View</p>
+              <h3>Salesman Performance — All Salesmen</h3>
+            </div>
+            <div className="salesman-summary-strip">
+              <span><b>{compactMoney(sales)}</b><small>MTD Sales</small></span>
+              <span><b>{compactMoney(eto)}</b><small>ETO Close</small></span>
+              <span><b>{Math.round(etoAch)}%</b><small>ETO vs Budget</small></span>
+            </div>
+          </div>
+          <div className="salesman-table-wrap">
+            <table>
+              <thead><tr><th>#</th><th>Salesman</th><th>MTD Sales</th><th>Budget</th><th>MTD %</th><th>ETO Close</th><th>ETO %</th><th>ETO Var.</th><th>GP %</th></tr></thead>
+              <tbody>
+                {salesmen.map((s, index) => {
+                  const actual = Number(s.actual_sales || 0)
+                  const budgetAmount = Number(s.budget_amount || 0)
+                  const mtdAch = budgetAmount ? actual / budgetAmount * 100 : 0
+                  const etoVariance = Number(s.eto_variance || 0)
+                  return <tr key={s.salesman}><td>{index + 1}</td><td>{s.salesman}</td><td>{compactMoney(actual)}</td><td>{compactMoney(budgetAmount)}</td><td>{Math.round(mtdAch)}%</td><td>{compactMoney(Number(s.eto_close || 0))}</td><td><mark>{Math.round(Number(s.eto_achievement_pct || 0))}%</mark></td><td className={etoVariance >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(etoVariance)}</td><td className="green">{safePct(Number(s.gp_pct))}</td></tr>
+                })}
+                <tr className="total"><td>—</td><td>TOTAL</td><td>{compactMoney(sales)}</td><td>{compactMoney(budget)}</td><td>{Math.round(budgetAch)}%</td><td>{compactMoney(eto)}</td><td>{Math.round(etoAch)}%</td><td className={etoVariance >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(etoVariance)}</td><td className="green">{safePct(gpPct)}</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         <section className="middle-grid">
           <article className="card bridge-card">
             <div className="card-title"><h3>Budget to Projection Bridge</h3><span>AED Millions</span></div>
@@ -257,11 +285,6 @@ export default function Page() {
                 return <div className="product-row" key={p.category}><span>{p.category}</span><i><b style={{ width: `${share}%` }} /></i><strong>{compactMoney(p.sales)}</strong><em>{Math.round(share)}%</em></div>
               })}
             </div>
-          </article>
-
-          <article className="card salesman-card">
-            <h3>Salesman Performance</h3>
-            <table><thead><tr><th>Salesman</th><th>Actual</th><th>Budget</th><th>ETO Close</th><th>ETO%</th><th>GP %</th></tr></thead><tbody>{salesmen.map((s) => <tr key={s.salesman}><td>{s.salesman}</td><td>{compactMoney(Number(s.actual_sales))}</td><td>{compactMoney(Number(s.budget_amount))}</td><td>{compactMoney(Number(s.eto_close))}</td><td><mark>{Math.round(Number(s.eto_achievement_pct))}%</mark></td><td className="green">{safePct(Number(s.gp_pct))}</td></tr>)}<tr className="total"><td>TOTAL</td><td>{compactMoney(sales)}</td><td>{compactMoney(budget)}</td><td>{compactMoney(eto)}</td><td>{Math.round(etoAch)}%</td><td>{safePct(gpPct)}</td></tr></tbody></table>
           </article>
 
           <article className="card customer-card">
