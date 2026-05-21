@@ -70,52 +70,146 @@ function formatMonthLabel(monthKey: string) {
 }
 
 type TrendPoint = { month_key: string; revenue_ex_vat: number }
-function TrendArea({ points, budget, projection }: { points: TrendPoint[]; budget: number; projection: number }) {
-  const W = 540
-  const H = 200
-  const padL = 38
-  const padR = 12
-  const padT = 18
-  const padB = 30
+function MonthlyBars({ points, projection }: { points: TrendPoint[]; projection: number }) {
+  const W = 620
+  const H = 230
+  const padL = 44
+  const padR = 60
+  const padT = 28
+  const padB = 32
   const innerW = W - padL - padR
   const innerH = H - padT - padB
-  const maxV = Math.max(...points.map((p) => Number(p.revenue_ex_vat) || 0), budget) * 1.06
-  const minV = 0
-  const x = (i: number) => padL + (i / Math.max(points.length - 1, 1)) * innerW
-  const y = (v: number) => padT + innerH - ((v - minV) / (maxV - minV || 1)) * innerH
-  const line = points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${x(i)} ${y(Number(p.revenue_ex_vat) || 0)}`).join(' ')
-  const area = `${line} L ${x(points.length - 1)} ${y(0)} L ${x(0)} ${y(0)} Z`
-  const last = points[points.length - 1]
-  const ticks = [0, 0.25, 0.5, 0.75, 1].map((t) => Math.round(maxV * t))
+  const values = points.map((p) => Number(p.revenue_ex_vat) || 0)
+  const maxData = Math.max(...values, projection)
+  const maxV = maxData * 1.18
+  const n = points.length
+  const slot = innerW / n
+  const barW = Math.min(slot * 0.58, 32)
+  const x = (i: number) => padL + slot * i + (slot - barW) / 2
+  const xCenter = (i: number) => padL + slot * i + slot / 2
+  const y = (v: number) => padT + innerH - (v / (maxV || 1)) * innerH
+  const ticks = [0, 0.25, 0.5, 0.75, 1].map((t) => maxV * t)
   return (
-    <svg className="trend-area" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" role="img" aria-label="Monthly revenue trend">
+    <svg className="monthly-bars" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" role="img" aria-label="Monthly revenue trend">
       <defs>
-        <linearGradient id="area-grad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.28" />
-          <stop offset="60%" stopColor="#3B82F6" stopOpacity="0.06" />
-          <stop offset="100%" stopColor="#3B82F6" stopOpacity="0" />
+        <linearGradient id="bar-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#60A5FA" />
+          <stop offset="100%" stopColor="#3B82F6" />
+        </linearGradient>
+        <linearGradient id="bar-grad-current" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#A78BFA" />
+          <stop offset="100%" stopColor="#7C3AED" />
         </linearGradient>
       </defs>
       {ticks.map((t, i) => (
         <g key={i}>
           <line x1={padL} x2={W - padR} y1={y(t)} y2={y(t)} stroke="#EEF1F4" strokeDasharray={i === 0 ? '0' : '3 4'} />
-          <text x={padL - 6} y={y(t) + 3} textAnchor="end" className="trend-axis">{(t / 1_000_000).toFixed(1)}M</text>
+          <text x={padL - 8} y={y(t) + 3} textAnchor="end" className="bars-axis">{(t / 1_000_000).toFixed(1)}M</text>
         </g>
       ))}
-      <line x1={padL} x2={W - padR} y1={y(budget)} y2={y(budget)} stroke="#F59E0B" strokeDasharray="4 4" strokeWidth="1.5" />
-      <text x={W - padR} y={y(budget) - 5} textAnchor="end" className="trend-ref">Budget {(budget / 1_000_000).toFixed(2)}M</text>
-      <line x1={padL} x2={W - padR} y1={y(projection)} y2={y(projection)} stroke="#0D9488" strokeDasharray="4 4" strokeWidth="1.5" />
-      <text x={W - padR} y={y(projection) - 5} textAnchor="end" className="trend-ref teal">Projection {(projection / 1_000_000).toFixed(2)}M</text>
-      <path d={area} fill="url(#area-grad)" />
-      <path d={line} fill="none" stroke="#2563EB" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+      <line x1={padL} x2={W - padR} y1={y(projection)} y2={y(projection)} stroke="#0D9488" strokeDasharray="5 4" strokeWidth="1.6" />
+      <text x={W - padR + 6} y={y(projection) + 4} textAnchor="start" className="bars-ref">
+        <tspan className="bars-ref-label">Projection</tspan>
+        <tspan x={W - padR + 6} dy="11" className="bars-ref-val">{(projection / 1_000_000).toFixed(2)}M</tspan>
+      </text>
       {points.map((p, i) => {
-        const v = Number(p.revenue_ex_vat) || 0
-        const isLast = i === points.length - 1
-        return <circle key={p.month_key} cx={x(i)} cy={y(v)} r={isLast ? 5 : 3} fill={isLast ? '#2563EB' : '#fff'} stroke="#2563EB" strokeWidth={isLast ? 2 : 1.6} />
+        const v = values[i]
+        const isLast = i === n - 1
+        const barH = Math.max(2, padT + innerH - y(v))
+        return (
+          <g key={p.month_key}>
+            <rect x={x(i)} y={y(v)} width={barW} height={barH} rx="4" fill={isLast ? 'url(#bar-grad-current)' : 'url(#bar-grad)'} />
+            <text x={xCenter(i)} y={y(v) - 6} textAnchor="middle" className={isLast ? 'bars-label current' : 'bars-label'}>
+              {(v / 1_000_000).toFixed(2)}
+            </text>
+            <text x={xCenter(i)} y={H - 10} textAnchor="middle" className={isLast ? 'bars-x current' : 'bars-x'}>{formatMonthLabel(p.month_key)}</text>
+          </g>
+        )
       })}
-      {points.map((p, i) => (i % 2 === 0 || i === points.length - 1) ? <text key={`l-${p.month_key}`} x={x(i)} y={H - 8} textAnchor="middle" className="trend-x">{formatMonthLabel(p.month_key)}</text> : null)}
-      <text x={x(points.length - 1)} y={y(Number(last?.revenue_ex_vat || 0)) - 12} textAnchor="middle" className="trend-callout">{(Number(last?.revenue_ex_vat || 0) / 1_000_000).toFixed(2)}M</text>
     </svg>
+  )
+}
+
+function GpCompareChart({ thisRev, thisGp, lastRev, lastGp }: { thisRev: number; thisGp: number; lastRev: number; lastGp: number }) {
+  const W = 220
+  const H = 110
+  const padT = 18
+  const padB = 22
+  const padL = 12
+  const padR = 12
+  const innerH = H - padT - padB
+  const max = Math.max(thisGp, lastGp) * 1.25 || 1
+  const barW = 38
+  const groupGap = 36
+  const totalGroupW = barW * 2 + 14
+  const startX = (W - (totalGroupW * 2 + groupGap)) / 2
+  const y = (v: number) => padT + innerH - (v / max) * innerH
+  const groups = [
+    { label: 'Last month', rev: lastRev, gp: lastGp },
+    { label: 'This MTD', rev: thisRev, gp: thisGp, current: true },
+  ]
+  return (
+    <svg className="gp-compare" viewBox={`0 0 ${W} ${H}`} role="img" aria-label="GP vs last month comparison">
+      <defs>
+        <linearGradient id="gp-bar-rev" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#93C5FD" />
+          <stop offset="100%" stopColor="#3B82F6" />
+        </linearGradient>
+        <linearGradient id="gp-bar-gp" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#5EEAD4" />
+          <stop offset="100%" stopColor="#0D9488" />
+        </linearGradient>
+      </defs>
+      {groups.map((g, gi) => {
+        const gx = startX + gi * (totalGroupW + groupGap)
+        const revBarH = padT + innerH - y(g.rev)
+        const gpBarH = padT + innerH - y(g.gp)
+        return (
+          <g key={g.label}>
+            <rect x={gx} y={y(g.rev)} width={barW} height={revBarH} rx="3" fill="url(#gp-bar-rev)" opacity={g.current ? 1 : 0.7} />
+            <rect x={gx + barW + 6} y={y(g.gp)} width={barW} height={gpBarH} rx="3" fill="url(#gp-bar-gp)" opacity={g.current ? 1 : 0.7} />
+            <text x={gx + barW / 2} y={y(g.rev) - 4} textAnchor="middle" className="gp-bar-val">{(g.rev / 1_000_000).toFixed(2)}M</text>
+            <text x={gx + barW + 6 + barW / 2} y={y(g.gp) - 4} textAnchor="middle" className="gp-bar-val gp">{(g.gp / 1000).toFixed(0)}K</text>
+            <text x={gx + totalGroupW / 2} y={H - 8} textAnchor="middle" className="gp-bar-label">{g.label}</text>
+          </g>
+        )
+      })}
+      <g transform={`translate(${W - 64}, 6)`}>
+        <rect width="10" height="10" rx="2" fill="url(#gp-bar-rev)" />
+        <text x="14" y="9" className="gp-legend-text">Revenue</text>
+        <rect y="14" width="10" height="10" rx="2" fill="url(#gp-bar-gp)" />
+        <text x="14" y="23" className="gp-legend-text">GP value</text>
+      </g>
+    </svg>
+  )
+}
+
+function ComparisonStrip({ thisRev, thisGp, thisGpPct, lastRev, lastGp, lastGpPct }: { thisRev: number; thisGp: number; thisGpPct: number; lastRev: number; lastGp: number; lastGpPct: number }) {
+  const revDelta = lastRev ? ((thisRev - lastRev) / lastRev) * 100 : null
+  const gpDelta = lastGp ? ((thisGp - lastGp) / lastGp) * 100 : null
+  const gpPctDelta = thisGpPct - lastGpPct
+  const items = [
+    { label: 'MTD Revenue', value: compactMoney(thisRev), delta: revDelta, deltaSuffix: '%', tone: 'blue' as const },
+    { label: 'MTD GP Value', value: compactMoney(thisGp), delta: gpDelta, deltaSuffix: '%', tone: 'teal' as const },
+    { label: 'MTD GP %', value: `${thisGpPct.toFixed(1)}%`, delta: gpPctDelta, deltaSuffix: 'pp', tone: 'purple' as const },
+  ]
+  return (
+    <div className="compare-strip">
+      {items.map((it) => {
+        const positive = (it.delta ?? 0) >= 0
+        return (
+          <div className={`compare-cell tone-${it.tone}`} key={it.label}>
+            <small>{it.label}</small>
+            <strong>{it.value}</strong>
+            {it.delta !== null && (
+              <em className={positive ? 'pos' : 'neg'}>
+                {positive ? '▲' : '▼'} {Math.abs(it.delta).toFixed(1)}{it.deltaSuffix} <span>vs last month</span>
+              </em>
+            )}
+          </div>
+        )
+      })}
+    </div>
   )
 }
 
@@ -341,25 +435,17 @@ export default function Page() {
   const pipeline = lpo + confirmed
   const gap = Number(bridge.shortfall_to_budget || 0)
   const projectionGap = Number(bridge.shortfall_to_projection || 0)
-  const runRate = Number(bridge.daily_required_for_budget || 0)
+  const runRate = Number(bridge.daily_required_for_projection || 0)
   const elapsedDays = Math.max(Number(ctx.day_of_month || 0), 1)
   const daysInMonth = Math.max(Number(ctx.days_in_month || elapsedDays), elapsedDays)
   const dailyTrend = sales / elapsedDays
   const eto = dailyTrend * daysInMonth
-  const etoVariance = eto - budget
-  const etoAch = budget ? eto / budget * 100 : 0
-  const budgetAch = budget ? sales / budget * 100 : 0
+  const etoVariance = eto - projection
+  const etoAch = projection ? eto / projection * 100 : 0
   const projectionAch = projection ? sales / projection * 100 : 0
   const gpPct = Number(gp.gp_pct || 0)
   const grossProfit = Number(gp.gross_profit || 0)
-  const gauge = Math.min(Math.max(etoAch, 0), 100)
-  const etoGaugeValue = Math.min(Math.max(etoAch, 0), 150)
-  const etoGaugeProgress = etoGaugeValue / 150 * 100
-  const gaugeAngle = Math.PI - (etoGaugeValue / 150) * Math.PI
-  const needleX = 110 + 72 * Math.cos(gaugeAngle)
-  const needleY = 132 - 72 * Math.sin(gaugeAngle)
-  const budgetProgress = budget ? Math.min(Math.max(sales / budget * 100, 0), 100) : 0
-  const remainingBudget = Math.max(budget - sales, 0)
+  const remainingProjection = Math.max(projection - sales, 0)
   const dailyTrendDelta = dailyTrend - runRate
   const daysRemaining = Number(ctx.days_remaining_month || 0)
   const regionTotal = data.region_current.reduce((sum, row) => sum + Number(row.revenue_ex_vat || 0), 0)
@@ -447,16 +533,23 @@ export default function Page() {
     `${gpLeak?.salesman || 'GP watch'}: ${gpLeak?.product_group || 'margin'} GP at ${safePct(Number(gpLeak?.gp_pct || 0))}`,
   ]
 
+  const lastMonthGpPct = totalLastMonthGpPct ?? 0
+  const gpValueDelta = grossProfit - lastMonthGrossProfit
+  const gpValueDeltaPct = lastMonthGrossProfit ? (gpValueDelta / lastMonthGrossProfit) * 100 : 0
+  const gpPctDelta = totalGpPctChange ?? 0
+  const revVsLastDelta = sales - salesmanLastMtdSales
+  const revVsLastDeltaPct = salesmanLastMtdSales ? (revVsLastDelta / salesmanLastMtdSales) * 100 : 0
+
   const kpis: Kpi[] = [
-    { icon: 'bills', label: 'MTD Sales', value: compactMoney(sales), basis: 'vs Budget', delta: `${safePct(budgetAch - 100)}`, tone: 'blue' },
-    { icon: 'target', label: 'ETO vs Budget', value: safePct(etoAch), basis: `Close: ${compactMoney(eto)}`, delta: signedCompactMoney(etoVariance), tone: 'gold' },
-    { icon: 'percent', label: 'GP %', value: safePct(gpPct), basis: 'vs Budget', delta: '+1.8 pp', tone: 'teal' },
-    { icon: 'dollar', label: 'Gross Profit AED', value: compactMoney(grossProfit), basis: 'vs Budget', delta: '-60%', tone: 'ink' },
+    { icon: 'bills', label: 'MTD Sales', value: compactMoney(sales), basis: 'vs Projection', delta: `${safePct(projectionAch - 100)}`, tone: 'blue' },
+    { icon: 'target', label: 'ETO vs Projection', value: safePct(etoAch), basis: `Close: ${compactMoney(eto)}`, delta: signedCompactMoney(etoVariance), tone: 'gold' },
+    { icon: 'percent', label: 'GP %', value: safePct(gpPct), basis: 'vs Last Month', delta: signedPp(gpPctDelta), tone: 'teal' },
+    { icon: 'dollar', label: 'Gross Profit AED', value: compactMoney(grossProfit), basis: 'vs Last Month', delta: `${gpValueDeltaPct >= 0 ? '+' : '-'}${Math.abs(gpValueDeltaPct).toFixed(1)}%`, tone: 'ink' },
     { icon: 'trend', label: 'Projection Achievement', value: safePct(projectionAch), basis: 'vs Projection', delta: `${Math.round(projectionAch - 100)} pp`, tone: 'gold' },
-    { icon: 'bolt', label: 'Daily Needed', value: `${compactMoney(runRate)}/day`, basis: `${ctx.days_remaining_month} days left`, delta: `${signedCompactMoney(runRate - dailyTrend)}/day`, tone: 'ink' },
+    { icon: 'bolt', label: 'Revenue Δ', value: `${revVsLastDeltaPct >= 0 ? '+' : '-'}${Math.abs(revVsLastDeltaPct).toFixed(1)}%`, basis: 'vs Same-Day LM', delta: signedCompactMoney(revVsLastDelta), tone: 'green' },
   ]
 
-  const maxWaterfall = Math.max(budget, projection, sales, pipeline, gap, 1)
+  const maxWaterfall = Math.max(projection, sales, pipeline, projectionGap, 1)
 
   return (
     <main className="command-artboard">
@@ -518,7 +611,7 @@ export default function Page() {
             <div className="cockpit-status-row">
               <div className={`status-pill ${etoVariance >= 0 ? 'surplus' : 'shortfall'}`}>
                 <Icon name={etoVariance >= 0 ? 'trend' : 'shield'} size={14} />
-                <span>{etoVariance >= 0 ? 'Pacing ahead' : 'Pacing behind'}</span>
+                <span>{etoVariance >= 0 ? 'Pacing ahead of projection' : 'Pacing behind projection'}</span>
                 <b>{signedCompactMoney(etoVariance)}</b>
               </div>
               <div className="status-pill neutral">
@@ -531,42 +624,50 @@ export default function Page() {
           <div className="cockpit-hero">
             <article className="hero-progress-card">
               <div className="hero-progress-head">
-                <p>Budget pacing</p>
-                <small>MTD &rarr; Projection &rarr; Budget target</small>
+                <p>Projection pacing</p>
+                <small>MTD &rarr; ETO Close &rarr; Projection Target</small>
               </div>
               <div className="hero-amounts">
                 <div className="amount achieved">
                   <small>MTD Sales</small>
                   <strong>{compactMoney(sales)}</strong>
-                  <em>{safePct(budgetAch)} of budget</em>
+                  <em>{safePct(projectionAch)} of projection</em>
                 </div>
                 <div className="amount projected">
                   <small>ETO Close</small>
                   <strong>{compactMoney(eto)}</strong>
-                  <em>{safePct(etoAch)} of budget</em>
+                  <em>{safePct(etoAch)} of projection</em>
                 </div>
                 <div className="amount budget">
-                  <small>Budget Target</small>
-                  <strong>{compactMoney(budget)}</strong>
-                  <em>{compactMoney(remainingBudget)} remaining</em>
+                  <small>Projection Target</small>
+                  <strong>{compactMoney(projection)}</strong>
+                  <em>{compactMoney(remainingProjection)} remaining</em>
                 </div>
               </div>
-              <SegmentBar achieved={sales} projected={Math.max(eto, projection)} budget={budget} />
+              <SegmentBar achieved={sales} projected={Math.max(eto, sales)} budget={projection} />
             </article>
 
             <article className="hero-chart-card">
               <div className="hero-chart-head">
                 <div>
                   <p>13-month revenue trend</p>
-                  <small>Monthly billing • Asia/Dubai</small>
+                  <small>Monthly billing • Asia/Dubai • Values in AED M</small>
                 </div>
                 <div className="chart-legend">
-                  <span><i className="lg-line" />Actual</span>
-                  <span><i className="lg-budget" />Budget</span>
-                  <span><i className="lg-proj" />Projection</span>
+                  <span><i className="lg-bar" />Monthly</span>
+                  <span><i className="lg-current" />Current (partial)</span>
+                  <span><i className="lg-proj" />Projection target</span>
                 </div>
               </div>
-              <TrendArea points={data.monthly_trend} budget={budget} projection={projection} />
+              <MonthlyBars points={data.monthly_trend} projection={projection} />
+              <ComparisonStrip
+                thisRev={sales}
+                thisGp={grossProfit}
+                thisGpPct={gpPct}
+                lastRev={salesmanLastMtdSales}
+                lastGp={lastMonthGrossProfit}
+                lastGpPct={lastMonthGpPct}
+              />
             </article>
           </div>
 
@@ -574,25 +675,34 @@ export default function Page() {
             <article className="tile tile-blue">
               <header><span className="tile-icon"><Icon name="bolt" size={14} /></span><p>Daily Trend</p></header>
               <strong>{compactMoney(dailyTrend)}<em>/day</em></strong>
-              <small className={dailyTrendDelta >= 0 ? 'good' : 'bad'}>{signedCompactMoney(dailyTrendDelta)}/day vs needed</small>
+              <small className={dailyTrendDelta >= 0 ? 'good' : 'bad'}>{signedCompactMoney(dailyTrendDelta)}/day vs projection pace</small>
               <MiniArea values={data.monthly_trend.slice(-8).map((p) => Number(p.revenue_ex_vat) || 0)} tone="blue" />
             </article>
 
             <article className="tile tile-amber">
-              <header><span className="tile-icon"><Icon name="gauge" size={14} /></span><p>Run Rate Needed</p></header>
-              <strong>{compactMoney(runRate)}<em>/day</em></strong>
-              <small>to clear AED {(remainingBudget / 1_000_000).toFixed(2)}M in {daysRemaining}d</small>
-              <MiniBarChart values={[dailyTrend, dailyTrend * 0.92, dailyTrend * 1.08, dailyTrend, runRate * 0.9, runRate, runRate * 1.05]} tone="amber" />
+              <header><span className="tile-icon"><Icon name="percent" size={14} /></span><p>GP Pulse vs Last Month</p></header>
+              <div className="gp-pulse-numbers">
+                <div>
+                  <small>GP Value</small>
+                  <strong>{compactMoney(grossProfit)}</strong>
+                  <em className={gpValueDelta >= 0 ? 'pos' : 'neg'}>{gpValueDelta >= 0 ? '▲' : '▼'} {Math.abs(gpValueDeltaPct).toFixed(1)}%</em>
+                </div>
+                <div>
+                  <small>GP %</small>
+                  <strong>{gpPct.toFixed(1)}%</strong>
+                  <em className={gpPctDelta >= 0 ? 'pos' : 'neg'}>{gpPctDelta >= 0 ? '▲' : '▼'} {Math.abs(gpPctDelta).toFixed(1)}pp</em>
+                </div>
+              </div>
+              <GpCompareChart thisRev={sales} thisGp={grossProfit} lastRev={salesmanLastMtdSales} lastGp={lastMonthGrossProfit} />
             </article>
 
             <article className="tile tile-teal">
-              <header><span className="tile-icon"><Icon name="percent" size={14} /></span><p>GP Margin</p></header>
-              <div className="tile-with-donut">
-                <div>
-                  <strong>{safePct(gpPct)}</strong>
-                  <small>{compactMoney(grossProfit)} gross profit</small>
-                </div>
-                <Donut pct={gpPct} tone="teal" />
+              <header><span className="tile-icon"><Icon name="check" size={14} /></span><p>Pipeline Strength</p></header>
+              <strong>{compactMoney(pipeline)}</strong>
+              <small>LPO {compactMoney(lpo)} • Confirmed {compactMoney(confirmed)}</small>
+              <div className="pipeline-split">
+                <div className="pipeline-bar"><i className="lpo" style={{ width: `${(lpo / Math.max(pipeline, 1)) * 100}%` }} /><i className="conf" style={{ width: `${(confirmed / Math.max(pipeline, 1)) * 100}%` }} /></div>
+                <div className="pipeline-legend"><span><i className="dot lpo" />LPO</span><span><i className="dot conf" />Confirmed</span></div>
               </div>
             </article>
 
@@ -699,13 +809,12 @@ export default function Page() {
 
         <section className="middle-grid">
           <article className="card bridge-card">
-            <div className="card-title"><h3>Budget to Projection Bridge</h3><span>AED Millions</span></div>
-            <div className="bridge-plot">
-              <WaterfallBar label="Budget" value={budget} max={maxWaterfall} tone="gold" />
-              <WaterfallBar label="Projection" value={projection} max={maxWaterfall} tone="teal" />
-              <WaterfallBar label="Achieved" value={sales} max={maxWaterfall} tone="blue" />
-              <WaterfallBar label="LPO / Confirmed Sales Pipeline" value={pipeline} max={maxWaterfall} tone="teal" />
-              <WaterfallBar label="Remaining Gap" value={gap} max={maxWaterfall} tone="red" />
+            <div className="card-title"><h3>Projection Bridge</h3><span>AED Millions</span></div>
+            <div className="bridge-plot bridge-plot-4">
+              <WaterfallBar label="Projection Target" value={projection} max={maxWaterfall} tone="teal" />
+              <WaterfallBar label="Achieved (MTD)" value={sales} max={maxWaterfall} tone="blue" />
+              <WaterfallBar label="LPO + Confirmed Pipeline" value={pipeline} max={maxWaterfall} tone="green" />
+              <WaterfallBar label="Remaining Gap" value={projectionGap} max={maxWaterfall} tone="red" />
             </div>
           </article>
 
