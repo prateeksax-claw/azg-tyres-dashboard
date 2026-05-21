@@ -1,7 +1,21 @@
 'use client'
 
 import { Fragment, useState } from 'react'
-import { dashboardData, money, pct } from '../lib/dashboard-data'
+import { dashboardData } from '../lib/dashboard-data'
+import {
+  compactMoney,
+  formatMonthLabel,
+  metric,
+  optionalMetric,
+  safePct,
+  signedCompactMoney,
+  signedPct,
+  signedPp,
+} from '../lib/format'
+import { Icon } from './components/Icon'
+import { Initials } from './components/Initials'
+import { CardOptions } from './components/CardOptions'
+import { SidebarToggle } from './components/DashboardShell'
 
 type Tone = 'red' | 'blue' | 'teal' | 'gold' | 'green' | 'ink'
 
@@ -12,28 +26,6 @@ type Kpi = {
   basis: string
   delta: string
   tone: Tone
-}
-
-function safePct(value: number) {
-  return Number.isFinite(value) ? pct(value) : '—'
-}
-
-function compactMoney(value: number) {
-  return money(value).replace('.00', '')
-}
-
-function formatGeneratedAt(value: string | null | undefined) {
-  if (!value) return '—'
-  const d = new Date(value)
-  if (Number.isNaN(d.getTime())) return value
-  return new Intl.DateTimeFormat('en-GB', {
-    timeZone: 'Asia/Dubai',
-    day: '2-digit',
-    month: 'short',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: true,
-  }).format(d).replace(',', '')
 }
 
 function MiniBars({ tone = 'blue' }: { tone?: Tone }) {
@@ -60,13 +52,6 @@ function InsightSpark({ tone = 'teal', down = false }: { tone?: Tone; down?: boo
       <circle cx="82" cy={down ? '27' : '7'} r="2.5" />
     </svg>
   )
-}
-
-function formatMonthLabel(monthKey: string) {
-  if (!monthKey) return ''
-  const [y, m] = monthKey.split('-').map(Number)
-  if (!y || !m) return monthKey
-  return new Date(y, m - 1, 1).toLocaleString('en-GB', { month: 'short' })
 }
 
 type TrendPoint = { month_key: string; revenue_ex_vat: number; gp_value: number; gp_pct: number; isCurrent?: boolean }
@@ -422,49 +407,6 @@ function DayProgress({ current, total }: { current: number; total: number }) {
   )
 }
 
-const ICON_STROKE = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const }
-
-function Icon({ name, size = 16 }: { name: string; size?: number }) {
-  const s = size
-  const props = { width: s, height: s, viewBox: '0 0 24 24', ...ICON_STROKE, 'aria-hidden': true }
-  switch (name) {
-    case 'gauge': return <svg {...props}><path d="M3 12a9 9 0 1 1 18 0" /><path d="M12 12l4-3" /><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" /></svg>
-    case 'target': return <svg {...props}><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none" /></svg>
-    case 'map': return <svg {...props}><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z" /><path d="M9 4v14M15 6v14" /></svg>
-    case 'user': return <svg {...props}><circle cx="12" cy="8" r="3.5" /><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6" /></svg>
-    case 'users': return <svg {...props}><circle cx="9" cy="9" r="3" /><circle cx="17" cy="10" r="2.5" /><path d="M3 19c0-3 2.5-5 6-5s6 2 6 5M14 19c0-2.4 1.7-4 4-4s3 1.6 3 4" /></svg>
-    case 'box': return <svg {...props}><path d="M3 7l9-4 9 4-9 4z" /><path d="M3 7v10l9 4 9-4V7" /><path d="M12 11v10" /></svg>
-    case 'percent': return <svg {...props}><circle cx="7.5" cy="7.5" r="2.5" /><circle cx="16.5" cy="16.5" r="2.5" /><path d="M19 5 5 19" /></svg>
-    case 'trend': return <svg {...props}><path d="M3 17l6-6 4 4 8-8" /><path d="M14 7h7v7" /></svg>
-    case 'check': return <svg {...props}><rect x="4" y="4" width="16" height="16" rx="3" /><path d="M8 12l3 3 5-6" /></svg>
-    case 'search': return <svg {...props}><circle cx="11" cy="11" r="6.5" /><path d="m20 20-4-4" /></svg>
-    case 'calendar': return <svg {...props}><rect x="3.5" y="5" width="17" height="15" rx="2.5" /><path d="M3.5 10h17M8 3v4M16 3v4" /></svg>
-    case 'pin': return <svg {...props}><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z" /><circle cx="12" cy="9" r="2.5" /></svg>
-    case 'badge': return <svg {...props}><circle cx="12" cy="9" r="4" /><path d="M9 13l-1 8 4-2 4 2-1-8" /></svg>
-    case 'refresh': return <svg {...props}><path d="M4 12a8 8 0 0 1 14-5.3L20 9" /><path d="M20 4v5h-5" /><path d="M20 12a8 8 0 0 1-14 5.3L4 15" /><path d="M4 20v-5h5" /></svg>
-    case 'sparkle': return <svg {...props}><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" /><path d="M19 14l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" /></svg>
-    case 'bills': return <svg {...props}><rect x="3" y="6" width="18" height="13" rx="2" /><circle cx="12" cy="12.5" r="2.5" /><path d="M7 9v.01M17 16v.01" /></svg>
-    case 'dollar': return <svg {...props}><circle cx="12" cy="12" r="9" /><path d="M9 14.5c0 1.4 1.4 2 3 2s3-.7 3-2-1.5-1.7-3-2-3-.6-3-2 1.4-2 3-2 3 .6 3 2" /><path d="M12 7v10" /></svg>
-    case 'clock': return <svg {...props}><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3.5 2" /></svg>
-    case 'bolt': return <svg {...props}><path d="M13 3 4 14h7l-1 7 9-11h-7z" /></svg>
-    case 'flag': return <svg {...props}><path d="M5 21V4" /><path d="M5 5h12l-2 4 2 4H5" /></svg>
-    case 'shield': return <svg {...props}><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z" /><path d="M9 12l2 2 4-4" /></svg>
-    case 'arrow-up-right': return <svg {...props}><path d="M7 17 17 7" /><path d="M9 7h8v8" /></svg>
-    case 'chevron-down': return <svg {...props}><path d="m6 9 6 6 6-6" /></svg>
-    case 'chevron-right': return <svg {...props}><path d="m9 6 6 6-6 6" /></svg>
-    default: return <svg {...props}><circle cx="12" cy="12" r="8" /></svg>
-  }
-}
-
-function Initials({ name }: { name: string }) {
-  const parts = name.trim().split(/\s+/)
-  const initials = (parts[0]?.[0] || '') + (parts[1]?.[0] || parts[0]?.[1] || '')
-  const palette = ['blue', 'teal', 'purple', 'amber', 'pink', 'green', 'indigo'] as const
-  const hash = [...name].reduce((acc, ch) => acc + ch.charCodeAt(0), 0)
-  const tone = palette[hash % palette.length]
-  return <span className={`avatar avatar-${tone}`}>{initials.toUpperCase()}</span>
-}
-
 function KpiCard({ item }: { item: Kpi }) {
   return (
     <article className="kpi-card">
@@ -489,66 +431,12 @@ function WaterfallBar({ label, value, max, tone }: { label: string; value: numbe
   )
 }
 
-function signedCompactMoney(value: number) {
-  const sign = value >= 0 ? '+' : '-'
-  return `${sign}${compactMoney(Math.abs(value)).replace('AED ', '')}`
-}
-
-function signedPct(value: number | null | undefined) {
-  if (value === null || value === undefined || Number.isNaN(Number(value))) return '—'
-  const n = Number(value)
-  const sign = n >= 0 ? '+' : '-'
-  return `${sign}${Math.abs(n).toFixed(1)}%`
-}
-
-function signedPp(value: number | null | undefined) {
-  if (value === null || value === undefined || Number.isNaN(Number(value))) return '—'
-  const n = Number(value)
-  const sign = n >= 0 ? '+' : '-'
-  return `${sign}${Math.abs(n).toFixed(1)} pp`
-}
-
-function metric(row: Record<string, unknown>, key: string, fallback = 0) {
-  const value = row[key]
-  if (value === null || value === undefined || value === '') return fallback
-  const n = Number(value)
-  return Number.isFinite(n) ? n : fallback
-}
-
-function optionalMetric(row: Record<string, unknown>, key: string) {
-  const value = row[key]
-  if (value === null || value === undefined || value === '') return null
-  const n = Number(value)
-  return Number.isFinite(n) ? n : null
-}
-
 function ProjectionVarianceChip({ actual, projection }: { actual: number; projection: number }) {
   const variance = actual - projection
   if (variance >= 0) {
     return <em className="projection-chip surplus">Surplus {compactMoney(variance)}</em>
   }
   return <em className="projection-chip shortfall">Shortfall {compactMoney(Math.abs(variance))}</em>
-}
-
-function CardOptions({ label }: { label: string }) {
-  const [open, setOpen] = useState(false)
-  return (
-    <div className={`card-options ${open ? 'open' : ''}`} onMouseLeave={() => setOpen(false)}>
-      <button type="button" className="card-options-trigger" onClick={() => setOpen((v) => !v)} aria-label={`Options for ${label}`} title={`Options for ${label}`}>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <circle cx="5" cy="12" r="1.6" /><circle cx="12" cy="12" r="1.6" /><circle cx="19" cy="12" r="1.6" />
-        </svg>
-      </button>
-      {open && (
-        <div className="card-options-menu" role="menu">
-          <button role="menuitem" type="button" onClick={() => setOpen(false)}><Icon name="refresh" size={13} /> Refresh data</button>
-          <button role="menuitem" type="button" onClick={() => setOpen(false)}><Icon name="trend" size={13} /> Expand view</button>
-          <button role="menuitem" type="button" onClick={() => setOpen(false)}><Icon name="dollar" size={13} /> Export CSV</button>
-          <button role="menuitem" type="button" onClick={() => setOpen(false)}><Icon name="check" size={13} /> Pin to top</button>
-        </div>
-      )}
-    </div>
-  )
 }
 
 function RegionMapAsset({ region }: { region: string }) {
@@ -565,12 +453,10 @@ function RegionMapAsset({ region }: { region: string }) {
 
 export default function Page() {
   const [expandedSalesmen, setExpandedSalesmen] = useState<Set<string>>(new Set())
-  const [sidebarOpen, setSidebarOpen] = useState(false)
   const data = dashboardData
   const ctx = data.context
   const bridge = data.command_center.shortfall_bridge
   const gp = data.command_center.gp_mtd
-  const refreshedAt = formatGeneratedAt(String(data.generated_at || ''))
 
   const sales = Number(bridge.actual_sales || 0)
   const budget = Number(bridge.budget_amount || 0)
@@ -754,47 +640,10 @@ export default function Page() {
   ]
 
   return (
-    <main className={`command-artboard ${sidebarOpen ? 'sidebar-open' : ''}`}>
-      <button type="button" className="sidebar-backdrop" onClick={() => setSidebarOpen(false)} aria-hidden={!sidebarOpen} tabIndex={-1} />
-      <aside className="side-rail">
-        <div className="side-logo">
-          <img src="/brand/al-zaabi-logo-light.png" alt="Al Zaabi Group" />
-          <strong>TYRES DIVISION</strong>
-          <button type="button" className="sidebar-close" onClick={() => setSidebarOpen(false)} aria-label="Close menu">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M6 6l12 12M18 6L6 18" /></svg>
-          </button>
-        </div>
-        <nav>
-          <small className="nav-section-label">MAIN MENU</small>
-          {[
-            { label: 'Executive Command', icon: 'gauge' },
-            { label: 'Sales & Targets', icon: 'target' },
-            { label: 'Region', icon: 'map' },
-            { label: 'Salesman', icon: 'user' },
-            { label: 'Product Mix', icon: 'box' },
-          ].map((item, i) => (
-            <a className={i === 0 ? 'active' : ''} href="#" key={item.label}><span><Icon name={item.icon} size={15} /></span>{item.label}</a>
-          ))}
-          <small className="nav-section-label">OPERATIONS</small>
-          {[
-            { label: 'Customer 360', icon: 'users' },
-            { label: 'GP & Margin', icon: 'percent' },
-            { label: 'Projection', icon: 'trend' },
-            { label: 'Action Center', icon: 'check' },
-          ].map((item) => (
-            <a href="#" key={item.label}><span><Icon name={item.icon} size={15} /></span>{item.label}</a>
-          ))}
-        </nav>
-        <div className="side-update"><i><Icon name="clock" size={12} /></i><span>Last Updated</span><b>{refreshedAt} GST</b></div>
-        <div className="tyre-graphic" aria-hidden="true" />
-      </aside>
-
-      <section className="command-canvas">
+    <>
         <header className="top-ribbon">
           <div className="dashboard-greeting">
-            <button type="button" className="sidebar-toggle" onClick={() => setSidebarOpen(true)} aria-label="Open menu">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
-            </button>
+            <SidebarToggle />
             <div className="greeting-text">
               <span>Automotive Division</span>
               <h1>Tyres Executive Command</h1>
@@ -1149,9 +998,6 @@ export default function Page() {
             </ul>
           </article>
         </section>
-      </section>
-
-      <footer className="command-footer"><span>Focus. Execute. Outperform.</span><span>Driven by Performance. Powered by People.</span><img src="/brand/al-zaabi-logo-light.png" alt="Al Zaabi Group" /></footer>
-    </main>
+    </>
   )
 }
