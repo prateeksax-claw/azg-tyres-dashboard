@@ -71,25 +71,25 @@ function formatMonthLabel(monthKey: string) {
 
 type TrendPoint = { month_key: string; revenue_ex_vat: number; gp_value: number; gp_pct: number; isCurrent?: boolean }
 
-function MonthlyBars({ points, projection }: { points: TrendPoint[]; projection: number }) {
+function MonthlyBars({ points, projection, eto, etoGp }: { points: TrendPoint[]; projection: number; eto: number; etoGp: number }) {
   const [hover, setHover] = useState<number | null>(null)
   const W = 920
-  const H = 360
+  const H = 380
   const padL = 56
   const padR = 56
-  const padT = 36
-  const padB = 56
+  const padT = 56
+  const padB = 50
   const innerW = W - padL - padR
   const innerH = H - padT - padB
   const revVals = points.map((p) => Number(p.revenue_ex_vat) || 0)
   const gpVals = points.map((p) => Number(p.gp_value) || 0)
   const gpPcts = points.map((p) => Number(p.gp_pct) || 0)
-  const maxRev = Math.max(...revVals, projection) * 1.18
+  const maxRev = Math.max(...revVals, eto, projection) * 1.22
   const maxGpPct = Math.max(...gpPcts, 25) * 1.1
   const n = points.length
   const slot = innerW / n
-  const barW = Math.min(slot * 0.34, 22)
-  const gpBarW = Math.min(slot * 0.24, 16)
+  const barW = Math.min(slot * 0.36, 24)
+  const gpBarW = Math.min(slot * 0.26, 17)
   const x = (i: number) => padL + slot * i + (slot - barW - gpBarW - 3) / 2
   const xCenter = (i: number) => padL + slot * i + slot / 2
   const y = (v: number) => padT + innerH - (v / (maxRev || 1)) * innerH
@@ -97,8 +97,6 @@ function MonthlyBars({ points, projection }: { points: TrendPoint[]; projection:
   const ticks = [0, 0.25, 0.5, 0.75, 1].map((t) => maxRev * t)
   const gpTicks = [0, 0.25, 0.5, 0.75, 1].map((t) => maxGpPct * t)
   const lastIdx = n - 1
-  const targetY = y(projection)
-  const targetXCenter = xCenter(lastIdx)
   const gpLine = points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${xCenter(i)} ${yGpPct(Number(p.gp_pct) || 0)}`).join(' ')
 
   return (
@@ -121,6 +119,14 @@ function MonthlyBars({ points, projection }: { points: TrendPoint[]; projection:
             <stop offset="0%" stopColor="#FCD34D" />
             <stop offset="100%" stopColor="#D97706" />
           </linearGradient>
+          <linearGradient id="eto-overlay" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#C4B5FD" />
+            <stop offset="100%" stopColor="#A78BFA" />
+          </linearGradient>
+          <pattern id="eto-stripe" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+            <rect width="6" height="6" fill="#C4B5FD" opacity="0.32" />
+            <line x1="0" y1="0" x2="0" y2="6" stroke="#7C3AED" strokeWidth="1.4" opacity="0.5" />
+          </pattern>
         </defs>
 
         {/* horizontal gridlines + left revenue axis */}
@@ -135,8 +141,8 @@ function MonthlyBars({ points, projection }: { points: TrendPoint[]; projection:
         {gpTicks.map((t, i) => (
           <text key={`gpt-${i}`} x={W - padR + 8} y={yGpPct(t) + 4} textAnchor="start" className="bars-axis gp-axis">{t.toFixed(0)}%</text>
         ))}
-        <text x={padL - 8} y={padT - 14} textAnchor="end" className="axis-title">Revenue (AED M)</text>
-        <text x={W - padR + 8} y={padT - 14} textAnchor="start" className="axis-title gp">GP %</text>
+        <text x={padL - 8} y={padT - 24} textAnchor="end" className="axis-title">Revenue (AED M)</text>
+        <text x={W - padR + 8} y={padT - 24} textAnchor="start" className="axis-title gp">GP %</text>
 
         {/* bars */}
         {points.map((p, i) => {
@@ -148,27 +154,48 @@ function MonthlyBars({ points, projection }: { points: TrendPoint[]; projection:
           const gpBarX = revBarX + barW + 3
           const revBarH = Math.max(2, padT + innerH - y(rev))
           const gpBarH = Math.max(2, padT + innerH - y(gpv))
+          const revOpacity = hover === null || isHover ? 1 : 0.4
+          const gpOpacity = hover === null || isHover ? 0.9 : 0.32
           return (
             <g key={p.month_key}>
-              <rect x={revBarX} y={y(rev)} width={barW} height={revBarH} rx="3" fill={isLast ? 'url(#bar-grad-current)' : 'url(#bar-grad)'} opacity={hover === null || isHover ? 1 : 0.45} />
-              <rect x={gpBarX} y={y(gpv)} width={gpBarW} height={gpBarH} rx="3" fill={isLast ? 'url(#gp-bar-current)' : 'url(#gp-bar-grad)'} opacity={hover === null || isHover ? 0.85 : 0.35} />
-              <text x={xCenter(i)} y={H - padB + 18} textAnchor="middle" className={isLast ? 'bars-x current' : 'bars-x'}>{formatMonthLabel(p.month_key)}</text>
+              {/* MTD revenue bar */}
+              <rect x={revBarX} y={y(rev)} width={barW} height={revBarH} rx="3" fill={isLast ? 'url(#bar-grad-current)' : 'url(#bar-grad)'} opacity={revOpacity} />
+              {/* GP bar */}
+              <rect x={gpBarX} y={y(gpv)} width={gpBarW} height={gpBarH} rx="3" fill={isLast ? 'url(#gp-bar-current)' : 'url(#gp-bar-grad)'} opacity={gpOpacity} />
+
+              {/* ETO overlay above the MTD bar (current month only) */}
+              {isLast && eto > rev && (
+                <g opacity={hover === null || isHover ? 1 : 0.5}>
+                  <rect x={revBarX} y={y(eto)} width={barW} height={y(rev) - y(eto)} rx="3" fill="url(#eto-stripe)" stroke="#7C3AED" strokeWidth="1.2" strokeDasharray="3 3" />
+                </g>
+              )}
+              {/* ETO GP overlay above GP bar (current month only) */}
+              {isLast && etoGp > gpv && (
+                <g opacity={hover === null || isHover ? 0.85 : 0.4}>
+                  <rect x={gpBarX} y={y(etoGp)} width={gpBarW} height={y(gpv) - y(etoGp)} rx="3" fill="#FDE68A" stroke="#D97706" strokeWidth="1" strokeDasharray="3 3" opacity="0.7" />
+                </g>
+              )}
+
+              {/* Revenue value label above bar (or above ETO if current) */}
+              <text x={revBarX + barW / 2} y={(isLast && eto > rev ? y(eto) : y(rev)) - 6} textAnchor="middle" className={isLast ? 'bars-val rev current' : 'bars-val rev'}>
+                {(((isLast && eto > rev) ? eto : rev) / 1_000_000).toFixed(2)}
+              </text>
+              {/* GP value label above GP bar */}
+              <text x={gpBarX + gpBarW / 2} y={(isLast && etoGp > gpv ? y(etoGp) : y(gpv)) - 6} textAnchor="middle" className={isLast ? 'bars-val gp current' : 'bars-val gp'}>
+                {(((isLast && etoGp > gpv) ? etoGp : gpv) / 1000).toFixed(0)}K
+              </text>
+
+              {/* Month x-label */}
+              <text x={xCenter(i)} y={H - padB + 22} textAnchor="middle" className={isLast ? 'bars-x current' : 'bars-x'}>{formatMonthLabel(p.month_key)}</text>
             </g>
           )
         })}
 
         {/* GP% line overlay (right axis) */}
-        <path d={gpLine} fill="none" stroke="#6366F1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="3 3" opacity={hover === null ? 0.75 : 0.4} />
+        <path d={gpLine} fill="none" stroke="#6366F1" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="3 3" opacity={hover === null ? 0.55 : 0.3} />
         {points.map((p, i) => (
-          <circle key={`gp-pt-${p.month_key}`} cx={xCenter(i)} cy={yGpPct(Number(p.gp_pct) || 0)} r={hover === i ? 4 : 2.5} fill="#fff" stroke="#6366F1" strokeWidth="1.6" />
+          <circle key={`gp-pt-${p.month_key}`} cx={xCenter(i)} cy={yGpPct(Number(p.gp_pct) || 0)} r={hover === i ? 4 : 2.2} fill="#fff" stroke="#6366F1" strokeWidth="1.5" />
         ))}
-
-        {/* Current-month projection target marker — clean side-positioned */}
-        <g className="target-marker">
-          <line x1={targetXCenter - barW * 1.6} x2={targetXCenter + gpBarW + 6} y1={targetY} y2={targetY} stroke="#0D9488" strokeWidth="1.8" strokeDasharray="4 3" strokeLinecap="round" />
-          <circle cx={targetXCenter + gpBarW + 6} cy={targetY} r="3.5" fill="#fff" stroke="#0D9488" strokeWidth="2" />
-          <text x={targetXCenter + gpBarW + 14} y={targetY + 4} textAnchor="start" className="target-side-label">May target {(projection / 1_000_000).toFixed(2)}M</text>
-        </g>
 
         {/* hit areas */}
         {points.map((p, i) => (
@@ -201,11 +228,17 @@ function MonthlyBars({ points, projection }: { points: TrendPoint[]; projection:
               <span className="tip-month">{formatMonthLabel(p.month_key)} {String(p.month_key).split('-')[0]}</span>
               {p.isCurrent && <em className="tip-tag">partial · MTD</em>}
             </div>
-            <div className="tip-row"><i className="tip-dot rev" /><span>Revenue</span><b>{compactMoney(Number(p.revenue_ex_vat) || 0)}</b></div>
-            <div className="tip-row"><i className="tip-dot gp" /><span>GP value</span><b>{compactMoney(Number(p.gp_value) || 0)}</b></div>
+            <div className="tip-row"><i className="tip-dot rev" /><span>{p.isCurrent ? 'MTD Revenue' : 'Revenue'}</span><b>{compactMoney(Number(p.revenue_ex_vat) || 0)}</b></div>
+            {p.isCurrent && (
+              <div className="tip-row"><i className="tip-dot eto" /><span>ETO close</span><b>{compactMoney(eto)}</b></div>
+            )}
+            <div className="tip-row"><i className="tip-dot gp" /><span>{p.isCurrent ? 'MTD GP value' : 'GP value'}</span><b>{compactMoney(Number(p.gp_value) || 0)}</b></div>
+            {p.isCurrent && (
+              <div className="tip-row"><i className="tip-dot gpeto" /><span>ETO GP value</span><b>{compactMoney(etoGp)}</b></div>
+            )}
             <div className="tip-row"><i className="tip-dot gppct" /><span>GP %</span><b>{(Number(p.gp_pct) || 0).toFixed(1)}%</b></div>
             {p.isCurrent && (
-              <div className="tip-target">May target: <b>{compactMoney(projection)}</b></div>
+              <div className="tip-target">Projection: <b>{compactMoney(projection)}</b></div>
             )}
           </div>
         )
@@ -861,16 +894,15 @@ export default function Page() {
                 </div>
                 <div className="hero-chart-actions">
                   <div className="chart-legend">
-                    <span><i className="lg-bar" />Revenue</span>
+                    <span><i className="lg-bar" />Revenue (MTD)</span>
+                    <span><i className="lg-eto" />ETO projection</span>
                     <span><i className="lg-gpbar" />GP value</span>
                     <span><i className="lg-gpline" />GP %</span>
-                    <span><i className="lg-current" />May (partial)</span>
-                    <span><i className="lg-proj" />Target</span>
                   </div>
                   <CardOptions label="13-month trend" />
                 </div>
               </div>
-              <MonthlyBars points={monthlyEnriched} projection={projection} />
+              <MonthlyBars points={monthlyEnriched} projection={projection} eto={eto} etoGp={eto * (gpPct / 100)} />
               <ComparisonStrip
                 thisRev={sales}
                 thisGp={grossProfit}

@@ -827,11 +827,10 @@ html, body {
 }
 .chart-legend .lg-line    { background: var(--brand); }
 .chart-legend .lg-bar     { background: linear-gradient(180deg, #60A5FA, var(--brand-2)); width: 10px; height: 10px; border-radius: 3px; }
+.chart-legend .lg-eto     { background: repeating-linear-gradient(45deg, rgba(196,181,253,.5) 0 4px, transparent 4px 7px), linear-gradient(180deg, rgba(196,181,253,.55), rgba(167,139,250,.7)); border: 1px dashed var(--purple-2); width: 10px; height: 10px; border-radius: 3px; }
 .chart-legend .lg-gpbar   { background: linear-gradient(180deg, #5EEAD4, var(--teal)); width: 8px; height: 10px; border-radius: 3px; }
 .chart-legend .lg-gpline  { background: var(--indigo); height: 0; border-top: 2px dashed var(--indigo); width: 16px; }
 .chart-legend .lg-current { background: linear-gradient(180deg, #A78BFA, var(--purple)); width: 10px; height: 10px; border-radius: 3px; }
-.chart-legend .lg-budget  { background: var(--amber-2); height: 0; border-top: 2px dashed var(--amber-2); width: 16px; }
-.chart-legend .lg-proj    { background: var(--teal-2); height: 0; border-top: 2px dashed var(--teal-2); width: 16px; }
 
 .hero-chart-actions {
   display: flex;
@@ -900,7 +899,9 @@ html, body {
   display: inline-block;
 }
 .chart-tip .tip-dot.rev   { background: #60A5FA; }
+.chart-tip .tip-dot.eto   { background: #A78BFA; }
 .chart-tip .tip-dot.gp    { background: #5EEAD4; }
+.chart-tip .tip-dot.gpeto { background: #F59E0B; }
 .chart-tip .tip-dot.gppct { background: #A5B4FC; }
 .chart-tip .tip-target {
   margin-top: 6px;
@@ -929,6 +930,23 @@ html, body {
 }
 .monthly-bars .bars-x.current {
   fill: var(--purple);
+  font-weight: 800;
+}
+.monthly-bars .bars-val {
+  font-size: 9px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.monthly-bars .bars-val.rev { fill: var(--brand); }
+.monthly-bars .bars-val.gp  { fill: var(--teal); }
+.monthly-bars .bars-val.rev.current {
+  fill: var(--purple);
+  font-size: 9.5px;
+  font-weight: 800;
+}
+.monthly-bars .bars-val.gp.current {
+  fill: var(--amber);
+  font-size: 9.5px;
   font-weight: 800;
 }
 .monthly-bars .target-side-label {
