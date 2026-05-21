@@ -302,7 +302,7 @@ export default function Page() {
             <div className="salesman-summary-strip">
               <span><b>{compactMoney(salesmanSales)}</b><small>MTD Sales</small></span>
               <span><b>{compactMoney(salesmanProjection)}</b><small>Projection</small></span>
-              <span><b>{signedCompactMoney(salesmanEtoVariance)}</b><small>ETO vs Projection</small></span>
+              <span className={salesmanEtoVariance >= 0 ? 'summary-variance pos' : 'summary-variance neg'}><b>{signedCompactMoney(salesmanEtoVariance)}</b><small>ETO vs Projection</small></span>
             </div>
           </div>
           <div className="salesman-table-wrap">
