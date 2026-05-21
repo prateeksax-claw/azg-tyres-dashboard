@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T17:14:07+04:00",
+  "generated_at": "2026-05-21T17:16:34+04:00",
   "context": {
     "as_of_date": "2026-05-21",
     "month_start": "2026-05-01",
@@ -36,55 +36,94 @@
   "monthly_trend": [
     {
       "month_key": "2025-05",
-      "revenue_ex_vat": 5044716.68
+      "revenue_ex_vat": 5044716.68,
+      "gp_costed_revenue": 0.0,
+      "gp_value": 0.0,
+      "gp_pct": null
     },
     {
       "month_key": "2025-06",
-      "revenue_ex_vat": 4829759.529999999
+      "revenue_ex_vat": 4829759.529999999,
+      "gp_costed_revenue": 0.0,
+      "gp_value": 0.0,
+      "gp_pct": null
     },
     {
       "month_key": "2025-07",
-      "revenue_ex_vat": 5273771.08
+      "revenue_ex_vat": 5273771.08,
+      "gp_costed_revenue": 0.0,
+      "gp_value": 0.0,
+      "gp_pct": null
     },
     {
       "month_key": "2025-08",
-      "revenue_ex_vat": 5137936.08
+      "revenue_ex_vat": 5137936.08,
+      "gp_costed_revenue": 0.0,
+      "gp_value": 0.0,
+      "gp_pct": null
     },
     {
       "month_key": "2025-09",
-      "revenue_ex_vat": 5104672.12
+      "revenue_ex_vat": 5104672.12,
+      "gp_costed_revenue": 0.0,
+      "gp_value": 0.0,
+      "gp_pct": null
     },
     {
       "month_key": "2025-10",
-      "revenue_ex_vat": 6242861.950000001
+      "revenue_ex_vat": 6242861.950000001,
+      "gp_costed_revenue": 5864931.987000001,
+      "gp_value": 1066299.287,
+      "gp_pct": 18.180931839678976
     },
     {
       "month_key": "2025-11",
-      "revenue_ex_vat": 5145292.96
+      "revenue_ex_vat": 5145292.96,
+      "gp_costed_revenue": 4992819.993,
+      "gp_value": 923478.4530000001,
+      "gp_pct": 18.49612952789664
     },
     {
       "month_key": "2025-12",
-      "revenue_ex_vat": 4798332.390000001
+      "revenue_ex_vat": 4798332.390000001,
+      "gp_costed_revenue": 4586863.579999999,
+      "gp_value": 916940.6899999998,
+      "gp_pct": 19.990581232851927
     },
     {
       "month_key": "2026-01",
-      "revenue_ex_vat": 4882691.07
+      "revenue_ex_vat": 4882691.07,
+      "gp_costed_revenue": 4753101.072799998,
+      "gp_value": 845951.9828000001,
+      "gp_pct": 17.797895938738357
     },
     {
       "month_key": "2026-02",
-      "revenue_ex_vat": 4725342.35
+      "revenue_ex_vat": 4725342.35,
+      "gp_costed_revenue": 4676234.350000001,
+      "gp_value": 838330.68,
+      "gp_pct": 17.927473630572
     },
     {
       "month_key": "2026-03",
-      "revenue_ex_vat": 5372724.26
+      "revenue_ex_vat": 5372724.26,
+      "gp_costed_revenue": 5301224.049999999,
+      "gp_value": 990687.9100000001,
+      "gp_pct": 18.68790869157851
     },
     {
       "month_key": "2026-04",
-      "revenue_ex_vat": 5200320.700000001
+      "revenue_ex_vat": 5200320.700000001,
+      "gp_costed_revenue": 5223488.209999998,
+      "gp_value": 1209527.8499999996,
+      "gp_pct": 23.155558151436896
     },
     {
       "month_key": "2026-05",
-      "revenue_ex_vat": 3291359.02
+      "revenue_ex_vat": 3291359.02,
+      "gp_costed_revenue": 3152486.02,
+      "gp_value": 690995.5099999999,
+      "gp_pct": 21.919066591134317
     }
   ],
   "salesman_leaderboard": [
@@ -5175,14 +5214,14 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "FABTEC INTERNATIONAL",
+      "customer_name": "GECO",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
       "outstanding_amount": 0.0,
       "overdue_amount": 0.0,
       "projected_amount": 10000.0,
-      "expectation_amount": 7000.0,
+      "expectation_amount": 10000.0,
       "projection_achievement_pct": 0.0,
       "eto_close": 0.0,
       "eto_projection_variance": -10000.0,
@@ -5197,7 +5236,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "BRIGHT SPARK AUTO",
+      "customer_name": "STG CONCRETE PRODUCT",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -5241,7 +5280,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "GECO",
+      "customer_name": "ELECTRON ELECTRO MECHANICAL",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -5307,7 +5346,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "SUN X CEMENT PRODUCT FACTORY LLC",
+      "customer_name": "BRIGHT SPARK AUTO",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -5351,29 +5390,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "ELECTRON ELECTRO MECHANICAL",
-      "mtd_sales": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 10000.0,
-      "expectation_amount": 10000.0,
-      "projection_achievement_pct": 0.0,
-      "eto_close": 0.0,
-      "eto_projection_variance": -10000.0,
-      "eto_projection_shortfall": 10000.0,
-      "last_month_mtd_sales": 0.0,
-      "sales_change_vs_last_month": 0.0,
-      "sales_change_pct_vs_last_month": null,
-      "last_month_costed_revenue": 0.0,
-      "last_month_gross_profit": 0.0,
-      "last_month_gp_pct": null,
-      "gp_pct_change": null
-    },
-    {
-      "salesman": "SOHAIL",
-      "customer_name": "STG CONCRETE PRODUCT",
+      "customer_name": "SUN X CEMENT PRODUCT FACTORY LLC",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -5403,6 +5420,28 @@
       "overdue_amount": 0.0,
       "projected_amount": 10000.0,
       "expectation_amount": 10000.0,
+      "projection_achievement_pct": 0.0,
+      "eto_close": 0.0,
+      "eto_projection_variance": -10000.0,
+      "eto_projection_shortfall": 10000.0,
+      "last_month_mtd_sales": 0.0,
+      "sales_change_vs_last_month": 0.0,
+      "sales_change_pct_vs_last_month": null,
+      "last_month_costed_revenue": 0.0,
+      "last_month_gross_profit": 0.0,
+      "last_month_gp_pct": null,
+      "gp_pct_change": null
+    },
+    {
+      "salesman": "SOHAIL",
+      "customer_name": "FABTEC INTERNATIONAL",
+      "mtd_sales": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
+      "projected_amount": 10000.0,
+      "expectation_amount": 7000.0,
       "projection_achievement_pct": 0.0,
       "eto_close": 0.0,
       "eto_projection_variance": -10000.0,
@@ -5703,24 +5742,24 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "GREAT LAND TRANSPORT LLC",
+      "customer_name": "NEW FIVE STAR TRANSPORT LLC",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
+      "outstanding_amount": 7350.0,
+      "overdue_amount": 7350.0,
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
       "eto_close": 0.0,
       "eto_projection_variance": 0.0,
       "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 9900.0,
-      "sales_change_vs_last_month": -9900.0,
+      "last_month_mtd_sales": 8100.0,
+      "sales_change_vs_last_month": -8100.0,
       "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 9900.0,
-      "last_month_gross_profit": 1800.0,
-      "last_month_gp_pct": 18.181818181818183,
+      "last_month_costed_revenue": 8100.0,
+      "last_month_gross_profit": 1224.0,
+      "last_month_gp_pct": 15.11111111111111,
       "gp_pct_change": null
     },
     {
@@ -5769,24 +5808,24 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "NEW FIVE STAR TRANSPORT LLC",
+      "customer_name": "GREAT LAND TRANSPORT LLC",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "outstanding_amount": 7350.0,
-      "overdue_amount": 7350.0,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
       "eto_close": 0.0,
       "eto_projection_variance": 0.0,
       "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 8100.0,
-      "sales_change_vs_last_month": -8100.0,
+      "last_month_mtd_sales": 9900.0,
+      "sales_change_vs_last_month": -9900.0,
       "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 8100.0,
-      "last_month_gross_profit": 1224.0,
-      "last_month_gp_pct": 15.11111111111111,
+      "last_month_costed_revenue": 9900.0,
+      "last_month_gross_profit": 1800.0,
+      "last_month_gp_pct": 18.181818181818183,
       "gp_pct_change": null
     },
     {

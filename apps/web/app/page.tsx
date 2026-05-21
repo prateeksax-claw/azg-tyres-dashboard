@@ -695,25 +695,18 @@ export default function Page() {
 
   const maxWaterfall = Math.max(projection, sales, pipeline, projectionGap, 1)
 
-  // Monthly GP overlay — real for current month only; modeled for all other months because
-  // the snapshot only carries point-in-time GP aggregates (which would visually clash with
-  // full-month revenue). Modeled GP sits in a conservative band centered slightly below the
-  // current MTD margin so historical bars look reasonable to a finance reader.
-  const monthly = data.monthly_trend as Array<{ month_key: string; revenue_ex_vat: number }>
+  // Monthly GP overlay uses actual CRM profitability values from the snapshot.
+  // Current and historical months both use gp_value / gp_pct; no modeled monthly GP.
+  const monthly = data.monthly_trend as Array<{ month_key: string; revenue_ex_vat: number; gp_value?: number; gp_pct?: number }>
   const currentMonthKey = monthly.length >= 1 ? String(monthly[monthly.length - 1].month_key) : ''
-  const modelMargin = (key: string) => {
-    const hash = [...key].reduce((acc, ch) => acc + ch.charCodeAt(0), 0)
-    const variance = ((hash % 21) - 10) / 10  // [-1.0, +1.0]
-    return 20.0 + variance                   // band: 19.0% .. 21.0%
-  }
   const monthlyEnriched = monthly.map((p) => {
-    const rev = Number(p.revenue_ex_vat) || 0
     const key = String(p.month_key)
-    if (key === currentMonthKey) {
-      return { ...p, gp_value: grossProfit, gp_pct: gpPct, isCurrent: true }
+    return {
+      ...p,
+      gp_value: Number(p.gp_value || 0),
+      gp_pct: Number(p.gp_pct || 0),
+      isCurrent: key === currentMonthKey,
     }
-    const margin = modelMargin(key)
-    return { ...p, gp_value: rev * (margin / 100), gp_pct: margin }
   })
 
   // AI-style insights for the projection pacing card
