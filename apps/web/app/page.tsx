@@ -62,6 +62,149 @@ function InsightSpark({ tone = 'teal', down = false }: { tone?: Tone; down?: boo
   )
 }
 
+function formatMonthLabel(monthKey: string) {
+  if (!monthKey) return ''
+  const [y, m] = monthKey.split('-').map(Number)
+  if (!y || !m) return monthKey
+  return new Date(y, m - 1, 1).toLocaleString('en-GB', { month: 'short' })
+}
+
+type TrendPoint = { month_key: string; revenue_ex_vat: number }
+function TrendArea({ points, budget, projection }: { points: TrendPoint[]; budget: number; projection: number }) {
+  const W = 540
+  const H = 200
+  const padL = 38
+  const padR = 12
+  const padT = 18
+  const padB = 30
+  const innerW = W - padL - padR
+  const innerH = H - padT - padB
+  const maxV = Math.max(...points.map((p) => Number(p.revenue_ex_vat) || 0), budget) * 1.06
+  const minV = 0
+  const x = (i: number) => padL + (i / Math.max(points.length - 1, 1)) * innerW
+  const y = (v: number) => padT + innerH - ((v - minV) / (maxV - minV || 1)) * innerH
+  const line = points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${x(i)} ${y(Number(p.revenue_ex_vat) || 0)}`).join(' ')
+  const area = `${line} L ${x(points.length - 1)} ${y(0)} L ${x(0)} ${y(0)} Z`
+  const last = points[points.length - 1]
+  const ticks = [0, 0.25, 0.5, 0.75, 1].map((t) => Math.round(maxV * t))
+  return (
+    <svg className="trend-area" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" role="img" aria-label="Monthly revenue trend">
+      <defs>
+        <linearGradient id="area-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.28" />
+          <stop offset="60%" stopColor="#3B82F6" stopOpacity="0.06" />
+          <stop offset="100%" stopColor="#3B82F6" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      {ticks.map((t, i) => (
+        <g key={i}>
+          <line x1={padL} x2={W - padR} y1={y(t)} y2={y(t)} stroke="#EEF1F4" strokeDasharray={i === 0 ? '0' : '3 4'} />
+          <text x={padL - 6} y={y(t) + 3} textAnchor="end" className="trend-axis">{(t / 1_000_000).toFixed(1)}M</text>
+        </g>
+      ))}
+      <line x1={padL} x2={W - padR} y1={y(budget)} y2={y(budget)} stroke="#F59E0B" strokeDasharray="4 4" strokeWidth="1.5" />
+      <text x={W - padR} y={y(budget) - 5} textAnchor="end" className="trend-ref">Budget {(budget / 1_000_000).toFixed(2)}M</text>
+      <line x1={padL} x2={W - padR} y1={y(projection)} y2={y(projection)} stroke="#0D9488" strokeDasharray="4 4" strokeWidth="1.5" />
+      <text x={W - padR} y={y(projection) - 5} textAnchor="end" className="trend-ref teal">Projection {(projection / 1_000_000).toFixed(2)}M</text>
+      <path d={area} fill="url(#area-grad)" />
+      <path d={line} fill="none" stroke="#2563EB" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+      {points.map((p, i) => {
+        const v = Number(p.revenue_ex_vat) || 0
+        const isLast = i === points.length - 1
+        return <circle key={p.month_key} cx={x(i)} cy={y(v)} r={isLast ? 5 : 3} fill={isLast ? '#2563EB' : '#fff'} stroke="#2563EB" strokeWidth={isLast ? 2 : 1.6} />
+      })}
+      {points.map((p, i) => (i % 2 === 0 || i === points.length - 1) ? <text key={`l-${p.month_key}`} x={x(i)} y={H - 8} textAnchor="middle" className="trend-x">{formatMonthLabel(p.month_key)}</text> : null)}
+      <text x={x(points.length - 1)} y={y(Number(last?.revenue_ex_vat || 0)) - 12} textAnchor="middle" className="trend-callout">{(Number(last?.revenue_ex_vat || 0) / 1_000_000).toFixed(2)}M</text>
+    </svg>
+  )
+}
+
+function SegmentBar({ achieved, projected, budget }: { achieved: number; projected: number; budget: number }) {
+  const total = Math.max(budget, projected, achieved, 1)
+  const achPct = (achieved / total) * 100
+  const projAdd = Math.max(projected - achieved, 0)
+  const projPct = (projAdd / total) * 100
+  const gap = Math.max(budget - Math.max(projected, achieved), 0)
+  const gapPct = (gap / total) * 100
+  return (
+    <div className="segment-bar">
+      <div className="segment-track">
+        <div className="seg seg-ach" style={{ width: `${achPct}%` }} title={`Achieved ${achPct.toFixed(1)}%`} />
+        <div className="seg seg-proj" style={{ width: `${projPct}%` }} title={`Projection +${projPct.toFixed(1)}%`} />
+        <div className="seg seg-gap" style={{ width: `${gapPct}%` }} title={`Gap ${gapPct.toFixed(1)}%`} />
+      </div>
+      <div className="segment-legend">
+        <span><i className="legend-ach" />MTD <b>{achPct.toFixed(1)}%</b></span>
+        <span><i className="legend-proj" />Pipeline <b>+{projPct.toFixed(1)}%</b></span>
+        <span><i className="legend-gap" />Gap <b>{gapPct.toFixed(1)}%</b></span>
+      </div>
+    </div>
+  )
+}
+
+function Donut({ pct, tone = 'teal' }: { pct: number; tone?: 'teal' | 'green' | 'amber' | 'blue' }) {
+  const r = 28
+  const C = 2 * Math.PI * r
+  const clamped = Math.max(0, Math.min(pct, 100))
+  const dash = (clamped / 100) * C
+  const palette: Record<string, string> = { teal: '#14B8A6', green: '#10B981', amber: '#F59E0B', blue: '#3B82F6' }
+  const color = palette[tone] || palette.teal
+  return (
+    <svg className="donut" viewBox="0 0 80 80" role="img" aria-label={`${clamped.toFixed(1)} percent`}>
+      <circle cx="40" cy="40" r={r} fill="none" stroke="#EEF1F4" strokeWidth="9" />
+      <circle cx="40" cy="40" r={r} fill="none" stroke={color} strokeWidth="9" strokeLinecap="round"
+        strokeDasharray={`${dash} ${C - dash}`} transform="rotate(-90 40 40)" />
+      <text x="40" y="44" textAnchor="middle" className="donut-label">{clamped.toFixed(1)}%</text>
+    </svg>
+  )
+}
+
+function MiniArea({ values, tone = 'blue' }: { values: number[]; tone?: 'blue' | 'teal' | 'amber' | 'purple' | 'green' | 'red' }) {
+  const W = 200
+  const H = 56
+  const padT = 6
+  const padB = 4
+  const max = Math.max(...values, 1)
+  const min = Math.min(...values, 0)
+  const x = (i: number) => (i / Math.max(values.length - 1, 1)) * W
+  const y = (v: number) => padT + (H - padT - padB) - ((v - min) / (max - min || 1)) * (H - padT - padB)
+  const line = values.map((v, i) => `${i === 0 ? 'M' : 'L'} ${x(i)} ${y(v)}`).join(' ')
+  const area = `${line} L ${x(values.length - 1)} ${H} L 0 ${H} Z`
+  const colors: Record<string, string> = { blue: '#3B82F6', teal: '#14B8A6', amber: '#F59E0B', purple: '#8B5CF6', green: '#10B981', red: '#EF4444' }
+  const c = colors[tone] || colors.blue
+  return (
+    <svg className="mini-area" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id={`mini-grad-${tone}`} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor={c} stopOpacity="0.32" />
+          <stop offset="100%" stopColor={c} stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <path d={area} fill={`url(#mini-grad-${tone})`} />
+      <path d={line} fill="none" stroke={c} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+function MiniBarChart({ values, tone = 'amber' }: { values: number[]; tone?: 'blue' | 'teal' | 'amber' | 'purple' | 'green' }) {
+  const max = Math.max(...values, 1)
+  return (
+    <div className={`mini-barchart tone-${tone}`} aria-hidden="true">
+      {values.map((v, i) => <i key={i} style={{ height: `${Math.max((v / max) * 100, 8)}%` }} />)}
+    </div>
+  )
+}
+
+function DayProgress({ current, total }: { current: number; total: number }) {
+  return (
+    <div className="day-progress" aria-hidden="true">
+      {Array.from({ length: total }).map((_, i) => (
+        <i key={i} className={i < current ? 'done' : ''} />
+      ))}
+    </div>
+  )
+}
+
 const ICON_STROKE = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const }
 
 function Icon({ name, size = 16 }: { name: string; size?: number }) {
@@ -363,40 +506,102 @@ export default function Page() {
           </div>
         </header>
 
-        <section className="eto-command-panel">
-          <div className="eto-panel-head">
-            <div className="eto-title-block"><span><Icon name="arrow-up-right" size={18} /></span><div><h2>ETO vs Budget</h2><p>MTD performance cockpit</p></div></div>
-            <div className={etoVariance >= 0 ? 'eto-status surplus' : 'eto-status shortfall'}>{etoVariance >= 0 ? 'Surplus trend' : 'Shortfall trend'} <b>{signedCompactMoney(etoVariance)}</b></div>
-          </div>
-          <div className="eto-panel-grid">
-            <div className="eto-kpi-stack">
-              <article className="eto-mini-card red"><span>MTD</span><strong>{compactMoney(sales)}</strong><small>Budget achievement {safePct(budgetAch)}</small><i style={{ width: `${budgetProgress}%` }} /></article>
-              <article className="eto-mini-card teal"><span>GP %</span><strong>{safePct(gpPct)}</strong><small>Gross profit {compactMoney(grossProfit)}</small><i style={{ width: `${Math.min(Math.max(gpPct, 0), 35) / 35 * 100}%` }} /></article>
-              <article className={etoVariance >= 0 ? 'eto-mini-card green' : 'eto-mini-card gold'}><span>ETO Close</span><strong>{compactMoney(eto)}</strong><small>{Math.round(etoAch)}% of budget trend</small><i style={{ width: `${Math.min(Math.max(etoAch, 0), 120) / 120 * 100}%` }} /></article>
-            </div>
-
-            <div className="eto-gauge-card">
-              <div className="eto-gauge-wrap">
-                <svg className="eto-gauge" viewBox="0 0 220 152" role="img" aria-label="ETO versus budget gauge">
-                  <path className="gauge-track" d="M24 132 A86 86 0 0 1 196 132" pathLength="100" />
-                  <path className={etoAch >= 100 ? 'gauge-fill surplus' : 'gauge-fill shortfall'} d="M24 132 A86 86 0 0 1 196 132" pathLength="100" style={{ strokeDasharray: `${etoGaugeProgress} 100` }} />
-                  <circle className="gauge-target" cx="153" cy="57" r="5" />
-                  <line className="gauge-needle" x1="110" y1="132" x2={needleX} y2={needleY} />
-                  <circle className="gauge-hub" cx="110" cy="132" r="6" />
-                  <text x="21" y="147">0%</text><text x="61" y="65">50%</text><text x="150" y="50">100%</text><text x="190" y="147">150%</text>
-                </svg>
-                <div className="gauge-center"><span>{Math.round(etoAch)}%</span><small>ETO vs Budget</small><b>{compactMoney(eto)}</b></div>
+        <section className="performance-cockpit">
+          <header className="cockpit-head">
+            <div className="cockpit-title">
+              <span className="cockpit-icon"><Icon name="trend" size={18} /></span>
+              <div>
+                <p>Performance Cockpit</p>
+                <h2>May Execution Status <em className="cockpit-period">Day {ctx.day_of_month} of {ctx.days_in_month}</em></h2>
               </div>
-              <div className="gauge-legend"><span><i className="red" />Shortfall</span><span><i className="gold" />Target</span><span><i className="green" />Surplus</span></div>
             </div>
+            <div className="cockpit-status-row">
+              <div className={`status-pill ${etoVariance >= 0 ? 'surplus' : 'shortfall'}`}>
+                <Icon name={etoVariance >= 0 ? 'trend' : 'shield'} size={14} />
+                <span>{etoVariance >= 0 ? 'Pacing ahead' : 'Pacing behind'}</span>
+                <b>{signedCompactMoney(etoVariance)}</b>
+              </div>
+              <div className="status-pill neutral">
+                <Icon name="clock" size={14} />
+                <span>{daysRemaining} days left</span>
+              </div>
+            </div>
+          </header>
 
-            <div className="eto-insights-grid">
-              <article><div><span className="gold"><Icon name="target" size={14} /></span><p>Budget Target<small>{compactMoney(budget)}</small></p></div><b>{compactMoney(remainingBudget)}</b><em>left to budget</em><InsightSpark tone="gold" /></article>
-              <article className={etoVariance >= 0 ? 'positive' : 'negative'}><div><span><Icon name={etoVariance >= 0 ? 'trend' : 'shield'} size={14} /></span><p>ETO Variance<small>trend close vs budget</small></p></div><b>{signedCompactMoney(etoVariance)}</b><em>{etoVariance >= 0 ? 'ahead' : 'behind'} at current pace</em><InsightSpark tone={etoVariance >= 0 ? 'green' : 'red'} down={etoVariance < 0} /></article>
-              <article><div><span className="teal"><Icon name="bolt" size={14} /></span><p>Daily Trend<small>actual average billing</small></p></div><b>{compactMoney(dailyTrend)}/day</b><em>{signedCompactMoney(dailyTrendDelta)}/day vs needed</em><InsightSpark tone={dailyTrendDelta >= 0 ? 'green' : 'red'} down={dailyTrendDelta < 0} /></article>
-              <article><div><span className="blue"><Icon name="gauge" size={14} /></span><p>Required Run Rate<small>to hit budget</small></p></div><b>{compactMoney(runRate)}/day</b><em>{daysRemaining} days remaining</em><InsightSpark tone="blue" /></article>
-              <article className="days-card"><div><span className="purple"><Icon name="clock" size={14} /></span><p>Month Clock<small>execution window</small></p></div><b>{ctx.day_of_month}/{ctx.days_in_month}</b><em>{daysRemaining} days left</em><div className="day-dots">{Array.from({ length: 10 }).map((_, i) => <i key={i} className={i < Math.round(Number(ctx.day_of_month || 0) / Number(ctx.days_in_month || 31) * 10) ? 'done' : ''} />)}</div></article>
-            </div>
+          <div className="cockpit-hero">
+            <article className="hero-progress-card">
+              <div className="hero-progress-head">
+                <p>Budget pacing</p>
+                <small>MTD &rarr; Projection &rarr; Budget target</small>
+              </div>
+              <div className="hero-amounts">
+                <div className="amount achieved">
+                  <small>MTD Sales</small>
+                  <strong>{compactMoney(sales)}</strong>
+                  <em>{safePct(budgetAch)} of budget</em>
+                </div>
+                <div className="amount projected">
+                  <small>ETO Close</small>
+                  <strong>{compactMoney(eto)}</strong>
+                  <em>{safePct(etoAch)} of budget</em>
+                </div>
+                <div className="amount budget">
+                  <small>Budget Target</small>
+                  <strong>{compactMoney(budget)}</strong>
+                  <em>{compactMoney(remainingBudget)} remaining</em>
+                </div>
+              </div>
+              <SegmentBar achieved={sales} projected={Math.max(eto, projection)} budget={budget} />
+            </article>
+
+            <article className="hero-chart-card">
+              <div className="hero-chart-head">
+                <div>
+                  <p>13-month revenue trend</p>
+                  <small>Monthly billing • Asia/Dubai</small>
+                </div>
+                <div className="chart-legend">
+                  <span><i className="lg-line" />Actual</span>
+                  <span><i className="lg-budget" />Budget</span>
+                  <span><i className="lg-proj" />Projection</span>
+                </div>
+              </div>
+              <TrendArea points={data.monthly_trend} budget={budget} projection={projection} />
+            </article>
+          </div>
+
+          <div className="cockpit-tiles">
+            <article className="tile tile-blue">
+              <header><span className="tile-icon"><Icon name="bolt" size={14} /></span><p>Daily Trend</p></header>
+              <strong>{compactMoney(dailyTrend)}<em>/day</em></strong>
+              <small className={dailyTrendDelta >= 0 ? 'good' : 'bad'}>{signedCompactMoney(dailyTrendDelta)}/day vs needed</small>
+              <MiniArea values={data.monthly_trend.slice(-8).map((p) => Number(p.revenue_ex_vat) || 0)} tone="blue" />
+            </article>
+
+            <article className="tile tile-amber">
+              <header><span className="tile-icon"><Icon name="gauge" size={14} /></span><p>Run Rate Needed</p></header>
+              <strong>{compactMoney(runRate)}<em>/day</em></strong>
+              <small>to clear AED {(remainingBudget / 1_000_000).toFixed(2)}M in {daysRemaining}d</small>
+              <MiniBarChart values={[dailyTrend, dailyTrend * 0.92, dailyTrend * 1.08, dailyTrend, runRate * 0.9, runRate, runRate * 1.05]} tone="amber" />
+            </article>
+
+            <article className="tile tile-teal">
+              <header><span className="tile-icon"><Icon name="percent" size={14} /></span><p>GP Margin</p></header>
+              <div className="tile-with-donut">
+                <div>
+                  <strong>{safePct(gpPct)}</strong>
+                  <small>{compactMoney(grossProfit)} gross profit</small>
+                </div>
+                <Donut pct={gpPct} tone="teal" />
+              </div>
+            </article>
+
+            <article className="tile tile-purple">
+              <header><span className="tile-icon"><Icon name="clock" size={14} /></span><p>Month Clock</p></header>
+              <strong>{ctx.day_of_month}<em>/{ctx.days_in_month}</em></strong>
+              <small>{daysRemaining} days remaining • {Math.round(Number(ctx.day_of_month) / Number(ctx.days_in_month) * 100)}% elapsed</small>
+              <DayProgress current={Number(ctx.day_of_month) || 0} total={Number(ctx.days_in_month) || 31} />
+            </article>
           </div>
         </section>
 
