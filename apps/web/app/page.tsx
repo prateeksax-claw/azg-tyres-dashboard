@@ -52,6 +52,16 @@ function TrendLine({ tone = 'green' }: { tone?: Tone }) {
   )
 }
 
+function InsightSpark({ tone = 'teal', down = false }: { tone?: Tone; down?: boolean }) {
+  const points = down ? '2,8 18,11 34,9 50,17 66,20 82,27' : '2,27 18,22 34,24 50,15 66,12 82,7'
+  return (
+    <svg className={`insight-spark ${tone}`} viewBox="0 0 84 34" aria-hidden="true">
+      <polyline points={points} />
+      <circle cx="82" cy={down ? '27' : '7'} r="2.5" />
+    </svg>
+  )
+}
+
 function KpiCard({ item }: { item: Kpi }) {
   return (
     <article className="kpi-card">
@@ -157,6 +167,15 @@ export default function Page() {
   const gpPct = Number(gp.gp_pct || 0)
   const grossProfit = Number(gp.gross_profit || 0)
   const gauge = Math.min(Math.max(etoAch, 0), 100)
+  const etoGaugeValue = Math.min(Math.max(etoAch, 0), 150)
+  const etoGaugeProgress = etoGaugeValue / 150 * 100
+  const gaugeAngle = Math.PI - (etoGaugeValue / 150) * Math.PI
+  const needleX = 110 + 72 * Math.cos(gaugeAngle)
+  const needleY = 132 - 72 * Math.sin(gaugeAngle)
+  const budgetProgress = budget ? Math.min(Math.max(sales / budget * 100, 0), 100) : 0
+  const remainingBudget = Math.max(budget - sales, 0)
+  const dailyTrendDelta = dailyTrend - runRate
+  const daysRemaining = Number(ctx.days_remaining_month || 0)
   const regionTotal = data.region_current.reduce((sum, row) => sum + Number(row.revenue_ex_vat || 0), 0)
   const regionSlots = [...data.region_current]
     .map((row) => ({
@@ -274,16 +293,41 @@ export default function Page() {
           </div>
         </header>
 
-        <section className="headline-panel">
-          <div className="headline-numbers">
-            <h2>MTD Sales <b>{compactMoney(sales)}</b></h2>
-            <i />
-            <h2>GP <b>{safePct(gpPct)}</b></h2>
-            <i />
-            <h2>ETO Close <b>{compactMoney(eto)}</b></h2>
+        <section className="eto-command-panel">
+          <div className="eto-panel-head">
+            <div className="eto-title-block"><span>↗</span><div><h2>ETO vs Budget</h2><p>MTD performance cockpit</p></div></div>
+            <div className={etoVariance >= 0 ? 'eto-status surplus' : 'eto-status shortfall'}>{etoVariance >= 0 ? 'Surplus trend' : 'Shortfall trend'} <b>{signedCompactMoney(etoVariance)}</b></div>
           </div>
-          <div className="achievement-donut" style={{ background: `conic-gradient(#ef3340 0 ${gauge * 2.45}deg, #16a3c7 ${gauge * 2.45}deg ${gauge * 3.6}deg, #e8e8e8 0)` }}><span>ETO vs<br />Budget</span><strong>{Math.round(etoAch)}%</strong></div>
-          <div className="legend-box"><p><i className="gold" /> Budget <b>{compactMoney(budget)}</b></p><p><i className="teal" /> MTD Sales <b>{compactMoney(sales)}</b></p><p><i className="red" /> ETO Var. <b>{signedCompactMoney(etoVariance)}</b></p></div>
+          <div className="eto-panel-grid">
+            <div className="eto-kpi-stack">
+              <article className="eto-mini-card red"><span>MTD</span><strong>{compactMoney(sales)}</strong><small>Budget achievement {safePct(budgetAch)}</small><i style={{ width: `${budgetProgress}%` }} /></article>
+              <article className="eto-mini-card teal"><span>GP %</span><strong>{safePct(gpPct)}</strong><small>Gross profit {compactMoney(grossProfit)}</small><i style={{ width: `${Math.min(Math.max(gpPct, 0), 35) / 35 * 100}%` }} /></article>
+              <article className={etoVariance >= 0 ? 'eto-mini-card green' : 'eto-mini-card gold'}><span>ETO Close</span><strong>{compactMoney(eto)}</strong><small>{Math.round(etoAch)}% of budget trend</small><i style={{ width: `${Math.min(Math.max(etoAch, 0), 120) / 120 * 100}%` }} /></article>
+            </div>
+
+            <div className="eto-gauge-card">
+              <div className="eto-gauge-wrap">
+                <svg className="eto-gauge" viewBox="0 0 220 152" role="img" aria-label="ETO versus budget gauge">
+                  <path className="gauge-track" d="M24 132 A86 86 0 0 1 196 132" pathLength="100" />
+                  <path className={etoAch >= 100 ? 'gauge-fill surplus' : 'gauge-fill shortfall'} d="M24 132 A86 86 0 0 1 196 132" pathLength="100" style={{ strokeDasharray: `${etoGaugeProgress} 100` }} />
+                  <circle className="gauge-target" cx="153" cy="57" r="5" />
+                  <line className="gauge-needle" x1="110" y1="132" x2={needleX} y2={needleY} />
+                  <circle className="gauge-hub" cx="110" cy="132" r="6" />
+                  <text x="21" y="147">0%</text><text x="61" y="65">50%</text><text x="150" y="50">100%</text><text x="190" y="147">150%</text>
+                </svg>
+                <div className="gauge-center"><span>{Math.round(etoAch)}%</span><small>ETO vs Budget</small><b>{compactMoney(eto)}</b></div>
+              </div>
+              <div className="gauge-legend"><span><i className="red" />Shortfall</span><span><i className="gold" />Target</span><span><i className="green" />Surplus</span></div>
+            </div>
+
+            <div className="eto-insights-grid">
+              <article><div><span className="gold">◎</span><p>Budget Target<small>{compactMoney(budget)}</small></p></div><b>{compactMoney(remainingBudget)}</b><em>left to budget</em><InsightSpark tone="gold" /></article>
+              <article className={etoVariance >= 0 ? 'positive' : 'negative'}><div><span>{etoVariance >= 0 ? '▲' : '▼'}</span><p>ETO Variance<small>trend close vs budget</small></p></div><b>{signedCompactMoney(etoVariance)}</b><em>{etoVariance >= 0 ? 'ahead' : 'behind'} at current pace</em><InsightSpark tone={etoVariance >= 0 ? 'green' : 'red'} down={etoVariance < 0} /></article>
+              <article><div><span className="teal">⌁</span><p>Daily Trend<small>actual average billing</small></p></div><b>{compactMoney(dailyTrend)}/day</b><em>{signedCompactMoney(dailyTrendDelta)}/day vs needed</em><InsightSpark tone={dailyTrendDelta >= 0 ? 'green' : 'red'} down={dailyTrendDelta < 0} /></article>
+              <article><div><span className="blue">▣</span><p>Required Run Rate<small>to hit budget</small></p></div><b>{compactMoney(runRate)}/day</b><em>{daysRemaining} days remaining</em><InsightSpark tone="blue" /></article>
+              <article className="days-card"><div><span className="purple">◷</span><p>Month Clock<small>execution window</small></p></div><b>{ctx.day_of_month}/{ctx.days_in_month}</b><em>{daysRemaining} days left</em><div className="day-dots">{Array.from({ length: 10 }).map((_, i) => <i key={i} className={i < Math.round(Number(ctx.day_of_month || 0) / Number(ctx.days_in_month || 31) * 10) ? 'done' : ''} />)}</div></article>
+            </div>
+          </div>
         </section>
 
         <section className="kpi-grid">{kpis.map((item) => <KpiCard key={item.label} item={item} />)}</section>
