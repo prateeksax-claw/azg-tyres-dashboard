@@ -565,6 +565,7 @@ function RegionMapAsset({ region }: { region: string }) {
 
 export default function Page() {
   const [expandedSalesmen, setExpandedSalesmen] = useState<Set<string>>(new Set())
+  const [sidebarOpen, setSidebarOpen] = useState(false)
   const data = dashboardData
   const ctx = data.context
   const bridge = data.command_center.shortfall_bridge
@@ -752,9 +753,16 @@ export default function Page() {
   ]
 
   return (
-    <main className="command-artboard">
+    <main className={`command-artboard ${sidebarOpen ? 'sidebar-open' : ''}`}>
+      <button type="button" className="sidebar-backdrop" onClick={() => setSidebarOpen(false)} aria-hidden={!sidebarOpen} tabIndex={-1} />
       <aside className="side-rail">
-        <div className="side-logo"><img src="/brand/al-zaabi-logo-light.png" alt="Al Zaabi Group" /><strong>TYRES DIVISION</strong></div>
+        <div className="side-logo">
+          <img src="/brand/al-zaabi-logo-light.png" alt="Al Zaabi Group" />
+          <strong>TYRES DIVISION</strong>
+          <button type="button" className="sidebar-close" onClick={() => setSidebarOpen(false)} aria-label="Close menu">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M6 6l12 12M18 6L6 18" /></svg>
+          </button>
+        </div>
         <nav>
           <small className="nav-section-label">MAIN MENU</small>
           {[
@@ -783,9 +791,14 @@ export default function Page() {
       <section className="command-canvas">
         <header className="top-ribbon">
           <div className="dashboard-greeting">
-            <span>Automotive Division</span>
-            <h1>Tyres Executive Command</h1>
-            <p>Sales, projection, GP and customer execution overview <b className="ui-version-pill">Modern UI v4</b></p>
+            <button type="button" className="sidebar-toggle" onClick={() => setSidebarOpen(true)} aria-label="Open menu">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+            </button>
+            <div className="greeting-text">
+              <span>Automotive Division</span>
+              <h1>Tyres Executive Command</h1>
+              <p>Sales, projection, GP and customer execution overview <b className="ui-version-pill">Modern UI v4</b></p>
+            </div>
           </div>
           <div className="top-control-cluster">
             <label className="global-search"><Icon name="search" size={15} /> <em>Search customer / salesman&hellip;</em></label>
