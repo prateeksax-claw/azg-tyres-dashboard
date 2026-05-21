@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T04:05:22+04:00",
+  "generated_at": "2026-05-21T04:05:45+04:00",
   "context": {
     "as_of_date": "2026-05-21",
     "month_start": "2026-05-01",
@@ -304,16 +304,6 @@
       "gp_pct": 20.72072072072072
     },
     {
-      "derived_category": "TBR",
-      "derived_brand": "CEAT",
-      "product_group": "CEAT-TBR",
-      "product": "1200R20 CEAT",
-      "qty": 100.0,
-      "revenue_ex_vat": 125000.0,
-      "gross_profit": 24000.0,
-      "gp_pct": 19.2
-    },
-    {
       "derived_category": "PCR / LTR",
       "derived_brand": "YARTU",
       "product_group": "YARTU",
@@ -322,6 +312,16 @@
       "revenue_ex_vat": 125000.0,
       "gross_profit": 32500.0,
       "gp_pct": 26.0
+    },
+    {
+      "derived_category": "TBR",
+      "derived_brand": "CEAT",
+      "product_group": "CEAT-TBR",
+      "product": "1200R20 CEAT",
+      "qty": 100.0,
+      "revenue_ex_vat": 125000.0,
+      "gross_profit": 24000.0,
+      "gp_pct": 19.2
     },
     {
       "derived_category": "PCR / LTR",
@@ -1347,30 +1347,6 @@
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
       "salesman": "ARUN RAJ",
-      "customer_name": "POWER INTERNATIONAL LLC",
-      "product_group": "ITR-TBR",
-      "product": "1200R24 *** ITR TM909A TTF",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 31800.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "BIJOY",
-      "customer_name": "DUBAI READYMIX CONCRETE L.L.C",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 24600.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "ARUN RAJ",
       "customer_name": "AL SHIRAA VEHICLE BODY IND LLC",
       "product_group": "CEAT-TBR",
       "product": "385/65R22.5 CEAT RD218",
@@ -1378,18 +1354,6 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 16730.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "SOHAIL",
-      "customer_name": "DATE QUICK TRANSPORT L.L.C",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 36700.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -1426,6 +1390,42 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 1080.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "SOHAIL",
+      "customer_name": "DATE QUICK TRANSPORT L.L.C",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 36700.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "BIJOY",
+      "customer_name": "DUBAI READYMIX CONCRETE L.L.C",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 24600.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "ARUN RAJ",
+      "customer_name": "POWER INTERNATIONAL LLC",
+      "product_group": "ITR-TBR",
+      "product": "1200R24 *** ITR TM909A TTF",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 31800.0
     },
     {
       "alert_type": "LOW GP",
