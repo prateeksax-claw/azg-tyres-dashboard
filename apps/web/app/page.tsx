@@ -277,8 +277,13 @@ export default function Page() {
       <aside className="side-rail">
         <div className="side-logo"><img src="/brand/al-zaabi-logo-light.png" alt="Al Zaabi Group" /><strong>TYRES DIVISION</strong></div>
         <nav>
-          {['Executive Command', 'Sales & Targets', 'Region', 'Salesman', 'Product Mix', 'Customer 360', 'GP & Margin', 'Projection', 'Action Center'].map((item, i) => (
-            <a className={i === 0 ? 'active' : ''} href="#" key={item}><span>{['◴','◎','◌','♙','▱','♧','%','▥','☑'][i]}</span>{item}</a>
+          <small className="nav-section-label">MAIN MENU</small>
+          {['Executive Command', 'Sales & Targets', 'Region', 'Salesman', 'Product Mix'].map((item, i) => (
+            <a className={i === 0 ? 'active' : ''} href="#" key={item}><span>{['◴','◎','◌','♙','▱'][i]}</span>{item}</a>
+          ))}
+          <small className="nav-section-label">OPERATIONS</small>
+          {['Customer 360', 'GP & Margin', 'Projection', 'Action Center'].map((item, i) => (
+            <a href="#" key={item}><span>{['♧','%','▥','☑'][i]}</span>{item}</a>
           ))}
         </nav>
         <div className="side-update"><i>◷</i><span>Last Updated</span><b>{refreshedAt} GST</b></div>
@@ -287,9 +292,17 @@ export default function Page() {
 
       <section className="command-canvas">
         <header className="top-ribbon">
-          <h1>Al Zaabi Group — Tyres Division Executive Command Center</h1>
-          <div className="filter-row">
-            <button>▣ May 1 – May {ctx.day_of_month}</button><button>May 2026</button><button>All Regions</button><button>All Salesmen</button><label>Search Customer... <span>⌕</span></label><button className="export">⇩ Export</button>
+          <div className="dashboard-greeting">
+            <span>Automotive Division</span>
+            <h1>Tyres Executive Command</h1>
+            <p>Sales, projection, GP and customer execution overview</p>
+          </div>
+          <div className="top-control-cluster">
+            <label className="global-search"><span>⌕</span> Search customer / salesman...</label>
+            <div className="filter-row">
+              <button>▣ May 1 – May {ctx.day_of_month}</button><button>All Regions</button><button>All Salesmen</button><button className="export">↻ Refresh</button>
+            </div>
+            <button className="ai-pill" type="button">✦ Ask Titan</button>
           </div>
         </header>
 
