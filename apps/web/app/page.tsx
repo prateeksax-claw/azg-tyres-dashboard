@@ -109,6 +109,14 @@ function optionalMetric(row: Record<string, unknown>, key: string) {
   return Number.isFinite(n) ? n : null
 }
 
+function ProjectionVarianceChip({ actual, projection }: { actual: number; projection: number }) {
+  const variance = actual - projection
+  if (variance >= 0) {
+    return <em className="projection-chip surplus">Surplus {compactMoney(variance)}</em>
+  }
+  return <em className="projection-chip shortfall">Shortfall {compactMoney(Math.abs(variance))}</em>
+}
+
 function RegionMapAsset({ region }: { region: string }) {
   const files: Record<string, string> = {
     'ABU DHABI': 'abudhabi',
@@ -307,7 +315,6 @@ export default function Page() {
                   const isOpen = expandedSalesmen.has(salesmanName)
                   const actual = Number(s.actual_sales || 0)
                   const projectionAmount = Number(s.projection_amount || 0)
-                  const projectionShortfall = Math.max(projectionAmount - actual, 0)
                   const mtdAch = projectionAmount ? actual / projectionAmount * 100 : 0
                   const etoProjectionVariance = Number(s.eto_projection_variance || 0)
                   const salesChange = Number(s.sales_change_vs_last_month || 0)
@@ -321,7 +328,7 @@ export default function Page() {
                           <button type="button" className="salesman-group-button" aria-expanded={isOpen} onClick={() => toggleSalesman(salesmanName)}>
                             <b>{isOpen ? '▾' : '▸'} {salesmanName}</b>
                             <small>{customerDetails.length} customers</small>
-                            <em>Shortfall {compactMoney(projectionShortfall)}</em>
+                            <ProjectionVarianceChip actual={actual} projection={projectionAmount} />
                           </button>
                         </td>
                         <td>{compactMoney(actual)}</td>
@@ -338,7 +345,6 @@ export default function Page() {
                         const record = customer as Record<string, unknown>
                         const customerActual = Number(customer.mtd_sales || 0)
                         const customerProjection = Number(customer.projected_amount || 0)
-                        const customerProjectionShortfall = Math.max(customerProjection - customerActual, 0)
                         const customerMtdAch = customerProjection ? customerActual / customerProjection * 100 : null
                         const customerEto = metric(record, 'eto_close', customerActual / elapsedDays * daysInMonth)
                         const customerEtoProjectionVariance = metric(record, 'eto_projection_variance', customerEto - customerProjection)
@@ -350,7 +356,7 @@ export default function Page() {
                         return (
                           <tr className="customer-drill-line" key={`${salesmanName}-${customer.customer_name}-${customerIndex}`}>
                             <td>↳</td>
-                            <td><span className="customer-drill-name"><b>{customer.customer_name}</b><small>Shortfall {compactMoney(customerProjectionShortfall)}</small></span></td>
+                            <td><span className="customer-drill-name"><b>{customer.customer_name}</b><ProjectionVarianceChip actual={customerActual} projection={customerProjection} /></span></td>
                             <td>{compactMoney(customerActual)}</td>
                             <td>{compactMoney(customerProjection)}</td>
                             <td>{customerMtdAch === null ? '—' : `${Math.round(customerMtdAch)}%`}</td>
