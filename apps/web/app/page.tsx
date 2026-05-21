@@ -295,7 +295,7 @@ export default function Page() {
           <div className="dashboard-greeting">
             <span>Automotive Division</span>
             <h1>Tyres Executive Command</h1>
-            <p>Sales, projection, GP and customer execution overview</p>
+            <p>Sales, projection, GP and customer execution overview <b className="ui-version-pill">Modern UI v3</b></p>
           </div>
           <div className="top-control-cluster">
             <label className="global-search"><span>⌕</span> Search customer / salesman...</label>
