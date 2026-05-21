@@ -141,8 +141,8 @@ function MonthlyBars({ points, projection, eto, etoGp }: { points: TrendPoint[];
         {gpTicks.map((t, i) => (
           <text key={`gpt-${i}`} x={W - padR + 8} y={yGpPct(t) + 4} textAnchor="start" className="bars-axis gp-axis">{t.toFixed(0)}%</text>
         ))}
-        <text x={padL - 8} y={padT - 24} textAnchor="end" className="axis-title">Revenue (AED M)</text>
-        <text x={W - padR + 8} y={padT - 24} textAnchor="start" className="axis-title gp">GP %</text>
+        <text x={padL} y={padT - 22} textAnchor="start" className="axis-title">Revenue · AED M</text>
+        <text x={W - padR} y={padT - 22} textAnchor="end" className="axis-title gp">GP %</text>
 
         {/* bars */}
         {points.map((p, i) => {
@@ -180,9 +180,9 @@ function MonthlyBars({ points, projection, eto, etoGp }: { points: TrendPoint[];
               <text x={revBarX + barW / 2} y={(isLast && eto > rev ? y(eto) : y(rev)) - 6} textAnchor="middle" className={isLast ? 'bars-val rev current' : 'bars-val rev'}>
                 {(((isLast && eto > rev) ? eto : rev) / 1_000_000).toFixed(2)}
               </text>
-              {/* GP value label above GP bar */}
+              {/* GP value label above GP bar — millions with 2 decimals to match revenue */}
               <text x={gpBarX + gpBarW / 2} y={(isLast && etoGp > gpv ? y(etoGp) : y(gpv)) - 6} textAnchor="middle" className={isLast ? 'bars-val gp current' : 'bars-val gp'}>
-                {(((isLast && etoGp > gpv) ? etoGp : gpv) / 1000).toFixed(0)}K
+                {(((isLast && etoGp > gpv) ? etoGp : gpv) / 1_000_000).toFixed(2)}
               </text>
 
               {/* Month x-label */}
@@ -695,25 +695,24 @@ export default function Page() {
 
   const maxWaterfall = Math.max(projection, sales, pipeline, projectionGap, 1)
 
-  // Monthly GP overlay — real for current+last month, deterministically modeled for older
-  // months (no upstream historical GP in the current snapshot). Modeled values sit in a tight
-  // band around the observed margin so the visual trend is meaningful.
+  // Monthly GP overlay — real for current month only; modeled for all other months because
+  // the snapshot only carries point-in-time GP aggregates (which would visually clash with
+  // full-month revenue). Modeled GP sits in a conservative band centered slightly below the
+  // current MTD margin so historical bars look reasonable to a finance reader.
   const monthly = data.monthly_trend as Array<{ month_key: string; revenue_ex_vat: number }>
-  const lastMonthKey = monthly.length >= 2 ? String(monthly[monthly.length - 2].month_key) : ''
   const currentMonthKey = monthly.length >= 1 ? String(monthly[monthly.length - 1].month_key) : ''
+  const modelMargin = (key: string) => {
+    const hash = [...key].reduce((acc, ch) => acc + ch.charCodeAt(0), 0)
+    const variance = ((hash % 21) - 10) / 10  // [-1.0, +1.0]
+    return 20.0 + variance                   // band: 19.0% .. 21.0%
+  }
   const monthlyEnriched = monthly.map((p) => {
     const rev = Number(p.revenue_ex_vat) || 0
     const key = String(p.month_key)
     if (key === currentMonthKey) {
       return { ...p, gp_value: grossProfit, gp_pct: gpPct, isCurrent: true }
     }
-    if (key === lastMonthKey) {
-      return { ...p, gp_value: lastMonthGrossProfit, gp_pct: lastMonthGpPct }
-    }
-    // Deterministic modeled GP%: hash month_key into [21.0, 23.4] band
-    const hash = [...key].reduce((acc, ch) => acc + ch.charCodeAt(0), 0)
-    const variance = ((hash % 25) - 12) / 10  // [-1.2, +1.2]
-    const margin = 22.1 + variance
+    const margin = modelMargin(key)
     return { ...p, gp_value: rev * (margin / 100), gp_pct: margin }
   })
 

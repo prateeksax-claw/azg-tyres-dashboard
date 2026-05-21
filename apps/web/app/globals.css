@@ -956,14 +956,14 @@ html, body {
   letter-spacing: .01em;
 }
 .monthly-bars .axis-title {
-  font-size: 9px;
+  font-size: 9.5px;
   fill: var(--muted);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .06em;
 }
 .monthly-bars .axis-title.gp { fill: var(--indigo); }
-.monthly-bars .gp-axis { fill: var(--indigo); }
+.monthly-bars .gp-axis { fill: var(--indigo); font-size: 10px; }
 
 /* Comparison strip beneath chart */
 .compare-strip {
