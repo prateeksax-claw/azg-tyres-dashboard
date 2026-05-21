@@ -1,4 +1,6 @@
-import { Fragment } from 'react'
+'use client'
+
+import { Fragment, useState } from 'react'
 import { dashboardData, money, pct } from '../lib/dashboard-data'
 
 type Tone = 'red' | 'blue' | 'teal' | 'gold' | 'green' | 'ink'
@@ -120,6 +122,7 @@ function RegionMapAsset({ region }: { region: string }) {
 }
 
 export default function Page() {
+  const [expandedSalesmen, setExpandedSalesmen] = useState<Set<string>>(new Set())
   const data = dashboardData
   const ctx = data.context
   const bridge = data.command_center.shortfall_bridge
@@ -171,6 +174,17 @@ export default function Page() {
   const salesmen = [...data.salesman_leaderboard]
     .filter((s) => Number(s.projection_amount || 0) > 0)
     .sort((a, b) => Number(b.actual_sales || 0) - Number(a.actual_sales || 0))
+  const salesmanNames = salesmen.map((s) => String(s.salesman))
+  const toggleSalesman = (salesmanName: string) => {
+    setExpandedSalesmen((current) => {
+      const next = new Set(current)
+      if (next.has(salesmanName)) next.delete(salesmanName)
+      else next.add(salesmanName)
+      return next
+    })
+  }
+  const expandAllSalesmen = () => setExpandedSalesmen(new Set(salesmanNames))
+  const collapseAllSalesmen = () => setExpandedSalesmen(new Set())
   const salesmanSales = salesmen.reduce((sum, s) => sum + Number(s.actual_sales || 0), 0)
   const salesmanProjection = salesmen.reduce((sum, s) => sum + Number(s.projection_amount || 0), 0)
   const salesmanProjectionAch = salesmanProjection ? salesmanSales / salesmanProjection * 100 : 0
@@ -271,7 +285,11 @@ export default function Page() {
             <div>
               <p>Primary Execution View</p>
               <h3>Salesman Performance — All Salesmen</h3>
-              <small className="salesman-breakdown-note">Customer rows are always expanded and sorted by projection shortfall ↓</small>
+              <small className="salesman-breakdown-note">Click a salesman to expand/collapse customers — sorted by projection shortfall ↓</small>
+            </div>
+            <div className="salesman-view-actions">
+              <button type="button" onClick={expandAllSalesmen}>Expand all</button>
+              <button type="button" onClick={collapseAllSalesmen}>Collapse all</button>
             </div>
             <div className="salesman-summary-strip">
               <span><b>{compactMoney(salesmanSales)}</b><small>MTD Sales</small></span>
@@ -286,6 +304,7 @@ export default function Page() {
                 {salesmen.map((s, index) => {
                   const salesmanName = String(s.salesman)
                   const customerDetails = customerRowsBySalesman.get(salesmanName.toUpperCase()) || []
+                  const isOpen = expandedSalesmen.has(salesmanName)
                   const actual = Number(s.actual_sales || 0)
                   const projectionAmount = Number(s.projection_amount || 0)
                   const projectionShortfall = Math.max(projectionAmount - actual, 0)
@@ -296,14 +315,14 @@ export default function Page() {
                   const gpChange = Number(s.gp_pct_change)
                   return (
                     <Fragment key={salesmanName}>
-                      <tr className="salesman-row open">
+                      <tr className={isOpen ? 'salesman-row open' : 'salesman-row collapsed'}>
                         <td>{index + 1}</td>
                         <td>
-                          <span className="salesman-group-label">
-                            <b>▾ {salesmanName}</b>
+                          <button type="button" className="salesman-group-button" aria-expanded={isOpen} onClick={() => toggleSalesman(salesmanName)}>
+                            <b>{isOpen ? '▾' : '▸'} {salesmanName}</b>
                             <small>{customerDetails.length} customers</small>
                             <em>Shortfall {compactMoney(projectionShortfall)}</em>
-                          </span>
+                          </button>
                         </td>
                         <td>{compactMoney(actual)}</td>
                         <td>{compactMoney(projectionAmount)}</td>
@@ -315,7 +334,7 @@ export default function Page() {
                         <td className="green">{safePct(Number(s.gp_pct))}</td>
                         <td className={gpChange >= 0 ? 'pos' : 'neg'}>{signedPp(gpChange)}</td>
                       </tr>
-                      {customerDetails.map((customer, customerIndex) => {
+                      {isOpen && customerDetails.map((customer, customerIndex) => {
                         const record = customer as Record<string, unknown>
                         const customerActual = Number(customer.mtd_sales || 0)
                         const customerProjection = Number(customer.projected_amount || 0)
