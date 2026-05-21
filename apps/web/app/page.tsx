@@ -1,3 +1,6 @@
+'use client'
+
+import { Fragment, useState } from 'react'
 import { dashboardData, money, pct } from '../lib/dashboard-data'
 
 type Tone = 'red' | 'blue' | 'teal' | 'gold' | 'green' | 'ink'
@@ -92,6 +95,20 @@ function signedPp(value: number | null | undefined) {
   return `${sign}${Math.abs(n).toFixed(1)} pp`
 }
 
+function metric(row: Record<string, unknown>, key: string, fallback = 0) {
+  const value = row[key]
+  if (value === null || value === undefined || value === '') return fallback
+  const n = Number(value)
+  return Number.isFinite(n) ? n : fallback
+}
+
+function optionalMetric(row: Record<string, unknown>, key: string) {
+  const value = row[key]
+  if (value === null || value === undefined || value === '') return null
+  const n = Number(value)
+  return Number.isFinite(n) ? n : null
+}
+
 function RegionMapAsset({ region }: { region: string }) {
   const files: Record<string, string> = {
     'ABU DHABI': 'abudhabi',
@@ -105,6 +122,7 @@ function RegionMapAsset({ region }: { region: string }) {
 }
 
 export default function Page() {
+  const [openSalesman, setOpenSalesman] = useState<string | null>(null)
   const data = dashboardData
   const ctx = data.context
   const bridge = data.command_center.shortfall_bridge
@@ -163,10 +181,26 @@ export default function Page() {
   const salesmanEtoVariance = salesmanEto - salesmanProjection
   const salesmanLastMtdSales = salesmen.reduce((sum, s) => sum + Number(s.last_month_mtd_sales || 0), 0)
   const salesmanSalesChange = salesmanSales - salesmanLastMtdSales
+  const salesmanSalesChangePct = salesmanLastMtdSales ? salesmanSalesChange / salesmanLastMtdSales * 100 : null
   const lastMonthCostedRevenue = salesmen.reduce((sum, s) => sum + Number(s.last_month_costed_revenue || 0), 0)
   const lastMonthGrossProfit = salesmen.reduce((sum, s) => sum + Number(s.last_month_gross_profit || 0), 0)
   const totalLastMonthGpPct = lastMonthCostedRevenue ? lastMonthGrossProfit / lastMonthCostedRevenue * 100 : null
   const totalGpPctChange = totalLastMonthGpPct === null ? null : gpPct - totalLastMonthGpPct
+  const customerRowsBySalesman = new Map<string, (typeof data.customer_top)[number][]>()
+  for (const row of data.customer_top) {
+    const record = row as Record<string, unknown>
+    const salesmanName = String(row.salesman || '').toUpperCase()
+    const currentSales = Number(row.mtd_sales || 0)
+    const projectionAmount = Number(row.projected_amount || 0)
+    const lastMtdSales = metric(record, 'last_month_mtd_sales')
+    if (!salesmanName || (currentSales === 0 && projectionAmount === 0 && lastMtdSales === 0)) continue
+    const rows = customerRowsBySalesman.get(salesmanName) || []
+    rows.push(row)
+    customerRowsBySalesman.set(salesmanName, rows)
+  }
+  for (const rows of customerRowsBySalesman.values()) {
+    rows.sort((a, b) => Number(b.mtd_sales || 0) - Number(a.mtd_sales || 0))
+  }
   const customerRows = [...data.customer_top]
     .filter((row) => Number(row.projected_amount || 0) > 0)
     .sort((a, b) => Number(b.projected_amount || 0) - Number(a.projected_amount || 0))
@@ -247,6 +281,9 @@ export default function Page() {
               <thead><tr><th>#</th><th>Salesman</th><th>MTD Sales</th><th>Projection</th><th>MTD %</th><th>ETO Close</th><th>ETO vs Projection</th><th>Last MTD</th><th>Revenue Δ</th><th>GP %</th><th>GP Δ</th></tr></thead>
               <tbody>
                 {salesmen.map((s, index) => {
+                  const salesmanName = String(s.salesman)
+                  const customerDetails = customerRowsBySalesman.get(salesmanName.toUpperCase()) || []
+                  const isOpen = openSalesman === salesmanName
                   const actual = Number(s.actual_sales || 0)
                   const projectionAmount = Number(s.projection_amount || 0)
                   const mtdAch = projectionAmount ? actual / projectionAmount * 100 : 0
@@ -254,9 +291,63 @@ export default function Page() {
                   const salesChange = Number(s.sales_change_vs_last_month || 0)
                   const salesChangePct = Number(s.sales_change_pct_vs_last_month)
                   const gpChange = Number(s.gp_pct_change)
-                  return <tr key={s.salesman}><td>{index + 1}</td><td>{s.salesman}</td><td>{compactMoney(actual)}</td><td>{compactMoney(projectionAmount)}</td><td>{Math.round(mtdAch)}%</td><td>{compactMoney(Number(s.eto_close || 0))}</td><td className={etoProjectionVariance >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(etoProjectionVariance)}</td><td>{compactMoney(Number(s.last_month_mtd_sales || 0))}</td><td className={salesChange >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(salesChange)} <small>{signedPct(salesChangePct)}</small></td><td className="green">{safePct(Number(s.gp_pct))}</td><td className={gpChange >= 0 ? 'pos' : 'neg'}>{signedPp(gpChange)}</td></tr>
+                  return (
+                    <Fragment key={salesmanName}>
+                      <tr className={isOpen ? 'salesman-row open' : 'salesman-row'}>
+                        <td>{index + 1}</td>
+                        <td>
+                          <button
+                            type="button"
+                            className="salesman-drill-toggle"
+                            aria-expanded={isOpen}
+                            onClick={() => setOpenSalesman(isOpen ? null : salesmanName)}
+                          >
+                            <span>{isOpen ? '▾' : '▸'} {salesmanName}</span>
+                            <small>{customerDetails.length} customers</small>
+                          </button>
+                        </td>
+                        <td>{compactMoney(actual)}</td>
+                        <td>{compactMoney(projectionAmount)}</td>
+                        <td>{Math.round(mtdAch)}%</td>
+                        <td>{compactMoney(Number(s.eto_close || 0))}</td>
+                        <td className={etoProjectionVariance >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(etoProjectionVariance)}</td>
+                        <td>{compactMoney(Number(s.last_month_mtd_sales || 0))}</td>
+                        <td className={salesChange >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(salesChange)} <small>{signedPct(salesChangePct)}</small></td>
+                        <td className="green">{safePct(Number(s.gp_pct))}</td>
+                        <td className={gpChange >= 0 ? 'pos' : 'neg'}>{signedPp(gpChange)}</td>
+                      </tr>
+                      {isOpen && customerDetails.map((customer, customerIndex) => {
+                        const record = customer as Record<string, unknown>
+                        const customerActual = Number(customer.mtd_sales || 0)
+                        const customerProjection = Number(customer.projected_amount || 0)
+                        const customerMtdAch = customerProjection ? customerActual / customerProjection * 100 : null
+                        const customerEto = metric(record, 'eto_close', customerActual / elapsedDays * daysInMonth)
+                        const customerEtoProjectionVariance = metric(record, 'eto_projection_variance', customerEto - customerProjection)
+                        const customerLastMtd = metric(record, 'last_month_mtd_sales')
+                        const customerSalesChange = metric(record, 'sales_change_vs_last_month', customerActual - customerLastMtd)
+                        const customerSalesChangePct = customerLastMtd ? metric(record, 'sales_change_pct_vs_last_month', customerSalesChange / customerLastMtd * 100) : null
+                        const customerGpPct = optionalMetric(record, 'gp_pct')
+                        const customerGpChange = optionalMetric(record, 'gp_pct_change')
+                        return (
+                          <tr className="customer-drill-line" key={`${salesmanName}-${customer.customer_name}-${customerIndex}`}>
+                            <td>↳</td>
+                            <td><span className="customer-drill-name">{customer.customer_name}</span></td>
+                            <td>{compactMoney(customerActual)}</td>
+                            <td>{compactMoney(customerProjection)}</td>
+                            <td>{customerMtdAch === null ? '—' : `${Math.round(customerMtdAch)}%`}</td>
+                            <td>{compactMoney(customerEto)}</td>
+                            <td className={customerEtoProjectionVariance >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(customerEtoProjectionVariance)}</td>
+                            <td>{compactMoney(customerLastMtd)}</td>
+                            <td className={customerSalesChange >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(customerSalesChange)} <small>{signedPct(customerSalesChangePct)}</small></td>
+                            <td className={customerGpPct === null ? '' : 'green'}>{customerGpPct === null ? '—' : safePct(customerGpPct)}</td>
+                            <td className={customerGpChange === null ? '' : customerGpChange >= 0 ? 'pos' : 'neg'}>{signedPp(customerGpChange)}</td>
+                          </tr>
+                        )
+                      })}
+                    </Fragment>
+                  )
                 })}
-                <tr className="total"><td>—</td><td>TOTAL</td><td>{compactMoney(salesmanSales)}</td><td>{compactMoney(salesmanProjection)}</td><td>{Math.round(salesmanProjectionAch)}%</td><td>{compactMoney(salesmanEto)}</td><td className={salesmanEtoVariance >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(salesmanEtoVariance)}</td><td>{compactMoney(salesmanLastMtdSales)}</td><td className={salesmanSalesChange >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(salesmanSalesChange)}</td><td className="green">{safePct(gpPct)}</td><td className={Number(totalGpPctChange || 0) >= 0 ? 'pos' : 'neg'}>{signedPp(totalGpPctChange)}</td></tr>
+                <tr className="total"><td>—</td><td>TOTAL</td><td>{compactMoney(salesmanSales)}</td><td>{compactMoney(salesmanProjection)}</td><td>{Math.round(salesmanProjectionAch)}%</td><td>{compactMoney(salesmanEto)}</td><td className={salesmanEtoVariance >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(salesmanEtoVariance)}</td><td>{compactMoney(salesmanLastMtdSales)}</td><td className={salesmanSalesChange >= 0 ? 'pos' : 'neg'}>{signedCompactMoney(salesmanSalesChange)} <small>{signedPct(salesmanSalesChangePct)}</small></td><td className="green">{safePct(gpPct)}</td><td className={Number(totalGpPctChange || 0) >= 0 ? 'pos' : 'neg'}>{signedPp(totalGpPctChange)}</td></tr>
               </tbody>
             </table>
           </div>
