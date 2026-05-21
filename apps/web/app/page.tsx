@@ -62,10 +62,53 @@ function InsightSpark({ tone = 'teal', down = false }: { tone?: Tone; down?: boo
   )
 }
 
+const ICON_STROKE = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const }
+
+function Icon({ name, size = 16 }: { name: string; size?: number }) {
+  const s = size
+  const props = { width: s, height: s, viewBox: '0 0 24 24', ...ICON_STROKE, 'aria-hidden': true }
+  switch (name) {
+    case 'gauge': return <svg {...props}><path d="M3 12a9 9 0 1 1 18 0" /><path d="M12 12l4-3" /><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" /></svg>
+    case 'target': return <svg {...props}><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none" /></svg>
+    case 'map': return <svg {...props}><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z" /><path d="M9 4v14M15 6v14" /></svg>
+    case 'user': return <svg {...props}><circle cx="12" cy="8" r="3.5" /><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6" /></svg>
+    case 'users': return <svg {...props}><circle cx="9" cy="9" r="3" /><circle cx="17" cy="10" r="2.5" /><path d="M3 19c0-3 2.5-5 6-5s6 2 6 5M14 19c0-2.4 1.7-4 4-4s3 1.6 3 4" /></svg>
+    case 'box': return <svg {...props}><path d="M3 7l9-4 9 4-9 4z" /><path d="M3 7v10l9 4 9-4V7" /><path d="M12 11v10" /></svg>
+    case 'percent': return <svg {...props}><circle cx="7.5" cy="7.5" r="2.5" /><circle cx="16.5" cy="16.5" r="2.5" /><path d="M19 5 5 19" /></svg>
+    case 'trend': return <svg {...props}><path d="M3 17l6-6 4 4 8-8" /><path d="M14 7h7v7" /></svg>
+    case 'check': return <svg {...props}><rect x="4" y="4" width="16" height="16" rx="3" /><path d="M8 12l3 3 5-6" /></svg>
+    case 'search': return <svg {...props}><circle cx="11" cy="11" r="6.5" /><path d="m20 20-4-4" /></svg>
+    case 'calendar': return <svg {...props}><rect x="3.5" y="5" width="17" height="15" rx="2.5" /><path d="M3.5 10h17M8 3v4M16 3v4" /></svg>
+    case 'pin': return <svg {...props}><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z" /><circle cx="12" cy="9" r="2.5" /></svg>
+    case 'badge': return <svg {...props}><circle cx="12" cy="9" r="4" /><path d="M9 13l-1 8 4-2 4 2-1-8" /></svg>
+    case 'refresh': return <svg {...props}><path d="M4 12a8 8 0 0 1 14-5.3L20 9" /><path d="M20 4v5h-5" /><path d="M20 12a8 8 0 0 1-14 5.3L4 15" /><path d="M4 20v-5h5" /></svg>
+    case 'sparkle': return <svg {...props}><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" /><path d="M19 14l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" /></svg>
+    case 'bills': return <svg {...props}><rect x="3" y="6" width="18" height="13" rx="2" /><circle cx="12" cy="12.5" r="2.5" /><path d="M7 9v.01M17 16v.01" /></svg>
+    case 'dollar': return <svg {...props}><circle cx="12" cy="12" r="9" /><path d="M9 14.5c0 1.4 1.4 2 3 2s3-.7 3-2-1.5-1.7-3-2-3-.6-3-2 1.4-2 3-2 3 .6 3 2" /><path d="M12 7v10" /></svg>
+    case 'clock': return <svg {...props}><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3.5 2" /></svg>
+    case 'bolt': return <svg {...props}><path d="M13 3 4 14h7l-1 7 9-11h-7z" /></svg>
+    case 'flag': return <svg {...props}><path d="M5 21V4" /><path d="M5 5h12l-2 4 2 4H5" /></svg>
+    case 'shield': return <svg {...props}><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z" /><path d="M9 12l2 2 4-4" /></svg>
+    case 'arrow-up-right': return <svg {...props}><path d="M7 17 17 7" /><path d="M9 7h8v8" /></svg>
+    case 'chevron-down': return <svg {...props}><path d="m6 9 6 6 6-6" /></svg>
+    case 'chevron-right': return <svg {...props}><path d="m9 6 6 6-6 6" /></svg>
+    default: return <svg {...props}><circle cx="12" cy="12" r="8" /></svg>
+  }
+}
+
+function Initials({ name }: { name: string }) {
+  const parts = name.trim().split(/\s+/)
+  const initials = (parts[0]?.[0] || '') + (parts[1]?.[0] || parts[0]?.[1] || '')
+  const palette = ['blue', 'teal', 'purple', 'amber', 'pink', 'green', 'indigo'] as const
+  const hash = [...name].reduce((acc, ch) => acc + ch.charCodeAt(0), 0)
+  const tone = palette[hash % palette.length]
+  return <span className={`avatar avatar-${tone}`}>{initials.toUpperCase()}</span>
+}
+
 function KpiCard({ item }: { item: Kpi }) {
   return (
     <article className="kpi-card">
-      <div className={`kpi-icon ${item.tone}`}>{item.icon}</div>
+      <div className={`kpi-icon ${item.tone}`}><Icon name={item.icon} size={20} /></div>
       <div className="kpi-content">
         <p>{item.label}</p>
         <strong>{item.value}</strong>
@@ -262,12 +305,12 @@ export default function Page() {
   ]
 
   const kpis: Kpi[] = [
-    { icon: '▥', label: 'MTD Sales', value: compactMoney(sales), basis: 'vs Budget', delta: `${safePct(budgetAch - 100)}`, tone: 'blue' },
-    { icon: '◎', label: 'ETO vs Budget', value: safePct(etoAch), basis: `Close: ${compactMoney(eto)}`, delta: signedCompactMoney(etoVariance), tone: 'gold' },
-    { icon: '%', label: 'GP %', value: safePct(gpPct), basis: 'vs Budget', delta: '+1.8 pp', tone: 'teal' },
-    { icon: '◉', label: 'Gross Profit AED', value: compactMoney(grossProfit), basis: 'vs Budget', delta: '-60%', tone: 'ink' },
-    { icon: '↗', label: 'Projection Achievement', value: safePct(projectionAch), basis: 'vs Projection', delta: `${Math.round(projectionAch - 100)} pp`, tone: 'gold' },
-    { icon: '↻', label: 'Daily Needed', value: `${compactMoney(runRate)}/day`, basis: `${ctx.days_remaining_month} days left`, delta: `${signedCompactMoney(runRate - dailyTrend)}/day`, tone: 'ink' },
+    { icon: 'bills', label: 'MTD Sales', value: compactMoney(sales), basis: 'vs Budget', delta: `${safePct(budgetAch - 100)}`, tone: 'blue' },
+    { icon: 'target', label: 'ETO vs Budget', value: safePct(etoAch), basis: `Close: ${compactMoney(eto)}`, delta: signedCompactMoney(etoVariance), tone: 'gold' },
+    { icon: 'percent', label: 'GP %', value: safePct(gpPct), basis: 'vs Budget', delta: '+1.8 pp', tone: 'teal' },
+    { icon: 'dollar', label: 'Gross Profit AED', value: compactMoney(grossProfit), basis: 'vs Budget', delta: '-60%', tone: 'ink' },
+    { icon: 'trend', label: 'Projection Achievement', value: safePct(projectionAch), basis: 'vs Projection', delta: `${Math.round(projectionAch - 100)} pp`, tone: 'gold' },
+    { icon: 'bolt', label: 'Daily Needed', value: `${compactMoney(runRate)}/day`, basis: `${ctx.days_remaining_month} days left`, delta: `${signedCompactMoney(runRate - dailyTrend)}/day`, tone: 'ink' },
   ]
 
   const maxWaterfall = Math.max(budget, projection, sales, pipeline, gap, 1)
@@ -278,15 +321,26 @@ export default function Page() {
         <div className="side-logo"><img src="/brand/al-zaabi-logo-light.png" alt="Al Zaabi Group" /><strong>TYRES DIVISION</strong></div>
         <nav>
           <small className="nav-section-label">MAIN MENU</small>
-          {['Executive Command', 'Sales & Targets', 'Region', 'Salesman', 'Product Mix'].map((item, i) => (
-            <a className={i === 0 ? 'active' : ''} href="#" key={item}><span>{['◴','◎','◌','♙','▱'][i]}</span>{item}</a>
+          {[
+            { label: 'Executive Command', icon: 'gauge' },
+            { label: 'Sales & Targets', icon: 'target' },
+            { label: 'Region', icon: 'map' },
+            { label: 'Salesman', icon: 'user' },
+            { label: 'Product Mix', icon: 'box' },
+          ].map((item, i) => (
+            <a className={i === 0 ? 'active' : ''} href="#" key={item.label}><span><Icon name={item.icon} size={15} /></span>{item.label}</a>
           ))}
           <small className="nav-section-label">OPERATIONS</small>
-          {['Customer 360', 'GP & Margin', 'Projection', 'Action Center'].map((item, i) => (
-            <a href="#" key={item}><span>{['♧','%','▥','☑'][i]}</span>{item}</a>
+          {[
+            { label: 'Customer 360', icon: 'users' },
+            { label: 'GP & Margin', icon: 'percent' },
+            { label: 'Projection', icon: 'trend' },
+            { label: 'Action Center', icon: 'check' },
+          ].map((item) => (
+            <a href="#" key={item.label}><span><Icon name={item.icon} size={15} /></span>{item.label}</a>
           ))}
         </nav>
-        <div className="side-update"><i>◷</i><span>Last Updated</span><b>{refreshedAt} GST</b></div>
+        <div className="side-update"><i><Icon name="clock" size={12} /></i><span>Last Updated</span><b>{refreshedAt} GST</b></div>
         <div className="tyre-graphic" aria-hidden="true" />
       </aside>
 
@@ -295,20 +349,23 @@ export default function Page() {
           <div className="dashboard-greeting">
             <span>Automotive Division</span>
             <h1>Tyres Executive Command</h1>
-            <p>Sales, projection, GP and customer execution overview <b className="ui-version-pill">Modern UI v3</b></p>
+            <p>Sales, projection, GP and customer execution overview <b className="ui-version-pill">Modern UI v4</b></p>
           </div>
           <div className="top-control-cluster">
-            <label className="global-search"><span>⌕</span> Search customer / salesman...</label>
+            <label className="global-search"><Icon name="search" size={15} /> <em>Search customer / salesman&hellip;</em></label>
             <div className="filter-row">
-              <button>▣ May 1 – May {ctx.day_of_month}</button><button>All Regions</button><button>All Salesmen</button><button className="export">↻ Refresh</button>
+              <button><Icon name="calendar" size={14} /> May 1 – May {ctx.day_of_month}</button>
+              <button><Icon name="pin" size={14} /> All Regions</button>
+              <button><Icon name="badge" size={14} /> All Salesmen</button>
+              <button className="export"><Icon name="refresh" size={14} /> Refresh</button>
             </div>
-            <button className="ai-pill" type="button">✦ Ask Titan</button>
+            <button className="ai-pill" type="button"><Icon name="sparkle" size={14} /> Ask Titan</button>
           </div>
         </header>
 
         <section className="eto-command-panel">
           <div className="eto-panel-head">
-            <div className="eto-title-block"><span>↗</span><div><h2>ETO vs Budget</h2><p>MTD performance cockpit</p></div></div>
+            <div className="eto-title-block"><span><Icon name="arrow-up-right" size={18} /></span><div><h2>ETO vs Budget</h2><p>MTD performance cockpit</p></div></div>
             <div className={etoVariance >= 0 ? 'eto-status surplus' : 'eto-status shortfall'}>{etoVariance >= 0 ? 'Surplus trend' : 'Shortfall trend'} <b>{signedCompactMoney(etoVariance)}</b></div>
           </div>
           <div className="eto-panel-grid">
@@ -334,11 +391,11 @@ export default function Page() {
             </div>
 
             <div className="eto-insights-grid">
-              <article><div><span className="gold">◎</span><p>Budget Target<small>{compactMoney(budget)}</small></p></div><b>{compactMoney(remainingBudget)}</b><em>left to budget</em><InsightSpark tone="gold" /></article>
-              <article className={etoVariance >= 0 ? 'positive' : 'negative'}><div><span>{etoVariance >= 0 ? '▲' : '▼'}</span><p>ETO Variance<small>trend close vs budget</small></p></div><b>{signedCompactMoney(etoVariance)}</b><em>{etoVariance >= 0 ? 'ahead' : 'behind'} at current pace</em><InsightSpark tone={etoVariance >= 0 ? 'green' : 'red'} down={etoVariance < 0} /></article>
-              <article><div><span className="teal">⌁</span><p>Daily Trend<small>actual average billing</small></p></div><b>{compactMoney(dailyTrend)}/day</b><em>{signedCompactMoney(dailyTrendDelta)}/day vs needed</em><InsightSpark tone={dailyTrendDelta >= 0 ? 'green' : 'red'} down={dailyTrendDelta < 0} /></article>
-              <article><div><span className="blue">▣</span><p>Required Run Rate<small>to hit budget</small></p></div><b>{compactMoney(runRate)}/day</b><em>{daysRemaining} days remaining</em><InsightSpark tone="blue" /></article>
-              <article className="days-card"><div><span className="purple">◷</span><p>Month Clock<small>execution window</small></p></div><b>{ctx.day_of_month}/{ctx.days_in_month}</b><em>{daysRemaining} days left</em><div className="day-dots">{Array.from({ length: 10 }).map((_, i) => <i key={i} className={i < Math.round(Number(ctx.day_of_month || 0) / Number(ctx.days_in_month || 31) * 10) ? 'done' : ''} />)}</div></article>
+              <article><div><span className="gold"><Icon name="target" size={14} /></span><p>Budget Target<small>{compactMoney(budget)}</small></p></div><b>{compactMoney(remainingBudget)}</b><em>left to budget</em><InsightSpark tone="gold" /></article>
+              <article className={etoVariance >= 0 ? 'positive' : 'negative'}><div><span><Icon name={etoVariance >= 0 ? 'trend' : 'shield'} size={14} /></span><p>ETO Variance<small>trend close vs budget</small></p></div><b>{signedCompactMoney(etoVariance)}</b><em>{etoVariance >= 0 ? 'ahead' : 'behind'} at current pace</em><InsightSpark tone={etoVariance >= 0 ? 'green' : 'red'} down={etoVariance < 0} /></article>
+              <article><div><span className="teal"><Icon name="bolt" size={14} /></span><p>Daily Trend<small>actual average billing</small></p></div><b>{compactMoney(dailyTrend)}/day</b><em>{signedCompactMoney(dailyTrendDelta)}/day vs needed</em><InsightSpark tone={dailyTrendDelta >= 0 ? 'green' : 'red'} down={dailyTrendDelta < 0} /></article>
+              <article><div><span className="blue"><Icon name="gauge" size={14} /></span><p>Required Run Rate<small>to hit budget</small></p></div><b>{compactMoney(runRate)}/day</b><em>{daysRemaining} days remaining</em><InsightSpark tone="blue" /></article>
+              <article className="days-card"><div><span className="purple"><Icon name="clock" size={14} /></span><p>Month Clock<small>execution window</small></p></div><b>{ctx.day_of_month}/{ctx.days_in_month}</b><em>{daysRemaining} days left</em><div className="day-dots">{Array.from({ length: 10 }).map((_, i) => <i key={i} className={i < Math.round(Number(ctx.day_of_month || 0) / Number(ctx.days_in_month || 31) * 10) ? 'done' : ''} />)}</div></article>
             </div>
           </div>
         </section>
@@ -383,7 +440,7 @@ export default function Page() {
                         <td>{index + 1}</td>
                         <td>
                           <button type="button" className="salesman-group-button" aria-expanded={isOpen} onClick={() => toggleSalesman(salesmanName)}>
-                            <b>{isOpen ? '▾' : '▸'} {salesmanName}</b>
+                            <b><span className={`salesman-caret ${isOpen ? 'open' : ''}`}><Icon name="chevron-right" size={12} /></span><Initials name={salesmanName} />{salesmanName}</b>
                             <small>{customerDetails.length} customers</small>
                             <ProjectionVarianceChip actual={actual} projection={projectionAmount} />
                           </button>
@@ -489,7 +546,7 @@ export default function Page() {
           <article className="card action-card">
             <h3>Action Center</h3>
             <ul>
-              {actionItems.map((item, index) => <li key={item}><b>{['◎', '◉', '♟', '↗'][index]}</b><span>{item}</span></li>)}
+              {actionItems.map((item, index) => <li key={item}><b><Icon name={['target', 'dollar', 'user', 'trend'][index]} size={14} /></b><span>{item}</span></li>)}
             </ul>
           </article>
         </section>
