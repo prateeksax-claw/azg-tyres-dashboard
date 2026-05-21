@@ -590,6 +590,7 @@ export default function Page() {
   const projectionAch = projection ? sales / projection * 100 : 0
   const gpPct = Number(gp.gp_pct || 0)
   const grossProfit = Number(gp.gross_profit || 0)
+  const etoGp = grossProfit / elapsedDays * daysInMonth
   const remainingProjection = Math.max(projection - sales, 0)
   const dailyTrendDelta = dailyTrend - runRate
   const daysRemaining = Number(ctx.days_remaining_month || 0)
@@ -907,7 +908,7 @@ export default function Page() {
                   <CardOptions label="13-month trend" />
                 </div>
               </div>
-              <MonthlyBars points={monthlyEnriched} projection={projection} eto={eto} etoGp={eto * (gpPct / 100)} />
+              <MonthlyBars points={monthlyEnriched} projection={projection} eto={eto} etoGp={etoGp} />
               <ComparisonStrip
                 thisRev={sales}
                 thisGp={grossProfit}
