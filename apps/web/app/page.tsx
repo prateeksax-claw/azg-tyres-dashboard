@@ -72,16 +72,16 @@ function formatMonthLabel(monthKey: string) {
 type TrendPoint = { month_key: string; revenue_ex_vat: number }
 function MonthlyBars({ points, projection }: { points: TrendPoint[]; projection: number }) {
   const W = 620
-  const H = 230
+  const H = 240
   const padL = 44
-  const padR = 60
-  const padT = 28
+  const padR = 24
+  const padT = 32
   const padB = 32
   const innerW = W - padL - padR
   const innerH = H - padT - padB
   const values = points.map((p) => Number(p.revenue_ex_vat) || 0)
   const maxData = Math.max(...values, projection)
-  const maxV = maxData * 1.18
+  const maxV = maxData * 1.2
   const n = points.length
   const slot = innerW / n
   const barW = Math.min(slot * 0.58, 32)
@@ -89,6 +89,9 @@ function MonthlyBars({ points, projection }: { points: TrendPoint[]; projection:
   const xCenter = (i: number) => padL + slot * i + slot / 2
   const y = (v: number) => padT + innerH - (v / (maxV || 1)) * innerH
   const ticks = [0, 0.25, 0.5, 0.75, 1].map((t) => maxV * t)
+  const lastIdx = n - 1
+  const targetY = y(projection)
+  const targetXCenter = xCenter(lastIdx)
   return (
     <svg className="monthly-bars" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" role="img" aria-label="Monthly revenue trend">
       <defs>
@@ -107,14 +110,9 @@ function MonthlyBars({ points, projection }: { points: TrendPoint[]; projection:
           <text x={padL - 8} y={y(t) + 3} textAnchor="end" className="bars-axis">{(t / 1_000_000).toFixed(1)}M</text>
         </g>
       ))}
-      <line x1={padL} x2={W - padR} y1={y(projection)} y2={y(projection)} stroke="#0D9488" strokeDasharray="5 4" strokeWidth="1.6" />
-      <text x={W - padR + 6} y={y(projection) + 4} textAnchor="start" className="bars-ref">
-        <tspan className="bars-ref-label">Projection</tspan>
-        <tspan x={W - padR + 6} dy="11" className="bars-ref-val">{(projection / 1_000_000).toFixed(2)}M</tspan>
-      </text>
       {points.map((p, i) => {
         const v = values[i]
-        const isLast = i === n - 1
+        const isLast = i === lastIdx
         const barH = Math.max(2, padT + innerH - y(v))
         return (
           <g key={p.month_key}>
@@ -126,61 +124,39 @@ function MonthlyBars({ points, projection }: { points: TrendPoint[]; projection:
           </g>
         )
       })}
+      {/* Current-month projection target marker (only on current bar) */}
+      <g className="target-marker">
+        <line x1={targetXCenter - barW * 0.95} x2={targetXCenter + barW * 0.95} y1={targetY} y2={targetY} stroke="#0D9488" strokeWidth="2.4" strokeDasharray="4 3" strokeLinecap="round" />
+        <circle cx={targetXCenter} cy={targetY} r="3.5" fill="#0D9488" stroke="#fff" strokeWidth="2" />
+        <rect x={targetXCenter - 38} y={targetY - 32} width="76" height="20" rx="10" fill="#0D9488" />
+        <text x={targetXCenter} y={targetY - 17} textAnchor="middle" className="target-label">
+          <tspan className="t-main">May target </tspan>
+          <tspan className="t-val">{(projection / 1_000_000).toFixed(2)}M</tspan>
+        </text>
+      </g>
     </svg>
   )
 }
 
-function GpCompareChart({ thisRev, thisGp, lastRev, lastGp }: { thisRev: number; thisGp: number; lastRev: number; lastGp: number }) {
-  const W = 220
-  const H = 110
-  const padT = 18
-  const padB = 22
-  const padL = 12
-  const padR = 12
-  const innerH = H - padT - padB
-  const max = Math.max(thisGp, lastGp) * 1.25 || 1
-  const barW = 38
-  const groupGap = 36
-  const totalGroupW = barW * 2 + 14
-  const startX = (W - (totalGroupW * 2 + groupGap)) / 2
-  const y = (v: number) => padT + innerH - (v / max) * innerH
-  const groups = [
-    { label: 'Last month', rev: lastRev, gp: lastGp },
-    { label: 'This MTD', rev: thisRev, gp: thisGp, current: true },
-  ]
+function HBarPair({ thisLabel, thisValue, lastLabel, lastValue, thisDisplay, lastDisplay, color }: {
+  thisLabel: string; thisValue: number; lastLabel: string; lastValue: number; thisDisplay: string; lastDisplay: string; color: string;
+}) {
+  const max = Math.max(thisValue, lastValue, 1)
+  const thisPct = (thisValue / max) * 100
+  const lastPct = (lastValue / max) * 100
   return (
-    <svg className="gp-compare" viewBox={`0 0 ${W} ${H}`} role="img" aria-label="GP vs last month comparison">
-      <defs>
-        <linearGradient id="gp-bar-rev" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#93C5FD" />
-          <stop offset="100%" stopColor="#3B82F6" />
-        </linearGradient>
-        <linearGradient id="gp-bar-gp" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#5EEAD4" />
-          <stop offset="100%" stopColor="#0D9488" />
-        </linearGradient>
-      </defs>
-      {groups.map((g, gi) => {
-        const gx = startX + gi * (totalGroupW + groupGap)
-        const revBarH = padT + innerH - y(g.rev)
-        const gpBarH = padT + innerH - y(g.gp)
-        return (
-          <g key={g.label}>
-            <rect x={gx} y={y(g.rev)} width={barW} height={revBarH} rx="3" fill="url(#gp-bar-rev)" opacity={g.current ? 1 : 0.7} />
-            <rect x={gx + barW + 6} y={y(g.gp)} width={barW} height={gpBarH} rx="3" fill="url(#gp-bar-gp)" opacity={g.current ? 1 : 0.7} />
-            <text x={gx + barW / 2} y={y(g.rev) - 4} textAnchor="middle" className="gp-bar-val">{(g.rev / 1_000_000).toFixed(2)}M</text>
-            <text x={gx + barW + 6 + barW / 2} y={y(g.gp) - 4} textAnchor="middle" className="gp-bar-val gp">{(g.gp / 1000).toFixed(0)}K</text>
-            <text x={gx + totalGroupW / 2} y={H - 8} textAnchor="middle" className="gp-bar-label">{g.label}</text>
-          </g>
-        )
-      })}
-      <g transform={`translate(${W - 64}, 6)`}>
-        <rect width="10" height="10" rx="2" fill="url(#gp-bar-rev)" />
-        <text x="14" y="9" className="gp-legend-text">Revenue</text>
-        <rect y="14" width="10" height="10" rx="2" fill="url(#gp-bar-gp)" />
-        <text x="14" y="23" className="gp-legend-text">GP value</text>
-      </g>
-    </svg>
+    <div className="hbar-pair">
+      <div className="hbar-row">
+        <span className="hbar-label">{lastLabel}</span>
+        <div className="hbar-track"><i className="hbar-fill last" style={{ width: `${lastPct}%`, background: color }} /></div>
+        <span className="hbar-val">{lastDisplay}</span>
+      </div>
+      <div className="hbar-row">
+        <span className="hbar-label this">{thisLabel}</span>
+        <div className="hbar-track"><i className="hbar-fill this" style={{ width: `${thisPct}%`, background: color }} /></div>
+        <span className="hbar-val this">{thisDisplay}</span>
+      </div>
+    </div>
   )
 }
 
@@ -253,17 +229,17 @@ function Donut({ pct, tone = 'teal' }: { pct: number; tone?: 'teal' | 'green' | 
   )
 }
 
-function MiniArea({ values, tone = 'blue' }: { values: number[]; tone?: 'blue' | 'teal' | 'amber' | 'purple' | 'green' | 'red' }) {
-  const W = 200
-  const H = 56
-  const padT = 6
-  const padB = 4
+function MiniArea({ values, labels, tone = 'blue' }: { values: number[]; labels?: string[]; tone?: 'blue' | 'teal' | 'amber' | 'purple' | 'green' | 'red' }) {
+  const W = 240
+  const H = labels ? 78 : 56
+  const padT = 16
+  const padB = labels ? 16 : 4
   const max = Math.max(...values, 1)
   const min = Math.min(...values, 0)
-  const x = (i: number) => (i / Math.max(values.length - 1, 1)) * W
+  const x = (i: number) => 4 + (i / Math.max(values.length - 1, 1)) * (W - 8)
   const y = (v: number) => padT + (H - padT - padB) - ((v - min) / (max - min || 1)) * (H - padT - padB)
   const line = values.map((v, i) => `${i === 0 ? 'M' : 'L'} ${x(i)} ${y(v)}`).join(' ')
-  const area = `${line} L ${x(values.length - 1)} ${H} L 0 ${H} Z`
+  const area = `${line} L ${x(values.length - 1)} ${H - padB} L ${x(0)} ${H - padB} Z`
   const colors: Record<string, string> = { blue: '#3B82F6', teal: '#14B8A6', amber: '#F59E0B', purple: '#8B5CF6', green: '#10B981', red: '#EF4444' }
   const c = colors[tone] || colors.blue
   return (
@@ -276,6 +252,16 @@ function MiniArea({ values, tone = 'blue' }: { values: number[]; tone?: 'blue' |
       </defs>
       <path d={area} fill={`url(#mini-grad-${tone})`} />
       <path d={line} fill="none" stroke={c} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      {values.map((v, i) => {
+        const isLast = i === values.length - 1
+        return <circle key={i} cx={x(i)} cy={y(v)} r={isLast ? 3 : 2} fill={isLast ? c : '#fff'} stroke={c} strokeWidth={1.4} />
+      })}
+      {labels && labels.map((lab, i) => (
+        <text key={`x-${i}`} x={x(i)} y={H - 3} textAnchor="middle" className="mini-area-x">{lab}</text>
+      ))}
+      {values.length > 0 && (
+        <text x={x(values.length - 1)} y={y(values[values.length - 1]) - 6} textAnchor="end" className="mini-area-val">{(values[values.length - 1] / 1_000_000).toFixed(2)}M</text>
+      )}
     </svg>
   )
 }
@@ -551,6 +537,48 @@ export default function Page() {
 
   const maxWaterfall = Math.max(projection, sales, pipeline, projectionGap, 1)
 
+  // AI-style insights for the projection pacing card
+  const topSalesman = [...data.salesman_leaderboard]
+    .filter((s) => Number(s.projection_amount || 0) > 0)
+    .sort((a, b) => Number(b.projection_achievement_pct || 0) - Number(a.projection_achievement_pct || 0))[0]
+  const watchSalesman = [...data.salesman_leaderboard]
+    .filter((s) => Number(s.projection_amount || 0) > 0)
+    .sort((a, b) => Number(a.eto_projection_variance || 0) - Number(b.eto_projection_variance || 0))[0]
+  const topCustomer = [...data.customer_top]
+    .sort((a, b) => Number(b.mtd_sales || 0) - Number(a.mtd_sales || 0))[0]
+  const categoryMap = new Map<string, number>()
+  for (const r of data.product_mix_top) {
+    const c = String(r.derived_category || 'Other')
+    categoryMap.set(c, (categoryMap.get(c) || 0) + Number(r.revenue_ex_vat || 0))
+  }
+  const topCategory = [...categoryMap.entries()].sort((a, b) => b[1] - a[1])[0]
+  const insights = [
+    {
+      icon: 'badge' as const,
+      tone: 'green' as const,
+      label: 'Top performer',
+      body: `${topSalesman?.salesman || '—'} — ${Math.round(Number(topSalesman?.projection_achievement_pct || 0))}% of projection`,
+    },
+    {
+      icon: 'user' as const,
+      tone: 'blue' as const,
+      label: 'Biggest customer (MTD)',
+      body: `${String(topCustomer?.customer_name || '—').split(' ').slice(0, 4).join(' ')} — ${compactMoney(Number(topCustomer?.mtd_sales || 0))}`,
+    },
+    {
+      icon: 'box' as const,
+      tone: 'purple' as const,
+      label: 'Leading category',
+      body: `${topCategory?.[0] || '—'} — ${compactMoney(topCategory?.[1] || 0)}`,
+    },
+    {
+      icon: 'shield' as const,
+      tone: 'red' as const,
+      label: 'Watchlist',
+      body: `${watchSalesman?.salesman || '—'} — ETO short by ${compactMoney(Math.abs(Number(watchSalesman?.eto_projection_variance || 0)))}`,
+    },
+  ]
+
   return (
     <main className="command-artboard">
       <aside className="side-rail">
@@ -645,6 +673,37 @@ export default function Page() {
                 </div>
               </div>
               <SegmentBar achieved={sales} projected={Math.max(eto, sales)} budget={projection} />
+
+              <div className="pacing-gp">
+                <div className="pacing-gp-cell">
+                  <small>MTD GP Value</small>
+                  <strong>{compactMoney(grossProfit)}</strong>
+                  <em className={gpValueDelta >= 0 ? 'pos' : 'neg'}>{gpValueDelta >= 0 ? '▲' : '▼'} {Math.abs(gpValueDeltaPct).toFixed(1)}% <span>vs last month</span></em>
+                </div>
+                <div className="pacing-gp-cell">
+                  <small>MTD GP %</small>
+                  <strong>{gpPct.toFixed(1)}%</strong>
+                  <em className={gpPctDelta >= 0 ? 'pos' : 'neg'}>{gpPctDelta >= 0 ? '▲' : '▼'} {Math.abs(gpPctDelta).toFixed(1)}pp <span>vs last month</span></em>
+                </div>
+              </div>
+
+              <div className="pacing-insights">
+                <div className="pacing-insights-head">
+                  <span className="ai-dot"><Icon name="sparkle" size={11} /></span>
+                  <p>Titan insights — May highlights</p>
+                </div>
+                <ul>
+                  {insights.map((it) => (
+                    <li key={it.label} className={`insight-${it.tone}`}>
+                      <span className="insight-icon"><Icon name={it.icon} size={12} /></span>
+                      <div>
+                        <small>{it.label}</small>
+                        <strong>{it.body}</strong>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </article>
 
             <article className="hero-chart-card">
@@ -654,9 +713,9 @@ export default function Page() {
                   <small>Monthly billing • Asia/Dubai • Values in AED M</small>
                 </div>
                 <div className="chart-legend">
-                  <span><i className="lg-bar" />Monthly</span>
-                  <span><i className="lg-current" />Current (partial)</span>
-                  <span><i className="lg-proj" />Projection target</span>
+                  <span><i className="lg-bar" />Monthly billing</span>
+                  <span><i className="lg-current" />Current month (partial)</span>
+                  <span><i className="lg-proj" />May target marker</span>
                 </div>
               </div>
               <MonthlyBars points={data.monthly_trend} projection={projection} />
@@ -676,24 +735,41 @@ export default function Page() {
               <header><span className="tile-icon"><Icon name="bolt" size={14} /></span><p>Daily Trend</p></header>
               <strong>{compactMoney(dailyTrend)}<em>/day</em></strong>
               <small className={dailyTrendDelta >= 0 ? 'good' : 'bad'}>{signedCompactMoney(dailyTrendDelta)}/day vs projection pace</small>
-              <MiniArea values={data.monthly_trend.slice(-8).map((p) => Number(p.revenue_ex_vat) || 0)} tone="blue" />
+              <MiniArea
+                values={data.monthly_trend.slice(-8).map((p) => Number(p.revenue_ex_vat) || 0)}
+                labels={data.monthly_trend.slice(-8).map((p) => formatMonthLabel(p.month_key))}
+                tone="blue"
+              />
             </article>
 
             <article className="tile tile-amber">
               <header><span className="tile-icon"><Icon name="percent" size={14} /></span><p>GP Pulse vs Last Month</p></header>
-              <div className="gp-pulse-numbers">
-                <div>
-                  <small>GP Value</small>
-                  <strong>{compactMoney(grossProfit)}</strong>
-                  <em className={gpValueDelta >= 0 ? 'pos' : 'neg'}>{gpValueDelta >= 0 ? '▲' : '▼'} {Math.abs(gpValueDeltaPct).toFixed(1)}%</em>
+              <div className="gp-pulse-pairs">
+                <div className="gp-pulse-section">
+                  <div className="gp-pulse-head">
+                    <span>GP Value</span>
+                    <strong>{compactMoney(grossProfit)}</strong>
+                    <em className={gpValueDelta >= 0 ? 'pos' : 'neg'}>{gpValueDelta >= 0 ? '▲' : '▼'} {Math.abs(gpValueDeltaPct).toFixed(1)}%</em>
+                  </div>
+                  <HBarPair
+                    lastLabel="Last LM" lastValue={lastMonthGrossProfit} lastDisplay={compactMoney(lastMonthGrossProfit)}
+                    thisLabel="This MTD" thisValue={grossProfit} thisDisplay={compactMoney(grossProfit)}
+                    color="linear-gradient(90deg, #5EEAD4, #0D9488)"
+                  />
                 </div>
-                <div>
-                  <small>GP %</small>
-                  <strong>{gpPct.toFixed(1)}%</strong>
-                  <em className={gpPctDelta >= 0 ? 'pos' : 'neg'}>{gpPctDelta >= 0 ? '▲' : '▼'} {Math.abs(gpPctDelta).toFixed(1)}pp</em>
+                <div className="gp-pulse-section">
+                  <div className="gp-pulse-head">
+                    <span>GP %</span>
+                    <strong>{gpPct.toFixed(1)}%</strong>
+                    <em className={gpPctDelta >= 0 ? 'pos' : 'neg'}>{gpPctDelta >= 0 ? '▲' : '▼'} {Math.abs(gpPctDelta).toFixed(1)}pp</em>
+                  </div>
+                  <HBarPair
+                    lastLabel="Last LM" lastValue={lastMonthGpPct} lastDisplay={`${lastMonthGpPct.toFixed(1)}%`}
+                    thisLabel="This MTD" thisValue={gpPct} thisDisplay={`${gpPct.toFixed(1)}%`}
+                    color="linear-gradient(90deg, #FCD34D, #D97706)"
+                  />
                 </div>
               </div>
-              <GpCompareChart thisRev={sales} thisGp={grossProfit} lastRev={salesmanLastMtdSales} lastGp={lastMonthGrossProfit} />
             </article>
 
             <article className="tile tile-teal">

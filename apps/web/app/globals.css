@@ -557,8 +557,8 @@ html, body {
 .hero-progress-card {
   background: linear-gradient(135deg, #F8FAFC 0%, #F0F7FF 100%);
   display: grid;
-  align-content: space-between;
-  gap: 16px;
+  align-content: start;
+  gap: 14px;
 }
 
 .hero-progress-head p,
@@ -673,6 +673,127 @@ html, body {
 .legend-proj { background: var(--teal-2); }
 .legend-gap  { background: var(--red-soft); border: 1px solid var(--red-line); }
 
+/* Projection pacing GP rows */
+.pacing-gp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 4px;
+}
+.pacing-gp-cell {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 10px 12px;
+  display: grid;
+  gap: 3px;
+  border-left: 3px solid var(--teal-2);
+}
+.pacing-gp-cell:nth-child(2) {
+  border-left-color: var(--amber-2);
+}
+.pacing-gp-cell small {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+}
+.pacing-gp-cell strong {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -.025em;
+  font-variant-numeric: tabular-nums;
+}
+.pacing-gp-cell em {
+  font-style: normal;
+  font-size: 10.5px;
+  font-weight: 700;
+}
+.pacing-gp-cell em span {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 9.5px;
+  margin-left: 3px;
+}
+.pacing-gp-cell em.pos { color: var(--green); }
+.pacing-gp-cell em.neg { color: var(--red); }
+
+/* AI-style insights list */
+.pacing-insights {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 12px 13px 11px;
+}
+.pacing-insights-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 9px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--line);
+}
+.pacing-insights-head .ai-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  background: linear-gradient(135deg, #8B5CF6, #6366F1);
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+.pacing-insights-head p {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--indigo);
+}
+.pacing-insights ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.pacing-insights li {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 9px;
+  align-items: start;
+}
+.insight-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+}
+.insight-green .insight-icon  { background: var(--green-soft);  color: var(--green); }
+.insight-blue .insight-icon   { background: var(--brand-soft);  color: var(--brand); }
+.insight-purple .insight-icon { background: var(--purple-soft); color: var(--purple); }
+.insight-red .insight-icon    { background: var(--red-soft);    color: var(--red); }
+.pacing-insights li small {
+  display: block;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 1px;
+}
+.pacing-insights li strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -.005em;
+  line-height: 1.25;
+}
+
 /* Chart card */
 .hero-chart-card {
   display: grid;
@@ -738,16 +859,14 @@ html, body {
   font-weight: 800;
   font-size: 10px;
 }
-.monthly-bars .bars-ref-label {
-  font-size: 9px;
-  fill: var(--teal);
-  font-weight: 700;
-}
-.monthly-bars .bars-ref-val {
-  font-size: 11px;
-  fill: var(--teal);
+.monthly-bars .target-label {
+  font-size: 9.5px;
+  fill: #fff;
   font-weight: 800;
+  letter-spacing: .02em;
 }
+.monthly-bars .target-label .t-main { fill: #fff; }
+.monthly-bars .target-label .t-val { fill: #fff; }
 
 /* Comparison strip beneath chart */
 .compare-strip {
@@ -801,59 +920,84 @@ html, body {
 .compare-cell em.neg { color: var(--red); }
 
 /* GP Pulse tile internals */
-.gp-pulse-numbers {
+.gp-pulse-pairs {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-.gp-pulse-numbers > div {
-  display: grid;
-  gap: 2px;
-}
-.gp-pulse-numbers small {
-  font-size: 9.5px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  color: var(--muted);
-}
-.gp-pulse-numbers strong {
-  font-size: 18px;
-  font-weight: 800;
-  letter-spacing: -.025em;
-  color: var(--ink);
-  font-variant-numeric: tabular-nums;
-}
-.gp-pulse-numbers em {
-  font-style: normal;
-  font-size: 10.5px;
-  font-weight: 700;
-}
-.gp-pulse-numbers em.pos { color: var(--green); }
-.gp-pulse-numbers em.neg { color: var(--red); }
-.gp-compare {
-  width: 100%;
-  height: 100px;
-  display: block;
+  gap: 10px;
   margin-top: 2px;
 }
-.gp-compare .gp-bar-val {
-  font-size: 9px;
-  fill: var(--ink-2);
+.gp-pulse-section {
+  display: grid;
+  gap: 6px;
+}
+.gp-pulse-head {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px;
+  align-items: baseline;
+}
+.gp-pulse-head span {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.gp-pulse-head strong {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.02em;
+}
+.gp-pulse-head em {
+  font-style: normal;
+  font-size: 10.5px;
   font-weight: 800;
 }
-.gp-compare .gp-bar-val.gp {
-  fill: var(--teal);
+.gp-pulse-head em.pos { color: var(--green); }
+.gp-pulse-head em.neg { color: var(--red); }
+
+.hbar-pair {
+  display: grid;
+  gap: 4px;
 }
-.gp-compare .gp-bar-label {
-  font-size: 9px;
-  fill: var(--muted);
-  font-weight: 700;
+.hbar-row {
+  display: grid;
+  grid-template-columns: 54px 1fr 60px;
+  gap: 8px;
+  align-items: center;
 }
-.gp-compare .gp-legend-text {
-  font-size: 8px;
-  fill: var(--muted);
+.hbar-label {
+  font-size: 9.5px;
   font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.hbar-label.this { color: var(--ink-2); }
+.hbar-track {
+  height: 12px;
+  background: rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.hbar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+}
+.hbar-fill.last { opacity: .55; }
+.hbar-val {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-3);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.hbar-val.this {
+  color: var(--ink);
+  font-weight: 800;
 }
 
 /* Pipeline Strength tile */
@@ -955,9 +1099,20 @@ html, body {
 
 .mini-area {
   width: 100%;
-  height: 50px;
+  height: 78px;
   margin-top: 4px;
   display: block;
+  overflow: visible;
+}
+.mini-area .mini-area-x {
+  font-size: 8.5px;
+  fill: var(--muted);
+  font-weight: 700;
+}
+.mini-area .mini-area-val {
+  font-size: 9.5px;
+  fill: var(--brand);
+  font-weight: 800;
 }
 
 .mini-barchart {
