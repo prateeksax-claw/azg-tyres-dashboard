@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T23:08:07+04:00",
+  "generated_at": "2026-05-23T00:07:55+04:00",
   "context": {
     "as_of_date": "2026-05-22",
     "month_start": "2026-05-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-05",
       "budget_amount": 6903750.0,
       "projected_amount": 5987805.0,
-      "actual_sales": 3771598.0,
+      "actual_sales": 3838748.0,
       "lpo_amount": 448885.0,
       "confirmed_amount": 801580.0,
       "expectation_amount": 2184705.0,
-      "shortfall_to_budget": 3132152.0,
-      "shortfall_to_projection": 2216207.0,
-      "daily_required_for_budget": 348016.8888888889,
-      "daily_required_for_projection": 246245.22222222222
+      "shortfall_to_budget": 3065002.0,
+      "shortfall_to_projection": 2149057.0,
+      "daily_required_for_budget": 340555.77777777775,
+      "daily_required_for_projection": 238784.11111111112
     },
     "gp_mtd": {
-      "costed_revenue": 3345387.0,
-      "gross_profit": 738648.0,
-      "gp_pct": 22.1,
+      "costed_revenue": 3412537.0,
+      "gross_profit": 750308.0,
+      "gp_pct": 22.0,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,31 +121,31 @@
     },
     {
       "month_key": "2026-05",
-      "revenue_ex_vat": 3771597.64,
-      "gp_costed_revenue": 3345387.0,
-      "gp_value": 738648.0,
-      "gp_pct": 22.1
+      "revenue_ex_vat": 3838747.64,
+      "gp_costed_revenue": 3412537.0,
+      "gp_value": 750308.0,
+      "gp_pct": 22.0
     }
   ],
   "salesman_leaderboard": [
     {
       "salesman": "BADARAN",
       "projection_amount": 1070600.0,
-      "actual_sales": 891992.0,
-      "projection_achievement_pct": 83.31701849430226,
-      "eto_close": 1256897.8181818184,
-      "eto_projection_variance": 186297.81818181835,
+      "actual_sales": 903542.0,
+      "projection_achievement_pct": 84.39585279282646,
+      "eto_close": 1273172.8181818184,
+      "eto_projection_variance": 202572.81818181835,
       "eto_projection_shortfall": 0,
       "last_month_mtd_sales": 864665.0,
-      "sales_change_vs_last_month": 25927.0,
-      "sales_change_pct_vs_last_month": 2.998502310143235,
-      "costed_revenue": 890592.0,
-      "gross_profit": 195157.0,
-      "gp_pct": 21.913176853149366,
+      "sales_change_vs_last_month": 37477.0,
+      "sales_change_pct_vs_last_month": 4.3342797499609675,
+      "costed_revenue": 902142.0,
+      "gross_profit": 197957.0,
+      "gp_pct": 21.942997887250566,
       "last_month_costed_revenue": 866065.0,
       "last_month_gross_profit": 185005.9,
       "last_month_gp_pct": 21.3616645401904,
-      "gp_pct_change": 0.5515123129589661
+      "gp_pct_change": 0.5813333470601663
     },
     {
       "salesman": "ARUN RAJ",
@@ -169,21 +169,21 @@
     {
       "salesman": "VIPIN",
       "projection_amount": 1010000.0,
-      "actual_sales": 672238.0,
-      "projection_achievement_pct": 66.55821782178218,
-      "eto_close": 947244.4545454546,
-      "eto_projection_variance": -62755.54545454541,
-      "eto_projection_shortfall": 62755.54545454541,
+      "actual_sales": 727838.0,
+      "projection_achievement_pct": 72.06316831683168,
+      "eto_close": 1025589.9090909092,
+      "eto_projection_variance": 15589.909090909176,
+      "eto_projection_shortfall": 0,
       "last_month_mtd_sales": 921194.0,
-      "sales_change_vs_last_month": -265276.0,
-      "sales_change_pct_vs_last_month": -28.79697436153514,
-      "costed_revenue": 633458.0,
-      "gross_profit": 121374.21,
-      "gp_pct": 19.160577338986958,
+      "sales_change_vs_last_month": -209676.0,
+      "sales_change_pct_vs_last_month": -22.761329318254354,
+      "costed_revenue": 689058.0,
+      "gross_profit": 130234.21,
+      "gp_pct": 18.900326242493374,
       "last_month_costed_revenue": 920774.0,
       "last_month_gross_profit": 211985.28,
       "last_month_gp_pct": 23.02250932367769,
-      "gp_pct_change": -3.861931984690731
+      "gp_pct_change": -4.122183081184314
     },
     {
       "salesman": "BIJOY",
@@ -303,7 +303,7 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 2156880.59,
+      "revenue_ex_vat": 2224030.59,
       "active_customers": 103
     },
     {
@@ -318,20 +318,20 @@
       "derived_brand": "CEAT-TBR",
       "product_group": "CEAT-TBR",
       "product": "CEAT-TBR",
-      "qty": 378.0,
-      "revenue_ex_vat": 464720.0,
-      "gross_profit": 70452.0,
-      "gp_pct": 18.2
+      "qty": 428.0,
+      "revenue_ex_vat": 520320.0,
+      "gross_profit": 79312.0,
+      "gp_pct": 17.9
     },
     {
       "derived_category": "ITR-TBR",
       "derived_brand": "ITR-TBR",
       "product_group": "ITR-TBR",
       "product": "ITR-TBR",
-      "qty": 387.0,
-      "revenue_ex_vat": 436760.0,
-      "gross_profit": 63805.0,
-      "gp_pct": 15.8
+      "qty": 397.0,
+      "revenue_ex_vat": 447010.0,
+      "gross_profit": 65955.0,
+      "gp_pct": 15.9
     },
     {
       "derived_category": "YARTU",
@@ -398,10 +398,10 @@
       "derived_brand": "RETREAD",
       "product_group": "RETREAD",
       "product": "RETREAD",
-      "qty": 349.0,
-      "revenue_ex_vat": 114020.0,
-      "gross_profit": 69170.0,
-      "gp_pct": 60.7
+      "qty": 362.0,
+      "revenue_ex_vat": 115320.0,
+      "gross_profit": 69820.0,
+      "gp_pct": 60.5
     },
     {
       "derived_category": "FIRESTONE-TBR",
@@ -1916,24 +1916,24 @@
     {
       "salesman": "BADARAN",
       "customer_name": "GULF READY MIX LLC",
-      "mtd_sales": 50100.0,
-      "gross_profit": 9390.0,
-      "gp_pct": 18.742514970059883,
+      "mtd_sales": 60350.0,
+      "gross_profit": 11540.0,
+      "gp_pct": 19.12178956089478,
       "outstanding_amount": 3415718.25,
       "overdue_amount": 3415718.25,
       "projected_amount": 31000.0,
       "expectation_amount": 0.0,
-      "projection_achievement_pct": 161.61290322580646,
-      "eto_close": 70595.45454545456,
-      "eto_projection_variance": 39595.45454545456,
+      "projection_achievement_pct": 194.67741935483872,
+      "eto_close": 85038.63636363635,
+      "eto_projection_variance": 54038.63636363635,
       "eto_projection_shortfall": 0,
       "last_month_mtd_sales": 13500.0,
-      "sales_change_vs_last_month": 36600.0,
-      "sales_change_pct_vs_last_month": 271.11111111111114,
+      "sales_change_vs_last_month": 46850.0,
+      "sales_change_pct_vs_last_month": 347.037037037037,
       "last_month_costed_revenue": 13500.0,
       "last_month_gross_profit": 2580.0,
       "last_month_gp_pct": 19.11111111111111,
-      "gp_pct_change": -0.36859614105122773
+      "gp_pct_change": 0.010678449783668498
     },
     {
       "salesman": "BADARAN",
@@ -1981,6 +1981,28 @@
     },
     {
       "salesman": "BADARAN",
+      "customer_name": "READYMIX ABU DHABI LTD. LLC",
+      "mtd_sales": 7742.0,
+      "gross_profit": 2450.0,
+      "gp_pct": 34.26573426573427,
+      "outstanding_amount": 1027335.75,
+      "overdue_amount": 1027335.75,
+      "projected_amount": 0.0,
+      "expectation_amount": 0.0,
+      "projection_achievement_pct": null,
+      "eto_close": 10909.18181818182,
+      "eto_projection_variance": 10909.18181818182,
+      "eto_projection_shortfall": 0,
+      "last_month_mtd_sales": 1800.0,
+      "sales_change_vs_last_month": 5942.0,
+      "sales_change_pct_vs_last_month": 330.1111111111111,
+      "last_month_costed_revenue": 1800.0,
+      "last_month_gross_profit": 900.0,
+      "last_month_gp_pct": 50.0,
+      "gp_pct_change": -15.734265734265733
+    },
+    {
+      "salesman": "BADARAN",
       "customer_name": "APPLUS TECHNICAL SERVICES L.L.C.",
       "mtd_sales": 6500.0,
       "gross_profit": 1200.0,
@@ -2000,28 +2022,6 @@
       "last_month_gross_profit": 532.0,
       "last_month_gp_pct": 28.913043478260867,
       "gp_pct_change": -10.451505016722404
-    },
-    {
-      "salesman": "BADARAN",
-      "customer_name": "READYMIX ABU DHABI LTD. LLC",
-      "mtd_sales": 6442.0,
-      "gross_profit": 1800.0,
-      "gp_pct": 30.76923076923077,
-      "outstanding_amount": 1027335.75,
-      "overdue_amount": 1027335.75,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0,
-      "projection_achievement_pct": null,
-      "eto_close": 9077.363636363636,
-      "eto_projection_variance": 9077.363636363636,
-      "eto_projection_shortfall": 0,
-      "last_month_mtd_sales": 1800.0,
-      "sales_change_vs_last_month": 4642.0,
-      "sales_change_pct_vs_last_month": 257.88888888888886,
-      "last_month_costed_revenue": 1800.0,
-      "last_month_gross_profit": 900.0,
-      "last_month_gp_pct": 50.0,
-      "gp_pct_change": -19.23076923076923
     },
     {
       "salesman": "BADARAN",
@@ -6183,6 +6183,28 @@
     },
     {
       "salesman": "VIPIN",
+      "customer_name": "ES GLOBAL LOGISTICS",
+      "mtd_sales": 82500.0,
+      "gross_profit": 13140.0,
+      "gp_pct": 15.927272727272726,
+      "outstanding_amount": 16852.5,
+      "overdue_amount": 16852.5,
+      "projected_amount": 0.0,
+      "expectation_amount": 0.0,
+      "projection_achievement_pct": null,
+      "eto_close": 116250.0,
+      "eto_projection_variance": 116250.0,
+      "eto_projection_shortfall": 0,
+      "last_month_mtd_sales": 27300.0,
+      "sales_change_vs_last_month": 55200.0,
+      "sales_change_pct_vs_last_month": 202.1978021978022,
+      "last_month_costed_revenue": 27300.0,
+      "last_month_gross_profit": 3720.0,
+      "last_month_gp_pct": 13.626373626373626,
+      "gp_pct_change": 2.3008991008991
+    },
+    {
+      "salesman": "VIPIN",
       "customer_name": "AVERDA WASTE MANAGEMENT LLC",
       "mtd_sales": 61082.0,
       "gross_profit": 0.0,
@@ -6246,28 +6268,6 @@
       "last_month_gross_profit": 1920.0,
       "last_month_gp_pct": 16.0,
       "gp_pct_change": 2.9592760180995477
-    },
-    {
-      "salesman": "VIPIN",
-      "customer_name": "ES GLOBAL LOGISTICS",
-      "mtd_sales": 26900.0,
-      "gross_profit": 4280.0,
-      "gp_pct": 15.91078066914498,
-      "outstanding_amount": 16852.5,
-      "overdue_amount": 16852.5,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0,
-      "projection_achievement_pct": null,
-      "eto_close": 37904.545454545456,
-      "eto_projection_variance": 37904.545454545456,
-      "eto_projection_shortfall": 0,
-      "last_month_mtd_sales": 27300.0,
-      "sales_change_vs_last_month": -400.0,
-      "sales_change_pct_vs_last_month": -1.465201465201465,
-      "last_month_costed_revenue": 27300.0,
-      "last_month_gross_profit": 3720.0,
-      "last_month_gp_pct": 13.626373626373626,
-      "gp_pct_change": 2.2844070427713543
     },
     {
       "salesman": "VIPIN",
