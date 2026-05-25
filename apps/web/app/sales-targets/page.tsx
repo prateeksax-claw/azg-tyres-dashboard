@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { dashboardData } from '../../lib/dashboard-data'
+import { computeEto } from '../../lib/eto'
 import {
   compactMoney,
   formatMonthLabel,
@@ -29,7 +30,8 @@ export default function SalesTargetsPage() {
   const daysInMonth = Math.max(Number(ctx.days_in_month || elapsedDays), elapsedDays)
   const daysRemaining = Number(ctx.days_remaining_month || 0)
   const dailyTrend = sales / elapsedDays
-  const eto = dailyTrend * daysInMonth
+  const etoCalc = computeEto(data)
+  const eto = etoCalc.eto
   const projectionAch = projection ? (sales / projection) * 100 : 0
   const etoAch = projection ? (eto / projection) * 100 : 0
   const requiredDaily = Number(bridge.daily_required_for_projection || 0)
@@ -104,7 +106,7 @@ export default function SalesTargetsPage() {
         <article className="kpi-card">
           <div className="kpi-icon teal"><Icon name="trend" size={20} /></div>
           <div className="kpi-content">
-            <p>ETO Close</p>
+            <p>ETO Close <em className="amount-method" title={etoCalc.method === 'smoothed' ? 'Smoothed: 60% last-month MTD→full ratio + 40% linear MTD÷elapsed×total, capped ±25%' : 'Linear: MTD ÷ elapsed × total days'}>{etoCalc.method === 'smoothed' ? 'smoothed' : 'linear'}</em></p>
             <strong>{compactMoney(eto)}</strong>
             <div className="kpi-foot"><span>vs Projection</span><b className={etoAch >= 100 ? 'good' : 'bad'}>{safePct(etoAch)}</b></div>
           </div>

@@ -2,6 +2,7 @@
 
 import { Fragment, useState } from 'react'
 import { dashboardData } from '../lib/dashboard-data'
+import { computeEto } from '../lib/eto'
 import {
   compactMoney,
   formatMonthLabel,
@@ -470,13 +471,14 @@ export default function Page() {
   const elapsedDays = Math.max(Number(ctx.day_of_month || 0), 1)
   const daysInMonth = Math.max(Number(ctx.days_in_month || elapsedDays), elapsedDays)
   const dailyTrend = sales / elapsedDays
-  const eto = dailyTrend * daysInMonth
+  const etoCalc = computeEto(data)
+  const eto = etoCalc.eto
   const etoVariance = eto - projection
   const etoAch = projection ? eto / projection * 100 : 0
   const projectionAch = projection ? sales / projection * 100 : 0
   const gpPct = Number(gp.gp_pct || 0)
   const grossProfit = Number(gp.gross_profit || 0)
-  const etoGp = grossProfit / elapsedDays * daysInMonth
+  const etoGp = grossProfit * etoCalc.ratio
   const remainingProjection = Math.max(projection - sales, 0)
   const dailyTrendDelta = dailyTrend - runRate
   const daysRemaining = Number(ctx.days_remaining_month || 0)
@@ -697,7 +699,7 @@ export default function Page() {
                   <em>{safePct(projectionAch)} of projection</em>
                 </div>
                 <div className="amount projected">
-                  <small>ETO Close</small>
+                  <small>ETO Close <em className="amount-method" title={etoCalc.method === 'smoothed' ? 'Smoothed: 60% last-month MTD→full ratio + 40% linear MTD÷elapsed×total, capped ±25%' : 'Linear: MTD ÷ elapsed × total days'}>{etoCalc.method === 'smoothed' ? 'smoothed' : 'linear'}</em></small>
                   <strong>{compactMoney(eto)}</strong>
                   <em>{safePct(etoAch)} of projection</em>
                 </div>
