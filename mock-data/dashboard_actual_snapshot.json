@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T13:05:21+04:00",
+  "generated_at": "2026-05-27T14:05:20+04:00",
   "context": {
     "as_of_date": "2026-05-26",
     "month_start": "2026-05-01",
@@ -88,7 +88,7 @@
       "month_key": "2025-12",
       "revenue_ex_vat": 4750786.67,
       "gp_costed_revenue": 4080109.0,
-      "gp_value": 826768.0,
+      "gp_value": 826738.0,
       "gp_pct": 20.3
     },
     {
@@ -2311,28 +2311,6 @@
     },
     {
       "salesman": "BIJOY",
-      "customer_name": "QASION BLDG. MAT. TR. EST.",
-      "mtd_sales": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "outstanding_amount": 48949.52,
-      "overdue_amount": 48949.52,
-      "projected_amount": 20000.0,
-      "expectation_amount": 20000.0,
-      "projection_achievement_pct": 0.0,
-      "eto_close": 0.0,
-      "eto_projection_variance": -20000.0,
-      "eto_projection_shortfall": 20000.0,
-      "last_month_mtd_sales": 16750.0,
-      "sales_change_vs_last_month": -16750.0,
-      "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 16750.0,
-      "last_month_gross_profit": 3350.0,
-      "last_month_gp_pct": 20.0,
-      "gp_pct_change": null
-    },
-    {
-      "salesman": "BIJOY",
       "customer_name": "TRANSGULF CEMENT PRODUCTS",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
@@ -2373,6 +2351,28 @@
       "last_month_costed_revenue": 0.0,
       "last_month_gross_profit": 0.0,
       "last_month_gp_pct": null,
+      "gp_pct_change": null
+    },
+    {
+      "salesman": "BIJOY",
+      "customer_name": "QASION BLDG. MAT. TR. EST.",
+      "mtd_sales": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "outstanding_amount": 48949.52,
+      "overdue_amount": 48949.52,
+      "projected_amount": 20000.0,
+      "expectation_amount": 20000.0,
+      "projection_achievement_pct": 0.0,
+      "eto_close": 0.0,
+      "eto_projection_variance": -20000.0,
+      "eto_projection_shortfall": 20000.0,
+      "last_month_mtd_sales": 16750.0,
+      "sales_change_vs_last_month": -16750.0,
+      "sales_change_pct_vs_last_month": -100.0,
+      "last_month_costed_revenue": 16750.0,
+      "last_month_gross_profit": 3350.0,
+      "last_month_gp_pct": 20.0,
       "gp_pct_change": null
     },
     {
