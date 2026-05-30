@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T18:05:20+04:00",
+  "generated_at": "2026-05-30T19:05:19+04:00",
   "context": {
     "as_of_date": "2026-05-30",
     "month_start": "2026-05-01",
@@ -6912,18 +6912,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "VIPIN",
-      "customer_name": "AL JABER GROUP L.L.C.",
-      "product_group": "WESTLAKE TBR",
-      "product": "1200R24 WESTLAKE AZ272",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 21000.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "SOHAIL",
       "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "product_group": "CEAT-TBR",
@@ -6936,14 +6924,50 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "ARUN RAJ",
-      "customer_name": "AL SHIRAA VEHICLE BODY IND LLC",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
+      "salesman": "NEWTYRE -OFFICE",
+      "customer_name": "X A V EXPERT AUDIO VISUAL EQUIPMENT&ACCESSORIES TRADING &IN",
+      "product_group": "DEESTONE - PCR",
+      "product": "215/70 R 16 DEESTONE",
       "costed_revenue": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "uncosted_revenue": 16730.0
+      "uncosted_revenue": 1080.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "BADARAN",
+      "customer_name": "ROYAL PRINCE GENERAL TRADING LLC",
+      "product_group": "ACCESSORIES",
+      "product": "I PHONE 5 DATA CABLE",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 23600.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "RAJATH KUMAR",
+      "customer_name": "MOTOR WAY AUTO SERVICES LLC",
+      "product_group": "DUMMY INV",
+      "product": "DUMMY",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 980.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "AL JABER GROUP L.L.C.",
+      "product_group": "WESTLAKE TBR",
+      "product": "1200R24 WESTLAKE AZ272",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 21000.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -6960,6 +6984,18 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "INTERNATIONAL MECHANICAL & ELECTRICAL COMPANY WLL",
+      "product_group": "DEESTONE - PCR",
+      "product": "215/70 R 16 DEESTONE",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 1460.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
       "salesman": "RAJATH KUMAR",
       "customer_name": "EMIRATES HOSPITALITY CENTER - SOLE PROPRIETORSHIP L.L.C",
       "product_group": "DEESTONE - PCR",
@@ -6968,6 +7004,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 710.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "ARUN RAJ",
+      "customer_name": "AL SHIRAA VEHICLE BODY IND LLC",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 16730.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -6987,23 +7035,11 @@
       "salesman": "ARUN RAJ",
       "customer_name": "AL HOLLA CONCRETE TECHNOLOGY CO CONTECH LLC (OPC)",
       "product_group": "SOLID LIFT",
-      "product": "700-12 SOLID LIFT",
+      "product": "300-15 SOLID LIFT",
       "costed_revenue": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "uncosted_revenue": 1660.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "BADARAN",
-      "customer_name": "ROYAL PRINCE GENERAL TRADING LLC",
-      "product_group": "ACCESSORIES",
-      "product": "I PHONE 5 DATA CABLE",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 23600.0
+      "uncosted_revenue": 3540.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -7023,23 +7059,11 @@
       "salesman": "ARUN RAJ",
       "customer_name": "AL HOLLA CONCRETE TECHNOLOGY CO CONTECH LLC (OPC)",
       "product_group": "SOLID LIFT",
-      "product": "300-15 SOLID LIFT",
+      "product": "700-12 SOLID LIFT",
       "costed_revenue": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "uncosted_revenue": 3540.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "RAJATH KUMAR",
-      "customer_name": "MOTOR WAY AUTO SERVICES LLC",
-      "product_group": "DUMMY INV",
-      "product": "DUMMY",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 980.0
+      "uncosted_revenue": 1660.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -7052,30 +7076,6 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 5510.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "VIPIN",
-      "customer_name": "INTERNATIONAL MECHANICAL & ELECTRICAL COMPANY WLL",
-      "product_group": "DEESTONE - PCR",
-      "product": "215/70 R 16 DEESTONE",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 1460.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "NEWTYRE -OFFICE",
-      "customer_name": "X A V EXPERT AUDIO VISUAL EQUIPMENT&ACCESSORIES TRADING &IN",
-      "product_group": "DEESTONE - PCR",
-      "product": "215/70 R 16 DEESTONE",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 1080.0
     },
     {
       "alert_type": "LOW GP",
