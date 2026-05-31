@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T08:05:21+04:00",
+  "generated_at": "2026-05-31T09:05:20+04:00",
   "context": {
     "as_of_date": "2026-05-30",
     "month_start": "2026-05-01",
@@ -181,9 +181,9 @@
       "gross_profit": 162044.21000000002,
       "gp_pct": 20.351483494677407,
       "last_month_costed_revenue": 1138231.0,
-      "last_month_gross_profit": 274786.88,
-      "last_month_gp_pct": 24.14157407415542,
-      "gp_pct_change": -3.790090579478015
+      "last_month_gross_profit": 274790.88,
+      "last_month_gp_pct": 24.141925496669835,
+      "gp_pct_change": -3.790442001992428
     },
     {
       "salesman": "BIJOY",
