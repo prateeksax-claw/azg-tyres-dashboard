@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T23:05:12+04:00",
+  "generated_at": "2026-06-02T00:05:12+04:00",
   "context": {
     "as_of_date": "2026-06-01",
     "month_start": "2026-06-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 7232500.0,
-      "actual_sales": 117448.0,
+      "actual_sales": 120548.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 7115052.0,
-      "shortfall_to_projection": 7115052.0,
-      "daily_required_for_budget": 245346.62068965516,
-      "daily_required_for_projection": 245346.62068965516
+      "shortfall_to_budget": 7111952.0,
+      "shortfall_to_projection": 7111952.0,
+      "daily_required_for_budget": 245239.72413793104,
+      "daily_required_for_projection": 245239.72413793104
     },
     "gp_mtd": {
-      "costed_revenue": 110368.0,
-      "gross_profit": 25409.0,
-      "gp_pct": 23.0,
+      "costed_revenue": 113468.0,
+      "gross_profit": 27839.0,
+      "gp_pct": 24.5,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,23 +121,23 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 117448.33,
-      "gp_costed_revenue": 110368.0,
-      "gp_value": 25409.0,
-      "gp_pct": 23.0
+      "revenue_ex_vat": 120548.33,
+      "gp_costed_revenue": 113468.0,
+      "gp_value": 27839.0,
+      "gp_pct": 24.5
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 91913.33,
+      "revenue_ex_vat": 94213.33,
       "active_customers": 7
     },
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 25535.0,
-      "active_customers": 6
+      "revenue_ex_vat": 26335.0,
+      "active_customers": 7
     }
   ],
   "product_mix_top": [
@@ -162,6 +162,16 @@
       "gp_pct": 20.6
     },
     {
+      "derived_category": "RETREAD",
+      "derived_brand": "RETREAD",
+      "product_group": "RETREAD",
+      "product": "RETREAD",
+      "qty": 15.0,
+      "revenue_ex_vat": 4940.0,
+      "gross_profit": 2990.0,
+      "gp_pct": 60.5
+    },
+    {
       "derived_category": "BRIDGESTONE-HC",
       "derived_brand": "BRIDGESTONE-HC",
       "product_group": "BRIDGESTONE-HC",
@@ -180,16 +190,6 @@
       "revenue_ex_vat": 2760.0,
       "gross_profit": 1160.0,
       "gp_pct": 42.0
-    },
-    {
-      "derived_category": "RETREAD",
-      "derived_brand": "RETREAD",
-      "product_group": "RETREAD",
-      "product": "RETREAD",
-      "qty": 15.0,
-      "revenue_ex_vat": 2640.0,
-      "gross_profit": 690.0,
-      "gp_pct": 26.1
     },
     {
       "derived_category": "FIRESTONE-HC",
@@ -232,6 +232,16 @@
       "gp_pct": 17.9
     },
     {
+      "derived_category": "NEXEN-PCR",
+      "derived_brand": "NEXEN-PCR",
+      "product_group": "NEXEN-PCR",
+      "product": "NEXEN-PCR",
+      "qty": 2.0,
+      "revenue_ex_vat": 800.0,
+      "gross_profit": 130.0,
+      "gp_pct": 16.2
+    },
+    {
       "derived_category": "SPARE PARTS",
       "derived_brand": "SPARE PARTS",
       "product_group": "SPARE PARTS",
@@ -253,20 +263,7 @@
     }
   ],
   "customer_top": [],
-  "gp_alerts_top": [
-    {
-      "alert_type": "CRITICAL LOW GP",
-      "severity": 4,
-      "salesman": "ARUN RAJ",
-      "customer_name": "ORYX TRANSPORT AND EQUIPMENT MAINTENANCE LLC",
-      "product_group": "RETREAD",
-      "product": "CUSTOMER TYRE-RETREAD",
-      "costed_revenue": 1500.0,
-      "gross_profit": 0.0,
-      "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
-    }
-  ],
+  "gp_alerts_top": [],
   "_source_note": "Auto-refreshed hourly from Tyres DuckDB semantic layer; compact snapshot for Cloudflare Pages static dashboard.",
   "_command_basis": {
     "sales": "projection_vs_actual total_actual (tyres_sales_clean with command exclusions)",
