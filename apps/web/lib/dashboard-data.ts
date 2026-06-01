@@ -1,5 +1,7 @@
 import sample from '../../../mock-data/dashboard_actual_snapshot.json'
 
+type Dict = Record<string, any>
+
 export type KpiContext = {
   as_of_date: string
   month_start: string
@@ -8,11 +10,27 @@ export type KpiContext = {
   days_in_month: number
   days_remaining_month: number
   month_key: string
+  month_num?: number
+  year_num?: number
 }
 
-export type DashboardSample = typeof sample
+export type DashboardSample = {
+  generated_at: string
+  context: KpiContext
+  command_center: {
+    shortfall_bridge: Dict
+    gp_mtd: Dict
+  }
+  monthly_trend: Dict[]
+  salesman_leaderboard: Dict[]
+  region_current: Dict[]
+  product_mix_top: Dict[]
+  customer_top: Dict[]
+  gp_alerts_top: Dict[]
+  [key: string]: any
+}
 
-export const dashboardData = sample as DashboardSample
+export const dashboardData: DashboardSample = sample as unknown as DashboardSample
 
 export function money(value: number | string | null | undefined) {
   const n = Number(value ?? 0)

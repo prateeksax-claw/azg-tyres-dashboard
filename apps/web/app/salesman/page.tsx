@@ -19,6 +19,8 @@ type SortKey = 'mtd' | 'projection' | 'achievement' | 'eto' | 'gp' | 'growth'
 export default function SalesmanPage() {
   const data = dashboardData
   const ctx = data.context
+  const monthName = new Date(`${ctx.month_start}T00:00:00+04:00`).toLocaleString('en-GB', { month: 'long', timeZone: 'Asia/Dubai' })
+  const monthShort = new Date(`${ctx.month_start}T00:00:00+04:00`).toLocaleString('en-GB', { month: 'short', timeZone: 'Asia/Dubai' })
   const [sortKey, setSortKey] = useState<SortKey>('mtd')
 
   const salesmen = useMemo(() => (
@@ -77,7 +79,7 @@ export default function SalesmanPage() {
         <div className="top-control-cluster">
           <label className="global-search"><Icon name="search" size={15} /> <em>Search salesman&hellip;</em></label>
           <div className="filter-row">
-            <button><Icon name="calendar" size={14} /> May 1 – May {ctx.day_of_month}</button>
+            <button><Icon name="calendar" size={14} /> {monthShort} 1 – {monthShort} {ctx.day_of_month}</button>
             <button><Icon name="pin" size={14} /> All Regions</button>
             <button><Icon name="layers" size={14} /> All Categories</button>
             <button className="export"><Icon name="refresh" size={14} /> Refresh</button>
@@ -142,7 +144,7 @@ export default function SalesmanPage() {
       <section className="ai-insights-row">
         <div className="ai-ribbon-head">
           <span className="ai-dot"><Icon name="sparkle" size={11} /></span>
-          <h2>Titan Salesman Insights — May Highlights</h2>
+          <h2>Titan Salesman Insights — {monthName} Highlights</h2>
           <CardOptions label="AI insights" />
         </div>
         <div className="ai-insights-grid">

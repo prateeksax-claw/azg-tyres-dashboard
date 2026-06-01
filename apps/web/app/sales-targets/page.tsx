@@ -19,6 +19,8 @@ export default function SalesTargetsPage() {
   const data = dashboardData
   const ctx = data.context
   const bridge = data.command_center.shortfall_bridge
+  const monthName = new Date(`${ctx.month_start}T00:00:00+04:00`).toLocaleString('en-GB', { month: 'long', timeZone: 'Asia/Dubai' })
+  const monthShort = new Date(`${ctx.month_start}T00:00:00+04:00`).toLocaleString('en-GB', { month: 'short', timeZone: 'Asia/Dubai' })
 
   const sales = Number(bridge.actual_sales || 0)
   const projection = Number(bridge.projected_amount || 0)
@@ -45,16 +47,16 @@ export default function SalesTargetsPage() {
   const onTrack = salesmen.filter((s) => Number(s.eto_projection_variance || 0) >= 0)
   const behind = salesmen.filter((s) => Number(s.eto_projection_variance || 0) < 0)
 
-  const watchCustomers = useMemo(() => (
-    [...data.customer_top]
+  const watchCustomers = useMemo<Record<string, any>[]>(() => (
+    ([...data.customer_top] as Record<string, any>[])
       .filter((c) => Number(c.projected_amount || 0) > 0)
       .map((c) => ({ ...c, gap: Number(c.eto_projection_variance || 0) }))
       .sort((a, b) => Number(a.gap) - Number(b.gap))
       .slice(0, 6)
   ), [data])
 
-  const topCustomers = useMemo(() => (
-    [...data.customer_top]
+  const topCustomers = useMemo<Record<string, any>[]>(() => (
+    ([...data.customer_top] as Record<string, any>[])
       .filter((c) => Number(c.mtd_sales || 0) > 0)
       .sort((a, b) => Number(b.mtd_sales || 0) - Number(a.mtd_sales || 0))
       .slice(0, 6)
@@ -78,13 +80,13 @@ export default function SalesTargetsPage() {
           <div className="greeting-text">
             <span>Automotive Division</span>
             <h1>Sales &amp; Targets</h1>
-            <p>Monthly target vs achievement, salesman bench and customer projection watch <b className="ui-version-pill">May {ctx.day_of_month} of {ctx.days_in_month}</b></p>
+            <p>Monthly target vs achievement, salesman bench and customer projection watch <b className="ui-version-pill">{monthName} {ctx.day_of_month} of {ctx.days_in_month}</b></p>
           </div>
         </div>
         <div className="top-control-cluster">
           <label className="global-search"><Icon name="search" size={15} /> <em>Search salesman / customer&hellip;</em></label>
           <div className="filter-row">
-            <button><Icon name="calendar" size={14} /> May 1 – May {ctx.day_of_month}</button>
+            <button><Icon name="calendar" size={14} /> {monthShort} 1 – {monthShort} {ctx.day_of_month}</button>
             <button><Icon name="pin" size={14} /> All Regions</button>
             <button><Icon name="badge" size={14} /> All Salesmen</button>
             <button className="export"><Icon name="refresh" size={14} /> Refresh</button>
@@ -149,7 +151,7 @@ export default function SalesTargetsPage() {
       <section className="ai-insights-row">
         <div className="ai-ribbon-head">
           <span className="ai-dot"><Icon name="sparkle" size={11} /></span>
-          <h2>Titan Sales Insights — May Highlights</h2>
+          <h2>Titan Sales Insights — {monthName} Highlights</h2>
           <CardOptions label="AI insights" />
         </div>
         <div className="ai-insights-grid">
@@ -206,7 +208,7 @@ export default function SalesTargetsPage() {
               </g>
             )
           })}
-          {/* Projection target on May only */}
+          {/* Projection target on the current month only */}
           {(() => {
             const i = monthly.length - 1
             const slot = (904 - 56) / monthly.length
@@ -215,7 +217,7 @@ export default function SalesTargetsPage() {
             return (
               <g>
                 <line x1={xCenter - 16} x2={xCenter + 16} y1={projY} y2={projY} stroke="#0D9488" strokeDasharray="4 3" strokeWidth="2" strokeLinecap="round" />
-                <text x={xCenter + 22} y={projY + 4} className="target-side-label">May target {(projection / 1_000_000).toFixed(2)}M</text>
+                <text x={xCenter + 22} y={projY + 4} className="target-side-label">{monthShort} target {(projection / 1_000_000).toFixed(2)}M</text>
               </g>
             )
           })()}

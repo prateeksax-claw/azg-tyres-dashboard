@@ -457,6 +457,8 @@ export default function Page() {
   const data = dashboardData
   const ctx = data.context
   const bridge = data.command_center.shortfall_bridge
+  const monthName = new Date(`${ctx.month_start}T00:00:00+04:00`).toLocaleString('en-GB', { month: 'long', timeZone: 'Asia/Dubai' })
+  const monthShort = new Date(`${ctx.month_start}T00:00:00+04:00`).toLocaleString('en-GB', { month: 'short', timeZone: 'Asia/Dubai' })
   const gp = data.command_center.gp_mtd
 
   const sales = Number(bridge.actual_sales || 0)
@@ -555,10 +557,10 @@ export default function Page() {
     .sort((a, b) => Number(b.projected_amount || 0) - Number(a.projected_amount || 0))
     .slice(0, 3)
   const largestEtoRisk = [...salesmen].sort((a, b) => Number(a.eto_projection_variance || 0) - Number(b.eto_projection_variance || 0))[0]
-  const projectionWatch = [...data.customer_top]
+  const projectionWatch: Record<string, any> | undefined = (([...data.customer_top] as Record<string, any>[])
     .filter((row) => Number(row.projected_amount || 0) > 0)
     .map((row) => ({ ...row, progress: Number(row.mtd_sales || 0) / Math.max(Number(row.projected_amount || 0), 1) * 100 }))
-    .sort((a, b) => a.progress - b.progress)[0]
+    .sort((a, b) => a.progress - b.progress)[0]) as Record<string, any> | undefined
   const gpLeak = [...data.gp_alerts_top].sort((a, b) => Number(a.gp_pct || 0) - Number(b.gp_pct || 0))[0]
   const actionItems = [
     `Trend closing ETO: ${compactMoney(eto)} (${signedCompactMoney(eto - projection)} vs projection)`,
@@ -655,7 +657,7 @@ export default function Page() {
           <div className="top-control-cluster">
             <label className="global-search"><Icon name="search" size={15} /> <em>Search customer / salesman&hellip;</em></label>
             <div className="filter-row">
-              <button><Icon name="calendar" size={14} /> May 1 – May {ctx.day_of_month}</button>
+              <button><Icon name="calendar" size={14} /> {monthShort} 1 – {monthShort} {ctx.day_of_month}</button>
               <button><Icon name="pin" size={14} /> All Regions</button>
               <button><Icon name="badge" size={14} /> All Salesmen</button>
               <button className="export"><Icon name="refresh" size={14} /> Refresh</button>
@@ -670,7 +672,7 @@ export default function Page() {
               <span className="cockpit-icon"><Icon name="trend" size={18} /></span>
               <div>
                 <p>Performance Cockpit</p>
-                <h2>May Execution Status <em className="cockpit-period">Day {ctx.day_of_month} of {ctx.days_in_month}</em></h2>
+                <h2>{monthName} Execution Status <em className="cockpit-period">Day {ctx.day_of_month} of {ctx.days_in_month}</em></h2>
               </div>
             </div>
             <div className="cockpit-status-row">
@@ -727,7 +729,7 @@ export default function Page() {
               <div className="pacing-insights">
                 <div className="pacing-insights-head">
                   <span className="ai-dot"><Icon name="sparkle" size={11} /></span>
-                  <p>Titan insights — May highlights</p>
+                  <p>Titan insights — {monthName} highlights</p>
                 </div>
                 <ul>
                   {insights.map((it) => (

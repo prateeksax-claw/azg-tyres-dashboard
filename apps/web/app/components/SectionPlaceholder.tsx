@@ -1,5 +1,6 @@
 'use client'
 
+import { dashboardData } from '../../lib/dashboard-data'
 import { Icon } from './Icon'
 import { SidebarToggle } from './DashboardShell'
 
@@ -20,6 +21,9 @@ export function SectionPlaceholder({
   features: Feature[]
   ribbonPill?: string
 }) {
+  const ctx = dashboardData.context
+  const monthYear = new Date(`${ctx.month_start}T00:00:00+04:00`).toLocaleString('en-GB', { month: 'long', year: 'numeric', timeZone: 'Asia/Dubai' })
+
   return (
     <>
       <header className="top-ribbon">
@@ -34,7 +38,7 @@ export function SectionPlaceholder({
         <div className="top-control-cluster">
           <label className="global-search"><Icon name="search" size={15} /> <em>Search&hellip;</em></label>
           <div className="filter-row">
-            <button><Icon name="calendar" size={14} /> May 2026</button>
+            <button><Icon name="calendar" size={14} /> {monthYear}</button>
             <button><Icon name="pin" size={14} /> All Regions</button>
             <button className="export"><Icon name="refresh" size={14} /> Refresh</button>
           </div>
