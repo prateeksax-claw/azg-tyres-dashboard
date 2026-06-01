@@ -255,7 +255,7 @@ function HBarPair({ thisLabel, thisValue, lastLabel, lastValue, thisDisplay, las
   )
 }
 
-function ComparisonStrip({ thisRev, thisGp, thisGpPct, lastRev, lastGp, lastGpPct }: { thisRev: number; thisGp: number; thisGpPct: number; lastRev: number; lastGp: number; lastGpPct: number }) {
+function ComparisonStrip({ thisRev, thisGp, thisGpPct, lastRev, lastGp, lastGpPct, compareLabel = 'last month' }: { thisRev: number; thisGp: number; thisGpPct: number; lastRev: number; lastGp: number; lastGpPct: number; compareLabel?: string }) {
   const revDelta = lastRev ? ((thisRev - lastRev) / lastRev) * 100 : null
   const gpDelta = lastGp ? ((thisGp - lastGp) / lastGp) * 100 : null
   const gpPctDelta = thisGpPct - lastGpPct
@@ -274,7 +274,7 @@ function ComparisonStrip({ thisRev, thisGp, thisGpPct, lastRev, lastGp, lastGpPc
             <strong>{it.value}</strong>
             {it.delta !== null && (
               <em className={positive ? 'pos' : 'neg'}>
-                {positive ? '▲' : '▼'} {Math.abs(it.delta).toFixed(1)}{it.deltaSuffix} <span>vs last month</span>
+                {positive ? '▲' : '▼'} {Math.abs(it.delta).toFixed(1)}{it.deltaSuffix} <span>vs {compareLabel}</span>
               </em>
             )}
           </div>
@@ -591,6 +591,11 @@ export default function Page() {
   // Current and historical months both use gp_value / gp_pct; no modeled monthly GP.
   const monthly = data.monthly_trend as Array<{ month_key: string; revenue_ex_vat: number; gp_value?: number; gp_pct?: number }>
   const currentMonthKey = monthly.length >= 1 ? String(monthly[monthly.length - 1].month_key) : ''
+  const previousMonth = monthly.length >= 2 ? monthly[monthly.length - 2] : undefined
+  const previousMonthLabel = previousMonth ? formatMonthLabel(String(previousMonth.month_key)) : 'last month'
+  const previousMonthRevenue = Number(previousMonth?.revenue_ex_vat || 0)
+  const previousMonthGp = Number(previousMonth?.gp_value || 0)
+  const previousMonthGpPct = Number(previousMonth?.gp_pct || 0)
   const monthlyEnriched = monthly.map((p) => {
     const key = String(p.month_key)
     return {
@@ -766,9 +771,10 @@ export default function Page() {
                 thisRev={sales}
                 thisGp={grossProfit}
                 thisGpPct={gpPct}
-                lastRev={salesmanLastMtdSales}
-                lastGp={lastMonthGrossProfit}
-                lastGpPct={lastMonthGpPct}
+                lastRev={previousMonthRevenue}
+                lastGp={previousMonthGp}
+                lastGpPct={previousMonthGpPct}
+                compareLabel={previousMonthLabel}
               />
             </article>
           </div>
