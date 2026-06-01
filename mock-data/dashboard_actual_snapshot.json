@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T02:05:13+04:00",
+  "generated_at": "2026-06-02T03:05:15+04:00",
   "context": {
     "as_of_date": "2026-06-01",
     "month_start": "2026-06-01",
@@ -192,16 +192,6 @@
       "gp_pct": 42.0
     },
     {
-      "derived_category": "FIRESTONE-HC",
-      "derived_brand": "FIRESTONE-HC",
-      "product_group": "FIRESTONE-HC",
-      "product": "FIRESTONE-HC",
-      "qty": 4.0,
-      "revenue_ex_vat": 2400.0,
-      "gross_profit": 600.0,
-      "gp_pct": 25.0
-    },
-    {
       "derived_category": "LANDSPIDER",
       "derived_brand": "LANDSPIDER",
       "product_group": "LANDSPIDER",
@@ -210,6 +200,16 @@
       "revenue_ex_vat": 2400.0,
       "gross_profit": 560.0,
       "gp_pct": 23.3
+    },
+    {
+      "derived_category": "FIRESTONE-HC",
+      "derived_brand": "FIRESTONE-HC",
+      "product_group": "FIRESTONE-HC",
+      "product": "FIRESTONE-HC",
+      "qty": 4.0,
+      "revenue_ex_vat": 2400.0,
+      "gross_profit": 600.0,
+      "gp_pct": 25.0
     },
     {
       "derived_category": "YOKOHAMA-PCR",
