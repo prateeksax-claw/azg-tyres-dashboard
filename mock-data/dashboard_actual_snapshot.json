@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T17:05:22+04:00",
+  "generated_at": "2026-06-02T18:05:26+04:00",
   "context": {
     "as_of_date": "2026-06-02",
     "month_start": "2026-06-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 7232500.0,
-      "actual_sales": 219568.0,
+      "actual_sales": 278172.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 7012932.0,
-      "shortfall_to_projection": 7012932.0,
-      "daily_required_for_budget": 250461.85714285713,
-      "daily_required_for_projection": 250461.85714285713
+      "shortfall_to_budget": 6954328.0,
+      "shortfall_to_projection": 6954328.0,
+      "daily_required_for_budget": 248368.85714285713,
+      "daily_required_for_projection": 248368.85714285713
     },
     "gp_mtd": {
-      "costed_revenue": 212488.0,
-      "gross_profit": 54149.0,
-      "gp_pct": 25.5,
+      "costed_revenue": 268972.0,
+      "gross_profit": 69128.0,
+      "gp_pct": 25.7,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,23 +121,23 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 219568.33,
-      "gp_costed_revenue": 212488.0,
-      "gp_value": 54149.0,
-      "gp_pct": 25.5
+      "revenue_ex_vat": 278171.66,
+      "gp_costed_revenue": 268972.0,
+      "gp_value": 69128.0,
+      "gp_pct": 25.7
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 116473.33,
-      "active_customers": 9
+      "revenue_ex_vat": 142144.76,
+      "active_customers": 12
     },
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 103095.0,
-      "active_customers": 12
+      "revenue_ex_vat": 136026.9,
+      "active_customers": 16
     }
   ],
   "product_mix_top": [
@@ -150,6 +150,26 @@
       "revenue_ex_vat": 153170.0,
       "gross_profit": 30900.0,
       "gp_pct": 20.2
+    },
+    {
+      "derived_category": "CEAT-TBR",
+      "derived_brand": "CEAT-TBR",
+      "product_group": "CEAT-TBR",
+      "product": "CEAT-TBR",
+      "qty": 29.0,
+      "revenue_ex_vat": 34700.0,
+      "gross_profit": 8203.0,
+      "gp_pct": 23.6
+    },
+    {
+      "derived_category": "BULL",
+      "derived_brand": "BULL",
+      "product_group": "BULL",
+      "product": "BULL",
+      "qty": 25.0,
+      "revenue_ex_vat": 18750.0,
+      "gross_profit": 3250.0,
+      "gp_pct": 17.3
     },
     {
       "derived_category": "HOTCURE",
@@ -172,14 +192,24 @@
       "gp_pct": 63.1
     },
     {
-      "derived_category": "CEAT-TBR",
-      "derived_brand": "CEAT-TBR",
-      "product_group": "CEAT-TBR",
-      "product": "CEAT-TBR",
-      "qty": 9.0,
-      "revenue_ex_vat": 11500.0,
-      "gross_profit": 2365.0,
-      "gp_pct": 20.6
+      "derived_category": "POWERTRAC",
+      "derived_brand": "POWERTRAC",
+      "product_group": "POWERTRAC",
+      "product": "POWERTRAC",
+      "qty": 16.0,
+      "revenue_ex_vat": 12000.0,
+      "gross_profit": 5280.0,
+      "gp_pct": 44.0
+    },
+    {
+      "derived_category": "LANDSPIDER",
+      "derived_brand": "LANDSPIDER",
+      "product_group": "LANDSPIDER",
+      "product": "LANDSPIDER",
+      "qty": 8.0,
+      "revenue_ex_vat": 4800.0,
+      "gross_profit": 1120.0,
+      "gp_pct": 23.3
     },
     {
       "derived_category": "BRIDGESTONE-HC",
@@ -220,16 +250,6 @@
       "revenue_ex_vat": 2400.0,
       "gross_profit": 600.0,
       "gp_pct": 25.0
-    },
-    {
-      "derived_category": "LANDSPIDER",
-      "derived_brand": "LANDSPIDER",
-      "product_group": "LANDSPIDER",
-      "product": "LANDSPIDER",
-      "qty": 4.0,
-      "revenue_ex_vat": 2400.0,
-      "gross_profit": 560.0,
-      "gp_pct": 23.3
     },
     {
       "derived_category": "YOKOHAMA-PCR",
@@ -282,6 +302,16 @@
       "gp_pct": 16.2
     },
     {
+      "derived_category": "SERVICES",
+      "derived_brand": "SERVICES",
+      "product_group": "SERVICES",
+      "product": "SERVICES",
+      "qty": 8.0,
+      "revenue_ex_vat": 274.0,
+      "gross_profit": 109.0,
+      "gp_pct": 39.8
+    },
+    {
       "derived_category": "SPARE PARTS",
       "derived_brand": "SPARE PARTS",
       "product_group": "SPARE PARTS",
@@ -292,14 +322,14 @@
       "gp_pct": 20.4
     },
     {
-      "derived_category": "SERVICES",
-      "derived_brand": "SERVICES",
-      "product_group": "SERVICES",
-      "product": "SERVICES",
-      "qty": 5.0,
-      "revenue_ex_vat": 183.0,
-      "gross_profit": 76.0,
-      "gp_pct": 41.5
+      "derived_category": "TUBE AND FLAP",
+      "derived_brand": "TUBE AND FLAP",
+      "product_group": "TUBE AND FLAP",
+      "product": "TUBE AND FLAP",
+      "qty": 1.0,
+      "revenue_ex_vat": 43.0,
+      "gross_profit": 18.0,
+      "gp_pct": 41.9
     }
   ],
   "customer_top": [],
