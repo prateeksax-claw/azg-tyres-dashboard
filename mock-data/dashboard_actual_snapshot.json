@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T23:05:24+04:00",
+  "generated_at": "2026-06-03T00:05:27+04:00",
   "context": {
     "as_of_date": "2026-06-02",
     "month_start": "2026-06-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 7232500.0,
-      "actual_sales": 278172.0,
+      "actual_sales": 282212.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 6954328.0,
-      "shortfall_to_projection": 6954328.0,
-      "daily_required_for_budget": 248368.85714285713,
-      "daily_required_for_projection": 248368.85714285713
+      "shortfall_to_budget": 6950288.0,
+      "shortfall_to_projection": 6950288.0,
+      "daily_required_for_budget": 248224.57142857142,
+      "daily_required_for_projection": 248224.57142857142
     },
     "gp_mtd": {
-      "costed_revenue": 268972.0,
-      "gross_profit": 69128.0,
+      "costed_revenue": 273012.0,
+      "gross_profit": 70028.0,
       "gp_pct": 25.7,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -121,9 +121,9 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 278171.66,
-      "gp_costed_revenue": 268972.0,
-      "gp_value": 69128.0,
+      "revenue_ex_vat": 282211.66,
+      "gp_costed_revenue": 273012.0,
+      "gp_value": 70028.0,
       "gp_pct": 25.7
     }
   ],
@@ -131,13 +131,13 @@
   "region_current": [
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 142144.76,
-      "active_customers": 12
+      "revenue_ex_vat": 144563.81,
+      "active_customers": 14
     },
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 136026.9,
-      "active_customers": 16
+      "revenue_ex_vat": 137666.9,
+      "active_customers": 17
     }
   ],
   "product_mix_top": [
@@ -242,11 +242,31 @@
       "gp_pct": 42.0
     },
     {
+      "derived_category": "NEXEN-PCR",
+      "derived_brand": "NEXEN-PCR",
+      "product_group": "NEXEN-PCR",
+      "product": "NEXEN-PCR",
+      "qty": 6.0,
+      "revenue_ex_vat": 2440.0,
+      "gross_profit": 430.0,
+      "gp_pct": 17.6
+    },
+    {
       "derived_category": "FIRESTONE-HC",
       "derived_brand": "FIRESTONE-HC",
       "product_group": "FIRESTONE-HC",
       "product": "FIRESTONE-HC",
       "qty": 4.0,
+      "revenue_ex_vat": 2400.0,
+      "gross_profit": 600.0,
+      "gp_pct": 25.0
+    },
+    {
+      "derived_category": "DUNLOP-PCR",
+      "derived_brand": "DUNLOP-PCR",
+      "product_group": "DUNLOP-PCR",
+      "product": "DUNLOP-PCR",
+      "qty": 3.0,
       "revenue_ex_vat": 2400.0,
       "gross_profit": 600.0,
       "gp_pct": 25.0
@@ -290,16 +310,6 @@
       "revenue_ex_vat": 900.0,
       "gross_profit": 220.0,
       "gp_pct": 24.4
-    },
-    {
-      "derived_category": "NEXEN-PCR",
-      "derived_brand": "NEXEN-PCR",
-      "product_group": "NEXEN-PCR",
-      "product": "NEXEN-PCR",
-      "qty": 2.0,
-      "revenue_ex_vat": 800.0,
-      "gross_profit": 130.0,
-      "gp_pct": 16.2
     },
     {
       "derived_category": "SERVICES",
