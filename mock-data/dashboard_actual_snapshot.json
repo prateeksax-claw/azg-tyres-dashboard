@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T18:05:27+04:00",
+  "generated_at": "2026-06-03T19:05:26+04:00",
   "context": {
     "as_of_date": "2026-06-03",
     "month_start": "2026-06-01",
@@ -16,15 +16,15 @@
       "as_of_date": "2026-06-03",
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
-      "projected_amount": 7232500.0,
+      "projected_amount": 849780.0,
       "actual_sales": 392081.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
       "shortfall_to_budget": 6840419.0,
-      "shortfall_to_projection": 6840419.0,
+      "shortfall_to_projection": 457699.0,
       "daily_required_for_budget": 253348.85185185185,
-      "daily_required_for_projection": 253348.85185185185
+      "daily_required_for_projection": 16951.814814814814
     },
     "gp_mtd": {
       "costed_revenue": 371141.0,
@@ -302,16 +302,6 @@
       "gp_pct": 25.0
     },
     {
-      "derived_category": "DUNLOP-PCR",
-      "derived_brand": "DUNLOP-PCR",
-      "product_group": "DUNLOP-PCR",
-      "product": "DUNLOP-PCR",
-      "qty": 3.0,
-      "revenue_ex_vat": 2400.0,
-      "gross_profit": 600.0,
-      "gp_pct": 25.0
-    },
-    {
       "derived_category": "LANDSPIDER",
       "derived_brand": "LANDSPIDER",
       "product_group": "LANDSPIDER",
@@ -320,6 +310,16 @@
       "revenue_ex_vat": 2400.0,
       "gross_profit": 560.0,
       "gp_pct": 23.3
+    },
+    {
+      "derived_category": "DUNLOP-PCR",
+      "derived_brand": "DUNLOP-PCR",
+      "product_group": "DUNLOP-PCR",
+      "product": "DUNLOP-PCR",
+      "qty": 3.0,
+      "revenue_ex_vat": 2400.0,
+      "gross_profit": 600.0,
+      "gp_pct": 25.0
     },
     {
       "derived_category": "YOKOHAMA-PCR",
