@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-06-03T11:05:24+04:00",
+  "generated_at": "2026-06-03T12:05:26+04:00",
   "context": {
-    "as_of_date": "2026-06-02",
+    "as_of_date": "2026-06-03",
     "month_start": "2026-06-01",
     "month_end": "2026-06-30",
-    "day_of_month": 2,
+    "day_of_month": 3,
     "days_in_month": 30,
-    "days_remaining_month": 28,
+    "days_remaining_month": 27,
     "month_key": "2026-06",
     "month_num": 6,
     "year_num": 2026
   },
   "command_center": {
     "shortfall_bridge": {
-      "as_of_date": "2026-06-02",
+      "as_of_date": "2026-06-03",
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 7232500.0,
-      "actual_sales": 282212.0,
+      "actual_sales": 361333.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 6950288.0,
-      "shortfall_to_projection": 6950288.0,
-      "daily_required_for_budget": 248224.57142857142,
-      "daily_required_for_projection": 248224.57142857142
+      "shortfall_to_budget": 6871167.0,
+      "shortfall_to_projection": 6871167.0,
+      "daily_required_for_budget": 254487.66666666666,
+      "daily_required_for_projection": 254487.66666666666
     },
     "gp_mtd": {
-      "costed_revenue": 273012.0,
-      "gross_profit": 70028.0,
-      "gp_pct": 25.7,
+      "costed_revenue": 352133.0,
+      "gross_profit": 86493.0,
+      "gp_pct": 24.6,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,23 +121,23 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 282211.66,
-      "gp_costed_revenue": 273012.0,
-      "gp_value": 70028.0,
-      "gp_pct": 25.7
+      "revenue_ex_vat": 361332.54,
+      "gp_costed_revenue": 352133.0,
+      "gp_value": 86493.0,
+      "gp_pct": 24.6
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 144563.81,
-      "active_customers": 14
+      "revenue_ex_vat": 212496.18999999997,
+      "active_customers": 16
     },
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 137666.9,
-      "active_customers": 17
+      "revenue_ex_vat": 148855.4,
+      "active_customers": 19
     }
   ],
   "product_mix_top": [
@@ -146,10 +146,10 @@
       "derived_brand": "ITR-TBR",
       "product_group": "ITR-TBR",
       "product": "ITR-TBR",
-      "qty": 142.0,
-      "revenue_ex_vat": 153170.0,
-      "gross_profit": 30900.0,
-      "gp_pct": 20.2
+      "qty": 193.0,
+      "revenue_ex_vat": 212170.0,
+      "gross_profit": 41195.0,
+      "gp_pct": 19.4
     },
     {
       "derived_category": "CEAT-TBR",
@@ -202,14 +202,24 @@
       "gp_pct": 44.0
     },
     {
-      "derived_category": "LANDSPIDER",
-      "derived_brand": "LANDSPIDER",
-      "product_group": "LANDSPIDER",
-      "product": "LANDSPIDER",
-      "qty": 8.0,
-      "revenue_ex_vat": 4800.0,
-      "gross_profit": 1120.0,
-      "gp_pct": 23.3
+      "derived_category": "ITR - OTR",
+      "derived_brand": "ITR - OTR",
+      "product_group": "ITR - OTR",
+      "product": "ITR - OTR",
+      "qty": 3.0,
+      "revenue_ex_vat": 11160.0,
+      "gross_profit": 3510.0,
+      "gp_pct": 31.5
+    },
+    {
+      "derived_category": "LINGLONG - OTR",
+      "derived_brand": "LINGLONG - OTR",
+      "product_group": "LINGLONG - OTR",
+      "product": "LINGLONG - OTR",
+      "qty": 10.0,
+      "revenue_ex_vat": 7800.0,
+      "gross_profit": 1400.0,
+      "gp_pct": 17.9
     },
     {
       "derived_category": "BRIDGESTONE-HC",
@@ -220,6 +230,16 @@
       "revenue_ex_vat": 3600.0,
       "gross_profit": 1500.0,
       "gp_pct": 41.7
+    },
+    {
+      "derived_category": "TUBE AND FLAP",
+      "derived_brand": "TUBE AND FLAP",
+      "product_group": "TUBE AND FLAP",
+      "product": "TUBE AND FLAP",
+      "qty": 16.0,
+      "revenue_ex_vat": 3566.0,
+      "gross_profit": 1810.0,
+      "gp_pct": 50.8
     },
     {
       "derived_category": "BKT - OTR",
@@ -272,6 +292,16 @@
       "gp_pct": 25.0
     },
     {
+      "derived_category": "LANDSPIDER",
+      "derived_brand": "LANDSPIDER",
+      "product_group": "LANDSPIDER",
+      "product": "LANDSPIDER",
+      "qty": 4.0,
+      "revenue_ex_vat": 2400.0,
+      "gross_profit": 560.0,
+      "gp_pct": 23.3
+    },
+    {
       "derived_category": "YOKOHAMA-PCR",
       "derived_brand": "YOKOHAMA-PCR",
       "product_group": "YOKOHAMA-PCR",
@@ -316,10 +346,10 @@
       "derived_brand": "SERVICES",
       "product_group": "SERVICES",
       "product": "SERVICES",
-      "qty": 8.0,
-      "revenue_ex_vat": 274.0,
-      "gross_profit": 109.0,
-      "gp_pct": 39.8
+      "qty": 12.0,
+      "revenue_ex_vat": 312.0,
+      "gross_profit": 137.0,
+      "gp_pct": 43.9
     },
     {
       "derived_category": "SPARE PARTS",
@@ -330,16 +360,6 @@
       "revenue_ex_vat": 235.0,
       "gross_profit": 48.0,
       "gp_pct": 20.4
-    },
-    {
-      "derived_category": "TUBE AND FLAP",
-      "derived_brand": "TUBE AND FLAP",
-      "product_group": "TUBE AND FLAP",
-      "product": "TUBE AND FLAP",
-      "qty": 1.0,
-      "revenue_ex_vat": 43.0,
-      "gross_profit": 18.0,
-      "gp_pct": 41.9
     }
   ],
   "customer_top": [],
