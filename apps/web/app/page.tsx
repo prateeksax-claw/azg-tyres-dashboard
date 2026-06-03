@@ -2,6 +2,7 @@
 
 import { Fragment, useState } from 'react'
 import { dashboardData } from '../lib/dashboard-data'
+import { computeComparison } from '../lib/comparison'
 import { computeEto } from '../lib/eto'
 import {
   compactMoney,
@@ -255,31 +256,66 @@ function HBarPair({ thisLabel, thisValue, lastLabel, lastValue, thisDisplay, las
   )
 }
 
-function ComparisonStrip({ thisRev, thisGp, thisGpPct, lastRev, lastGp, lastGpPct, compareLabel = 'last month' }: { thisRev: number; thisGp: number; thisGpPct: number; lastRev: number; lastGp: number; lastGpPct: number; compareLabel?: string }) {
-  const revDelta = lastRev ? ((thisRev - lastRev) / lastRev) * 100 : null
-  const gpDelta = lastGp ? ((thisGp - lastGp) / lastGp) * 100 : null
-  const gpPctDelta = thisGpPct - lastGpPct
-  const items = [
-    { label: 'MTD Revenue', value: compactMoney(thisRev), delta: revDelta, deltaSuffix: '%', tone: 'blue' as const },
-    { label: 'MTD GP Value', value: compactMoney(thisGp), delta: gpDelta, deltaSuffix: '%', tone: 'teal' as const },
-    { label: 'MTD GP %', value: `${thisGpPct.toFixed(1)}%`, delta: gpPctDelta, deltaSuffix: 'pp', tone: 'purple' as const },
+function ComparisonStrip({
+  thisRev, thisGp, thisGpPct,
+  revDelta, revDeltaPct,
+  gpDelta, gpDeltaPct,
+  gpPctDelta,
+  label = 'same period last month',
+}: {
+  thisRev: number; thisGp: number; thisGpPct: number
+  revDelta: number; revDeltaPct: number | null
+  gpDelta: number; gpDeltaPct: number | null
+  gpPctDelta: number
+  label?: string
+}) {
+  type Item = { label: string; value: string; valueDelta: string | null; pctDelta: number | null; positive: boolean; tone: 'blue' | 'teal' | 'purple' }
+  const items: Item[] = [
+    {
+      label: 'MTD Revenue',
+      value: compactMoney(thisRev),
+      valueDelta: signedCompactMoney(revDelta),
+      pctDelta: revDeltaPct,
+      positive: revDelta >= 0,
+      tone: 'blue',
+    },
+    {
+      label: 'MTD GP Value',
+      value: compactMoney(thisGp),
+      valueDelta: signedCompactMoney(gpDelta),
+      pctDelta: gpDeltaPct,
+      positive: gpDelta >= 0,
+      tone: 'teal',
+    },
+    {
+      label: 'MTD GP %',
+      value: `${thisGpPct.toFixed(1)}%`,
+      valueDelta: null,
+      pctDelta: gpPctDelta,
+      positive: gpPctDelta >= 0,
+      tone: 'purple',
+    },
   ]
   return (
     <div className="compare-strip">
-      {items.map((it) => {
-        const positive = (it.delta ?? 0) >= 0
-        return (
-          <div className={`compare-cell tone-${it.tone}`} key={it.label}>
-            <small>{it.label}</small>
-            <strong>{it.value}</strong>
-            {it.delta !== null && (
-              <em className={positive ? 'pos' : 'neg'}>
-                {positive ? '▲' : '▼'} {Math.abs(it.delta).toFixed(1)}{it.deltaSuffix} <span>vs {compareLabel}</span>
-              </em>
-            )}
-          </div>
-        )
-      })}
+      {items.map((it) => (
+        <div className={`compare-cell tone-${it.tone}`} key={it.label}>
+          <small>{it.label}</small>
+          <strong>{it.value}</strong>
+          <em className={it.positive ? 'pos' : 'neg'}>
+            {it.positive ? '▲' : '▼'}{' '}
+            {it.valueDelta !== null ? (
+              <>
+                {it.valueDelta}
+                {it.pctDelta !== null && <span className="cell-pct">({it.pctDelta >= 0 ? '+' : '−'}{Math.abs(it.pctDelta).toFixed(1)}%)</span>}
+              </>
+            ) : (
+              <>{Math.abs(it.pctDelta || 0).toFixed(1)}pp</>
+            )}{' '}
+            <span>vs {label}</span>
+          </em>
+        </div>
+      ))}
     </div>
   )
 }
@@ -569,20 +605,25 @@ export default function Page() {
     `${gpLeak?.salesman || 'GP watch'}: ${gpLeak?.product_group || 'margin'} GP at ${safePct(Number(gpLeak?.gp_pct || 0))}`,
   ]
 
-  const lastMonthGpPct = totalLastMonthGpPct ?? 0
-  const gpValueDelta = grossProfit - lastMonthGrossProfit
-  const gpValueDeltaPct = lastMonthGrossProfit ? (gpValueDelta / lastMonthGrossProfit) * 100 : 0
-  const gpPctDelta = totalGpPctChange ?? 0
-  const revVsLastDelta = sales - salesmanLastMtdSales
-  const revVsLastDeltaPct = salesmanLastMtdSales ? (revVsLastDelta / salesmanLastMtdSales) * 100 : 0
+  // Period comparison: this month MTD vs same-period last month (prorated).
+  // Replaces the snapshot's unreliable `last_month_mtd_sales` field which on the
+  // first few days of a new month returns last month's *full* total and produces
+  // nonsense deltas like "-92.6% vs last month".
+  const compare = computeComparison(data)
+  const gpValueDelta = compare.gpDelta
+  const gpValueDeltaPct = compare.gpDeltaPct ?? 0
+  const gpPctDelta = compare.gpPctDelta
+  const revVsLastDelta = compare.revDelta
+  const revVsLastDeltaPct = compare.revDeltaPct ?? 0
+  const lastMonthGpPctForPulse = compare.lastGpPct
 
   const kpis: Kpi[] = [
     { icon: 'bills', label: 'MTD Sales', value: compactMoney(sales), basis: 'vs Projection', delta: `${safePct(projectionAch - 100)}`, tone: 'blue' },
     { icon: 'target', label: 'ETO vs Projection', value: safePct(etoAch), basis: `Close: ${compactMoney(eto)}`, delta: signedCompactMoney(etoVariance), tone: 'gold' },
     { icon: 'percent', label: 'GP %', value: safePct(gpPct), basis: 'vs Last Month', delta: signedPp(gpPctDelta), tone: 'teal' },
-    { icon: 'dollar', label: 'Gross Profit AED', value: compactMoney(grossProfit), basis: 'vs Last Month', delta: `${gpValueDeltaPct >= 0 ? '+' : '-'}${Math.abs(gpValueDeltaPct).toFixed(1)}%`, tone: 'ink' },
+    { icon: 'dollar', label: 'Gross Profit AED', value: compactMoney(grossProfit), basis: 'vs Same-Period LM', delta: `${signedCompactMoney(gpValueDelta)} (${gpValueDeltaPct >= 0 ? '+' : '-'}${Math.abs(gpValueDeltaPct).toFixed(1)}%)`, tone: 'ink' },
     { icon: 'trend', label: 'Projection Achievement', value: safePct(projectionAch), basis: 'vs Projection', delta: `${Math.round(projectionAch - 100)} pp`, tone: 'gold' },
-    { icon: 'bolt', label: 'Revenue Δ', value: `${revVsLastDeltaPct >= 0 ? '+' : '-'}${Math.abs(revVsLastDeltaPct).toFixed(1)}%`, basis: 'vs Same-Day LM', delta: signedCompactMoney(revVsLastDelta), tone: 'green' },
+    { icon: 'bolt', label: 'Revenue Δ', value: signedCompactMoney(revVsLastDelta), basis: 'vs Same-Period LM', delta: `${revVsLastDeltaPct >= 0 ? '+' : '-'}${Math.abs(revVsLastDeltaPct).toFixed(1)}%`, tone: 'green' },
   ]
 
   const maxWaterfall = Math.max(projection, sales, pipeline, projectionGap, 1)
@@ -591,11 +632,6 @@ export default function Page() {
   // Current and historical months both use gp_value / gp_pct; no modeled monthly GP.
   const monthly = data.monthly_trend as Array<{ month_key: string; revenue_ex_vat: number; gp_value?: number; gp_pct?: number }>
   const currentMonthKey = monthly.length >= 1 ? String(monthly[monthly.length - 1].month_key) : ''
-  const previousMonth = monthly.length >= 2 ? monthly[monthly.length - 2] : undefined
-  const previousMonthLabel = previousMonth ? formatMonthLabel(String(previousMonth.month_key)) : 'last month'
-  const previousMonthRevenue = Number(previousMonth?.revenue_ex_vat || 0)
-  const previousMonthGp = Number(previousMonth?.gp_value || 0)
-  const previousMonthGpPct = Number(previousMonth?.gp_pct || 0)
   const monthlyEnriched = monthly.map((p) => {
     const key = String(p.month_key)
     return {
@@ -722,12 +758,18 @@ export default function Page() {
                 <div className="pacing-gp-cell">
                   <small>MTD GP Value</small>
                   <strong>{compactMoney(grossProfit)}</strong>
-                  <em className={gpValueDelta >= 0 ? 'pos' : 'neg'}>{gpValueDelta >= 0 ? '▲' : '▼'} {Math.abs(gpValueDeltaPct).toFixed(1)}% <span>vs last month</span></em>
+                  <em className={gpValueDelta >= 0 ? 'pos' : 'neg'}>
+                    {gpValueDelta >= 0 ? '▲' : '▼'} {signedCompactMoney(gpValueDelta)}{' '}
+                    <span>({gpValueDeltaPct >= 0 ? '+' : '−'}{Math.abs(gpValueDeltaPct).toFixed(1)}% vs {compare.label})</span>
+                  </em>
                 </div>
                 <div className="pacing-gp-cell">
                   <small>MTD GP %</small>
                   <strong>{gpPct.toFixed(1)}%</strong>
-                  <em className={gpPctDelta >= 0 ? 'pos' : 'neg'}>{gpPctDelta >= 0 ? '▲' : '▼'} {Math.abs(gpPctDelta).toFixed(1)}pp <span>vs last month</span></em>
+                  <em className={gpPctDelta >= 0 ? 'pos' : 'neg'}>
+                    {gpPctDelta >= 0 ? '▲' : '▼'} {Math.abs(gpPctDelta).toFixed(1)}pp{' '}
+                    <span>vs {compare.label}</span>
+                  </em>
                 </div>
               </div>
 
@@ -771,10 +813,12 @@ export default function Page() {
                 thisRev={sales}
                 thisGp={grossProfit}
                 thisGpPct={gpPct}
-                lastRev={previousMonthRevenue}
-                lastGp={previousMonthGp}
-                lastGpPct={previousMonthGpPct}
-                compareLabel={previousMonthLabel}
+                revDelta={compare.revDelta}
+                revDeltaPct={compare.revDeltaPct}
+                gpDelta={compare.gpDelta}
+                gpDeltaPct={compare.gpDeltaPct}
+                gpPctDelta={compare.gpPctDelta}
+                label={compare.label}
               />
             </article>
           </div>
@@ -798,7 +842,7 @@ export default function Page() {
             <article className="tile tile-amber gp-pulse-tile">
               <header>
                 <span className="tile-icon"><Icon name="percent" size={14} /></span>
-                <p>GP Pulse vs Last Month</p>
+                <p>GP Pulse vs Same Period LM</p>
                 <CardOptions label="GP pulse" />
               </header>
               <div className="gp-pulse-grid">
@@ -806,11 +850,11 @@ export default function Page() {
                   <small>GP Value</small>
                   <strong>{compactMoney(grossProfit)}</strong>
                   <em className={gpValueDelta >= 0 ? 'pos' : 'neg'}>
-                    {gpValueDelta >= 0 ? '▲' : '▼'} {Math.abs(gpValueDeltaPct).toFixed(1)}% vs last
+                    {gpValueDelta >= 0 ? '▲' : '▼'} {signedCompactMoney(gpValueDelta)} ({gpValueDeltaPct >= 0 ? '+' : '−'}{Math.abs(gpValueDeltaPct).toFixed(1)}%)
                   </em>
                   <div className="gp-pulse-bars">
-                    <div className="gp-pulse-bar last" style={{ width: `${(lastMonthGrossProfit / Math.max(grossProfit, lastMonthGrossProfit, 1)) * 100}%` }}><span>{compactMoney(lastMonthGrossProfit).replace('AED ', '')}</span></div>
-                    <div className="gp-pulse-bar this teal" style={{ width: `${(grossProfit / Math.max(grossProfit, lastMonthGrossProfit, 1)) * 100}%` }}><span>{compactMoney(grossProfit).replace('AED ', '')}</span></div>
+                    <div className="gp-pulse-bar last" style={{ width: `${(compare.lastGp / Math.max(grossProfit, compare.lastGp, 1)) * 100}%` }}><span>{compactMoney(compare.lastGp).replace('AED ', '')}</span></div>
+                    <div className="gp-pulse-bar this teal" style={{ width: `${(grossProfit / Math.max(grossProfit, compare.lastGp, 1)) * 100}%` }}><span>{compactMoney(grossProfit).replace('AED ', '')}</span></div>
                   </div>
                 </div>
                 <div className="gp-pulse-divider" />
@@ -818,16 +862,16 @@ export default function Page() {
                   <small>GP %</small>
                   <strong>{gpPct.toFixed(1)}%</strong>
                   <em className={gpPctDelta >= 0 ? 'pos' : 'neg'}>
-                    {gpPctDelta >= 0 ? '▲' : '▼'} {Math.abs(gpPctDelta).toFixed(1)}pp vs last
+                    {gpPctDelta >= 0 ? '▲' : '▼'} {Math.abs(gpPctDelta).toFixed(1)}pp vs prior
                   </em>
                   <div className="gp-pulse-bars">
-                    <div className="gp-pulse-bar last amber" style={{ width: `${(lastMonthGpPct / Math.max(gpPct, lastMonthGpPct, 1)) * 100}%` }}><span>{lastMonthGpPct.toFixed(1)}%</span></div>
-                    <div className="gp-pulse-bar this amber-deep" style={{ width: `${(gpPct / Math.max(gpPct, lastMonthGpPct, 1)) * 100}%` }}><span>{gpPct.toFixed(1)}%</span></div>
+                    <div className="gp-pulse-bar last amber" style={{ width: `${(lastMonthGpPctForPulse / Math.max(gpPct, lastMonthGpPctForPulse, 1)) * 100}%` }}><span>{lastMonthGpPctForPulse.toFixed(1)}%</span></div>
+                    <div className="gp-pulse-bar this amber-deep" style={{ width: `${(gpPct / Math.max(gpPct, lastMonthGpPctForPulse, 1)) * 100}%` }}><span>{gpPct.toFixed(1)}%</span></div>
                   </div>
                 </div>
               </div>
               <div className="gp-pulse-legend">
-                <span><i className="dot last" />Last month</span>
+                <span><i className="dot last" />Prior (prorated)</span>
                 <span><i className="dot this" />This MTD</span>
               </div>
             </article>

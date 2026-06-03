@@ -1094,6 +1094,13 @@ html, body {
   color: var(--muted);
   font-size: 9.5px;
 }
+.compare-cell em .cell-pct {
+  display: inline-block;
+  margin-left: 4px;
+  font-weight: 700;
+  color: inherit;
+  opacity: .8;
+}
 .compare-cell em.pos { color: var(--green); }
 .compare-cell em.neg { color: var(--red); }
 
