@@ -1,6 +1,6 @@
 import { dashboardData, type DashboardSample } from './dashboard-data'
 
-export type ComparisonBasis = 'mtd-actual' | 'prorated'
+export type ComparisonBasis = 'mtd-actual' | 'prorated' | 'unavailable'
 
 export type PeriodComparison = {
   /** Current MTD figures */
@@ -73,39 +73,67 @@ export function computeComparison(data: DashboardSample = dashboardData): Period
   const lastMonthKey = String(lastMonthEntry?.month_key || '')
   const daysInLastMonth = lastMonthKey ? daysInMonthFromKey(lastMonthKey) : 31
 
-  // Last month GP value: try salesman_leaderboard aggregate, fall back to imputed
+  // Last month aggregates from salesman_leaderboard
+  const salesmanLastMtd = data.salesman_leaderboard.reduce((sum, row) => sum + Number(row.last_month_mtd_sales || 0), 0)
   const salesmanLastGp = data.salesman_leaderboard.reduce((sum, row) => sum + Number(row.last_month_gross_profit || 0), 0)
   const salesmanLastCostedRev = data.salesman_leaderboard.reduce((sum, row) => sum + Number(row.last_month_costed_revenue || 0), 0)
 
-  // If the salesman_leaderboard aggregate is healthy, use it; otherwise fall back to revenue × baseline GP%
+  // Last month GP value: prefer salesman aggregate, otherwise fall back to revenue × baseline GP%
   let lastGpFull: number
   let lastGpPct: number
   if (salesmanLastCostedRev > 0 && salesmanLastGp > 0) {
     lastGpFull = salesmanLastGp
     lastGpPct = (salesmanLastGp / salesmanLastCostedRev) * 100
   } else {
-    // Fallback: assume last month closed at the snapshot's baseline GP%
     const fallbackGpPct = thisGpPct > 0 ? thisGpPct : DEFAULT_LAST_GP_PCT_FALLBACK
     lastGpPct = fallbackGpPct
     lastGpFull = lastRevFull * (fallbackGpPct / 100)
   }
 
-  // Prorate to the same fraction of elapsed days
-  const elapsedFraction = daysInLastMonth > 0 ? elapsedDays / daysInLastMonth : 0
-  const proratedLastRev = lastRevFull * elapsedFraction
-  const proratedLastGp = lastGpFull * elapsedFraction
+  // Pick the comparison basis:
+  // - 'mtd-actual'  → the snapshot's same-period MTD aggregate looks valid (> 0 and < 85% of full)
+  // - 'prorated'    → fall back to uniform proration of last month's full value
+  // - 'unavailable' → leaderboard is empty (early in the month) and prorated comparison would
+  //                   mislead because most businesses (incl. tyres) bill back-loaded — better
+  //                   to surface a "(forming)" tag than show a fabricated number
+  const lastMonthMtdLooksReal =
+    salesmanLastMtd > 0 && salesmanLastMtd < lastRevFull * 0.85
 
-  // Lean on the prorated comparison when current month is materially incomplete or
-  // when MTD-actual would be wildly larger than current MTD (signals a bad MTD field)
-  const basis: ComparisonBasis = 'prorated'
-  const lastRev = proratedLastRev
-  const lastGp = proratedLastGp
+  let basis: ComparisonBasis
+  let lastRev: number
+  let lastGp: number
+  let label: string
 
-  const revDelta = thisRev - lastRev
-  const revDeltaPct = lastRev > 0 ? (revDelta / lastRev) * 100 : null
-  const gpDelta = thisGp - lastGp
-  const gpDeltaPct = lastGp > 0 ? (gpDelta / lastGp) * 100 : null
-  const gpPctDelta = thisGpPct - lastGpPct
+  const earlyMonth = elapsedDays <= 4 && !lastMonthMtdLooksReal
+
+  if (lastMonthMtdLooksReal) {
+    // Use the real same-period MTD aggregate from the snapshot
+    basis = 'mtd-actual'
+    lastRev = salesmanLastMtd
+    // Scale GP by the same MTD/full ratio
+    const lastMtdFraction = salesmanLastMtd / Math.max(lastRevFull, 1)
+    lastGp = lastGpFull * lastMtdFraction
+    label = 'same period last month'
+  } else if (earlyMonth) {
+    // Too early to compare — proration would mislead since last month was back-loaded
+    basis = 'unavailable'
+    lastRev = 0
+    lastGp = 0
+    label = 'same period last month'
+  } else {
+    // Mid/late month with missing data → uniform proration (rough but better than nothing)
+    basis = 'prorated'
+    const elapsedFraction = daysInLastMonth > 0 ? elapsedDays / daysInLastMonth : 0
+    lastRev = lastRevFull * elapsedFraction
+    lastGp = lastGpFull * elapsedFraction
+    label = 'prorated last month'
+  }
+
+  const revDelta = basis === 'unavailable' ? 0 : thisRev - lastRev
+  const revDeltaPct = basis === 'unavailable' || lastRev <= 0 ? null : (revDelta / lastRev) * 100
+  const gpDelta = basis === 'unavailable' ? 0 : thisGp - lastGp
+  const gpDeltaPct = basis === 'unavailable' || lastGp <= 0 ? null : (gpDelta / lastGp) * 100
+  const gpPctDelta = basis === 'unavailable' ? 0 : thisGpPct - lastGpPct
 
   return {
     thisRev,
@@ -122,7 +150,7 @@ export function computeComparison(data: DashboardSample = dashboardData): Period
     gpDeltaPct,
     gpPctDelta,
     basis,
-    label: 'same period last month',
+    label,
     elapsedDays,
     daysInMonth,
   }

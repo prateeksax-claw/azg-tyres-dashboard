@@ -1101,6 +1101,51 @@ html, body {
   color: inherit;
   opacity: .8;
 }
+.compare-cell em.forming {
+  color: var(--muted-2);
+  font-weight: 700;
+  font-style: normal;
+  cursor: help;
+}
+.compare-cell em.forming span {
+  font-weight: 500;
+  color: var(--muted-2);
+}
+.pacing-gp-cell em.forming {
+  color: var(--muted-2);
+  font-weight: 700;
+  font-style: normal;
+  cursor: help;
+}
+.gp-pulse-forming {
+  display: grid;
+  gap: 6px;
+  padding: 14px 6px 6px;
+}
+.gp-pulse-forming strong {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -.025em;
+  font-variant-numeric: tabular-nums;
+}
+.gp-pulse-forming small {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.gp-pulse-forming em.forming {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: rgba(255,255,255,.5);
+  border: 1px dashed rgba(217,119,6,.4);
+  border-radius: 8px;
+  font-size: 10.5px;
+  font-style: normal;
+  color: var(--amber);
+  font-weight: 600;
+  line-height: 1.4;
+}
 .compare-cell em.pos { color: var(--green); }
 .compare-cell em.neg { color: var(--red); }
 

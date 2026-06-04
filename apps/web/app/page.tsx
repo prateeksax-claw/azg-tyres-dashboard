@@ -262,13 +262,16 @@ function ComparisonStrip({
   gpDelta, gpDeltaPct,
   gpPctDelta,
   label = 'same period last month',
+  basis = 'prorated',
 }: {
   thisRev: number; thisGp: number; thisGpPct: number
   revDelta: number; revDeltaPct: number | null
   gpDelta: number; gpDeltaPct: number | null
   gpPctDelta: number
   label?: string
+  basis?: 'mtd-actual' | 'prorated' | 'unavailable'
 }) {
+  const unavailable = basis === 'unavailable'
   type Item = { label: string; value: string; valueDelta: string | null; pctDelta: number | null; positive: boolean; tone: 'blue' | 'teal' | 'purple' }
   const items: Item[] = [
     {
@@ -302,18 +305,24 @@ function ComparisonStrip({
         <div className={`compare-cell tone-${it.tone}`} key={it.label}>
           <small>{it.label}</small>
           <strong>{it.value}</strong>
-          <em className={it.positive ? 'pos' : 'neg'}>
-            {it.positive ? '▲' : '▼'}{' '}
-            {it.valueDelta !== null ? (
-              <>
-                {it.valueDelta}
-                {it.pctDelta !== null && <span className="cell-pct">({it.pctDelta >= 0 ? '+' : '−'}{Math.abs(it.pctDelta).toFixed(1)}%)</span>}
-              </>
-            ) : (
-              <>{Math.abs(it.pctDelta || 0).toFixed(1)}pp</>
-            )}{' '}
-            <span>vs {label}</span>
-          </em>
+          {unavailable ? (
+            <em className="forming" title="Same-period last-month data not yet available from the snapshot at this point in the month">
+              — <span>vs {label} (forming)</span>
+            </em>
+          ) : (
+            <em className={it.positive ? 'pos' : 'neg'}>
+              {it.positive ? '▲' : '▼'}{' '}
+              {it.valueDelta !== null ? (
+                <>
+                  {it.valueDelta}
+                  {it.pctDelta !== null && <span className="cell-pct">({it.pctDelta >= 0 ? '+' : '−'}{Math.abs(it.pctDelta).toFixed(1)}%)</span>}
+                </>
+              ) : (
+                <>{Math.abs(it.pctDelta || 0).toFixed(1)}pp</>
+              )}{' '}
+              <span>vs {label}{basis === 'prorated' ? ' (est.)' : ''}</span>
+            </em>
+          )}
         </div>
       ))}
     </div>
@@ -758,18 +767,26 @@ export default function Page() {
                 <div className="pacing-gp-cell">
                   <small>MTD GP Value</small>
                   <strong>{compactMoney(grossProfit)}</strong>
-                  <em className={gpValueDelta >= 0 ? 'pos' : 'neg'}>
-                    {gpValueDelta >= 0 ? '▲' : '▼'} {signedCompactMoney(gpValueDelta)}{' '}
-                    <span>({gpValueDeltaPct >= 0 ? '+' : '−'}{Math.abs(gpValueDeltaPct).toFixed(1)}% vs {compare.label})</span>
-                  </em>
+                  {compare.basis === 'unavailable' ? (
+                    <em className="forming" title="Same-period last-month aggregate not yet available">— <span>vs {compare.label} (forming)</span></em>
+                  ) : (
+                    <em className={gpValueDelta >= 0 ? 'pos' : 'neg'}>
+                      {gpValueDelta >= 0 ? '▲' : '▼'} {signedCompactMoney(gpValueDelta)}{' '}
+                      <span>({gpValueDeltaPct >= 0 ? '+' : '−'}{Math.abs(gpValueDeltaPct).toFixed(1)}% vs {compare.label}{compare.basis === 'prorated' ? ' est.' : ''})</span>
+                    </em>
+                  )}
                 </div>
                 <div className="pacing-gp-cell">
                   <small>MTD GP %</small>
                   <strong>{gpPct.toFixed(1)}%</strong>
-                  <em className={gpPctDelta >= 0 ? 'pos' : 'neg'}>
-                    {gpPctDelta >= 0 ? '▲' : '▼'} {Math.abs(gpPctDelta).toFixed(1)}pp{' '}
-                    <span>vs {compare.label}</span>
-                  </em>
+                  {compare.basis === 'unavailable' ? (
+                    <em className="forming">— <span>vs {compare.label} (forming)</span></em>
+                  ) : (
+                    <em className={gpPctDelta >= 0 ? 'pos' : 'neg'}>
+                      {gpPctDelta >= 0 ? '▲' : '▼'} {Math.abs(gpPctDelta).toFixed(1)}pp{' '}
+                      <span>vs {compare.label}{compare.basis === 'prorated' ? ' est.' : ''}</span>
+                    </em>
+                  )}
                 </div>
               </div>
 
@@ -819,6 +836,7 @@ export default function Page() {
                 gpDeltaPct={compare.gpDeltaPct}
                 gpPctDelta={compare.gpPctDelta}
                 label={compare.label}
+                basis={compare.basis}
               />
             </article>
           </div>
@@ -845,35 +863,45 @@ export default function Page() {
                 <p>GP Pulse vs Same Period LM</p>
                 <CardOptions label="GP pulse" />
               </header>
-              <div className="gp-pulse-grid">
-                <div className="gp-pulse-metric">
-                  <small>GP Value</small>
+              {compare.basis === 'unavailable' ? (
+                <div className="gp-pulse-forming">
                   <strong>{compactMoney(grossProfit)}</strong>
-                  <em className={gpValueDelta >= 0 ? 'pos' : 'neg'}>
-                    {gpValueDelta >= 0 ? '▲' : '▼'} {signedCompactMoney(gpValueDelta)} ({gpValueDeltaPct >= 0 ? '+' : '−'}{Math.abs(gpValueDeltaPct).toFixed(1)}%)
-                  </em>
-                  <div className="gp-pulse-bars">
-                    <div className="gp-pulse-bar last" style={{ width: `${(compare.lastGp / Math.max(grossProfit, compare.lastGp, 1)) * 100}%` }}><span>{compactMoney(compare.lastGp).replace('AED ', '')}</span></div>
-                    <div className="gp-pulse-bar this teal" style={{ width: `${(grossProfit / Math.max(grossProfit, compare.lastGp, 1)) * 100}%` }}><span>{compactMoney(grossProfit).replace('AED ', '')}</span></div>
-                  </div>
+                  <small>GP value · {gpPct.toFixed(1)}% margin</small>
+                  <em className="forming">Same-period comparison forming — full bench available from Day 5 onwards.</em>
                 </div>
-                <div className="gp-pulse-divider" />
-                <div className="gp-pulse-metric">
-                  <small>GP %</small>
-                  <strong>{gpPct.toFixed(1)}%</strong>
-                  <em className={gpPctDelta >= 0 ? 'pos' : 'neg'}>
-                    {gpPctDelta >= 0 ? '▲' : '▼'} {Math.abs(gpPctDelta).toFixed(1)}pp vs prior
-                  </em>
-                  <div className="gp-pulse-bars">
-                    <div className="gp-pulse-bar last amber" style={{ width: `${(lastMonthGpPctForPulse / Math.max(gpPct, lastMonthGpPctForPulse, 1)) * 100}%` }}><span>{lastMonthGpPctForPulse.toFixed(1)}%</span></div>
-                    <div className="gp-pulse-bar this amber-deep" style={{ width: `${(gpPct / Math.max(gpPct, lastMonthGpPctForPulse, 1)) * 100}%` }}><span>{gpPct.toFixed(1)}%</span></div>
+              ) : (
+                <>
+                  <div className="gp-pulse-grid">
+                    <div className="gp-pulse-metric">
+                      <small>GP Value</small>
+                      <strong>{compactMoney(grossProfit)}</strong>
+                      <em className={gpValueDelta >= 0 ? 'pos' : 'neg'}>
+                        {gpValueDelta >= 0 ? '▲' : '▼'} {signedCompactMoney(gpValueDelta)} ({gpValueDeltaPct >= 0 ? '+' : '−'}{Math.abs(gpValueDeltaPct).toFixed(1)}%)
+                      </em>
+                      <div className="gp-pulse-bars">
+                        <div className="gp-pulse-bar last" style={{ width: `${(compare.lastGp / Math.max(grossProfit, compare.lastGp, 1)) * 100}%` }}><span>{compactMoney(compare.lastGp).replace('AED ', '')}</span></div>
+                        <div className="gp-pulse-bar this teal" style={{ width: `${(grossProfit / Math.max(grossProfit, compare.lastGp, 1)) * 100}%` }}><span>{compactMoney(grossProfit).replace('AED ', '')}</span></div>
+                      </div>
+                    </div>
+                    <div className="gp-pulse-divider" />
+                    <div className="gp-pulse-metric">
+                      <small>GP %</small>
+                      <strong>{gpPct.toFixed(1)}%</strong>
+                      <em className={gpPctDelta >= 0 ? 'pos' : 'neg'}>
+                        {gpPctDelta >= 0 ? '▲' : '▼'} {Math.abs(gpPctDelta).toFixed(1)}pp vs prior
+                      </em>
+                      <div className="gp-pulse-bars">
+                        <div className="gp-pulse-bar last amber" style={{ width: `${(lastMonthGpPctForPulse / Math.max(gpPct, lastMonthGpPctForPulse, 1)) * 100}%` }}><span>{lastMonthGpPctForPulse.toFixed(1)}%</span></div>
+                        <div className="gp-pulse-bar this amber-deep" style={{ width: `${(gpPct / Math.max(gpPct, lastMonthGpPctForPulse, 1)) * 100}%` }}><span>{gpPct.toFixed(1)}%</span></div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="gp-pulse-legend">
-                <span><i className="dot last" />Prior (prorated)</span>
-                <span><i className="dot this" />This MTD</span>
-              </div>
+                  <div className="gp-pulse-legend">
+                    <span><i className="dot last" />Prior ({compare.basis === 'prorated' ? 'prorated' : 'same period'})</span>
+                    <span><i className="dot this" />This MTD</span>
+                  </div>
+                </>
+              )}
             </article>
 
             <article className="tile tile-teal">
