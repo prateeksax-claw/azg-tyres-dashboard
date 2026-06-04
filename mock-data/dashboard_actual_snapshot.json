@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T07:05:26+04:00",
+  "generated_at": "2026-06-04T08:05:26+04:00",
   "context": {
     "as_of_date": "2026-06-03",
     "month_start": "2026-06-01",
@@ -302,6 +302,16 @@
       "gp_pct": 17.6
     },
     {
+      "derived_category": "LANDSPIDER",
+      "derived_brand": "LANDSPIDER",
+      "product_group": "LANDSPIDER",
+      "product": "LANDSPIDER",
+      "qty": 4.0,
+      "revenue_ex_vat": 2400.0,
+      "gross_profit": 560.0,
+      "gp_pct": 23.3
+    },
+    {
       "derived_category": "DUNLOP-PCR",
       "derived_brand": "DUNLOP-PCR",
       "product_group": "DUNLOP-PCR",
@@ -320,16 +330,6 @@
       "revenue_ex_vat": 2400.0,
       "gross_profit": 600.0,
       "gp_pct": 25.0
-    },
-    {
-      "derived_category": "LANDSPIDER",
-      "derived_brand": "LANDSPIDER",
-      "product_group": "LANDSPIDER",
-      "product": "LANDSPIDER",
-      "qty": 4.0,
-      "revenue_ex_vat": 2400.0,
-      "gross_profit": 560.0,
-      "gp_pct": 23.3
     },
     {
       "derived_category": "YOKOHAMA-PCR",
