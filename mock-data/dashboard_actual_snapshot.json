@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T17:05:31+04:00",
+  "generated_at": "2026-06-04T18:05:31+04:00",
   "context": {
     "as_of_date": "2026-06-04",
     "month_start": "2026-06-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 849780.0,
-      "actual_sales": 668531.0,
+      "actual_sales": 760072.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 6563969.0,
-      "shortfall_to_projection": 181249.0,
-      "daily_required_for_budget": 252460.34615384616,
-      "daily_required_for_projection": 6971.115384615385
+      "shortfall_to_budget": 6472428.0,
+      "shortfall_to_projection": 89708.0,
+      "daily_required_for_budget": 248939.53846153847,
+      "daily_required_for_projection": 3450.3076923076924
     },
     "gp_mtd": {
-      "costed_revenue": 544171.0,
-      "gross_profit": 124173.0,
-      "gp_pct": 22.8,
+      "costed_revenue": 624420.0,
+      "gross_profit": 143737.0,
+      "gp_pct": 23.0,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,23 +121,23 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 668530.54,
-      "gp_costed_revenue": 544171.0,
-      "gp_value": 124173.0,
-      "gp_pct": 22.8
+      "revenue_ex_vat": 760072.14,
+      "gp_costed_revenue": 624420.0,
+      "gp_value": 143737.0,
+      "gp_pct": 23.0
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 373999.9699999999,
-      "active_customers": 24
+      "revenue_ex_vat": 433839.9699999999,
+      "active_customers": 28
     },
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 295273.4,
-      "active_customers": 23
+      "revenue_ex_vat": 308773.4,
+      "active_customers": 25
     }
   ],
   "product_mix_top": [
@@ -146,10 +146,10 @@
       "derived_brand": "ITR-TBR",
       "product_group": "ITR-TBR",
       "product": "ITR-TBR",
-      "qty": 193.0,
-      "revenue_ex_vat": 212170.0,
-      "gross_profit": 41195.0,
-      "gp_pct": 19.4
+      "qty": 234.0,
+      "revenue_ex_vat": 257070.0,
+      "gross_profit": 52885.0,
+      "gp_pct": 20.6
     },
     {
       "derived_category": "CEAT-TBR",
@@ -212,6 +212,16 @@
       "gp_pct": 26.6
     },
     {
+      "derived_category": "BKT - OTR",
+      "derived_brand": "BKT - OTR",
+      "product_group": "BKT - OTR",
+      "product": "BKT - OTR",
+      "qty": 8.0,
+      "revenue_ex_vat": 15940.0,
+      "gross_profit": 2940.0,
+      "gp_pct": 18.4
+    },
+    {
       "derived_category": "SPARE PARTS",
       "derived_brand": "SPARE PARTS",
       "product_group": "SPARE PARTS",
@@ -252,6 +262,16 @@
       "gp_pct": 44.0
     },
     {
+      "derived_category": "YOKOHAMA-PCR",
+      "derived_brand": "YOKOHAMA-PCR",
+      "product_group": "YOKOHAMA-PCR",
+      "product": "YOKOHAMA-PCR",
+      "qty": 26.0,
+      "revenue_ex_vat": 11960.0,
+      "gross_profit": 4650.0,
+      "gp_pct": 38.9
+    },
+    {
       "derived_category": "ITR - OTR",
       "derived_brand": "ITR - OTR",
       "product_group": "ITR - OTR",
@@ -266,10 +286,20 @@
       "derived_brand": "DUNLOP-PCR",
       "product_group": "DUNLOP-PCR",
       "product": "DUNLOP-PCR",
-      "qty": 11.0,
-      "revenue_ex_vat": 7080.0,
-      "gross_profit": 1840.0,
-      "gp_pct": 26.0
+      "qty": 15.0,
+      "revenue_ex_vat": 9760.0,
+      "gross_profit": 2320.0,
+      "gp_pct": 23.8
+    },
+    {
+      "derived_category": "DIESEL",
+      "derived_brand": "DIESEL",
+      "product_group": "DIESEL",
+      "product": "DIESEL",
+      "qty": 2528.0,
+      "revenue_ex_vat": 9101.0,
+      "gross_profit": 506.0,
+      "gp_pct": 5.6
     },
     {
       "derived_category": "VIKRANT",
@@ -302,16 +332,6 @@
       "gp_pct": 43.1
     },
     {
-      "derived_category": "YOKOHAMA-PCR",
-      "derived_brand": "YOKOHAMA-PCR",
-      "product_group": "YOKOHAMA-PCR",
-      "product": "YOKOHAMA-PCR",
-      "qty": 12.0,
-      "revenue_ex_vat": 5840.0,
-      "gross_profit": 1400.0,
-      "gp_pct": 24.0
-    },
-    {
       "derived_category": "ECOSTAR",
       "derived_brand": "ECOSTAR",
       "product_group": "ECOSTAR",
@@ -342,24 +362,14 @@
       "gp_pct": 15.9
     },
     {
-      "derived_category": "BKT - OTR",
-      "derived_brand": "BKT - OTR",
-      "product_group": "BKT - OTR",
-      "product": "BKT - OTR",
-      "qty": 2.0,
-      "revenue_ex_vat": 3440.0,
-      "gross_profit": 690.0,
-      "gp_pct": 20.1
-    },
-    {
       "derived_category": "DEESTONE - PCR",
       "derived_brand": "DEESTONE - PCR",
       "product_group": "DEESTONE - PCR",
       "product": "DEESTONE - PCR",
-      "qty": 8.0,
-      "revenue_ex_vat": 2760.0,
-      "gross_profit": 1160.0,
-      "gp_pct": 42.0
+      "qty": 10.0,
+      "revenue_ex_vat": 3480.0,
+      "gross_profit": 1300.0,
+      "gp_pct": 37.4
     },
     {
       "derived_category": "LANDSPIDER",
@@ -402,6 +412,16 @@
       "gp_pct": 17.9
     },
     {
+      "derived_category": "OTANI-",
+      "derived_brand": "OTANI-",
+      "product_group": "OTANI-",
+      "product": "OTANI-",
+      "qty": 4.0,
+      "revenue_ex_vat": 1820.0,
+      "gross_profit": 400.0,
+      "gp_pct": 22.0
+    },
+    {
       "derived_category": "BRIDGESTONE-PCR",
       "derived_brand": "BRIDGESTONE-PCR",
       "product_group": "BRIDGESTONE-PCR",
@@ -412,38 +432,30 @@
       "gp_pct": 20.0
     },
     {
-      "derived_category": "TRUEFAST",
-      "derived_brand": "TRUEFAST",
-      "product_group": "TRUEFAST",
-      "product": "TRUEFAST",
-      "qty": 2.0,
-      "revenue_ex_vat": 940.0,
-      "gross_profit": 240.0,
-      "gp_pct": 25.5
-    },
-    {
-      "derived_category": "KUNLUN",
-      "derived_brand": "KUNLUN",
-      "product_group": "KUNLUN",
-      "product": "KUNLUN",
-      "qty": 2.0,
-      "revenue_ex_vat": 900.0,
-      "gross_profit": 220.0,
-      "gp_pct": 24.4
-    },
-    {
-      "derived_category": "SERVICES",
-      "derived_brand": "SERVICES",
-      "product_group": "SERVICES",
-      "product": "SERVICES",
-      "qty": 12.0,
-      "revenue_ex_vat": 312.0,
-      "gross_profit": 137.0,
-      "gp_pct": 43.9
+      "derived_category": "ROADSTONE-PCR",
+      "derived_brand": "ROADSTONE-PCR",
+      "product_group": "ROADSTONE-PCR",
+      "product": "ROADSTONE-PCR",
+      "qty": 4.0,
+      "revenue_ex_vat": 1040.0,
+      "gross_profit": 400.0,
+      "gp_pct": 38.5
     }
   ],
   "customer_top": [],
   "gp_alerts_top": [
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
+      "salesman": "ARUN RAJ",
+      "customer_name": "IMDAAD LLC",
+      "product_group": "DIESEL",
+      "product": "DIESEL SUPPLY LTR",
+      "costed_revenue": 9100.800000000001,
+      "gross_profit": 505.6000000000022,
+      "gp_pct": 5.5555555555555785,
+      "uncosted_revenue": 0.0
+    },
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
