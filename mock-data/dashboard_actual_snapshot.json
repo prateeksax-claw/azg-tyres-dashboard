@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T23:05:32+04:00",
+  "generated_at": "2026-06-06T00:05:33+04:00",
   "context": {
     "as_of_date": "2026-06-05",
     "month_start": "2026-06-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 1145810.0,
+      "actual_sales": 1156210.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 6086690.0,
+      "shortfall_to_budget": 6076290.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 243467.6,
+      "daily_required_for_budget": 243051.6,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 981932.0,
-      "gross_profit": 235666.0,
+      "costed_revenue": 992332.0,
+      "gross_profit": 237938.0,
       "gp_pct": 24.0,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -121,9 +121,9 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 1145809.52,
-      "gp_costed_revenue": 981932.0,
-      "gp_value": 235666.0,
+      "revenue_ex_vat": 1156209.52,
+      "gp_costed_revenue": 992332.0,
+      "gp_value": 237938.0,
       "gp_pct": 24.0
     }
   ],
@@ -136,8 +136,8 @@
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 465872.3499999999,
-      "active_customers": 32
+      "revenue_ex_vat": 476286.6399999999,
+      "active_customers": 33
     }
   ],
   "product_mix_top": [
@@ -166,10 +166,10 @@
       "derived_brand": "CEAT-TBR",
       "product_group": "CEAT-TBR",
       "product": "CEAT-TBR",
-      "qty": 57.0,
-      "revenue_ex_vat": 71420.0,
-      "gross_profit": 8203.0,
-      "gp_pct": 23.6
+      "qty": 63.0,
+      "revenue_ex_vat": 78380.0,
+      "gross_profit": 9853.0,
+      "gp_pct": 23.7
     },
     {
       "derived_category": "YARTU",
@@ -362,6 +362,16 @@
       "gp_pct": 16.3
     },
     {
+      "derived_category": "FIRESTONE-TBR",
+      "derived_brand": "FIRESTONE-TBR",
+      "product_group": "FIRESTONE-TBR",
+      "product": "FIRESTONE-TBR",
+      "qty": 4.0,
+      "revenue_ex_vat": 6420.0,
+      "gross_profit": 1164.0,
+      "gp_pct": 18.1
+    },
+    {
       "derived_category": "LINGLONG - OTR",
       "derived_brand": "LINGLONG - OTR",
       "product_group": "LINGLONG - OTR",
@@ -410,16 +420,6 @@
       "revenue_ex_vat": 3600.0,
       "gross_profit": 1500.0,
       "gp_pct": 41.7
-    },
-    {
-      "derived_category": "FIRESTONE-TBR",
-      "derived_brand": "FIRESTONE-TBR",
-      "product_group": "FIRESTONE-TBR",
-      "product": "FIRESTONE-TBR",
-      "qty": 2.0,
-      "revenue_ex_vat": 2980.0,
-      "gross_profit": 542.0,
-      "gp_pct": 18.2
     },
     {
       "derived_category": "LANDSPIDER",
