@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T17:05:24+04:00",
+  "generated_at": "2026-06-06T18:05:21+04:00",
   "context": {
     "as_of_date": "2026-06-06",
     "month_start": "2026-06-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 1210180.0,
+      "actual_sales": 1217550.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 6022320.0,
+      "shortfall_to_budget": 6014950.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 250930.0,
+      "daily_required_for_budget": 250622.91666666666,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 1032302.0,
-      "gross_profit": 249268.0,
+      "costed_revenue": 1037772.0,
+      "gross_profit": 250617.0,
       "gp_pct": 24.1,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -121,9 +121,9 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 1210179.52,
-      "gp_costed_revenue": 1032302.0,
-      "gp_value": 249268.0,
+      "revenue_ex_vat": 1217549.52,
+      "gp_costed_revenue": 1037772.0,
+      "gp_value": 250617.0,
       "gp_pct": 24.1
     }
   ],
@@ -131,12 +131,12 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 705868.4,
-      "active_customers": 37
+      "revenue_ex_vat": 713283.4,
+      "active_customers": 39
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 488786.6399999999,
+      "revenue_ex_vat": 489156.1599999999,
       "active_customers": 34
     }
   ],
@@ -242,6 +242,16 @@
       "gp_pct": 17.3
     },
     {
+      "derived_category": "SPARE PARTS",
+      "derived_brand": "SPARE PARTS",
+      "product_group": "SPARE PARTS",
+      "product": "SPARE PARTS",
+      "qty": 55.0,
+      "revenue_ex_vat": 16215.0,
+      "gross_profit": 3113.0,
+      "gp_pct": 19.2
+    },
+    {
       "derived_category": "BKT - OTR",
       "derived_brand": "BKT - OTR",
       "product_group": "BKT - OTR",
@@ -260,16 +270,6 @@
       "revenue_ex_vat": 15420.0,
       "gross_profit": 2220.0,
       "gp_pct": 14.4
-    },
-    {
-      "derived_category": "SPARE PARTS",
-      "derived_brand": "SPARE PARTS",
-      "product_group": "SPARE PARTS",
-      "product": "SPARE PARTS",
-      "qty": 31.0,
-      "revenue_ex_vat": 14635.0,
-      "gross_profit": 2718.0,
-      "gp_pct": 18.6
     },
     {
       "derived_category": "POWERTRAC",
@@ -322,6 +322,16 @@
       "gp_pct": 23.6
     },
     {
+      "derived_category": "DEESTONE - PCR",
+      "derived_brand": "DEESTONE - PCR",
+      "product_group": "DEESTONE - PCR",
+      "product": "DEESTONE - PCR",
+      "qty": 24.0,
+      "revenue_ex_vat": 9300.0,
+      "gross_profit": 2720.0,
+      "gp_pct": 29.2
+    },
+    {
       "derived_category": "DIESEL",
       "derived_brand": "DIESEL",
       "product_group": "DIESEL",
@@ -330,16 +340,6 @@
       "revenue_ex_vat": 9101.0,
       "gross_profit": 506.0,
       "gp_pct": 5.6
-    },
-    {
-      "derived_category": "DEESTONE - PCR",
-      "derived_brand": "DEESTONE - PCR",
-      "product_group": "DEESTONE - PCR",
-      "product": "DEESTONE - PCR",
-      "qty": 20.0,
-      "revenue_ex_vat": 8380.0,
-      "gross_profit": 2400.0,
-      "gp_pct": 28.6
     },
     {
       "derived_category": "SAILUN TBR",
@@ -491,6 +491,30 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 5280.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
+      "salesman": "BADARAN",
+      "customer_name": "EMIRATES ROYAL HOLDING LLC (BILLING)",
+      "product_group": "OZKA",
+      "product": "12-16.5 VIKRANT",
+      "costed_revenue": 1900.0,
+      "gross_profit": 160.0,
+      "gp_pct": 8.421052631578947,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
+      "salesman": "INTERCOMPANY",
+      "customer_name": "CASH CUSTOMER - SAEED AL ZAABI TRANSPORT",
+      "product_group": "SPARE PARTS",
+      "product": "5W30 ADCO OIL PETROL ENGINE OIL 4Ltr",
+      "costed_revenue": 45.0,
+      "gross_profit": 3.75,
+      "gp_pct": 8.333333333333332,
+      "uncosted_revenue": 0.0
     }
   ],
   "_source_note": "Auto-refreshed hourly from Tyres DuckDB semantic layer; compact snapshot for Cloudflare Pages static dashboard.",
