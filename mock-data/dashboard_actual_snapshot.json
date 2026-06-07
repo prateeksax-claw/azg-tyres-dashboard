@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-06-07T23:05:38+04:00",
+  "generated_at": "2026-06-08T00:05:46+04:00",
   "context": {
-    "as_of_date": "2026-06-07",
+    "as_of_date": "2026-06-08",
     "month_start": "2026-06-01",
     "month_end": "2026-06-30",
-    "day_of_month": 7,
+    "day_of_month": 8,
     "days_in_month": 30,
-    "days_remaining_month": 23,
+    "days_remaining_month": 22,
     "month_key": "2026-06",
     "month_num": 6,
     "year_num": 2026
   },
   "command_center": {
     "shortfall_bridge": {
-      "as_of_date": "2026-06-07",
+      "as_of_date": "2026-06-08",
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 1218812.0,
+      "actual_sales": 1337042.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 6013688.0,
+      "shortfall_to_budget": 5895458.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 261464.69565217392,
+      "daily_required_for_budget": 267975.36363636365,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 1039012.0,
-      "gross_profit": 250983.0,
-      "gp_pct": 24.2,
+      "costed_revenue": 1136242.0,
+      "gross_profit": 269243.0,
+      "gp_pct": 23.7,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -114,17 +114,17 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 1218811.52,
-      "gp_costed_revenue": 1039012.0,
-      "gp_value": 250983.0,
-      "gp_pct": 24.2
+      "revenue_ex_vat": 1337041.52,
+      "gp_costed_revenue": 1136242.0,
+      "gp_value": 269243.0,
+      "gp_pct": 23.7
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 714545.4,
+      "revenue_ex_vat": 832775.4,
       "active_customers": 40
     },
     {
@@ -134,6 +134,16 @@
     }
   ],
   "product_mix_top": [
+    {
+      "derived_category": "ITR-TBR",
+      "derived_brand": "ITR-TBR",
+      "product_group": "ITR-TBR",
+      "product": "ITR-TBR",
+      "qty": 334.0,
+      "revenue_ex_vat": 361200.0,
+      "gross_profit": 73695.0,
+      "gp_pct": 20.4
+    },
     {
       "derived_category": "GOLD DOVE",
       "derived_brand": "GOLD DOVE",
@@ -145,16 +155,6 @@
       "gp_pct": 25.8
     },
     {
-      "derived_category": "ITR-TBR",
-      "derived_brand": "ITR-TBR",
-      "product_group": "ITR-TBR",
-      "product": "ITR-TBR",
-      "qty": 257.0,
-      "revenue_ex_vat": 284970.0,
-      "gross_profit": 59835.0,
-      "gp_pct": 21.0
-    },
-    {
       "derived_category": "CEAT-TBR",
       "derived_brand": "CEAT-TBR",
       "product_group": "CEAT-TBR",
@@ -163,6 +163,16 @@
       "revenue_ex_vat": 78380.0,
       "gross_profit": 9853.0,
       "gp_pct": 23.7
+    },
+    {
+      "derived_category": "WESTLAKE TBR",
+      "derived_brand": "WESTLAKE TBR",
+      "product_group": "WESTLAKE TBR",
+      "product": "WESTLAKE TBR",
+      "qty": 65.0,
+      "revenue_ex_vat": 65150.0,
+      "gross_profit": 10040.0,
+      "gp_pct": 22.7
     },
     {
       "derived_category": "YARTU",
@@ -193,16 +203,6 @@
       "revenue_ex_vat": 33900.0,
       "gross_profit": 10180.0,
       "gp_pct": 30.0
-    },
-    {
-      "derived_category": "WESTLAKE TBR",
-      "derived_brand": "WESTLAKE TBR",
-      "product_group": "WESTLAKE TBR",
-      "product": "WESTLAKE TBR",
-      "qty": 25.0,
-      "revenue_ex_vat": 23150.0,
-      "gross_profit": 5640.0,
-      "gp_pct": 24.4
     },
     {
       "derived_category": "YOKOHAMA-PCR",
@@ -484,6 +484,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 5280.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "AL JABER GROUP L.L.C.",
+      "product_group": "WESTLAKE TBR",
+      "product": "1200R24 WESTLAKE AZ272",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 21000.0
     },
     {
       "alert_type": "LOW GP",
