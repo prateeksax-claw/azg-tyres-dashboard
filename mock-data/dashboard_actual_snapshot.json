@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-06-07T11:05:37+04:00",
+  "generated_at": "2026-06-07T12:05:39+04:00",
   "context": {
-    "as_of_date": "2026-06-06",
+    "as_of_date": "2026-06-07",
     "month_start": "2026-06-01",
     "month_end": "2026-06-30",
-    "day_of_month": 6,
+    "day_of_month": 7,
     "days_in_month": 30,
-    "days_remaining_month": 24,
+    "days_remaining_month": 23,
     "month_key": "2026-06",
     "month_num": 6,
     "year_num": 2026
   },
   "command_center": {
     "shortfall_bridge": {
-      "as_of_date": "2026-06-06",
+      "as_of_date": "2026-06-07",
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 1217572.0,
+      "actual_sales": 1218772.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 6014928.0,
+      "shortfall_to_budget": 6013728.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 250622.0,
+      "daily_required_for_budget": 261466.4347826087,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 1037772.0,
-      "gross_profit": 250617.0,
-      "gp_pct": 24.1,
+      "costed_revenue": 1038972.0,
+      "gross_profit": 250953.0,
+      "gp_pct": 24.2,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,17 +121,17 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 1217571.52,
-      "gp_costed_revenue": 1037772.0,
-      "gp_value": 250617.0,
-      "gp_pct": 24.1
+      "revenue_ex_vat": 1218771.52,
+      "gp_costed_revenue": 1038972.0,
+      "gp_value": 250953.0,
+      "gp_pct": 24.2
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 713305.4,
+      "revenue_ex_vat": 714505.4,
       "active_customers": 40
     },
     {
@@ -346,10 +346,10 @@
       "derived_brand": "SAILUN TBR",
       "product_group": "SAILUN TBR",
       "product": "SAILUN TBR",
-      "qty": 20.0,
-      "revenue_ex_vat": 6600.0,
-      "gross_profit": 2280.0,
-      "gp_pct": 34.5
+      "qty": 24.0,
+      "revenue_ex_vat": 7800.0,
+      "gross_profit": 2616.0,
+      "gp_pct": 33.5
     },
     {
       "derived_category": "VIKRANT",
