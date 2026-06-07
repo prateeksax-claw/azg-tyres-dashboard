@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T17:05:34+04:00",
+  "generated_at": "2026-06-07T18:05:36+04:00",
   "context": {
     "as_of_date": "2026-06-07",
     "month_start": "2026-06-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 1218772.0,
+      "actual_sales": 1218812.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 6013728.0,
+      "shortfall_to_budget": 6013688.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 261466.4347826087,
+      "daily_required_for_budget": 261464.69565217392,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 1038972.0,
-      "gross_profit": 250953.0,
+      "costed_revenue": 1039012.0,
+      "gross_profit": 250983.0,
       "gp_pct": 24.2,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -80,50 +80,36 @@
     {
       "month_key": "2025-12",
       "revenue_ex_vat": 4750786.67,
-      "gp_costed_revenue": 4080109.0,
-      "gp_value": 826738.0,
-      "gp_pct": 20.3
+      "gp_costed_revenue": 1767078.0,
+      "gp_value": 369575.0,
+      "gp_pct": 20.9
     },
     {
       "month_key": "2026-01",
-      "revenue_ex_vat": 4846358.07,
-      "gp_costed_revenue": 4192254.0,
-      "gp_value": 758522.0,
-      "gp_pct": 18.1
+      "revenue_ex_vat": 3877468.73,
+      "gp_costed_revenue": 1675488.0,
+      "gp_value": 309458.0,
+      "gp_pct": 18.5
     },
     {
       "month_key": "2026-02",
-      "revenue_ex_vat": 4757693.54,
-      "gp_costed_revenue": 4293816.0,
-      "gp_value": 771351.0,
-      "gp_pct": 18.0
+      "revenue_ex_vat": 909879.3,
+      "gp_costed_revenue": 1864710.0,
+      "gp_value": 318220.0,
+      "gp_pct": 17.1
     },
     {
       "month_key": "2026-03",
-      "revenue_ex_vat": 5475925.34,
-      "gp_costed_revenue": 4717369.0,
-      "gp_value": 895328.0,
-      "gp_pct": 19.0
-    },
-    {
-      "month_key": "2026-04",
-      "revenue_ex_vat": 5263084.66,
-      "gp_costed_revenue": 4602797.0,
-      "gp_value": 1040174.0,
-      "gp_pct": 22.6
-    },
-    {
-      "month_key": "2026-05",
-      "revenue_ex_vat": 4858468.89,
-      "gp_costed_revenue": 4165629.0,
-      "gp_value": 941574.0,
-      "gp_pct": 22.6
+      "revenue_ex_vat": 382641.9,
+      "gp_costed_revenue": 2421995.0,
+      "gp_value": 485185.0,
+      "gp_pct": 20.0
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 1218771.52,
-      "gp_costed_revenue": 1038972.0,
-      "gp_value": 250953.0,
+      "revenue_ex_vat": 1218811.52,
+      "gp_costed_revenue": 1039012.0,
+      "gp_value": 250983.0,
       "gp_pct": 24.2
     }
   ],
@@ -131,7 +117,7 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 714505.4,
+      "revenue_ex_vat": 714545.4,
       "active_customers": 40
     },
     {
