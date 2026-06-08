@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T23:05:47+04:00",
+  "generated_at": "2026-06-09T00:05:51+04:00",
   "context": {
     "as_of_date": "2026-06-08",
     "month_start": "2026-06-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 1467087.0,
+      "actual_sales": 1469087.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 5765413.0,
+      "shortfall_to_budget": 5763413.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 262064.22727272726,
+      "daily_required_for_budget": 261973.31818181818,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 1285497.0,
-      "gross_profit": 308233.0,
+      "costed_revenue": 1287497.0,
+      "gross_profit": 308433.0,
       "gp_pct": 24.0,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -121,9 +121,9 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 1467086.52,
-      "gp_costed_revenue": 1285497.0,
-      "gp_value": 308233.0,
+      "revenue_ex_vat": 1469086.52,
+      "gp_costed_revenue": 1287497.0,
+      "gp_value": 308433.0,
       "gp_pct": 24.0
     }
   ],
@@ -131,7 +131,7 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 901190.4,
+      "revenue_ex_vat": 903190.4,
       "active_customers": 46
     },
     {
@@ -538,6 +538,18 @@
       "costed_revenue": 23600.0,
       "gross_profit": 2580.0,
       "gp_pct": 10.932203389830509,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
+      "salesman": "NEWTYRE -OFFICE",
+      "customer_name": "CARD CUSTOMER",
+      "product_group": "BRIDGESTONE-PCR",
+      "product": "225/55 R 17 BRIDGESTONE RFT",
+      "costed_revenue": 2000.0,
+      "gross_profit": 200.0,
+      "gp_pct": 10.0,
       "uncosted_revenue": 0.0
     },
     {
