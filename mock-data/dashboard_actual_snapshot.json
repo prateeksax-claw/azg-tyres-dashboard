@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T17:05:51+04:00",
+  "generated_at": "2026-06-08T18:05:55+04:00",
   "context": {
     "as_of_date": "2026-06-08",
     "month_start": "2026-06-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 1421857.0,
+      "actual_sales": 1467087.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 5810643.0,
+      "shortfall_to_budget": 5765413.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 264120.13636363635,
+      "daily_required_for_budget": 262064.22727272726,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 1218787.0,
-      "gross_profit": 288393.0,
-      "gp_pct": 23.7,
+      "costed_revenue": 1285497.0,
+      "gross_profit": 308233.0,
+      "gp_pct": 24.0,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -116,28 +116,28 @@
       "month_key": "2026-05",
       "revenue_ex_vat": 4858468.89,
       "gp_costed_revenue": 4165629.0,
-      "gp_value": 941534.0,
+      "gp_value": 941574.0,
       "gp_pct": 22.6
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 1421856.52,
-      "gp_costed_revenue": 1218787.0,
-      "gp_value": 288393.0,
-      "gp_pct": 23.7
+      "revenue_ex_vat": 1467086.52,
+      "gp_costed_revenue": 1285497.0,
+      "gp_value": 308233.0,
+      "gp_pct": 24.0
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 855960.4,
-      "active_customers": 43
+      "revenue_ex_vat": 901190.4,
+      "active_customers": 46
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 551285.6799999999,
-      "active_customers": 34
+      "revenue_ex_vat": 551295.2,
+      "active_customers": 35
     }
   ],
   "product_mix_top": [
@@ -162,6 +162,16 @@
       "gp_pct": 25.8
     },
     {
+      "derived_category": "CEAT-TBR",
+      "derived_brand": "CEAT-TBR",
+      "product_group": "CEAT-TBR",
+      "product": "CEAT-TBR",
+      "qty": 83.0,
+      "revenue_ex_vat": 101980.0,
+      "gross_profit": 12433.0,
+      "gp_pct": 19.1
+    },
+    {
       "derived_category": "WESTLAKE TBR",
       "derived_brand": "WESTLAKE TBR",
       "product_group": "WESTLAKE TBR",
@@ -170,16 +180,6 @@
       "revenue_ex_vat": 82350.0,
       "gross_profit": 14960.0,
       "gp_pct": 24.4
-    },
-    {
-      "derived_category": "CEAT-TBR",
-      "derived_brand": "CEAT-TBR",
-      "product_group": "CEAT-TBR",
-      "product": "CEAT-TBR",
-      "qty": 63.0,
-      "revenue_ex_vat": 78380.0,
-      "gross_profit": 9853.0,
-      "gp_pct": 23.7
     },
     {
       "derived_category": "YARTU",
@@ -212,6 +212,16 @@
       "gp_pct": 30.2
     },
     {
+      "derived_category": "ITR - OTR",
+      "derived_brand": "ITR - OTR",
+      "product_group": "ITR - OTR",
+      "product": "ITR - OTR",
+      "qty": 12.0,
+      "revenue_ex_vat": 36830.0,
+      "gross_profit": 12030.0,
+      "gp_pct": 32.7
+    },
+    {
       "derived_category": "YOKOHAMA-TBR",
       "derived_brand": "YOKOHAMA-TBR",
       "product_group": "YOKOHAMA-TBR",
@@ -220,6 +230,16 @@
       "revenue_ex_vat": 33800.0,
       "gross_profit": 6400.0,
       "gp_pct": 18.9
+    },
+    {
+      "derived_category": "HOTCURE",
+      "derived_brand": "HOTCURE",
+      "product_group": "HOTCURE",
+      "product": "HOTCURE",
+      "qty": 69.0,
+      "revenue_ex_vat": 28830.0,
+      "gross_profit": 15030.0,
+      "gp_pct": 52.1
     },
     {
       "derived_category": "YOKOHAMA-PCR",
@@ -302,26 +322,6 @@
       "gp_pct": 42.5
     },
     {
-      "derived_category": "HOTCURE",
-      "derived_brand": "HOTCURE",
-      "product_group": "HOTCURE",
-      "product": "HOTCURE",
-      "qty": 33.0,
-      "revenue_ex_vat": 13530.0,
-      "gross_profit": 6930.0,
-      "gp_pct": 51.2
-    },
-    {
-      "derived_category": "ITR - OTR",
-      "derived_brand": "ITR - OTR",
-      "product_group": "ITR - OTR",
-      "product": "ITR - OTR",
-      "qty": 6.0,
-      "revenue_ex_vat": 12530.0,
-      "gross_profit": 3930.0,
-      "gp_pct": 31.4
-    },
-    {
       "derived_category": "TBR CHINEESE",
       "derived_brand": "TBR CHINEESE",
       "product_group": "TBR CHINEESE",
@@ -392,6 +392,16 @@
       "gp_pct": 18.1
     },
     {
+      "derived_category": "OTANI-",
+      "derived_brand": "OTANI-",
+      "product_group": "OTANI-",
+      "product": "OTANI-",
+      "qty": 18.0,
+      "revenue_ex_vat": 6350.0,
+      "gross_profit": 1680.0,
+      "gp_pct": 26.5
+    },
+    {
       "derived_category": "LINGLONG - OTR",
       "derived_brand": "LINGLONG - OTR",
       "product_group": "LINGLONG - OTR",
@@ -430,16 +440,6 @@
       "revenue_ex_vat": 4800.0,
       "gross_profit": 2000.0,
       "gp_pct": 41.7
-    },
-    {
-      "derived_category": "OTANI-",
-      "derived_brand": "OTANI-",
-      "product_group": "OTANI-",
-      "product": "OTANI-",
-      "qty": 12.0,
-      "revenue_ex_vat": 4700.0,
-      "gross_profit": 960.0,
-      "gp_pct": 20.4
     }
   ],
   "customer_top": [],
@@ -527,6 +527,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 5280.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
+      "salesman": "NEWTYRE -OFFICE",
+      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
+      "product_group": "CEAT-TBR",
+      "product": "1200 R 24 CEAT",
+      "costed_revenue": 23600.0,
+      "gross_profit": 2580.0,
+      "gp_pct": 10.932203389830509,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "LOW GP",
