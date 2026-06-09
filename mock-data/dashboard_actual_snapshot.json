@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T01:05:49+04:00",
+  "generated_at": "2026-06-10T02:05:54+04:00",
   "context": {
     "as_of_date": "2026-06-10",
     "month_start": "2026-06-01",
@@ -312,16 +312,6 @@
       "gp_pct": 14.4
     },
     {
-      "derived_category": "APTANY",
-      "derived_brand": "APTANY",
-      "product_group": "APTANY",
-      "product": "APTANY",
-      "qty": 20.0,
-      "revenue_ex_vat": 14800.0,
-      "gross_profit": 6600.0,
-      "gp_pct": 44.6
-    },
-    {
       "derived_category": "TBR CHINEESE",
       "derived_brand": "TBR CHINEESE",
       "product_group": "TBR CHINEESE",
@@ -330,6 +320,16 @@
       "revenue_ex_vat": 14800.0,
       "gross_profit": 2680.0,
       "gp_pct": 18.1
+    },
+    {
+      "derived_category": "APTANY",
+      "derived_brand": "APTANY",
+      "product_group": "APTANY",
+      "product": "APTANY",
+      "qty": 20.0,
+      "revenue_ex_vat": 14800.0,
+      "gross_profit": 6600.0,
+      "gp_pct": 44.6
     },
     {
       "derived_category": "POWERTRAC",
@@ -531,18 +531,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 5280.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "SOHAIL",
       "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "product_group": "CEAT-TBR",
@@ -551,6 +539,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 31440.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "DEEPU",
+      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 5280.0
     },
     {
       "alert_type": "LOW GP",
