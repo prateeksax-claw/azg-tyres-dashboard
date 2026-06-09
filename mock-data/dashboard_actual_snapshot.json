@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T13:06:02+04:00",
+  "generated_at": "2026-06-09T14:06:00+04:00",
   "context": {
     "as_of_date": "2026-06-09",
     "month_start": "2026-06-01",
@@ -95,7 +95,7 @@
       "month_key": "2026-02",
       "revenue_ex_vat": 4757693.54,
       "gp_costed_revenue": 4293816.0,
-      "gp_value": 771351.0,
+      "gp_value": 771639.0,
       "gp_pct": 18.0
     },
     {
@@ -109,15 +109,15 @@
       "month_key": "2026-04",
       "revenue_ex_vat": 5263084.66,
       "gp_costed_revenue": 4602797.0,
-      "gp_value": 1040174.0,
+      "gp_value": 1040352.0,
       "gp_pct": 22.6
     },
     {
       "month_key": "2026-05",
       "revenue_ex_vat": 4858468.89,
-      "gp_costed_revenue": 4165629.0,
-      "gp_value": 900508.0,
-      "gp_pct": 21.6
+      "gp_costed_revenue": 4205879.0,
+      "gp_value": 845763.0,
+      "gp_pct": 20.1
     },
     {
       "month_key": "2026-06",
