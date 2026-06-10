@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T12:06:32+04:00",
+  "generated_at": "2026-06-10T13:05:57+04:00",
   "context": {
     "as_of_date": "2026-06-10",
     "month_start": "2026-06-01",
@@ -322,16 +322,6 @@
       "gp_pct": 14.4
     },
     {
-      "derived_category": "TBR CHINEESE",
-      "derived_brand": "TBR CHINEESE",
-      "product_group": "TBR CHINEESE",
-      "product": "TBR CHINEESE",
-      "qty": 18.0,
-      "revenue_ex_vat": 14800.0,
-      "gross_profit": 2680.0,
-      "gp_pct": 18.1
-    },
-    {
       "derived_category": "APTANY",
       "derived_brand": "APTANY",
       "product_group": "APTANY",
@@ -340,6 +330,16 @@
       "revenue_ex_vat": 14800.0,
       "gross_profit": 6600.0,
       "gp_pct": 44.6
+    },
+    {
+      "derived_category": "TBR CHINEESE",
+      "derived_brand": "TBR CHINEESE",
+      "product_group": "TBR CHINEESE",
+      "product": "TBR CHINEESE",
+      "qty": 18.0,
+      "revenue_ex_vat": 14800.0,
+      "gross_profit": 2680.0,
+      "gp_pct": 18.1
     },
     {
       "derived_category": "VIKRANT",
