@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T17:06:05+04:00",
+  "generated_at": "2026-06-10T18:06:09+04:00",
   "context": {
     "as_of_date": "2026-06-10",
     "month_start": "2026-06-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 1627955.0,
+      "actual_sales": 1684705.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 5604545.0,
+      "shortfall_to_budget": 5547795.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 280227.25,
+      "daily_required_for_budget": 277389.75,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 1423705.0,
-      "gross_profit": 347671.0,
-      "gp_pct": 24.4,
+      "costed_revenue": 1459875.0,
+      "gross_profit": 357699.0,
+      "gp_pct": 24.5,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,23 +121,23 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 1627954.42,
-      "gp_costed_revenue": 1423705.0,
-      "gp_value": 347671.0,
-      "gp_pct": 24.4
+      "revenue_ex_vat": 1684704.42,
+      "gp_costed_revenue": 1459875.0,
+      "gp_value": 357699.0,
+      "gp_pct": 24.5
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 955828.3,
-      "active_customers": 52
+      "revenue_ex_vat": 1008768.3,
+      "active_customers": 57
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 657525.2,
-      "active_customers": 41
+      "revenue_ex_vat": 662678.02,
+      "active_customers": 42
     }
   ],
   "product_mix_top": [
@@ -216,9 +216,9 @@
       "derived_brand": "HOTCURE",
       "product_group": "HOTCURE",
       "product": "HOTCURE",
-      "qty": 92.0,
-      "revenue_ex_vat": 38630.0,
-      "gross_profit": 20230.0,
+      "qty": 94.0,
+      "revenue_ex_vat": 39530.0,
+      "gross_profit": 20730.0,
       "gp_pct": 52.4
     },
     {
@@ -240,6 +240,16 @@
       "revenue_ex_vat": 33800.0,
       "gross_profit": 6400.0,
       "gp_pct": 18.9
+    },
+    {
+      "derived_category": "RETREAD",
+      "derived_brand": "RETREAD",
+      "product_group": "RETREAD",
+      "product": "RETREAD",
+      "qty": 86.0,
+      "revenue_ex_vat": 25785.0,
+      "gross_profit": 15585.0,
+      "gp_pct": 60.4
     },
     {
       "derived_category": "POWERTRAC",
@@ -272,16 +282,6 @@
       "gp_pct": 22.1
     },
     {
-      "derived_category": "RETREAD",
-      "derived_brand": "RETREAD",
-      "product_group": "RETREAD",
-      "product": "RETREAD",
-      "qty": 65.0,
-      "revenue_ex_vat": 18910.0,
-      "gross_profit": 11460.0,
-      "gp_pct": 60.6
-    },
-    {
       "derived_category": "BULL",
       "derived_brand": "BULL",
       "product_group": "BULL",
@@ -296,10 +296,10 @@
       "derived_brand": "SPARE PARTS",
       "product_group": "SPARE PARTS",
       "product": "SPARE PARTS",
-      "qty": 55.0,
-      "revenue_ex_vat": 16215.0,
-      "gross_profit": 3113.0,
-      "gp_pct": 19.2
+      "qty": 62.0,
+      "revenue_ex_vat": 18060.0,
+      "gross_profit": 3442.0,
+      "gp_pct": 19.1
     },
     {
       "derived_category": "BKT - OTR",
@@ -392,6 +392,16 @@
       "gp_pct": 5.6
     },
     {
+      "derived_category": "OTANI-",
+      "derived_brand": "OTANI-",
+      "product_group": "OTANI-",
+      "product": "OTANI-",
+      "qty": 24.0,
+      "revenue_ex_vat": 8290.0,
+      "gross_profit": 1970.0,
+      "gp_pct": 23.8
+    },
+    {
       "derived_category": "SAILUN TBR",
       "derived_brand": "SAILUN TBR",
       "product_group": "SAILUN TBR",
@@ -402,6 +412,26 @@
       "gp_pct": 33.5
     },
     {
+      "derived_category": "FIREMAX",
+      "derived_brand": "FIREMAX",
+      "product_group": "FIREMAX",
+      "product": "FIREMAX",
+      "qty": 8.0,
+      "revenue_ex_vat": 7310.0,
+      "gross_profit": 1560.0,
+      "gp_pct": 21.3
+    },
+    {
+      "derived_category": "TUBE AND FLAP",
+      "derived_brand": "TUBE AND FLAP",
+      "product_group": "TUBE AND FLAP",
+      "product": "TUBE AND FLAP",
+      "qty": 69.0,
+      "revenue_ex_vat": 7239.0,
+      "gross_profit": 2761.0,
+      "gp_pct": 38.1
+    },
+    {
       "derived_category": "BRIDGESTONE-TBR",
       "derived_brand": "BRIDGESTONE-TBR",
       "product_group": "BRIDGESTONE-TBR",
@@ -410,36 +440,6 @@
       "revenue_ex_vat": 6760.0,
       "gross_profit": 1060.0,
       "gp_pct": 15.7
-    },
-    {
-      "derived_category": "OTANI-",
-      "derived_brand": "OTANI-",
-      "product_group": "OTANI-",
-      "product": "OTANI-",
-      "qty": 18.0,
-      "revenue_ex_vat": 6350.0,
-      "gross_profit": 1680.0,
-      "gp_pct": 26.5
-    },
-    {
-      "derived_category": "LINGLONG - OTR",
-      "derived_brand": "LINGLONG - OTR",
-      "product_group": "LINGLONG - OTR",
-      "product": "LINGLONG - OTR",
-      "qty": 8.0,
-      "revenue_ex_vat": 6240.0,
-      "gross_profit": 1120.0,
-      "gp_pct": 17.9
-    },
-    {
-      "derived_category": "TUBE AND FLAP",
-      "derived_brand": "TUBE AND FLAP",
-      "product_group": "TUBE AND FLAP",
-      "product": "TUBE AND FLAP",
-      "qty": 48.0,
-      "revenue_ex_vat": 5874.0,
-      "gross_profit": 2530.0,
-      "gp_pct": 43.1
     }
   ],
   "customer_top": [],
@@ -483,6 +483,18 @@
     {
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
+      "salesman": "NEWTYRE -OFFICE",
+      "customer_name": "VERACITY CONTRACTING AND GENERAL MAINTENANCE L.L.C.",
+      "product_group": "OTANI-",
+      "product": "265/65R17 OTANI",
+      "costed_revenue": 740.0,
+      "gross_profit": 30.0,
+      "gp_pct": 4.054054054054054,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
       "salesman": "INTERCOMPANY",
       "customer_name": "CASH CUSTOMER - SAEED AL ZAABI TRANSPORT",
       "product_group": "JKTYRE-TBR",
@@ -519,18 +531,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "VIPIN",
-      "customer_name": "AL JABER GROUP L.L.C.",
-      "product_group": "WESTLAKE TBR",
-      "product": "1200R24 WESTLAKE AZ272",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 21000.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "SOHAIL",
       "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "product_group": "CEAT-TBR",
@@ -539,6 +539,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 31440.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "AL JABER GROUP L.L.C.",
+      "product_group": "WESTLAKE TBR",
+      "product": "1200R24 WESTLAKE AZ272",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 21000.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -574,6 +586,18 @@
       "costed_revenue": 2000.0,
       "gross_profit": 200.0,
       "gp_pct": 10.0,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
+      "salesman": "NEWTYRE -OFFICE",
+      "customer_name": "CARD CUSTOMER",
+      "product_group": "NEXEN-PCR",
+      "product": "255/55R19 NEXEN",
+      "costed_revenue": 1720.0,
+      "gross_profit": 180.0,
+      "gp_pct": 10.465116279069768,
       "uncosted_revenue": 0.0
     },
     {
