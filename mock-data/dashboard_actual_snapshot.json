@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T13:06:10+04:00",
+  "generated_at": "2026-06-11T14:05:55+04:00",
   "context": {
     "as_of_date": "2026-06-11",
     "month_start": "2026-06-01",
@@ -80,8 +80,8 @@
     {
       "month_key": "2025-12",
       "revenue_ex_vat": 4750786.67,
-      "gp_costed_revenue": 4080109.0,
-      "gp_value": 826768.0,
+      "gp_costed_revenue": 4066669.0,
+      "gp_value": 824578.0,
       "gp_pct": 20.3
     },
     {
@@ -531,6 +531,18 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
+      "salesman": "SOHAIL",
+      "customer_name": "DATE QUICK TRANSPORT L.L.C",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 31440.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
       "salesman": "VIPIN",
       "customer_name": "AL JABER GROUP L.L.C.",
       "product_group": "WESTLAKE TBR",
@@ -551,18 +563,6 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 5280.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "SOHAIL",
-      "customer_name": "DATE QUICK TRANSPORT L.L.C",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 31440.0
     },
     {
       "alert_type": "LOW GP",
