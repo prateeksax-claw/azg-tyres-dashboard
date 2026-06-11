@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T17:06:13+04:00",
+  "generated_at": "2026-06-11T18:06:04+04:00",
   "context": {
     "as_of_date": "2026-06-11",
     "month_start": "2026-06-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 1755505.0,
+      "actual_sales": 1990993.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 5476995.0,
+      "shortfall_to_budget": 5241507.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 288262.8947368421,
+      "daily_required_for_budget": 275868.7894736842,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 1517235.0,
-      "gross_profit": 369984.0,
-      "gp_pct": 24.4,
+      "costed_revenue": 1716813.0,
+      "gross_profit": 422353.0,
+      "gp_pct": 24.6,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,23 +121,23 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 1755504.42,
-      "gp_costed_revenue": 1517235.0,
-      "gp_value": 369984.0,
-      "gp_pct": 24.4
+      "revenue_ex_vat": 1990992.42,
+      "gp_costed_revenue": 1716813.0,
+      "gp_value": 422353.0,
+      "gp_pct": 24.6
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 1032618.3,
-      "active_customers": 57
+      "revenue_ex_vat": 1093136.3,
+      "active_customers": 62
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 682748.02,
-      "active_customers": 43
+      "revenue_ex_vat": 857718.02,
+      "active_customers": 47
     }
   ],
   "product_mix_top": [
@@ -156,20 +156,20 @@
       "derived_brand": "GOLD DOVE",
       "product_group": "GOLD DOVE",
       "product": "GOLD DOVE",
-      "qty": 300.0,
-      "revenue_ex_vat": 285000.0,
-      "gross_profit": 73500.0,
-      "gp_pct": 25.8
+      "qty": 325.0,
+      "revenue_ex_vat": 306250.0,
+      "gross_profit": 77125.0,
+      "gp_pct": 25.2
     },
     {
       "derived_category": "CEAT-TBR",
       "derived_brand": "CEAT-TBR",
       "product_group": "CEAT-TBR",
       "product": "CEAT-TBR",
-      "qty": 91.0,
-      "revenue_ex_vat": 112700.0,
-      "gross_profit": 14745.0,
-      "gp_pct": 19.4
+      "qty": 147.0,
+      "revenue_ex_vat": 187400.0,
+      "gross_profit": 30589.0,
+      "gp_pct": 20.3
     },
     {
       "derived_category": "WESTLAKE TBR",
@@ -180,6 +180,16 @@
       "revenue_ex_vat": 103030.0,
       "gross_profit": 20904.0,
       "gp_pct": 25.5
+    },
+    {
+      "derived_category": "VIKRANT",
+      "derived_brand": "VIKRANT",
+      "product_group": "VIKRANT",
+      "product": "VIKRANT",
+      "qty": 42.0,
+      "revenue_ex_vat": 61050.0,
+      "gross_profit": 16986.0,
+      "gp_pct": 27.8
     },
     {
       "derived_category": "YARTU",
@@ -202,6 +212,16 @@
       "gp_pct": 31.1
     },
     {
+      "derived_category": "HOTCURE",
+      "derived_brand": "HOTCURE",
+      "product_group": "HOTCURE",
+      "product": "HOTCURE",
+      "qty": 124.0,
+      "revenue_ex_vat": 52040.0,
+      "gross_profit": 27240.0,
+      "gp_pct": 52.3
+    },
+    {
       "derived_category": "SBK",
       "derived_brand": "SBK",
       "product_group": "SBK",
@@ -212,24 +232,14 @@
       "gp_pct": 16.5
     },
     {
-      "derived_category": "HOTCURE",
-      "derived_brand": "HOTCURE",
-      "product_group": "HOTCURE",
-      "product": "HOTCURE",
-      "qty": 94.0,
-      "revenue_ex_vat": 39530.0,
-      "gross_profit": 20730.0,
-      "gp_pct": 52.4
-    },
-    {
       "derived_category": "ITR - OTR",
       "derived_brand": "ITR - OTR",
       "product_group": "ITR - OTR",
       "product": "ITR - OTR",
-      "qty": 12.0,
-      "revenue_ex_vat": 36830.0,
-      "gross_profit": 12030.0,
-      "gp_pct": 32.7
+      "qty": 16.0,
+      "revenue_ex_vat": 39230.0,
+      "gross_profit": 12550.0,
+      "gp_pct": 32.0
     },
     {
       "derived_category": "YOKOHAMA-TBR",
@@ -242,14 +252,24 @@
       "gp_pct": 18.9
     },
     {
+      "derived_category": "FIRELINE",
+      "derived_brand": "FIRELINE",
+      "product_group": "FIRELINE",
+      "product": "FIRELINE",
+      "qty": 32.0,
+      "revenue_ex_vat": 28800.0,
+      "gross_profit": 5760.0,
+      "gp_pct": 20.0
+    },
+    {
       "derived_category": "RETREAD",
       "derived_brand": "RETREAD",
       "product_group": "RETREAD",
       "product": "RETREAD",
-      "qty": 86.0,
-      "revenue_ex_vat": 25785.0,
-      "gross_profit": 15585.0,
-      "gp_pct": 60.4
+      "qty": 91.0,
+      "revenue_ex_vat": 27835.0,
+      "gross_profit": 16985.0,
+      "gp_pct": 61.0
     },
     {
       "derived_category": "POWERTRAC",
@@ -262,14 +282,24 @@
       "gp_pct": 45.0
     },
     {
-      "derived_category": "FIRELINE",
-      "derived_brand": "FIRELINE",
-      "product_group": "FIRELINE",
-      "product": "FIRELINE",
-      "qty": 22.0,
-      "revenue_ex_vat": 19800.0,
-      "gross_profit": 3960.0,
-      "gp_pct": 20.0
+      "derived_category": "SPARE PARTS",
+      "derived_brand": "SPARE PARTS",
+      "product_group": "SPARE PARTS",
+      "product": "SPARE PARTS",
+      "qty": 468.0,
+      "revenue_ex_vat": 21110.0,
+      "gross_profit": 4073.0,
+      "gp_pct": 19.3
+    },
+    {
+      "derived_category": "BKT - OTR",
+      "derived_brand": "BKT - OTR",
+      "product_group": "BKT - OTR",
+      "product": "BKT - OTR",
+      "qty": 10.0,
+      "revenue_ex_vat": 20100.0,
+      "gross_profit": 3460.0,
+      "gp_pct": 17.2
     },
     {
       "derived_category": "YOKOHAMA-PCR",
@@ -302,26 +332,6 @@
       "gp_pct": 17.3
     },
     {
-      "derived_category": "SPARE PARTS",
-      "derived_brand": "SPARE PARTS",
-      "product_group": "SPARE PARTS",
-      "product": "SPARE PARTS",
-      "qty": 62.0,
-      "revenue_ex_vat": 18060.0,
-      "gross_profit": 3442.0,
-      "gp_pct": 19.1
-    },
-    {
-      "derived_category": "BKT - OTR",
-      "derived_brand": "BKT - OTR",
-      "product_group": "BKT - OTR",
-      "product": "BKT - OTR",
-      "qty": 8.0,
-      "revenue_ex_vat": 15940.0,
-      "gross_profit": 2750.0,
-      "gp_pct": 17.3
-    },
-    {
       "derived_category": "ADVANCE OTR",
       "derived_brand": "ADVANCE OTR",
       "product_group": "ADVANCE OTR",
@@ -342,16 +352,6 @@
       "gp_pct": 18.8
     },
     {
-      "derived_category": "APTANY",
-      "derived_brand": "APTANY",
-      "product_group": "APTANY",
-      "product": "APTANY",
-      "qty": 20.0,
-      "revenue_ex_vat": 14800.0,
-      "gross_profit": 6600.0,
-      "gp_pct": 44.6
-    },
-    {
       "derived_category": "TBR CHINEESE",
       "derived_brand": "TBR CHINEESE",
       "product_group": "TBR CHINEESE",
@@ -362,14 +362,24 @@
       "gp_pct": 18.1
     },
     {
-      "derived_category": "VIKRANT",
-      "derived_brand": "VIKRANT",
-      "product_group": "VIKRANT",
-      "product": "VIKRANT",
-      "qty": 12.0,
-      "revenue_ex_vat": 14550.0,
-      "gross_profit": 2706.0,
-      "gp_pct": 18.6
+      "derived_category": "APTANY",
+      "derived_brand": "APTANY",
+      "product_group": "APTANY",
+      "product": "APTANY",
+      "qty": 20.0,
+      "revenue_ex_vat": 14800.0,
+      "gross_profit": 6600.0,
+      "gp_pct": 44.6
+    },
+    {
+      "derived_category": "DEESTONE - PCR",
+      "derived_brand": "DEESTONE - PCR",
+      "product_group": "DEESTONE - PCR",
+      "product": "DEESTONE - PCR",
+      "qty": 40.0,
+      "revenue_ex_vat": 14530.0,
+      "gross_profit": 4110.0,
+      "gp_pct": 28.3
     },
     {
       "derived_category": "GAZELLE",
@@ -382,14 +392,14 @@
       "gp_pct": 17.7
     },
     {
-      "derived_category": "DEESTONE - PCR",
-      "derived_brand": "DEESTONE - PCR",
-      "product_group": "DEESTONE - PCR",
-      "product": "DEESTONE - PCR",
-      "qty": 36.0,
-      "revenue_ex_vat": 13170.0,
-      "gross_profit": 3910.0,
-      "gp_pct": 29.7
+      "derived_category": "BRIDGESTONE-HC",
+      "derived_brand": "BRIDGESTONE-HC",
+      "product_group": "BRIDGESTONE-HC",
+      "product": "BRIDGESTONE-HC",
+      "qty": 23.0,
+      "revenue_ex_vat": 13800.0,
+      "gross_profit": 5750.0,
+      "gp_pct": 41.7
     },
     {
       "derived_category": "FIRESTONE-TBR",
@@ -430,16 +440,6 @@
       "revenue_ex_vat": 7800.0,
       "gross_profit": 2616.0,
       "gp_pct": 33.5
-    },
-    {
-      "derived_category": "DUNLOP-TBR",
-      "derived_brand": "DUNLOP-TBR",
-      "product_group": "DUNLOP-TBR",
-      "product": "DUNLOP-TBR",
-      "qty": 10.0,
-      "revenue_ex_vat": 7650.0,
-      "gross_profit": 1250.0,
-      "gp_pct": 16.3
     }
   ],
   "customer_top": [],
