@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T19:06:11+04:00",
+  "generated_at": "2026-06-11T20:06:06+04:00",
   "context": {
     "as_of_date": "2026-06-11",
     "month_start": "2026-06-01",
@@ -352,16 +352,6 @@
       "gp_pct": 18.8
     },
     {
-      "derived_category": "APTANY",
-      "derived_brand": "APTANY",
-      "product_group": "APTANY",
-      "product": "APTANY",
-      "qty": 20.0,
-      "revenue_ex_vat": 14800.0,
-      "gross_profit": 6600.0,
-      "gp_pct": 44.6
-    },
-    {
       "derived_category": "TBR CHINEESE",
       "derived_brand": "TBR CHINEESE",
       "product_group": "TBR CHINEESE",
@@ -370,6 +360,16 @@
       "revenue_ex_vat": 14800.0,
       "gross_profit": 2680.0,
       "gp_pct": 18.1
+    },
+    {
+      "derived_category": "APTANY",
+      "derived_brand": "APTANY",
+      "product_group": "APTANY",
+      "product": "APTANY",
+      "qty": 20.0,
+      "revenue_ex_vat": 14800.0,
+      "gross_profit": 6600.0,
+      "gp_pct": 44.6
     },
     {
       "derived_category": "DEESTONE - PCR",
