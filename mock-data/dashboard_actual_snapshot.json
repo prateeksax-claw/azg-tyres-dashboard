@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T17:06:06+04:00",
+  "generated_at": "2026-06-12T18:06:29+04:00",
   "context": {
     "as_of_date": "2026-06-12",
     "month_start": "2026-06-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 2206401.0,
+      "actual_sales": 2299846.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 5026099.0,
+      "shortfall_to_budget": 4932654.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 279227.72222222225,
+      "daily_required_for_budget": 274036.3333333333,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 1932221.0,
-      "gross_profit": 466327.0,
-      "gp_pct": 24.1,
+      "costed_revenue": 2018466.0,
+      "gross_profit": 484251.0,
+      "gp_pct": 24.0,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -81,7 +81,7 @@
       "month_key": "2025-12",
       "revenue_ex_vat": 4750786.67,
       "gp_costed_revenue": 4066669.0,
-      "gp_value": 824578.0,
+      "gp_value": 824608.0,
       "gp_pct": 20.3
     },
     {
@@ -107,9 +107,9 @@
     },
     {
       "month_key": "2026-04",
-      "revenue_ex_vat": 5263084.66,
-      "gp_costed_revenue": 4602797.0,
-      "gp_value": 1040352.0,
+      "revenue_ex_vat": 5265604.66,
+      "gp_costed_revenue": 4605317.0,
+      "gp_value": 1040792.0,
       "gp_pct": 22.6
     },
     {
@@ -121,23 +121,23 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 2206400.51,
-      "gp_costed_revenue": 1932221.0,
-      "gp_value": 466327.0,
-      "gp_pct": 24.1
+      "revenue_ex_vat": 2299845.01,
+      "gp_costed_revenue": 2018466.0,
+      "gp_value": 484251.0,
+      "gp_pct": 24.0
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 1208613.2,
-      "active_customers": 66
+      "revenue_ex_vat": 1248017.7,
+      "active_customers": 68
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 958274.21,
-      "active_customers": 50
+      "revenue_ex_vat": 1015348.5,
+      "active_customers": 52
     }
   ],
   "product_mix_top": [
@@ -166,10 +166,10 @@
       "derived_brand": "CEAT-TBR",
       "product_group": "CEAT-TBR",
       "product": "CEAT-TBR",
-      "qty": 149.0,
-      "revenue_ex_vat": 190080.0,
-      "gross_profit": 31167.0,
-      "gp_pct": 20.3
+      "qty": 177.0,
+      "revenue_ex_vat": 224400.0,
+      "gross_profit": 36059.0,
+      "gp_pct": 19.2
     },
     {
       "derived_category": "WESTLAKE TBR",
@@ -196,20 +196,20 @@
       "derived_brand": "VIKRANT",
       "product_group": "VIKRANT",
       "product": "VIKRANT",
-      "qty": 42.0,
-      "revenue_ex_vat": 61050.0,
-      "gross_profit": 16986.0,
-      "gp_pct": 27.8
+      "qty": 54.0,
+      "revenue_ex_vat": 72210.0,
+      "gross_profit": 19026.0,
+      "gp_pct": 26.3
     },
     {
       "derived_category": "HOTCURE",
       "derived_brand": "HOTCURE",
       "product_group": "HOTCURE",
       "product": "HOTCURE",
-      "qty": 139.0,
-      "revenue_ex_vat": 58340.0,
-      "gross_profit": 30540.0,
-      "gp_pct": 52.3
+      "qty": 144.0,
+      "revenue_ex_vat": 60465.0,
+      "gross_profit": 31665.0,
+      "gp_pct": 52.4
     },
     {
       "derived_category": "YARTU",
@@ -272,6 +272,26 @@
       "gp_pct": 61.0
     },
     {
+      "derived_category": "TBR CHINEESE",
+      "derived_brand": "TBR CHINEESE",
+      "product_group": "TBR CHINEESE",
+      "product": "TBR CHINEESE",
+      "qty": 28.0,
+      "revenue_ex_vat": 24550.0,
+      "gross_profit": 4230.0,
+      "gp_pct": 17.2
+    },
+    {
+      "derived_category": "DUNLOP-PCR",
+      "derived_brand": "DUNLOP-PCR",
+      "product_group": "DUNLOP-PCR",
+      "product": "DUNLOP-PCR",
+      "qty": 39.0,
+      "revenue_ex_vat": 21460.0,
+      "gross_profit": 4880.0,
+      "gp_pct": 22.7
+    },
+    {
       "derived_category": "POWERTRAC",
       "derived_brand": "POWERTRAC",
       "product_group": "POWERTRAC",
@@ -282,6 +302,16 @@
       "gp_pct": 45.0
     },
     {
+      "derived_category": "DEESTONE - PCR",
+      "derived_brand": "DEESTONE - PCR",
+      "product_group": "DEESTONE - PCR",
+      "product": "DEESTONE - PCR",
+      "qty": 52.0,
+      "revenue_ex_vat": 21110.0,
+      "gross_profit": 6690.0,
+      "gp_pct": 31.7
+    },
+    {
       "derived_category": "SPARE PARTS",
       "derived_brand": "SPARE PARTS",
       "product_group": "SPARE PARTS",
@@ -290,6 +320,16 @@
       "revenue_ex_vat": 21110.0,
       "gross_profit": 4073.0,
       "gp_pct": 19.3
+    },
+    {
+      "derived_category": "FIRESTONE-TBR",
+      "derived_brand": "FIRESTONE-TBR",
+      "product_group": "FIRESTONE-TBR",
+      "product": "FIRESTONE-TBR",
+      "qty": 30.0,
+      "revenue_ex_vat": 20440.0,
+      "gross_profit": 3964.0,
+      "gp_pct": 19.4
     },
     {
       "derived_category": "BKT - OTR",
@@ -310,16 +350,6 @@
       "revenue_ex_vat": 19290.0,
       "gross_profit": 6320.0,
       "gp_pct": 32.8
-    },
-    {
-      "derived_category": "DUNLOP-PCR",
-      "derived_brand": "DUNLOP-PCR",
-      "product_group": "DUNLOP-PCR",
-      "product": "DUNLOP-PCR",
-      "qty": 35.0,
-      "revenue_ex_vat": 19020.0,
-      "gross_profit": 4200.0,
-      "gp_pct": 22.1
     },
     {
       "derived_category": "BULL",
@@ -362,16 +392,6 @@
       "gp_pct": 18.5
     },
     {
-      "derived_category": "TBR CHINEESE",
-      "derived_brand": "TBR CHINEESE",
-      "product_group": "TBR CHINEESE",
-      "product": "TBR CHINEESE",
-      "qty": 18.0,
-      "revenue_ex_vat": 14800.0,
-      "gross_profit": 2680.0,
-      "gp_pct": 18.1
-    },
-    {
       "derived_category": "APTANY",
       "derived_brand": "APTANY",
       "product_group": "APTANY",
@@ -380,16 +400,6 @@
       "revenue_ex_vat": 14800.0,
       "gross_profit": 6600.0,
       "gp_pct": 44.6
-    },
-    {
-      "derived_category": "DEESTONE - PCR",
-      "derived_brand": "DEESTONE - PCR",
-      "product_group": "DEESTONE - PCR",
-      "product": "DEESTONE - PCR",
-      "qty": 40.0,
-      "revenue_ex_vat": 14530.0,
-      "gross_profit": 4110.0,
-      "gp_pct": 28.3
     },
     {
       "derived_category": "GAZELLE",
@@ -422,24 +432,14 @@
       "gp_pct": 17.1
     },
     {
-      "derived_category": "OTANI-",
-      "derived_brand": "OTANI-",
-      "product_group": "OTANI-",
-      "product": "OTANI-",
-      "qty": 30.0,
-      "revenue_ex_vat": 9820.0,
-      "gross_profit": 2370.0,
-      "gp_pct": 24.1
-    },
-    {
-      "derived_category": "FIRESTONE-TBR",
-      "derived_brand": "FIRESTONE-TBR",
-      "product_group": "FIRESTONE-TBR",
-      "product": "FIRESTONE-TBR",
-      "qty": 10.0,
-      "revenue_ex_vat": 9240.0,
-      "gross_profit": 1164.0,
-      "gp_pct": 12.6
+      "derived_category": "DUNLOP-TBR",
+      "derived_brand": "DUNLOP-TBR",
+      "product_group": "DUNLOP-TBR",
+      "product": "DUNLOP-TBR",
+      "qty": 16.0,
+      "revenue_ex_vat": 11050.0,
+      "gross_profit": 2280.0,
+      "gp_pct": 20.6
     }
   ],
   "customer_top": [],
@@ -495,6 +495,18 @@
     {
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
+      "salesman": "NEWTYRE -OFFICE",
+      "customer_name": "CARD CUSTOMER",
+      "product_group": "ROADSTONE-PCR",
+      "product": "195/55R16 ROADSTONE",
+      "costed_revenue": 260.0,
+      "gross_profit": 20.0,
+      "gp_pct": 7.6923076923076925,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
       "salesman": "INTERCOMPANY",
       "customer_name": "CASH CUSTOMER - SAEED AL ZAABI TRANSPORT",
       "product_group": "JKTYRE-TBR",
@@ -512,6 +524,30 @@
       "product_group": "FIRESTONE-TBR",
       "product": "750 R 16 FIRESTONE",
       "costed_revenue": 2820.0,
+      "gross_profit": 0.0,
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
+      "salesman": "INTERCOMPANY",
+      "customer_name": "ROYAL PRINCE AUTO CAR CARE LLC",
+      "product_group": "MICHELIN-PCR",
+      "product": "245/45R18 MICHELIN",
+      "costed_revenue": 2280.0,
+      "gross_profit": 0.0,
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
+      "salesman": "INTERCOMPANY",
+      "customer_name": "ROYAL PRINCE AUTO CAR CARE LLC",
+      "product_group": "LANDSPIDER",
+      "product": "205/55R16 LAND SPIDER",
+      "costed_revenue": 740.0,
       "gross_profit": 0.0,
       "gp_pct": 0.0,
       "uncosted_revenue": 0.0
@@ -563,6 +599,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 5280.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
+      "salesman": "BADARAN",
+      "customer_name": "LAMASIA GENERAL TRANSPORT",
+      "product_group": "CEAT-TBR",
+      "product": "1200 R 24 CEAT",
+      "costed_revenue": 23600.0,
+      "gross_profit": 2580.0,
+      "gp_pct": 10.932203389830509,
+      "uncosted_revenue": 0.0
     },
     {
       "alert_type": "LOW GP",
