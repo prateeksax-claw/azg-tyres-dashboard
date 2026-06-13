@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T06:05:19+04:00",
+  "generated_at": "2026-06-13T07:05:20+04:00",
   "context": {
     "as_of_date": "2026-06-13",
     "month_start": "2026-06-01",
@@ -302,16 +302,6 @@
       "gp_pct": 45.0
     },
     {
-      "derived_category": "DEESTONE - PCR",
-      "derived_brand": "DEESTONE - PCR",
-      "product_group": "DEESTONE - PCR",
-      "product": "DEESTONE - PCR",
-      "qty": 52.0,
-      "revenue_ex_vat": 21110.0,
-      "gross_profit": 6690.0,
-      "gp_pct": 31.7
-    },
-    {
       "derived_category": "SPARE PARTS",
       "derived_brand": "SPARE PARTS",
       "product_group": "SPARE PARTS",
@@ -320,6 +310,16 @@
       "revenue_ex_vat": 21110.0,
       "gross_profit": 4073.0,
       "gp_pct": 19.3
+    },
+    {
+      "derived_category": "DEESTONE - PCR",
+      "derived_brand": "DEESTONE - PCR",
+      "product_group": "DEESTONE - PCR",
+      "product": "DEESTONE - PCR",
+      "qty": 52.0,
+      "revenue_ex_vat": 21110.0,
+      "gross_profit": 6690.0,
+      "gp_pct": 31.7
     },
     {
       "derived_category": "FIRESTONE-TBR",
