@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T09:05:31+04:00",
+  "generated_at": "2026-06-13T10:05:25+04:00",
   "context": {
     "as_of_date": "2026-06-13",
     "month_start": "2026-06-01",
@@ -302,16 +302,6 @@
       "gp_pct": 45.0
     },
     {
-      "derived_category": "DEESTONE - PCR",
-      "derived_brand": "DEESTONE - PCR",
-      "product_group": "DEESTONE - PCR",
-      "product": "DEESTONE - PCR",
-      "qty": 52.0,
-      "revenue_ex_vat": 21110.0,
-      "gross_profit": 6690.0,
-      "gp_pct": 31.7
-    },
-    {
       "derived_category": "SPARE PARTS",
       "derived_brand": "SPARE PARTS",
       "product_group": "SPARE PARTS",
@@ -320,6 +310,16 @@
       "revenue_ex_vat": 21110.0,
       "gross_profit": 4073.0,
       "gp_pct": 19.3
+    },
+    {
+      "derived_category": "DEESTONE - PCR",
+      "derived_brand": "DEESTONE - PCR",
+      "product_group": "DEESTONE - PCR",
+      "product": "DEESTONE - PCR",
+      "qty": 52.0,
+      "revenue_ex_vat": 21110.0,
+      "gross_profit": 6690.0,
+      "gp_pct": 31.7
     },
     {
       "derived_category": "FIRESTONE-TBR",
@@ -579,18 +579,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 5280.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "SOHAIL",
       "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "product_group": "CEAT-TBR",
@@ -599,6 +587,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 31440.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "DEEPU",
+      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 5280.0
     },
     {
       "alert_type": "LOW GP",
