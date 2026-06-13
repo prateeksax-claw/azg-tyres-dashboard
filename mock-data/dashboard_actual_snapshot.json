@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T11:05:21+04:00",
+  "generated_at": "2026-06-13T12:05:21+04:00",
   "context": {
     "as_of_date": "2026-06-13",
     "month_start": "2026-06-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 2335546.0,
+      "actual_sales": 2421671.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 4896954.0,
+      "shortfall_to_budget": 4810829.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 288056.1176470588,
+      "daily_required_for_budget": 282989.9411764706,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 2048906.0,
-      "gross_profit": 490751.0,
-      "gp_pct": 24.0,
+      "costed_revenue": 2134331.0,
+      "gross_profit": 518092.0,
+      "gp_pct": 24.3,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,23 +121,23 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 2335545.01,
-      "gp_costed_revenue": 2048906.0,
-      "gp_value": 490751.0,
-      "gp_pct": 24.0
+      "revenue_ex_vat": 2421670.51,
+      "gp_costed_revenue": 2134331.0,
+      "gp_value": 518092.0,
+      "gp_pct": 24.3
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 1283717.7,
-      "active_customers": 70
+      "revenue_ex_vat": 1288083.2,
+      "active_customers": 72
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 1015358.02,
-      "active_customers": 52
+      "revenue_ex_vat": 1097118.02,
+      "active_customers": 56
     }
   ],
   "product_mix_top": [
@@ -166,10 +166,10 @@
       "derived_brand": "CEAT-TBR",
       "product_group": "CEAT-TBR",
       "product": "CEAT-TBR",
-      "qty": 177.0,
-      "revenue_ex_vat": 224400.0,
-      "gross_profit": 36059.0,
-      "gp_pct": 19.2
+      "qty": 201.0,
+      "revenue_ex_vat": 256200.0,
+      "gross_profit": 42635.0,
+      "gp_pct": 19.4
     },
     {
       "derived_category": "WESTLAKE TBR",
@@ -206,10 +206,20 @@
       "derived_brand": "HOTCURE",
       "product_group": "HOTCURE",
       "product": "HOTCURE",
-      "qty": 144.0,
-      "revenue_ex_vat": 60465.0,
-      "gross_profit": 31665.0,
-      "gp_pct": 52.4
+      "qty": 156.0,
+      "revenue_ex_vat": 65441.0,
+      "gross_profit": 34241.0,
+      "gp_pct": 52.3
+    },
+    {
+      "derived_category": "ITR - OTR",
+      "derived_brand": "ITR - OTR",
+      "product_group": "ITR - OTR",
+      "product": "ITR - OTR",
+      "qty": 18.0,
+      "revenue_ex_vat": 59630.0,
+      "gross_profit": 22950.0,
+      "gp_pct": 38.5
     },
     {
       "derived_category": "YARTU",
@@ -230,16 +240,6 @@
       "revenue_ex_vat": 52000.0,
       "gross_profit": 8600.0,
       "gp_pct": 16.5
-    },
-    {
-      "derived_category": "ITR - OTR",
-      "derived_brand": "ITR - OTR",
-      "product_group": "ITR - OTR",
-      "product": "ITR - OTR",
-      "qty": 16.0,
-      "revenue_ex_vat": 39230.0,
-      "gross_profit": 12550.0,
-      "gp_pct": 32.0
     },
     {
       "derived_category": "YOKOHAMA-TBR",
@@ -272,6 +272,16 @@
       "gp_pct": 61.0
     },
     {
+      "derived_category": "POWERTRAC",
+      "derived_brand": "POWERTRAC",
+      "product_group": "POWERTRAC",
+      "product": "POWERTRAC",
+      "qty": 32.0,
+      "revenue_ex_vat": 26160.0,
+      "gross_profit": 12120.0,
+      "gp_pct": 46.3
+    },
+    {
       "derived_category": "TBR CHINEESE",
       "derived_brand": "TBR CHINEESE",
       "product_group": "TBR CHINEESE",
@@ -286,30 +296,30 @@
       "derived_brand": "DUNLOP-PCR",
       "product_group": "DUNLOP-PCR",
       "product": "DUNLOP-PCR",
-      "qty": 39.0,
-      "revenue_ex_vat": 21460.0,
-      "gross_profit": 4880.0,
-      "gp_pct": 22.7
-    },
-    {
-      "derived_category": "POWERTRAC",
-      "derived_brand": "POWERTRAC",
-      "product_group": "POWERTRAC",
-      "product": "POWERTRAC",
-      "qty": 28.0,
-      "revenue_ex_vat": 21400.0,
-      "gross_profit": 9640.0,
-      "gp_pct": 45.0
+      "qty": 43.0,
+      "revenue_ex_vat": 22860.0,
+      "gross_profit": 5240.0,
+      "gp_pct": 22.9
     },
     {
       "derived_category": "DEESTONE - PCR",
       "derived_brand": "DEESTONE - PCR",
       "product_group": "DEESTONE - PCR",
       "product": "DEESTONE - PCR",
-      "qty": 52.0,
-      "revenue_ex_vat": 21110.0,
-      "gross_profit": 6690.0,
-      "gp_pct": 31.7
+      "qty": 54.0,
+      "revenue_ex_vat": 21890.0,
+      "gross_profit": 6830.0,
+      "gp_pct": 31.2
+    },
+    {
+      "derived_category": "BKT - OTR",
+      "derived_brand": "BKT - OTR",
+      "product_group": "BKT - OTR",
+      "product": "BKT - OTR",
+      "qty": 14.0,
+      "revenue_ex_vat": 21780.0,
+      "gross_profit": 3780.0,
+      "gp_pct": 17.4
     },
     {
       "derived_category": "SPARE PARTS",
@@ -330,16 +340,6 @@
       "revenue_ex_vat": 20440.0,
       "gross_profit": 3964.0,
       "gp_pct": 19.4
-    },
-    {
-      "derived_category": "BKT - OTR",
-      "derived_brand": "BKT - OTR",
-      "product_group": "BKT - OTR",
-      "product": "BKT - OTR",
-      "qty": 10.0,
-      "revenue_ex_vat": 20100.0,
-      "gross_profit": 3460.0,
-      "gp_pct": 17.2
     },
     {
       "derived_category": "YOKOHAMA-PCR",
@@ -432,14 +432,14 @@
       "gp_pct": 14.1
     },
     {
-      "derived_category": "SAILUN TBR",
-      "derived_brand": "SAILUN TBR",
-      "product_group": "SAILUN TBR",
-      "product": "SAILUN TBR",
-      "qty": 36.0,
-      "revenue_ex_vat": 12240.0,
-      "gross_profit": 3712.0,
-      "gp_pct": 30.3
+      "derived_category": "TUBE AND FLAP",
+      "derived_brand": "TUBE AND FLAP",
+      "product_group": "TUBE AND FLAP",
+      "product": "TUBE AND FLAP",
+      "qty": 329.0,
+      "revenue_ex_vat": 12679.0,
+      "gross_profit": -2849.0,
+      "gp_pct": -22.5
     }
   ],
   "customer_top": [],
@@ -543,6 +543,18 @@
     {
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
+      "salesman": "DEEPU",
+      "customer_name": "ASIAN BUILDING CONTRACTING LLC",
+      "product_group": "OTANI-TBR",
+      "product": "12.5/80-18 OTANI",
+      "costed_revenue": 1720.0,
+      "gross_profit": 0.0,
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
       "salesman": "INTERCOMPANY",
       "customer_name": "ROYAL PRINCE AUTO CAR CARE LLC",
       "product_group": "LANDSPIDER",
@@ -567,14 +579,14 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "SOHAIL",
-      "customer_name": "DATE QUICK TRANSPORT L.L.C",
+      "salesman": "DEEPU",
+      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
       "product_group": "CEAT-TBR",
       "product": "385/65R22.5 CEAT RD218",
       "costed_revenue": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "uncosted_revenue": 31440.0
+      "uncosted_revenue": 5280.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -591,14 +603,14 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
+      "salesman": "SOHAIL",
+      "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "product_group": "CEAT-TBR",
       "product": "385/65R22.5 CEAT RD218",
       "costed_revenue": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "uncosted_revenue": 5280.0
+      "uncosted_revenue": 31440.0
     },
     {
       "alert_type": "LOW GP",
