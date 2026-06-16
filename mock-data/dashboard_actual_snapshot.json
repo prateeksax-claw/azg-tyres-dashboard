@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T09:13:30+04:00",
+  "generated_at": "2026-06-16T09:16:49+04:00",
   "context": {
     "as_of_date": "2026-06-15",
     "month_start": "2026-06-01",
@@ -567,18 +567,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 5280.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "NEWTYRE -OFFICE",
       "customer_name": "CARD CUSTOMER",
       "product_group": "DUMMY INV",
@@ -603,6 +591,18 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
+      "salesman": "DEEPU",
+      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 5280.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
       "salesman": "VIPIN",
       "customer_name": "AL JABER GROUP L.L.C.",
       "product_group": "WESTLAKE TBR",
@@ -616,7 +616,7 @@
       "alert_type": "LOW GP",
       "severity": 3,
       "salesman": "BADARAN",
-      "customer_name": "LAMASIA GENERAL TRANSPORT",
+      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
@@ -628,7 +628,7 @@
       "alert_type": "LOW GP",
       "severity": 3,
       "salesman": "BADARAN",
-      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
+      "customer_name": "LAMASIA GENERAL TRANSPORT",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
