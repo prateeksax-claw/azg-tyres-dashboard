@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-06-17T23:05:35+04:00",
+  "generated_at": "2026-06-18T00:05:22+04:00",
   "context": {
-    "as_of_date": "2026-06-17",
+    "as_of_date": "2026-06-18",
     "month_start": "2026-06-01",
     "month_end": "2026-06-30",
-    "day_of_month": 17,
+    "day_of_month": 18,
     "days_in_month": 30,
-    "days_remaining_month": 13,
+    "days_remaining_month": 12,
     "month_key": "2026-06",
     "month_num": 6,
     "year_num": 2026
   },
   "command_center": {
     "shortfall_bridge": {
-      "as_of_date": "2026-06-17",
+      "as_of_date": "2026-06-18",
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 3250887.0,
+      "actual_sales": 3294007.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 3981613.0,
+      "shortfall_to_budget": 3938493.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 306277.92307692306,
+      "daily_required_for_budget": 328207.75,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 2943692.0,
-      "gross_profit": 710063.0,
-      "gp_pct": 24.1,
+      "costed_revenue": 2986812.0,
+      "gross_profit": 726678.0,
+      "gp_pct": 24.3,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,22 +121,22 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 3250886.1,
-      "gp_costed_revenue": 2943692.0,
-      "gp_value": 710063.0,
-      "gp_pct": 24.1
+      "revenue_ex_vat": 3294006.1,
+      "gp_costed_revenue": 2986812.0,
+      "gp_value": 726678.0,
+      "gp_pct": 24.3
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 1942942.5999999999,
-      "active_customers": 80
+      "revenue_ex_vat": 1968862.5999999999,
+      "active_customers": 81
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 1275138.02,
+      "revenue_ex_vat": 1293438.02,
       "active_customers": 61
     }
   ],
@@ -172,6 +172,16 @@
       "gp_pct": 25.1
     },
     {
+      "derived_category": "WESTLAKE TBR",
+      "derived_brand": "WESTLAKE TBR",
+      "product_group": "WESTLAKE TBR",
+      "product": "WESTLAKE TBR",
+      "qty": 161.0,
+      "revenue_ex_vat": 143320.0,
+      "gross_profit": 31974.0,
+      "gp_pct": 26.1
+    },
+    {
       "derived_category": "V-GLORY",
       "derived_brand": "V-GLORY",
       "product_group": "V-GLORY",
@@ -192,16 +202,6 @@
       "gp_pct": 32.4
     },
     {
-      "derived_category": "WESTLAKE TBR",
-      "derived_brand": "WESTLAKE TBR",
-      "product_group": "WESTLAKE TBR",
-      "product": "WESTLAKE TBR",
-      "qty": 141.0,
-      "revenue_ex_vat": 126120.0,
-      "gross_profit": 27054.0,
-      "gp_pct": 25.7
-    },
-    {
       "derived_category": "BKT - OTR",
       "derived_brand": "BKT - OTR",
       "product_group": "BKT - OTR",
@@ -216,10 +216,10 @@
       "derived_brand": "HOTCURE",
       "product_group": "HOTCURE",
       "product": "HOTCURE",
-      "qty": 186.0,
-      "revenue_ex_vat": 77831.0,
-      "gross_profit": 40631.0,
-      "gp_pct": 52.2
+      "qty": 230.0,
+      "revenue_ex_vat": 96771.0,
+      "gross_profit": 50771.0,
+      "gp_pct": 52.5
     },
     {
       "derived_category": "VIKRANT",
@@ -288,8 +288,8 @@
       "product": "SPARE PARTS",
       "qty": 631.0,
       "revenue_ex_vat": 34433.0,
-      "gross_profit": 6682.0,
-      "gp_pct": 19.4
+      "gross_profit": 6717.0,
+      "gp_pct": 19.5
     },
     {
       "derived_category": "YOKOHAMA-PCR",
@@ -457,18 +457,6 @@
       "uncosted_revenue": 0.0
     },
     {
-      "alert_type": "NEGATIVE GP",
-      "severity": 5,
-      "salesman": "RAJATH KUMAR",
-      "customer_name": "ARABIAN INDUSTRIES LLC - ABU DHABI",
-      "product_group": "SPARE PARTS",
-      "product": "90942-02082 WHEEL HUB BOLT",
-      "costed_revenue": 70.0,
-      "gross_profit": -20.0,
-      "gp_pct": -28.57142857142857,
-      "uncosted_revenue": 0.0
-    },
-    {
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
       "salesman": "ARUN RAJ",
@@ -603,6 +591,30 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
+      "salesman": "DEEPU",
+      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 5280.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "AL JABER GROUP L.L.C.",
+      "product_group": "WESTLAKE TBR",
+      "product": "1200R24 WESTLAKE AZ272",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 21000.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
       "salesman": "SOHAIL",
       "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "product_group": "CEAT-TBR",
@@ -623,30 +635,6 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 540.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "VIPIN",
-      "customer_name": "AL JABER GROUP L.L.C.",
-      "product_group": "WESTLAKE TBR",
-      "product": "1200R24 WESTLAKE AZ272",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 21000.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 5280.0
     },
     {
       "alert_type": "LOW GP",
