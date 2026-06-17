@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T14:05:22+04:00",
+  "generated_at": "2026-06-17T14:26:19+04:00",
   "context": {
     "as_of_date": "2026-06-17",
     "month_start": "2026-06-01",
@@ -81,7 +81,7 @@
       "month_key": "2025-12",
       "revenue_ex_vat": 4750786.67,
       "gp_costed_revenue": 4066669.0,
-      "gp_value": 824578.0,
+      "gp_value": 824608.0,
       "gp_pct": 20.3
     },
     {
@@ -116,7 +116,7 @@
       "month_key": "2026-05",
       "revenue_ex_vat": 4858468.89,
       "gp_costed_revenue": 4207199.0,
-      "gp_value": 848373.0,
+      "gp_value": 848333.0,
       "gp_pct": 20.2
     },
     {
