@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T11:10:33+04:00",
+  "generated_at": "2026-06-18T12:07:26+04:00",
   "context": {
     "as_of_date": "2026-06-18",
     "month_start": "2026-06-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 3294007.0,
+      "actual_sales": 3350379.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 3938493.0,
+      "shortfall_to_budget": 3882121.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 328207.75,
+      "daily_required_for_budget": 323510.0833333333,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 2986812.0,
-      "gross_profit": 726678.0,
-      "gp_pct": 24.3,
+      "costed_revenue": 3043184.0,
+      "gross_profit": 741702.0,
+      "gp_pct": 24.4,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,22 +121,22 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 3294006.1,
-      "gp_costed_revenue": 2986812.0,
-      "gp_value": 726678.0,
-      "gp_pct": 24.3
+      "revenue_ex_vat": 3350378.0,
+      "gp_costed_revenue": 3043184.0,
+      "gp_value": 741702.0,
+      "gp_pct": 24.4
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 1968862.5999999999,
-      "active_customers": 81
+      "revenue_ex_vat": 1994994.4999999998,
+      "active_customers": 82
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 1293438.02,
+      "revenue_ex_vat": 1323678.02,
       "active_customers": 61
     }
   ],
@@ -156,10 +156,10 @@
       "derived_brand": "CEAT-TBR",
       "product_group": "CEAT-TBR",
       "product": "CEAT-TBR",
-      "qty": 366.0,
-      "revenue_ex_vat": 462950.0,
-      "gross_profit": 82125.0,
-      "gp_pct": 19.3
+      "qty": 386.0,
+      "revenue_ex_vat": 489950.0,
+      "gross_profit": 88105.0,
+      "gp_pct": 19.4
     },
     {
       "derived_category": "GOLD DOVE",
@@ -172,13 +172,23 @@
       "gp_pct": 25.1
     },
     {
+      "derived_category": "ITR - OTR",
+      "derived_brand": "ITR - OTR",
+      "product_group": "ITR - OTR",
+      "product": "ITR - OTR",
+      "qty": 54.0,
+      "revenue_ex_vat": 147410.0,
+      "gross_profit": 46932.0,
+      "gp_pct": 31.8
+    },
+    {
       "derived_category": "WESTLAKE TBR",
       "derived_brand": "WESTLAKE TBR",
       "product_group": "WESTLAKE TBR",
       "product": "WESTLAKE TBR",
-      "qty": 161.0,
-      "revenue_ex_vat": 143320.0,
-      "gross_profit": 31974.0,
+      "qty": 163.0,
+      "revenue_ex_vat": 144260.0,
+      "gross_profit": 32154.0,
       "gp_pct": 26.1
     },
     {
@@ -192,14 +202,14 @@
       "gp_pct": 30.9
     },
     {
-      "derived_category": "ITR - OTR",
-      "derived_brand": "ITR - OTR",
-      "product_group": "ITR - OTR",
-      "product": "ITR - OTR",
-      "qty": 52.0,
-      "revenue_ex_vat": 137510.0,
-      "gross_profit": 44580.0,
-      "gp_pct": 32.4
+      "derived_category": "HOTCURE",
+      "derived_brand": "HOTCURE",
+      "product_group": "HOTCURE",
+      "product": "HOTCURE",
+      "qty": 254.0,
+      "revenue_ex_vat": 106611.0,
+      "gross_profit": 55811.0,
+      "gp_pct": 52.4
     },
     {
       "derived_category": "BKT - OTR",
@@ -210,16 +220,6 @@
       "revenue_ex_vat": 98920.0,
       "gross_profit": 17670.0,
       "gp_pct": 17.9
-    },
-    {
-      "derived_category": "HOTCURE",
-      "derived_brand": "HOTCURE",
-      "product_group": "HOTCURE",
-      "product": "HOTCURE",
-      "qty": 230.0,
-      "revenue_ex_vat": 96771.0,
-      "gross_profit": 50771.0,
-      "gp_pct": 52.5
     },
     {
       "derived_category": "VIKRANT",
@@ -286,9 +286,9 @@
       "derived_brand": "SPARE PARTS",
       "product_group": "SPARE PARTS",
       "product": "SPARE PARTS",
-      "qty": 631.0,
-      "revenue_ex_vat": 34433.0,
-      "gross_profit": 6717.0,
+      "qty": 634.0,
+      "revenue_ex_vat": 34593.0,
+      "gross_profit": 6747.0,
       "gp_pct": 19.5
     },
     {
@@ -296,9 +296,9 @@
       "derived_brand": "YOKOHAMA-PCR",
       "product_group": "YOKOHAMA-PCR",
       "product": "YOKOHAMA-PCR",
-      "qty": 80.0,
-      "revenue_ex_vat": 32300.0,
-      "gross_profit": 9810.0,
+      "qty": 86.0,
+      "revenue_ex_vat": 34100.0,
+      "gross_profit": 10380.0,
       "gp_pct": 30.4
     },
     {
@@ -471,6 +471,18 @@
     {
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
+      "salesman": "BADARAN",
+      "customer_name": "GULF READY MIX LLC",
+      "product_group": "MAGNA",
+      "product": "325/95R24 MAGNA",
+      "costed_revenue": 4300.0,
+      "gross_profit": 340.0,
+      "gp_pct": 7.906976744186046,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
       "salesman": "AL ZAABI",
       "customer_name": "ABU DHABI PRECAST L.L.C",
       "product_group": "OTANI-",
@@ -591,18 +603,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 5280.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "SOHAIL",
       "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "product_group": "CEAT-TBR",
@@ -615,14 +615,14 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "VIPIN",
-      "customer_name": "AL JABER GROUP L.L.C.",
-      "product_group": "WESTLAKE TBR",
-      "product": "1200R24 WESTLAKE AZ272",
+      "salesman": "DEEPU",
+      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
       "costed_revenue": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "uncosted_revenue": 21000.0
+      "uncosted_revenue": 5280.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -635,6 +635,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 540.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "AL JABER GROUP L.L.C.",
+      "product_group": "WESTLAKE TBR",
+      "product": "1200R24 WESTLAKE AZ272",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 21000.0
     },
     {
       "alert_type": "LOW GP",
