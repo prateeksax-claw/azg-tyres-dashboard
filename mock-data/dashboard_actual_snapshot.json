@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T23:07:33+04:00",
+  "generated_at": "2026-06-19T00:07:19+04:00",
   "context": {
     "as_of_date": "2026-06-18",
     "month_start": "2026-06-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 3394221.0,
+      "actual_sales": 3398566.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 3838279.0,
+      "shortfall_to_budget": 3833934.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 319856.5833333333,
+      "daily_required_for_budget": 319494.5,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 3084247.0,
-      "gross_profit": 749570.0,
+      "costed_revenue": 3088592.0,
+      "gross_profit": 751100.0,
       "gp_pct": 24.3,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -121,9 +121,9 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 3394221.09,
-      "gp_costed_revenue": 3084247.0,
-      "gp_value": 749570.0,
+      "revenue_ex_vat": 3398566.09,
+      "gp_costed_revenue": 3088592.0,
+      "gp_value": 751100.0,
       "gp_pct": 24.3
     }
   ],
@@ -136,7 +136,7 @@
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 1334054.21,
+      "revenue_ex_vat": 1338399.21,
       "active_customers": 60
     }
   ],
@@ -206,10 +206,10 @@
       "derived_brand": "HOTCURE",
       "product_group": "HOTCURE",
       "product": "HOTCURE",
-      "qty": 254.0,
-      "revenue_ex_vat": 106611.0,
-      "gross_profit": 55811.0,
-      "gp_pct": 52.4
+      "qty": 258.0,
+      "revenue_ex_vat": 108251.0,
+      "gross_profit": 56651.0,
+      "gp_pct": 52.3
     },
     {
       "derived_category": "BKT - OTR",
@@ -262,6 +262,16 @@
       "gp_pct": 18.9
     },
     {
+      "derived_category": "RETREAD",
+      "derived_brand": "RETREAD",
+      "product_group": "RETREAD",
+      "product": "RETREAD",
+      "qty": 148.0,
+      "revenue_ex_vat": 46230.0,
+      "gross_profit": 28130.0,
+      "gp_pct": 60.8
+    },
+    {
       "derived_category": "SAILUN TBR",
       "derived_brand": "SAILUN TBR",
       "product_group": "SAILUN TBR",
@@ -270,16 +280,6 @@
       "revenue_ex_vat": 45560.0,
       "gross_profit": 15864.0,
       "gp_pct": 34.8
-    },
-    {
-      "derived_category": "RETREAD",
-      "derived_brand": "RETREAD",
-      "product_group": "RETREAD",
-      "product": "RETREAD",
-      "qty": 145.0,
-      "revenue_ex_vat": 45250.0,
-      "gross_profit": 27500.0,
-      "gp_pct": 60.8
     },
     {
       "derived_category": "SPARE PARTS",
@@ -412,6 +412,16 @@
       "gp_pct": 17.3
     },
     {
+      "derived_category": "TUBE AND FLAP",
+      "derived_brand": "TUBE AND FLAP",
+      "product_group": "TUBE AND FLAP",
+      "product": "TUBE AND FLAP",
+      "qty": 435.0,
+      "revenue_ex_vat": 18584.0,
+      "gross_profit": -4009.0,
+      "gp_pct": -21.6
+    },
+    {
       "derived_category": "ROADSHINE",
       "derived_brand": "ROADSHINE",
       "product_group": "ROADSHINE",
@@ -420,16 +430,6 @@
       "revenue_ex_vat": 17590.0,
       "gross_profit": 3960.0,
       "gp_pct": 22.5
-    },
-    {
-      "derived_category": "TUBE AND FLAP",
-      "derived_brand": "TUBE AND FLAP",
-      "product_group": "TUBE AND FLAP",
-      "product": "TUBE AND FLAP",
-      "qty": 405.0,
-      "revenue_ex_vat": 16859.0,
-      "gross_profit": -4069.0,
-      "gp_pct": -24.1
     },
     {
       "derived_category": "ADVANCE OTR",
@@ -444,6 +444,18 @@
   ],
   "customer_top": [],
   "gp_alerts_top": [
+    {
+      "alert_type": "NEGATIVE GP",
+      "severity": 5,
+      "salesman": "BIJOY",
+      "customer_name": "DULSCO SOLUTIONS-SOLE PROPRIETORSHIP LLC",
+      "product_group": "TUBE AND FLAP",
+      "product": "FLAP 1200 R 24",
+      "costed_revenue": 600.0,
+      "gross_profit": -120.0,
+      "gp_pct": -20.0,
+      "uncosted_revenue": 0.0
+    },
     {
       "alert_type": "NEGATIVE GP",
       "severity": 5,
@@ -603,14 +615,14 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
+      "salesman": "SOHAIL",
+      "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "product_group": "CEAT-TBR",
       "product": "385/65R22.5 CEAT RD218",
       "costed_revenue": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "uncosted_revenue": 5280.0
+      "uncosted_revenue": 31440.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -627,6 +639,18 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
+      "salesman": "DEEPU",
+      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 5280.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
       "salesman": "VIPIN",
       "customer_name": "AL JABER GROUP L.L.C.",
       "product_group": "WESTLAKE TBR",
@@ -635,18 +659,6 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 21000.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "SOHAIL",
-      "customer_name": "DATE QUICK TRANSPORT L.L.C",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 31440.0
     },
     {
       "alert_type": "LOW GP",
