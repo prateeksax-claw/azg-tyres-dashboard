@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T09:06:59+04:00",
+  "generated_at": "2026-06-18T09:13:00+04:00",
   "context": {
     "as_of_date": "2026-06-18",
     "month_start": "2026-06-01",
@@ -81,7 +81,7 @@
       "month_key": "2025-12",
       "revenue_ex_vat": 4750786.67,
       "gp_costed_revenue": 4066669.0,
-      "gp_value": 824608.0,
+      "gp_value": 824578.0,
       "gp_pct": 20.3
     },
     {
@@ -116,7 +116,7 @@
       "month_key": "2026-05",
       "revenue_ex_vat": 4858468.89,
       "gp_costed_revenue": 4207199.0,
-      "gp_value": 848373.0,
+      "gp_value": 848333.0,
       "gp_pct": 20.2
     },
     {
@@ -591,18 +591,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "NEWTYRE -OFFICE",
-      "customer_name": "CARD CUSTOMER",
-      "product_group": "DUMMY INV",
-      "product": "DUMMY",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 540.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "DEEPU",
       "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
       "product_group": "CEAT-TBR",
@@ -611,6 +599,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 5280.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "SOHAIL",
+      "customer_name": "DATE QUICK TRANSPORT L.L.C",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 31440.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -627,20 +627,20 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "SOHAIL",
-      "customer_name": "DATE QUICK TRANSPORT L.L.C",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
+      "salesman": "NEWTYRE -OFFICE",
+      "customer_name": "CARD CUSTOMER",
+      "product_group": "DUMMY INV",
+      "product": "DUMMY",
       "costed_revenue": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "uncosted_revenue": 31440.0
+      "uncosted_revenue": 540.0
     },
     {
       "alert_type": "LOW GP",
       "severity": 3,
       "salesman": "BADARAN",
-      "customer_name": "LAMASIA GENERAL TRANSPORT",
+      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
@@ -652,7 +652,7 @@
       "alert_type": "LOW GP",
       "severity": 3,
       "salesman": "BADARAN",
-      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
+      "customer_name": "LAMASIA GENERAL TRANSPORT",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
