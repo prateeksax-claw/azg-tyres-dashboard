@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T13:05:36+04:00",
+  "generated_at": "2026-06-19T13:06:13+04:00",
   "context": {
     "as_of_date": "2026-06-19",
     "month_start": "2026-06-01",
@@ -28,8 +28,8 @@
     },
     "gp_mtd": {
       "costed_revenue": 3203711.0,
-      "gross_profit": 655680.0,
-      "gp_pct": 20.5,
+      "gross_profit": 643701.0,
+      "gp_pct": 20.1,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -123,8 +123,8 @@
       "month_key": "2026-06",
       "revenue_ex_vat": 3514313.68,
       "gp_costed_revenue": 3203711.0,
-      "gp_value": 655680.0,
-      "gp_pct": 20.5
+      "gp_value": 643701.0,
+      "gp_pct": 20.1
     }
   ],
   "salesman_leaderboard": [],
@@ -178,8 +178,8 @@
       "product": "WESTLAKE TBR",
       "qty": 175.0,
       "revenue_ex_vat": 156280.0,
-      "gross_profit": 35014.0,
-      "gp_pct": 25.9
+      "gross_profit": 23035.0,
+      "gp_pct": 17.0
     },
     {
       "derived_category": "ITR - OTR",
