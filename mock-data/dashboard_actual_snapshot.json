@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T14:14:24+04:00",
+  "generated_at": "2026-06-19T15:05:24+04:00",
   "context": {
     "as_of_date": "2026-06-19",
     "month_start": "2026-06-01",
@@ -28,7 +28,7 @@
     },
     "gp_mtd": {
       "costed_revenue": 3203711.0,
-      "gross_profit": 622551.0,
+      "gross_profit": 621051.0,
       "gp_pct": 19.4,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -123,7 +123,7 @@
       "month_key": "2026-06",
       "revenue_ex_vat": 3514313.68,
       "gp_costed_revenue": 3203711.0,
-      "gp_value": 622551.0,
+      "gp_value": 621051.0,
       "gp_pct": 19.4
     }
   ],
@@ -148,8 +148,8 @@
       "product": "ITR-TBR",
       "qty": 586.0,
       "revenue_ex_vat": 669900.0,
-      "gross_profit": 70765.0,
-      "gp_pct": 10.6
+      "gross_profit": 80515.0,
+      "gp_pct": 12.0
     },
     {
       "derived_category": "CEAT-TBR",
@@ -396,10 +396,10 @@
       "derived_brand": "TUBE AND FLAP",
       "product_group": "TUBE AND FLAP",
       "product": "TUBE AND FLAP",
-      "qty": 493.0,
+      "qty": 793.0,
       "revenue_ex_vat": 22774.0,
-      "gross_profit": -3671.0,
-      "gp_pct": -16.1
+      "gross_profit": -14921.0,
+      "gp_pct": -65.5
     },
     {
       "derived_category": "TAIHO",
@@ -478,18 +478,6 @@
       "costed_revenue": 1500.0,
       "gross_profit": -20.0,
       "gp_pct": -1.3333333333333335,
-      "uncosted_revenue": 0.0
-    },
-    {
-      "alert_type": "CRITICAL LOW GP",
-      "severity": 4,
-      "salesman": "VIPIN",
-      "customer_name": "NAEL GENERAL CONTRACTING OWNED BY NAYEL RASHED ALSHAMSI -",
-      "product_group": "ITR-TBR",
-      "product": "1200R24 20PR TTF ITR",
-      "costed_revenue": 148500.0,
-      "gross_profit": 6000.0,
-      "gp_pct": 4.040404040404041,
       "uncosted_revenue": 0.0
     },
     {
@@ -687,18 +675,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "SOHAIL",
-      "customer_name": "DATE QUICK TRANSPORT L.L.C",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 31440.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "NEWTYRE -OFFICE",
       "customer_name": "CARD CUSTOMER",
       "product_group": "DUMMY INV",
@@ -707,6 +683,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 540.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "SOHAIL",
+      "customer_name": "DATE QUICK TRANSPORT L.L.C",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 31440.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -730,6 +718,18 @@
       "costed_revenue": 144000.0,
       "gross_profit": 16200.0,
       "gp_pct": 11.25,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
+      "salesman": "VIPIN",
+      "customer_name": "NAEL GENERAL CONTRACTING OWNED BY NAYEL RASHED ALSHAMSI -",
+      "product_group": "ITR-TBR",
+      "product": "1200R24 20PR TTF ITR",
+      "costed_revenue": 148500.0,
+      "gross_profit": 15750.0,
+      "gp_pct": 10.606060606060606,
       "uncosted_revenue": 0.0
     },
     {
