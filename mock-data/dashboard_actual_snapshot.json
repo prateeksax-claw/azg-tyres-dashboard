@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T23:05:37+04:00",
+  "generated_at": "2026-06-20T00:05:22+04:00",
   "context": {
     "as_of_date": "2026-06-19",
     "month_start": "2026-06-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 3598861.0,
+      "actual_sales": 3623801.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 3633639.0,
+      "shortfall_to_budget": 3608699.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 330330.8181818182,
+      "daily_required_for_budget": 328063.54545454547,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 3262557.0,
-      "gross_profit": 633564.0,
+      "costed_revenue": 3287497.0,
+      "gross_profit": 637744.0,
       "gp_pct": 19.4,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -121,9 +121,9 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 3598859.89,
-      "gp_costed_revenue": 3262557.0,
-      "gp_value": 633564.0,
+      "revenue_ex_vat": 3623799.89,
+      "gp_costed_revenue": 3287497.0,
+      "gp_value": 637744.0,
       "gp_pct": 19.4
     }
   ],
@@ -131,12 +131,12 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 2130937.6099999994,
+      "revenue_ex_vat": 2138137.6099999994,
       "active_customers": 86
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 1411298.26,
+      "revenue_ex_vat": 1429038.26,
       "active_customers": 67
     }
   ],
@@ -362,6 +362,16 @@
       "gp_pct": 17.6
     },
     {
+      "derived_category": "DUNLOP-PCR",
+      "derived_brand": "DUNLOP-PCR",
+      "product_group": "DUNLOP-PCR",
+      "product": "DUNLOP-PCR",
+      "qty": 47.0,
+      "revenue_ex_vat": 25240.0,
+      "gross_profit": 5660.0,
+      "gp_pct": 22.4
+    },
+    {
       "derived_category": "BRIDGESTONE-PCR",
       "derived_brand": "BRIDGESTONE-PCR",
       "product_group": "BRIDGESTONE-PCR",
@@ -392,14 +402,14 @@
       "gp_pct": -63.3
     },
     {
-      "derived_category": "DUNLOP-PCR",
-      "derived_brand": "DUNLOP-PCR",
-      "product_group": "DUNLOP-PCR",
-      "product": "DUNLOP-PCR",
-      "qty": 43.0,
-      "revenue_ex_vat": 22860.0,
-      "gross_profit": 5240.0,
-      "gp_pct": 22.9
+      "derived_category": "ASCENSO",
+      "derived_brand": "ASCENSO",
+      "product_group": "ASCENSO",
+      "product": "ASCENSO",
+      "qty": 16.0,
+      "revenue_ex_vat": 22460.0,
+      "gross_profit": 3710.0,
+      "gp_pct": 16.5
     },
     {
       "derived_category": "TAIHO",
@@ -430,16 +440,6 @@
       "revenue_ex_vat": 17590.0,
       "gross_profit": 3960.0,
       "gp_pct": 22.5
-    },
-    {
-      "derived_category": "OTANI-",
-      "derived_brand": "OTANI-",
-      "product_group": "OTANI-",
-      "product": "OTANI-",
-      "qty": 40.0,
-      "revenue_ex_vat": 15580.0,
-      "gross_profit": 3560.0,
-      "gp_pct": 22.8
     }
   ],
   "customer_top": [],
@@ -663,6 +663,18 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
+      "salesman": "SOHAIL",
+      "customer_name": "DATE QUICK TRANSPORT L.L.C",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 31440.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
       "salesman": "VIPIN",
       "customer_name": "AL JABER GROUP L.L.C.",
       "product_group": "WESTLAKE TBR",
@@ -683,18 +695,6 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 5280.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "SOHAIL",
-      "customer_name": "DATE QUICK TRANSPORT L.L.C",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 31440.0
     },
     {
       "alert_type": "LOW GP",
