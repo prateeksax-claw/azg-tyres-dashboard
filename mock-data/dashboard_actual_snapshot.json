@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T15:06:15+04:00",
+  "generated_at": "2026-06-19T16:05:24+04:00",
   "context": {
     "as_of_date": "2026-06-19",
     "month_start": "2026-06-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 3514314.0,
+      "actual_sales": 3541554.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 3718186.0,
+      "shortfall_to_budget": 3690946.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 338016.9090909091,
+      "daily_required_for_budget": 335540.54545454547,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 3203711.0,
-      "gross_profit": 621051.0,
+      "costed_revenue": 3230691.0,
+      "gross_profit": 626885.0,
       "gp_pct": 19.4,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -121,9 +121,9 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 3514313.68,
-      "gp_costed_revenue": 3203711.0,
-      "gp_value": 621051.0,
+      "revenue_ex_vat": 3541553.68,
+      "gp_costed_revenue": 3230691.0,
+      "gp_value": 626885.0,
       "gp_pct": 19.4
     }
   ],
@@ -131,13 +131,13 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 2099661.3999999994,
+      "revenue_ex_vat": 2100461.3999999994,
       "active_customers": 85
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 1383468.26,
-      "active_customers": 64
+      "revenue_ex_vat": 1409908.26,
+      "active_customers": 66
     }
   ],
   "product_mix_top": [
@@ -172,6 +172,16 @@
       "gp_pct": 25.1
     },
     {
+      "derived_category": "V-GLORY",
+      "derived_brand": "V-GLORY",
+      "product_group": "V-GLORY",
+      "product": "V-GLORY",
+      "qty": 186.0,
+      "revenue_ex_vat": 160860.0,
+      "gross_profit": 28694.0,
+      "gp_pct": 17.8
+    },
+    {
       "derived_category": "WESTLAKE TBR",
       "derived_brand": "WESTLAKE TBR",
       "product_group": "WESTLAKE TBR",
@@ -190,16 +200,6 @@
       "revenue_ex_vat": 147410.0,
       "gross_profit": 35650.0,
       "gp_pct": 24.2
-    },
-    {
-      "derived_category": "V-GLORY",
-      "derived_brand": "V-GLORY",
-      "product_group": "V-GLORY",
-      "product": "V-GLORY",
-      "qty": 172.0,
-      "revenue_ex_vat": 147140.0,
-      "gross_profit": 25964.0,
-      "gp_pct": 17.6
     },
     {
       "derived_category": "HOTCURE",
@@ -302,6 +302,16 @@
       "gp_pct": 29.3
     },
     {
+      "derived_category": "POWERTRAC",
+      "derived_brand": "POWERTRAC",
+      "product_group": "POWERTRAC",
+      "product": "POWERTRAC",
+      "qty": 37.0,
+      "revenue_ex_vat": 31770.0,
+      "gross_profit": 8514.0,
+      "gp_pct": 26.8
+    },
+    {
       "derived_category": "TBR CHINEESE",
       "derived_brand": "TBR CHINEESE",
       "product_group": "TBR CHINEESE",
@@ -326,20 +336,10 @@
       "derived_brand": "DEESTONE - PCR",
       "product_group": "DEESTONE - PCR",
       "product": "DEESTONE - PCR",
-      "qty": 72.0,
-      "revenue_ex_vat": 27750.0,
-      "gross_profit": 8080.0,
+      "qty": 74.0,
+      "revenue_ex_vat": 28290.0,
+      "gross_profit": 8240.0,
       "gp_pct": 29.1
-    },
-    {
-      "derived_category": "POWERTRAC",
-      "derived_brand": "POWERTRAC",
-      "product_group": "POWERTRAC",
-      "product": "POWERTRAC",
-      "qty": 33.0,
-      "revenue_ex_vat": 27010.0,
-      "gross_profit": 6470.0,
-      "gp_pct": 24.0
     },
     {
       "derived_category": "BRIDGESTONE-TBR",
@@ -663,30 +663,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "VIPIN",
-      "customer_name": "AL JABER GROUP L.L.C.",
-      "product_group": "WESTLAKE TBR",
-      "product": "1200R24 WESTLAKE AZ272",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 21000.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "NEWTYRE -OFFICE",
-      "customer_name": "CARD CUSTOMER",
-      "product_group": "DUMMY INV",
-      "product": "DUMMY",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 540.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "SOHAIL",
       "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "product_group": "CEAT-TBR",
@@ -695,6 +671,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 31440.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "AL JABER GROUP L.L.C.",
+      "product_group": "WESTLAKE TBR",
+      "product": "1200R24 WESTLAKE AZ272",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 21000.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
