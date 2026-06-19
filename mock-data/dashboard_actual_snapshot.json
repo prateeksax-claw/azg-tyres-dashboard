@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T12:05:35+04:00",
+  "generated_at": "2026-06-19T13:05:21+04:00",
   "context": {
     "as_of_date": "2026-06-19",
     "month_start": "2026-06-01",
@@ -28,8 +28,8 @@
     },
     "gp_mtd": {
       "costed_revenue": 3203711.0,
-      "gross_profit": 785544.0,
-      "gp_pct": 24.5,
+      "gross_profit": 655680.0,
+      "gp_pct": 20.5,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -123,8 +123,8 @@
       "month_key": "2026-06",
       "revenue_ex_vat": 3514313.68,
       "gp_costed_revenue": 3203711.0,
-      "gp_value": 785544.0,
-      "gp_pct": 24.5
+      "gp_value": 655680.0,
+      "gp_pct": 20.5
     }
   ],
   "salesman_leaderboard": [],
@@ -148,8 +148,8 @@
       "product": "ITR-TBR",
       "qty": 586.0,
       "revenue_ex_vat": 669900.0,
-      "gross_profit": 141735.0,
-      "gp_pct": 21.2
+      "gross_profit": 70765.0,
+      "gp_pct": 10.6
     },
     {
       "derived_category": "CEAT-TBR",
@@ -158,8 +158,8 @@
       "product": "CEAT-TBR",
       "qty": 440.0,
       "revenue_ex_vat": 559650.0,
-      "gross_profit": 103897.0,
-      "gp_pct": 19.9
+      "gross_profit": 75725.0,
+      "gp_pct": 14.5
     },
     {
       "derived_category": "GOLD DOVE",
@@ -188,8 +188,8 @@
       "product": "ITR - OTR",
       "qty": 54.0,
       "revenue_ex_vat": 147410.0,
-      "gross_profit": 46932.0,
-      "gp_pct": 31.8
+      "gross_profit": 35650.0,
+      "gp_pct": 24.2
     },
     {
       "derived_category": "V-GLORY",
@@ -208,8 +208,8 @@
       "product": "HOTCURE",
       "qty": 272.0,
       "revenue_ex_vat": 113751.0,
-      "gross_profit": 59351.0,
-      "gp_pct": 52.2
+      "gross_profit": 48471.0,
+      "gp_pct": 42.6
     },
     {
       "derived_category": "BKT - OTR",
@@ -318,8 +318,8 @@
       "product": "FIRELINE",
       "qty": 32.0,
       "revenue_ex_vat": 28800.0,
-      "gross_profit": 5760.0,
-      "gp_pct": 20.0
+      "gross_profit": 3680.0,
+      "gp_pct": 12.8
     },
     {
       "derived_category": "DEESTONE - PCR",
@@ -338,8 +338,8 @@
       "product": "POWERTRAC",
       "qty": 33.0,
       "revenue_ex_vat": 27010.0,
-      "gross_profit": 12550.0,
-      "gp_pct": 46.5
+      "gross_profit": 6470.0,
+      "gp_pct": 24.0
     },
     {
       "derived_category": "BRIDGESTONE-TBR",
@@ -483,6 +483,54 @@
     {
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "NAEL GENERAL CONTRACTING OWNED BY NAYEL RASHED ALSHAMSI -",
+      "product_group": "ITR-TBR",
+      "product": "1200R24 20PR TTF ITR",
+      "costed_revenue": 148500.0,
+      "gross_profit": 6000.0,
+      "gp_pct": 4.040404040404041,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
+      "salesman": "ARUN RAJ",
+      "customer_name": "RUM TRANSPORT LLC",
+      "product_group": "ITR-TBR",
+      "product": "325/95R24 22PR TTF ITR",
+      "costed_revenue": 59000.0,
+      "gross_profit": 4685.0,
+      "gp_pct": 7.940677966101695,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
+      "salesman": "BADARAN",
+      "customer_name": "LAMASIA GENERAL TRANSPORT",
+      "product_group": "CEAT-TBR",
+      "product": "1200 R 24 CEAT",
+      "costed_revenue": 23600.0,
+      "gross_profit": 1100.0,
+      "gp_pct": 4.661016949152542,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
+      "salesman": "BADARAN",
+      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
+      "product_group": "CEAT-TBR",
+      "product": "1200 R 24 CEAT",
+      "costed_revenue": 23600.0,
+      "gross_profit": 1100.0,
+      "gp_pct": 4.661016949152542,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
       "salesman": "ARUN RAJ",
       "customer_name": "IMDAAD LLC",
       "product_group": "DIESEL",
@@ -495,13 +543,13 @@
     {
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
-      "salesman": "BADARAN",
-      "customer_name": "GULF READY MIX LLC",
-      "product_group": "MAGNA",
-      "product": "325/95R24 MAGNA",
-      "costed_revenue": 4300.0,
-      "gross_profit": 340.0,
-      "gp_pct": 7.906976744186046,
+      "salesman": "BIJOY",
+      "customer_name": "QASION BLDG. MAT. TR. EST.",
+      "product_group": "POWERTRAC",
+      "product": "315/80R22.5 POWERTRAC",
+      "costed_revenue": 2600.0,
+      "gross_profit": 200.0,
+      "gp_pct": 7.6923076923076925,
       "uncosted_revenue": 0.0
     },
     {
@@ -639,18 +687,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 5280.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "SOHAIL",
       "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "product_group": "CEAT-TBR",
@@ -673,27 +709,39 @@
       "uncosted_revenue": 21000.0
     },
     {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "DEEPU",
+      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 5280.0
+    },
+    {
       "alert_type": "LOW GP",
       "severity": 3,
-      "salesman": "BADARAN",
-      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
-      "product_group": "CEAT-TBR",
-      "product": "1200 R 24 CEAT",
-      "costed_revenue": 23600.0,
-      "gross_profit": 2580.0,
-      "gp_pct": 10.932203389830509,
+      "salesman": "VIPIN",
+      "customer_name": "DAR AL DHAID BLDG MATERIAL TR",
+      "product_group": "ITR-TBR",
+      "product": "325/95R24 22PR TTF ITR",
+      "costed_revenue": 144000.0,
+      "gross_profit": 16200.0,
+      "gp_pct": 11.25,
       "uncosted_revenue": 0.0
     },
     {
       "alert_type": "LOW GP",
       "severity": 3,
-      "salesman": "BADARAN",
-      "customer_name": "LAMASIA GENERAL TRANSPORT",
-      "product_group": "CEAT-TBR",
-      "product": "1200 R 24 CEAT",
-      "costed_revenue": 23600.0,
-      "gross_profit": 2580.0,
-      "gp_pct": 10.932203389830509,
+      "salesman": "DEEPU",
+      "customer_name": "TAHER LAND TRANSPORT LLC",
+      "product_group": "ITR-TBR",
+      "product": "325/95R24 22PR TTF ITR",
+      "costed_revenue": 60000.0,
+      "gross_profit": 6750.0,
+      "gp_pct": 11.25,
       "uncosted_revenue": 0.0
     },
     {
