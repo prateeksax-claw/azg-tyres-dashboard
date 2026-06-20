@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T23:07:25+04:00",
+  "generated_at": "2026-06-21T00:07:55+04:00",
   "context": {
     "as_of_date": "2026-06-20",
     "month_start": "2026-06-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 1350080.0,
-      "actual_sales": 3791021.0,
+      "actual_sales": 3793333.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 3441479.0,
+      "shortfall_to_budget": 3439167.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 344147.9,
+      "daily_required_for_budget": 343916.7,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 3453318.0,
-      "gross_profit": 666859.0,
+      "costed_revenue": 3453380.0,
+      "gross_profit": 666871.0,
       "gp_pct": 19.3,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -121,9 +121,9 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 3791020.59,
-      "gp_costed_revenue": 3453318.0,
-      "gp_value": 666859.0,
+      "revenue_ex_vat": 3793332.49,
+      "gp_costed_revenue": 3453380.0,
+      "gp_value": 666871.0,
       "gp_pct": 19.3
     }
   ],
@@ -170,7 +170,7 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 2235638.309999999,
+      "revenue_ex_vat": 2240370.209999999,
       "active_customers": 89
     },
     {
@@ -2472,7 +2472,7 @@
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
       "salesman": "BADARAN",
-      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
+      "customer_name": "LAMASIA GENERAL TRANSPORT",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
@@ -2484,7 +2484,7 @@
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
       "salesman": "BADARAN",
-      "customer_name": "LAMASIA GENERAL TRANSPORT",
+      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
@@ -2593,6 +2593,18 @@
       "severity": 4,
       "salesman": "INTERCOMPANY",
       "customer_name": "ROYAL PRINCE AUTO CAR CARE LLC",
+      "product_group": "BRIDGESTONE-PCR",
+      "product": "285/75R16 BRIDGESTONE",
+      "costed_revenue": 2360.0,
+      "gross_profit": 0.0,
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
+      "salesman": "INTERCOMPANY",
+      "customer_name": "ROYAL PRINCE AUTO CAR CARE LLC",
       "product_group": "MICHELIN-PCR",
       "product": "245/45R18 MICHELIN",
       "costed_revenue": 2280.0,
@@ -2651,18 +2663,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "VIPIN",
-      "customer_name": "AL JABER GROUP L.L.C.",
-      "product_group": "WESTLAKE TBR",
-      "product": "1200R24 WESTLAKE AZ272",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 21000.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "DEEPU",
       "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
       "product_group": "CEAT-TBR",
@@ -2671,6 +2671,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 5280.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "AL JABER GROUP L.L.C.",
+      "product_group": "WESTLAKE TBR",
+      "product": "1200R24 WESTLAKE AZ272",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 21000.0
     },
     {
       "alert_type": "LOW GP",
@@ -2787,8 +2799,8 @@
       "customer_name": "CASH CUSTOMER - SAEED AL ZAABI TRANSPORT",
       "product_group": "SPARE PARTS",
       "product": "5W30 ADCO OIL PETROL ENGINE OIL 4Ltr",
-      "costed_revenue": 45.0,
-      "gross_profit": 3.75,
+      "costed_revenue": 90.0,
+      "gross_profit": 7.5,
       "gp_pct": 8.333333333333332,
       "uncosted_revenue": 0.0
     }
