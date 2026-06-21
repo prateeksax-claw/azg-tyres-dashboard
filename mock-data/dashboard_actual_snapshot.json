@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T14:05:20+04:00",
+  "generated_at": "2026-06-21T14:05:46+04:00",
   "context": {
     "as_of_date": "2026-06-21",
     "month_start": "2026-06-01",
@@ -2472,7 +2472,7 @@
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
       "salesman": "BADARAN",
-      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
+      "customer_name": "LAMASIA GENERAL TRANSPORT",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
@@ -2484,7 +2484,7 @@
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
       "salesman": "BADARAN",
-      "customer_name": "LAMASIA GENERAL TRANSPORT",
+      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
@@ -2663,18 +2663,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "VIPIN",
-      "customer_name": "AL JABER GROUP L.L.C.",
-      "product_group": "WESTLAKE TBR",
-      "product": "1200R24 WESTLAKE AZ272",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 21000.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "DEEPU",
       "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
       "product_group": "CEAT-TBR",
@@ -2683,6 +2671,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 5280.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "AL JABER GROUP L.L.C.",
+      "product_group": "WESTLAKE TBR",
+      "product": "1200R24 WESTLAKE AZ272",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 21000.0
     },
     {
       "alert_type": "LOW GP",
