@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T14:26:50+04:00",
+  "generated_at": "2026-06-22T15:07:16+04:00",
   "context": {
     "as_of_date": "2026-06-22",
     "month_start": "2026-06-01",
@@ -1324,8 +1324,8 @@
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "outstanding_amount": 107959.71999999999,
-      "overdue_amount": 107959.71999999999,
+      "outstanding_amount": 107959.72,
+      "overdue_amount": 107959.72,
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
@@ -2685,18 +2685,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 5280.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "VIPIN",
       "customer_name": "AL JABER GROUP L.L.C.",
       "product_group": "WESTLAKE TBR",
@@ -2705,6 +2693,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 21000.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "DEEPU",
+      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 5280.0
     },
     {
       "alert_type": "LOW GP",
