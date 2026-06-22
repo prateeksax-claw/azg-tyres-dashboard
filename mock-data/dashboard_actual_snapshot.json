@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T05:08:15+04:00",
+  "generated_at": "2026-06-22T06:07:00+04:00",
   "context": {
     "as_of_date": "2026-06-21",
     "month_start": "2026-06-01",
@@ -28,7 +28,7 @@
     },
     "gp_mtd": {
       "costed_revenue": 3456060.0,
-      "gross_profit": 667325.0,
+      "gross_profit": 667321.0,
       "gp_pct": 19.3,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -123,7 +123,7 @@
       "month_key": "2026-06",
       "revenue_ex_vat": 3796012.49,
       "gp_costed_revenue": 3456060.0,
-      "gp_value": 667325.0,
+      "gp_value": 667321.0,
       "gp_pct": 19.3
     }
   ],
@@ -337,7 +337,7 @@
       "product": "SPARE PARTS",
       "qty": 660.0,
       "revenue_ex_vat": 39845.0,
-      "gross_profit": 7676.0,
+      "gross_profit": 7672.0,
       "gp_pct": 19.3
     },
     {
