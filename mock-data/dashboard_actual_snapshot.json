@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T23:05:21+04:00",
+  "generated_at": "2026-06-25T00:05:21+04:00",
   "context": {
     "as_of_date": "2026-06-24",
     "month_start": "2026-06-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 1350080.0,
-      "actual_sales": 4827668.0,
+      "actual_sales": 4857398.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 2404832.0,
+      "shortfall_to_budget": 2375102.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 400805.3333333333,
+      "daily_required_for_budget": 395850.3333333333,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 4316374.0,
-      "gross_profit": 864940.0,
-      "gp_pct": 20.0,
+      "costed_revenue": 4337804.0,
+      "gross_profit": 870166.0,
+      "gp_pct": 20.1,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,10 +121,10 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 4827667.24,
-      "gp_costed_revenue": 4316374.0,
-      "gp_value": 864940.0,
-      "gp_pct": 20.0
+      "revenue_ex_vat": 4857397.24,
+      "gp_costed_revenue": 4337804.0,
+      "gp_value": 870166.0,
+      "gp_pct": 20.1
     }
   ],
   "salesman_leaderboard": [
@@ -170,8 +170,8 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 2957066.3899999987,
-      "active_customers": 105
+      "revenue_ex_vat": 2986796.3899999987,
+      "active_customers": 106
     },
     {
       "region": "SHARJAH",
@@ -311,6 +311,16 @@
       "gp_pct": 25.0
     },
     {
+      "derived_category": "SAILUN TBR",
+      "derived_brand": "SAILUN TBR",
+      "product_group": "SAILUN TBR",
+      "product": "SAILUN TBR",
+      "qty": 168.0,
+      "revenue_ex_vat": 58380.0,
+      "gross_profit": 19812.0,
+      "gp_pct": 33.9
+    },
+    {
       "derived_category": "YARTU",
       "derived_brand": "YARTU",
       "product_group": "YARTU",
@@ -325,10 +335,10 @@
       "derived_brand": "DEESTONE - PCR",
       "product_group": "DEESTONE - PCR",
       "product": "DEESTONE - PCR",
-      "qty": 142.0,
-      "revenue_ex_vat": 52170.0,
-      "gross_profit": 15240.0,
-      "gp_pct": 29.2
+      "qty": 146.0,
+      "revenue_ex_vat": 53690.0,
+      "gross_profit": 15960.0,
+      "gp_pct": 29.7
     },
     {
       "derived_category": "SBK",
@@ -341,14 +351,14 @@
       "gp_pct": 16.5
     },
     {
-      "derived_category": "SAILUN TBR",
-      "derived_brand": "SAILUN TBR",
-      "product_group": "SAILUN TBR",
-      "product": "SAILUN TBR",
-      "qty": 160.0,
-      "revenue_ex_vat": 51740.0,
-      "gross_profit": 18372.0,
-      "gp_pct": 35.5
+      "derived_category": "TUBE AND FLAP",
+      "derived_brand": "TUBE AND FLAP",
+      "product_group": "TUBE AND FLAP",
+      "product": "TUBE AND FLAP",
+      "qty": 1074.0,
+      "revenue_ex_vat": 48872.0,
+      "gross_profit": -9408.0,
+      "gp_pct": -19.3
     },
     {
       "derived_category": "YOKOHAMA-PCR",
@@ -391,14 +401,14 @@
       "gp_pct": 17.3
     },
     {
-      "derived_category": "TUBE AND FLAP",
-      "derived_brand": "TUBE AND FLAP",
-      "product_group": "TUBE AND FLAP",
-      "product": "TUBE AND FLAP",
-      "qty": 924.0,
-      "revenue_ex_vat": 37422.0,
-      "gross_profit": -11808.0,
-      "gp_pct": -31.6
+      "derived_category": "OTANI-",
+      "derived_brand": "OTANI-",
+      "product_group": "OTANI-",
+      "product": "OTANI-",
+      "qty": 102.0,
+      "revenue_ex_vat": 35720.0,
+      "gross_profit": 9162.0,
+      "gp_pct": 25.6
     },
     {
       "derived_category": "DIAMOND BLACK-TBR",
@@ -409,16 +419,6 @@
       "revenue_ex_vat": 35600.0,
       "gross_profit": 5500.0,
       "gp_pct": 15.4
-    },
-    {
-      "derived_category": "OTANI-",
-      "derived_brand": "OTANI-",
-      "product_group": "OTANI-",
-      "product": "OTANI-",
-      "qty": 98.0,
-      "revenue_ex_vat": 34600.0,
-      "gross_profit": 8726.0,
-      "gp_pct": 25.2
     },
     {
       "derived_category": "TRUEFAST",
@@ -2773,14 +2773,14 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
+      "salesman": "VIPIN",
+      "customer_name": "AL JABER GROUP L.L.C.",
+      "product_group": "WESTLAKE TBR",
+      "product": "1200R24 WESTLAKE AZ272",
       "costed_revenue": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "uncosted_revenue": 5280.0
+      "uncosted_revenue": 21000.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -2797,14 +2797,14 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "VIPIN",
-      "customer_name": "AL JABER GROUP L.L.C.",
-      "product_group": "WESTLAKE TBR",
-      "product": "1200R24 WESTLAKE AZ272",
+      "salesman": "DEEPU",
+      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
       "costed_revenue": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "uncosted_revenue": 21000.0
+      "uncosted_revenue": 5280.0
     },
     {
       "alert_type": "LOW GP",
