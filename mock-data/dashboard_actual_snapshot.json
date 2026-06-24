@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T16:05:22+04:00",
+  "generated_at": "2026-06-24T17:05:26+04:00",
   "context": {
     "as_of_date": "2026-06-24",
     "month_start": "2026-06-01",
@@ -2560,7 +2560,7 @@
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
       "salesman": "BADARAN",
-      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
+      "customer_name": "LAMASIA GENERAL TRANSPORT",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
@@ -2572,7 +2572,7 @@
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
       "salesman": "BADARAN",
-      "customer_name": "LAMASIA GENERAL TRANSPORT",
+      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
