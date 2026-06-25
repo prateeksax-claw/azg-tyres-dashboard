@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T23:07:14+04:00",
+  "generated_at": "2026-06-26T00:07:14+04:00",
   "context": {
     "as_of_date": "2026-06-25",
     "month_start": "2026-06-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-06",
       "budget_amount": 7232500.0,
       "projected_amount": 1350080.0,
-      "actual_sales": 5065440.0,
+      "actual_sales": 5086890.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 2167060.0,
+      "shortfall_to_budget": 2145610.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 433412.0,
+      "daily_required_for_budget": 429122.0,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 4522147.0,
-      "gross_profit": 919163.0,
+      "costed_revenue": 4541197.0,
+      "gross_profit": 922737.0,
       "gp_pct": 20.3,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -121,9 +121,9 @@
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 5065439.62,
-      "gp_costed_revenue": 4522147.0,
-      "gp_value": 919163.0,
+      "revenue_ex_vat": 5086889.62,
+      "gp_costed_revenue": 4541197.0,
+      "gp_value": 922737.0,
       "gp_pct": 20.3
     }
   ],
@@ -150,33 +150,33 @@
     {
       "salesman": "SOHAIL",
       "projection_amount": 500000.0,
-      "actual_sales": 254975.0,
-      "projection_achievement_pct": 50.995000000000005,
-      "eto_close": 305970.0,
-      "eto_projection_variance": -194030.0,
-      "eto_projection_shortfall": 194030.0,
+      "actual_sales": 257025.0,
+      "projection_achievement_pct": 51.405,
+      "eto_close": 308430.0,
+      "eto_projection_variance": -191570.0,
+      "eto_projection_shortfall": 191570.0,
       "last_month_mtd_sales": 135870.0,
-      "sales_change_vs_last_month": 94705.0,
-      "sales_change_pct_vs_last_month": 69.70265695149776,
-      "costed_revenue": 199135.0,
-      "gross_profit": 42356.25,
-      "gp_pct": 21.270118261480906,
+      "sales_change_vs_last_month": 96755.0,
+      "sales_change_pct_vs_last_month": 71.2114521233532,
+      "costed_revenue": 201185.0,
+      "gross_profit": 42786.25,
+      "gp_pct": 21.267117329820813,
       "last_month_costed_revenue": 99170.0,
       "last_month_gross_profit": 19573.8,
       "last_month_gp_pct": 19.73762226479782,
-      "gp_pct_change": 1.5324959966830853
+      "gp_pct_change": 1.5294950650229922
     }
   ],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 3163426.3899999987,
-      "active_customers": 108
+      "revenue_ex_vat": 3175726.3899999987,
+      "active_customers": 109
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 1847587.5099999998,
-      "active_customers": 79
+      "revenue_ex_vat": 1856737.5099999998,
+      "active_customers": 80
     }
   ],
   "product_mix_top": [
@@ -305,10 +305,20 @@
       "derived_brand": "DEESTONE - PCR",
       "product_group": "DEESTONE - PCR",
       "product": "DEESTONE - PCR",
-      "qty": 176.0,
-      "revenue_ex_vat": 61730.0,
-      "gross_profit": 17850.0,
-      "gp_pct": 28.9
+      "qty": 180.0,
+      "revenue_ex_vat": 63490.0,
+      "gross_profit": 18210.0,
+      "gp_pct": 28.7
+    },
+    {
+      "derived_category": "SAILUN TBR",
+      "derived_brand": "SAILUN TBR",
+      "product_group": "SAILUN TBR",
+      "product": "SAILUN TBR",
+      "qty": 174.0,
+      "revenue_ex_vat": 60420.0,
+      "gross_profit": 20556.0,
+      "gp_pct": 34.0
     },
     {
       "derived_category": "POWERTRAC",
@@ -321,16 +331,6 @@
       "gp_pct": 25.0
     },
     {
-      "derived_category": "SAILUN TBR",
-      "derived_brand": "SAILUN TBR",
-      "product_group": "SAILUN TBR",
-      "product": "SAILUN TBR",
-      "qty": 168.0,
-      "revenue_ex_vat": 58380.0,
-      "gross_profit": 19812.0,
-      "gp_pct": 33.9
-    },
-    {
       "derived_category": "YARTU",
       "derived_brand": "YARTU",
       "product_group": "YARTU",
@@ -341,6 +341,16 @@
       "gp_pct": 17.4
     },
     {
+      "derived_category": "YOKOHAMA-PCR",
+      "derived_brand": "YOKOHAMA-PCR",
+      "product_group": "YOKOHAMA-PCR",
+      "product": "YOKOHAMA-PCR",
+      "qty": 125.0,
+      "revenue_ex_vat": 52200.0,
+      "gross_profit": 14840.0,
+      "gp_pct": 28.4
+    },
+    {
       "derived_category": "SBK",
       "derived_brand": "SBK",
       "product_group": "SBK",
@@ -349,16 +359,6 @@
       "revenue_ex_vat": 52000.0,
       "gross_profit": 8600.0,
       "gp_pct": 16.5
-    },
-    {
-      "derived_category": "YOKOHAMA-PCR",
-      "derived_brand": "YOKOHAMA-PCR",
-      "product_group": "YOKOHAMA-PCR",
-      "product": "YOKOHAMA-PCR",
-      "qty": 121.0,
-      "revenue_ex_vat": 49760.0,
-      "gross_profit": 14500.0,
-      "gp_pct": 29.1
     },
     {
       "derived_category": "TUBE AND FLAP",
@@ -471,14 +471,14 @@
       "gp_pct": 12.8
     },
     {
-      "derived_category": "BRIDGESTONE-TBR",
-      "derived_brand": "BRIDGESTONE-TBR",
-      "product_group": "BRIDGESTONE-TBR",
-      "product": "BRIDGESTONE-TBR",
-      "qty": 34.0,
-      "revenue_ex_vat": 26760.0,
-      "gross_profit": 6560.0,
-      "gp_pct": 24.5
+      "derived_category": "GAZELLE",
+      "derived_brand": "GAZELLE",
+      "product_group": "GAZELLE",
+      "product": "GAZELLE",
+      "qty": 38.0,
+      "revenue_ex_vat": 27130.0,
+      "gross_profit": 4319.0,
+      "gp_pct": 15.9
     }
   ],
   "customer_top": [
@@ -2354,6 +2354,28 @@
     },
     {
       "salesman": "SOHAIL",
+      "customer_name": "HRE CONSTRUCTION L.L.C",
+      "mtd_sales": 15485.0,
+      "gross_profit": 2733.25,
+      "gp_pct": 17.650952534711013,
+      "outstanding_amount": 16327.5,
+      "overdue_amount": 16327.5,
+      "projected_amount": 0.0,
+      "expectation_amount": 0.0,
+      "projection_achievement_pct": null,
+      "eto_close": 18582.0,
+      "eto_projection_variance": 18582.0,
+      "eto_projection_shortfall": 0,
+      "last_month_mtd_sales": 7880.0,
+      "sales_change_vs_last_month": 7605.0,
+      "sales_change_pct_vs_last_month": 96.51015228426397,
+      "last_month_costed_revenue": 7880.0,
+      "last_month_gross_profit": 1720.0,
+      "last_month_gp_pct": 21.82741116751269,
+      "gp_pct_change": -4.176458632801676
+    },
+    {
+      "salesman": "SOHAIL",
       "customer_name": "GECO MECHANICAL & ELECTRICAL LTD.CO.",
       "mtd_sales": 14580.0,
       "gross_profit": 2769.5,
@@ -2373,28 +2395,6 @@
       "last_month_gross_profit": 0.0,
       "last_month_gp_pct": null,
       "gp_pct_change": null
-    },
-    {
-      "salesman": "SOHAIL",
-      "customer_name": "HRE CONSTRUCTION L.L.C",
-      "mtd_sales": 13435.0,
-      "gross_profit": 2303.25,
-      "gp_pct": 17.143654633420173,
-      "outstanding_amount": 16327.5,
-      "overdue_amount": 16327.5,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0,
-      "projection_achievement_pct": null,
-      "eto_close": 16122.0,
-      "eto_projection_variance": 16122.0,
-      "eto_projection_shortfall": 0,
-      "last_month_mtd_sales": 7880.0,
-      "sales_change_vs_last_month": 5555.0,
-      "sales_change_pct_vs_last_month": 70.49492385786802,
-      "last_month_costed_revenue": 7880.0,
-      "last_month_gross_profit": 1720.0,
-      "last_month_gp_pct": 21.82741116751269,
-      "gp_pct_change": -4.683756534092517
     },
     {
       "salesman": "SOHAIL",
@@ -2795,18 +2795,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "VIPIN",
-      "customer_name": "AL JABER GROUP L.L.C.",
-      "product_group": "WESTLAKE TBR",
-      "product": "1200R24 WESTLAKE AZ272",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 21000.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "SOHAIL",
       "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "product_group": "CEAT-TBR",
@@ -2827,6 +2815,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 5280.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "VIPIN",
+      "customer_name": "AL JABER GROUP L.L.C.",
+      "product_group": "WESTLAKE TBR",
+      "product": "1200R24 WESTLAKE AZ272",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 21000.0
     },
     {
       "alert_type": "LOW GP",
@@ -2874,6 +2874,18 @@
       "costed_revenue": 4320.0,
       "gross_profit": 456.0,
       "gp_pct": 10.555555555555555,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
+      "salesman": "BADARAN",
+      "customer_name": "EMIRATES ROYAL HOLDING LLC (BILLING)",
+      "product_group": "VIKRANT",
+      "product": "325/95R24 VIKRANT",
+      "costed_revenue": 2400.0,
+      "gross_profit": 252.0,
+      "gp_pct": 10.5,
       "uncosted_revenue": 0.0
     },
     {
