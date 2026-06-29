@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T19:07:59+04:00",
+  "generated_at": "2026-06-29T19:56:43+04:00",
   "context": {
     "as_of_date": "2026-06-29",
     "month_start": "2026-06-01",
@@ -2670,7 +2670,7 @@
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
       "salesman": "BADARAN",
-      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
+      "customer_name": "LAMASIA GENERAL TRANSPORT",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
@@ -2682,7 +2682,7 @@
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
       "salesman": "BADARAN",
-      "customer_name": "LAMASIA GENERAL TRANSPORT",
+      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
@@ -2861,6 +2861,18 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
+      "salesman": "DEEPU",
+      "customer_name": "RIVIERE MINERAL W. DE. & FI. FAC. LLC. SPC",
+      "product_group": "SOLID LIFT",
+      "product": "700-12 SOLID LIFT",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 1900.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
       "salesman": "SOHAIL",
       "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "product_group": "CEAT-TBR",
@@ -2881,18 +2893,6 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 5280.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "RIVIERE MINERAL W. DE. & FI. FAC. LLC. SPC",
-      "product_group": "SOLID LIFT",
-      "product": "700-12 SOLID LIFT",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 1900.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
