@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T22:09:22+04:00",
+  "generated_at": "2026-06-30T23:05:23+04:00",
   "context": {
     "as_of_date": "2026-06-30",
     "month_start": "2026-06-01",
@@ -2971,18 +2971,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "SOHAIL",
-      "customer_name": "DATE QUICK TRANSPORT L.L.C",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 31440.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "RAJATH KUMAR",
       "customer_name": "DIRDONY GENERAL TRANSPORTING-",
       "product_group": "CEAT-TBR",
@@ -2991,6 +2979,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 34500.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "SOHAIL",
+      "customer_name": "DATE QUICK TRANSPORT L.L.C",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 31440.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
