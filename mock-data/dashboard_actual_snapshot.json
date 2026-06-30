@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T15:06:29+04:00",
+  "generated_at": "2026-06-30T16:05:31+04:00",
   "context": {
     "as_of_date": "2026-06-30",
     "month_start": "2026-06-01",
@@ -27,9 +27,9 @@
       "daily_required_for_projection": 0
     },
     "gp_mtd": {
-      "costed_revenue": 5672621.0,
-      "gross_profit": 1149727.0,
-      "gp_pct": 20.3,
+      "costed_revenue": 5674521.0,
+      "gross_profit": 1135578.0,
+      "gp_pct": 20.0,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -122,9 +122,9 @@
     {
       "month_key": "2026-06",
       "revenue_ex_vat": 6340227.52,
-      "gp_costed_revenue": 5672621.0,
-      "gp_value": 1149727.0,
-      "gp_pct": 20.3
+      "gp_costed_revenue": 5674521.0,
+      "gp_value": 1135578.0,
+      "gp_pct": 20.0
     }
   ],
   "salesman_leaderboard": [
@@ -140,12 +140,12 @@
       "sales_change_vs_last_month": -106000.43000000017,
       "sales_change_pct_vs_last_month": -11.546230243009708,
       "costed_revenue": 784888.6499999999,
-      "gross_profit": 136082.45,
-      "gp_pct": 17.337803266743638,
+      "gross_profit": 135902.45,
+      "gp_pct": 17.314870077430733,
       "last_month_costed_revenue": 895082.28,
       "last_month_gross_profit": 154344.48000000004,
       "last_month_gp_pct": 17.243608040145766,
-      "gp_pct_change": 0.09419522659787205
+      "gp_pct_change": 0.07126203728496705
     },
     {
       "salesman": "SOHAIL",
@@ -159,12 +159,12 @@
       "sales_change_vs_last_month": 167295.0,
       "sales_change_pct_vs_last_month": 115.871311816041,
       "costed_revenue": 280235.0,
-      "gross_profit": 58005.25,
-      "gp_pct": 20.69878851678056,
+      "gross_profit": 57391.25,
+      "gp_pct": 20.479686691526755,
       "last_month_costed_revenue": 107680.0,
       "last_month_gross_profit": 20823.8,
       "last_month_gp_pct": 19.338595839524515,
-      "gp_pct_change": 1.3601926772560446
+      "gp_pct_change": 1.1410908520022396
     }
   ],
   "region_current": [
@@ -357,8 +357,8 @@
       "product": "YOKOHAMA-PCR",
       "qty": 151.0,
       "revenue_ex_vat": 63640.0,
-      "gross_profit": 17570.0,
-      "gp_pct": 27.6
+      "gross_profit": 14200.0,
+      "gp_pct": 22.3
     },
     {
       "derived_category": "YARTU",
@@ -377,8 +377,8 @@
       "product": "SAILUN TBR",
       "qty": 154.0,
       "revenue_ex_vat": 53820.0,
-      "gross_profit": 17796.0,
-      "gp_pct": 33.1
+      "gross_profit": 12780.0,
+      "gp_pct": 23.7
     },
     {
       "derived_category": "SBK",
@@ -447,8 +447,8 @@
       "product": "YOKOHAMA --TBR",
       "qty": 75.0,
       "revenue_ex_vat": 43600.0,
-      "gross_profit": 12100.0,
-      "gp_pct": 27.8
+      "gross_profit": 7975.0,
+      "gp_pct": 18.3
     },
     {
       "derived_category": "OTANI-",
@@ -457,8 +457,8 @@
       "product": "OTANI-",
       "qty": 118.0,
       "revenue_ex_vat": 42120.0,
-      "gross_profit": 10888.0,
-      "gp_pct": 25.8
+      "gross_profit": 9820.0,
+      "gp_pct": 23.3
     },
     {
       "derived_category": "DUNLOP-PCR",
@@ -1036,8 +1036,8 @@
       "salesman": "ARUN RAJ",
       "customer_name": "BUCOMAC INDUSTRIES LLC",
       "mtd_sales": 80820.0,
-      "gross_profit": 12500.0,
-      "gp_pct": 15.466468695867361,
+      "gross_profit": 12320.0,
+      "gp_pct": 15.24375154664687,
       "outstanding_amount": 1128519.0,
       "overdue_amount": 1128519.0,
       "projected_amount": 0.0,
@@ -1052,7 +1052,7 @@
       "last_month_costed_revenue": 25700.0,
       "last_month_gross_profit": 3200.0,
       "last_month_gp_pct": 12.45136186770428,
-      "gp_pct_change": 3.0151068281630806
+      "gp_pct_change": 2.7923896789425893
     },
     {
       "salesman": "ARUN RAJ",
@@ -1430,50 +1430,6 @@
     },
     {
       "salesman": "ARUN RAJ",
-      "customer_name": "BIN LAHEJ CEMENT PRODUCTS LLC",
-      "mtd_sales": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "outstanding_amount": 31725.75,
-      "overdue_amount": 31725.75,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0,
-      "projection_achievement_pct": null,
-      "eto_close": 0.0,
-      "eto_projection_variance": 0.0,
-      "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 5200.0,
-      "sales_change_vs_last_month": -5200.0,
-      "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 5200.0,
-      "last_month_gross_profit": 700.0,
-      "last_month_gp_pct": 13.461538461538462,
-      "gp_pct_change": null
-    },
-    {
-      "salesman": "ARUN RAJ",
-      "customer_name": "POWER INTERNATIONAL LLC",
-      "mtd_sales": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "outstanding_amount": 301870.80000000005,
-      "overdue_amount": 301870.80000000005,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0,
-      "projection_achievement_pct": null,
-      "eto_close": 0.0,
-      "eto_projection_variance": 0.0,
-      "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 185620.0,
-      "sales_change_vs_last_month": -185620.0,
-      "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 185620.0,
-      "last_month_gross_profit": 28620.0,
-      "last_month_gp_pct": 15.418597133929534,
-      "gp_pct_change": null
-    },
-    {
-      "salesman": "ARUN RAJ",
       "customer_name": "AL AZZANI READY MIX L.L.C",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
@@ -1492,6 +1448,72 @@
       "last_month_costed_revenue": 12800.0,
       "last_month_gross_profit": 3400.0,
       "last_month_gp_pct": 26.5625,
+      "gp_pct_change": null
+    },
+    {
+      "salesman": "ARUN RAJ",
+      "customer_name": "SHJ-ENVIRONMENT CO LLC -BEEAH",
+      "mtd_sales": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "outstanding_amount": 107959.72,
+      "overdue_amount": 107959.72,
+      "projected_amount": 0.0,
+      "expectation_amount": 0.0,
+      "projection_achievement_pct": null,
+      "eto_close": 0.0,
+      "eto_projection_variance": 0.0,
+      "eto_projection_shortfall": 0.0,
+      "last_month_mtd_sales": 16150.0,
+      "sales_change_vs_last_month": -16150.0,
+      "sales_change_pct_vs_last_month": -100.0,
+      "last_month_costed_revenue": 16150.0,
+      "last_month_gross_profit": 2650.0,
+      "last_month_gp_pct": 16.408668730650156,
+      "gp_pct_change": null
+    },
+    {
+      "salesman": "ARUN RAJ",
+      "customer_name": "AL FUTTAIM COLAS QUARRY LLC OPC",
+      "mtd_sales": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "outstanding_amount": 74277.0,
+      "overdue_amount": 74277.0,
+      "projected_amount": 0.0,
+      "expectation_amount": 0.0,
+      "projection_achievement_pct": null,
+      "eto_close": 0.0,
+      "eto_projection_variance": 0.0,
+      "eto_projection_shortfall": 0.0,
+      "last_month_mtd_sales": 43335.0,
+      "sales_change_vs_last_month": -43335.0,
+      "sales_change_pct_vs_last_month": -100.0,
+      "last_month_costed_revenue": 43335.0,
+      "last_month_gross_profit": 7410.0,
+      "last_month_gp_pct": 17.099342332987195,
+      "gp_pct_change": null
+    },
+    {
+      "salesman": "ARUN RAJ",
+      "customer_name": "AL SHUWAIKH CRUSHER",
+      "mtd_sales": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "outstanding_amount": 3373134.1000000006,
+      "overdue_amount": 2995251.6500000013,
+      "projected_amount": 0.0,
+      "expectation_amount": 0.0,
+      "projection_achievement_pct": null,
+      "eto_close": 0.0,
+      "eto_projection_variance": 0.0,
+      "eto_projection_shortfall": 0.0,
+      "last_month_mtd_sales": 16050.0,
+      "sales_change_vs_last_month": -16050.0,
+      "sales_change_pct_vs_last_month": -100.0,
+      "last_month_costed_revenue": 16050.0,
+      "last_month_gross_profit": 4302.0,
+      "last_month_gp_pct": 26.80373831775701,
       "gp_pct_change": null
     },
     {
@@ -1515,28 +1537,6 @@
       "last_month_gross_profit": 7810.0,
       "last_month_gp_pct": 13.582608695652173,
       "gp_pct_change": 6.1704777241009126
-    },
-    {
-      "salesman": "ARUN RAJ",
-      "customer_name": "AL SHUWAIKH CRUSHER",
-      "mtd_sales": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "outstanding_amount": 3373134.1000000006,
-      "overdue_amount": 2995251.6500000013,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0,
-      "projection_achievement_pct": null,
-      "eto_close": 0.0,
-      "eto_projection_variance": 0.0,
-      "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 16050.0,
-      "sales_change_vs_last_month": -16050.0,
-      "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 16050.0,
-      "last_month_gross_profit": 4302.0,
-      "last_month_gp_pct": 26.80373831775701,
-      "gp_pct_change": null
     },
     {
       "salesman": "ARUN RAJ",
@@ -1606,46 +1606,46 @@
     },
     {
       "salesman": "ARUN RAJ",
-      "customer_name": "AL FUTTAIM COLAS QUARRY LLC OPC",
+      "customer_name": "BIN LAHEJ CEMENT PRODUCTS LLC",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "outstanding_amount": 74277.0,
-      "overdue_amount": 74277.0,
+      "outstanding_amount": 31725.75,
+      "overdue_amount": 31725.75,
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
       "eto_close": 0.0,
       "eto_projection_variance": 0.0,
       "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 43335.0,
-      "sales_change_vs_last_month": -43335.0,
+      "last_month_mtd_sales": 5200.0,
+      "sales_change_vs_last_month": -5200.0,
       "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 43335.0,
-      "last_month_gross_profit": 7410.0,
-      "last_month_gp_pct": 17.099342332987195,
+      "last_month_costed_revenue": 5200.0,
+      "last_month_gross_profit": 700.0,
+      "last_month_gp_pct": 13.461538461538462,
       "gp_pct_change": null
     },
     {
       "salesman": "ARUN RAJ",
-      "customer_name": "SHJ-ENVIRONMENT CO LLC -BEEAH",
+      "customer_name": "POWER INTERNATIONAL LLC",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "outstanding_amount": 107959.72,
-      "overdue_amount": 107959.72,
+      "outstanding_amount": 301870.80000000005,
+      "overdue_amount": 301870.80000000005,
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
       "eto_close": 0.0,
       "eto_projection_variance": 0.0,
       "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 16150.0,
-      "sales_change_vs_last_month": -16150.0,
+      "last_month_mtd_sales": 185620.0,
+      "sales_change_vs_last_month": -185620.0,
       "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 16150.0,
-      "last_month_gross_profit": 2650.0,
-      "last_month_gp_pct": 16.408668730650156,
+      "last_month_costed_revenue": 185620.0,
+      "last_month_gross_profit": 28620.0,
+      "last_month_gp_pct": 15.418597133929534,
       "gp_pct_change": null
     },
     {
@@ -1738,7 +1738,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "GREAT LAND TRANSPORT",
+      "customer_name": "MASAFI LAND TRANSPORT",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -1804,7 +1804,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "AIMS GROUP",
+      "customer_name": "GREAT LAND TRANSPORT",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -1826,7 +1826,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "MASAFI LAND TRANSPORT",
+      "customer_name": "NEW FIVE STAR TRANSPORT",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -1870,7 +1870,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "INTERNATIONAL FOUNDATION GROUP",
+      "customer_name": "AIMS GROUP",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -1914,7 +1914,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "NEW FIVE STAR TRANSPORT",
+      "customer_name": "INTERNATIONAL FOUNDATION GROUP",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -2068,7 +2068,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "AL MADEENA INTERLOCK LLC",
+      "customer_name": "ROYAL AVANUE ENGINEERING",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -2156,7 +2156,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "ROYAL AVANUE ENGINEERING",
+      "customer_name": "AL MADEENA INTERLOCK LLC",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -2290,8 +2290,8 @@
       "salesman": "SOHAIL",
       "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "mtd_sales": 32760.0,
-      "gross_profit": 500.0,
-      "gp_pct": 37.878787878787875,
+      "gross_profit": 320.0,
+      "gp_pct": 24.242424242424242,
       "outstanding_amount": 150633.0,
       "overdue_amount": 150633.0,
       "projected_amount": 0.0,
@@ -2306,14 +2306,14 @@
       "last_month_costed_revenue": 11810.0,
       "last_month_gross_profit": 1840.0,
       "last_month_gp_pct": 15.580016934801016,
-      "gp_pct_change": 22.29877094398686
+      "gp_pct_change": 8.662407307623226
     },
     {
       "salesman": "SOHAIL",
       "customer_name": "HRE CONSTRUCTION L.L.C",
       "mtd_sales": 30685.0,
-      "gross_profit": 7267.25,
-      "gp_pct": 23.683395795991526,
+      "gross_profit": 7163.25,
+      "gp_pct": 23.34446798109826,
       "outstanding_amount": 16327.5,
       "overdue_amount": 16327.5,
       "projected_amount": 0.0,
@@ -2328,7 +2328,7 @@
       "last_month_costed_revenue": 7880.0,
       "last_month_gross_profit": 1720.0,
       "last_month_gp_pct": 21.82741116751269,
-      "gp_pct_change": 1.8559846284788364
+      "gp_pct_change": 1.5170568135855689
     },
     {
       "salesman": "SOHAIL",
@@ -2378,8 +2378,8 @@
       "salesman": "SOHAIL",
       "customer_name": "ASIA PRIME GEN. CONT. CO. LLC",
       "mtd_sales": 21350.0,
-      "gross_profit": 5630.0,
-      "gp_pct": 26.370023419203747,
+      "gross_profit": 5300.0,
+      "gp_pct": 24.824355971896956,
       "outstanding_amount": 0.0,
       "overdue_amount": 0.0,
       "projected_amount": 0.0,
@@ -2763,30 +2763,6 @@
     {
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
-      "salesman": "AL ZAABI",
-      "customer_name": "ABU DHABI PRECAST L.L.C",
-      "product_group": "OTANI-",
-      "product": "265/65R17 OTANI",
-      "costed_revenue": 1500.0,
-      "gross_profit": 80.0,
-      "gp_pct": 5.333333333333334,
-      "uncosted_revenue": 0.0
-    },
-    {
-      "alert_type": "CRITICAL LOW GP",
-      "severity": 4,
-      "salesman": "NEWTYRE -OFFICE",
-      "customer_name": "VERACITY CONTRACTING AND GENERAL MAINTENANCE L.L.C.",
-      "product_group": "OTANI-",
-      "product": "265/65R17 OTANI",
-      "costed_revenue": 740.0,
-      "gross_profit": 30.0,
-      "gp_pct": 4.054054054054054,
-      "uncosted_revenue": 0.0
-    },
-    {
-      "alert_type": "CRITICAL LOW GP",
-      "severity": 4,
       "salesman": "NEWTYRE -OFFICE",
       "customer_name": "CARD CUSTOMER",
       "product_group": "ROADSTONE-PCR",
@@ -2895,18 +2871,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "RAJATH KUMAR",
-      "customer_name": "DIRDONY GENERAL TRANSPORTING-",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 34500.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "DEEPU",
       "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
       "product_group": "CEAT-TBR",
@@ -2919,18 +2883,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "RIVIERE MINERAL W. DE. & FI. FAC. LLC. SPC",
-      "product_group": "SOLID LIFT",
-      "product": "700-12 SOLID LIFT",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 1900.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "SOHAIL",
       "customer_name": "DATE QUICK TRANSPORT L.L.C",
       "product_group": "CEAT-TBR",
@@ -2939,6 +2891,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 31440.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "RAJATH KUMAR",
+      "customer_name": "DIRDONY GENERAL TRANSPORTING-",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 34500.0
     },
     {
       "alert_type": "LOW GP",
@@ -3015,6 +2979,18 @@
     {
       "alert_type": "LOW GP",
       "severity": 3,
+      "salesman": "SOHAIL",
+      "customer_name": "ASIA PRIME GEN. CONT. CO. LLC",
+      "product_group": "YOKOHAMA --TBR",
+      "product": "750 R 16 YOKOHAMA - 12-PR",
+      "costed_revenue": 3210.0,
+      "gross_profit": 360.0,
+      "gp_pct": 11.214953271028037,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
       "salesman": "BADARAN",
       "customer_name": "EMIRATES ROYAL HOLDING LLC (BILLING)",
       "product_group": "VIKRANT",
@@ -3051,18 +3027,6 @@
     {
       "alert_type": "LOW GP",
       "severity": 3,
-      "salesman": "VIPIN",
-      "customer_name": "TARGET ENGINEERING CONSTRUCTION COMPANY - SOLE PROPRIETORSH",
-      "product_group": "OTANI-",
-      "product": "265/65R17 OTANI",
-      "costed_revenue": 1600.0,
-      "gross_profit": 180.0,
-      "gp_pct": 11.25,
-      "uncosted_revenue": 0.0
-    },
-    {
-      "alert_type": "LOW GP",
-      "severity": 3,
       "salesman": "BADARAN",
       "customer_name": "EMIRATES ROYAL HOLDING LLC (BILLING)",
       "product_group": "OZKA",
@@ -3070,6 +3034,18 @@
       "costed_revenue": 1900.0,
       "gross_profit": 160.0,
       "gp_pct": 8.421052631578947,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
+      "salesman": "VIPIN",
+      "customer_name": "INTERNATIONAL MECHANICAL & ELECTRICAL COMPANY WLL",
+      "product_group": "YOKOHAMA-PCR",
+      "product": "195 R 15 C-PCR--JAPAN-YOKOHAMA",
+      "costed_revenue": 1650.0,
+      "gross_profit": 150.0,
+      "gp_pct": 9.090909090909092,
       "uncosted_revenue": 0.0
     },
     {
