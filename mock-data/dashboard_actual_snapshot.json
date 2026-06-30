@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T16:16:56+04:00",
+  "generated_at": "2026-06-30T17:05:47+04:00",
   "context": {
     "as_of_date": "2026-06-30",
     "month_start": "2026-06-01",
@@ -1456,8 +1456,8 @@
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "outstanding_amount": 107959.72,
-      "overdue_amount": 107959.72,
+      "outstanding_amount": 107959.71999999999,
+      "overdue_amount": 107959.71999999999,
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
@@ -2704,7 +2704,7 @@
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
       "salesman": "BADARAN",
-      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
+      "customer_name": "LAMASIA GENERAL TRANSPORT",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
@@ -2716,7 +2716,7 @@
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
       "salesman": "BADARAN",
-      "customer_name": "LAMASIA GENERAL TRANSPORT",
+      "customer_name": "LA MASIA GEN TRADING SOLE PROPRIETORSHIP L L C",
       "product_group": "CEAT-TBR",
       "product": "1200 R 24 CEAT",
       "costed_revenue": 23600.0,
@@ -2871,18 +2871,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "RAJATH KUMAR",
-      "customer_name": "DIRDONY GENERAL TRANSPORTING-",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 34500.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "DEEPU",
       "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
       "product_group": "CEAT-TBR",
@@ -2903,6 +2891,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 31440.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "RAJATH KUMAR",
+      "customer_name": "DIRDONY GENERAL TRANSPORTING-",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 34500.0
     },
     {
       "alert_type": "LOW GP",
