@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T11:05:26+04:00",
+  "generated_at": "2026-07-01T11:06:01+04:00",
   "context": {
     "as_of_date": "2026-06-30",
     "month_start": "2026-06-01",
@@ -1588,8 +1588,8 @@
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "outstanding_amount": 107959.72,
-      "overdue_amount": 107959.72,
+      "outstanding_amount": 107959.71999999999,
+      "overdue_amount": 107959.71999999999,
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
