@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T19:05:16+04:00",
+  "generated_at": "2026-07-01T19:32:40+04:00",
   "context": {
     "as_of_date": "2026-07-01",
     "month_start": "2026-07-01",
@@ -16,15 +16,15 @@
       "as_of_date": "2026-07-01",
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
-      "projected_amount": 7407500.0,
+      "projected_amount": 861640.0,
       "actual_sales": 91743.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
       "shortfall_to_budget": 7315757.0,
-      "shortfall_to_projection": 7315757.0,
+      "shortfall_to_projection": 769897.0,
       "daily_required_for_budget": 243858.56666666668,
-      "daily_required_for_projection": 243858.56666666668
+      "daily_required_for_projection": 25663.233333333334
     },
     "gp_mtd": {
       "costed_revenue": 73593.0,
