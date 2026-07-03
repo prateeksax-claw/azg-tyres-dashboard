@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T23:05:38+04:00",
+  "generated_at": "2026-07-04T00:05:24+04:00",
   "context": {
     "as_of_date": "2026-07-03",
     "month_start": "2026-07-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 861620.0,
-      "actual_sales": 270949.0,
+      "actual_sales": 284105.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 7136551.0,
-      "shortfall_to_projection": 590671.0,
-      "daily_required_for_budget": 254876.82142857142,
-      "daily_required_for_projection": 21095.39285714286
+      "shortfall_to_budget": 7123395.0,
+      "shortfall_to_projection": 577515.0,
+      "daily_required_for_budget": 254406.9642857143,
+      "daily_required_for_projection": 20625.535714285714
     },
     "gp_mtd": {
-      "costed_revenue": 239299.0,
-      "gross_profit": 57365.0,
-      "gp_pct": 24.0,
+      "costed_revenue": 252455.0,
+      "gross_profit": 59381.0,
+      "gp_pct": 23.5,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,10 +121,10 @@
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 270948.73,
-      "gp_costed_revenue": 239299.0,
-      "gp_value": 57365.0,
-      "gp_pct": 24.0
+      "revenue_ex_vat": 284104.92,
+      "gp_costed_revenue": 252455.0,
+      "gp_value": 59381.0,
+      "gp_pct": 23.5
     }
   ],
   "salesman_leaderboard": [],
@@ -136,8 +136,8 @@
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 84600.0,
-      "active_customers": 9
+      "revenue_ex_vat": 97756.19,
+      "active_customers": 11
     }
   ],
   "product_mix_top": [
@@ -156,10 +156,10 @@
       "derived_brand": "WESTLAKE TBR",
       "product_group": "WESTLAKE TBR",
       "product": "WESTLAKE TBR",
-      "qty": 36.0,
-      "revenue_ex_vat": 29610.0,
-      "gross_profit": 5280.0,
-      "gp_pct": 17.8
+      "qty": 46.0,
+      "revenue_ex_vat": 38210.0,
+      "gross_profit": 6530.0,
+      "gp_pct": 17.1
     },
     {
       "derived_category": "HOTCURE",
@@ -312,6 +312,16 @@
       "gp_pct": 21.1
     },
     {
+      "derived_category": "ORNET-TBR",
+      "derived_brand": "ORNET-TBR",
+      "product_group": "ORNET-TBR",
+      "product": "ORNET-TBR",
+      "qty": 4.0,
+      "revenue_ex_vat": 4480.0,
+      "gross_profit": 740.0,
+      "gp_pct": 16.5
+    },
+    {
       "derived_category": "ARMSTRONG",
       "derived_brand": "ARMSTRONG",
       "product_group": "ARMSTRONG",
@@ -430,16 +440,6 @@
       "revenue_ex_vat": 1660.0,
       "gross_profit": 400.0,
       "gp_pct": 24.1
-    },
-    {
-      "derived_category": "PUMP",
-      "derived_brand": "PUMP",
-      "product_group": "PUMP",
-      "product": "PUMP",
-      "qty": 8.0,
-      "revenue_ex_vat": 1570.0,
-      "gross_profit": 295.0,
-      "gp_pct": 18.8
     }
   ],
   "customer_top": [],
