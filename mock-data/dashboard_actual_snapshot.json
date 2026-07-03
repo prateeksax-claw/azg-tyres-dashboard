@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T17:05:45+04:00",
+  "generated_at": "2026-07-03T18:05:26+04:00",
   "context": {
     "as_of_date": "2026-07-03",
     "month_start": "2026-07-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 861620.0,
-      "actual_sales": 206489.0,
+      "actual_sales": 270949.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 7201011.0,
-      "shortfall_to_projection": 655131.0,
-      "daily_required_for_budget": 257178.9642857143,
-      "daily_required_for_projection": 23397.535714285714
+      "shortfall_to_budget": 7136551.0,
+      "shortfall_to_projection": 590671.0,
+      "daily_required_for_budget": 254876.82142857142,
+      "daily_required_for_projection": 21095.39285714286
     },
     "gp_mtd": {
-      "costed_revenue": 174839.0,
-      "gross_profit": 39973.0,
-      "gp_pct": 22.9,
+      "costed_revenue": 239299.0,
+      "gross_profit": 57365.0,
+      "gp_pct": 24.0,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -116,31 +116,41 @@
       "month_key": "2026-06",
       "revenue_ex_vat": 6906207.52,
       "gp_costed_revenue": 6124481.0,
-      "gp_value": 1246662.0,
-      "gp_pct": 20.4
+      "gp_value": 1243252.0,
+      "gp_pct": 20.3
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 206489.23,
-      "gp_costed_revenue": 174839.0,
-      "gp_value": 39973.0,
-      "gp_pct": 22.9
+      "revenue_ex_vat": 270948.73,
+      "gp_costed_revenue": 239299.0,
+      "gp_value": 57365.0,
+      "gp_pct": 24.0
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 147689.22999999998,
-      "active_customers": 25
+      "revenue_ex_vat": 183348.72999999998,
+      "active_customers": 30
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 55800.0,
-      "active_customers": 8
+      "revenue_ex_vat": 84600.0,
+      "active_customers": 9
     }
   ],
   "product_mix_top": [
+    {
+      "derived_category": "ITR - OTR",
+      "derived_brand": "ITR - OTR",
+      "product_group": "ITR - OTR",
+      "product": "ITR - OTR",
+      "qty": 5.0,
+      "revenue_ex_vat": 39960.0,
+      "gross_profit": 11910.0,
+      "gp_pct": 29.8
+    },
     {
       "derived_category": "WESTLAKE TBR",
       "derived_brand": "WESTLAKE TBR",
@@ -152,14 +162,24 @@
       "gp_pct": 17.8
     },
     {
-      "derived_category": "ITR - OTR",
-      "derived_brand": "ITR - OTR",
-      "product_group": "ITR - OTR",
-      "product": "ITR - OTR",
-      "qty": 3.0,
-      "revenue_ex_vat": 11160.0,
-      "gross_profit": 3510.0,
-      "gp_pct": 31.5
+      "derived_category": "HOTCURE",
+      "derived_brand": "HOTCURE",
+      "product_group": "HOTCURE",
+      "product": "HOTCURE",
+      "qty": 62.0,
+      "revenue_ex_vat": 26040.0,
+      "gross_profit": 9920.0,
+      "gp_pct": 38.1
+    },
+    {
+      "derived_category": "FIRESTONE-TBR",
+      "derived_brand": "FIRESTONE-TBR",
+      "product_group": "FIRESTONE-TBR",
+      "product": "FIRESTONE-TBR",
+      "qty": 10.0,
+      "revenue_ex_vat": 13500.0,
+      "gross_profit": 855.0,
+      "gp_pct": 6.3
     },
     {
       "derived_category": "BKT - OTR",
@@ -252,16 +272,6 @@
       "gp_pct": 22.7
     },
     {
-      "derived_category": "HOTCURE",
-      "derived_brand": "HOTCURE",
-      "product_group": "HOTCURE",
-      "product": "HOTCURE",
-      "qty": 15.0,
-      "revenue_ex_vat": 6300.0,
-      "gross_profit": 2400.0,
-      "gp_pct": 38.1
-    },
-    {
       "derived_category": "FIREMAX",
       "derived_brand": "FIREMAX",
       "product_group": "FIREMAX",
@@ -296,10 +306,10 @@
       "derived_brand": "KUNLUN",
       "product_group": "KUNLUN",
       "product": "KUNLUN",
-      "qty": 6.0,
-      "revenue_ex_vat": 4020.0,
-      "gross_profit": 820.0,
-      "gp_pct": 20.4
+      "qty": 8.0,
+      "revenue_ex_vat": 4920.0,
+      "gross_profit": 1040.0,
+      "gp_pct": 21.1
     },
     {
       "derived_category": "ARMSTRONG",
@@ -430,20 +440,22 @@
       "revenue_ex_vat": 1570.0,
       "gross_profit": 295.0,
       "gp_pct": 18.8
-    },
-    {
-      "derived_category": "VIKRANT",
-      "derived_brand": "VIKRANT",
-      "product_group": "VIKRANT",
-      "product": "VIKRANT",
-      "qty": 3.0,
-      "revenue_ex_vat": 1140.0,
-      "gross_profit": 390.0,
-      "gp_pct": 34.2
     }
   ],
   "customer_top": [],
   "gp_alerts_top": [
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
+      "salesman": "BADARAN",
+      "customer_name": "LAMASIA GENERAL TRANSPORT",
+      "product_group": "FIRESTONE-TBR",
+      "product": "385/65 R 22.5 FIRESTONE T300JAP",
+      "costed_revenue": 13500.0,
+      "gross_profit": 854.7999999999993,
+      "gp_pct": 6.331851851851847,
+      "uncosted_revenue": 0.0
+    },
     {
       "alert_type": "LOW GP",
       "severity": 3,
