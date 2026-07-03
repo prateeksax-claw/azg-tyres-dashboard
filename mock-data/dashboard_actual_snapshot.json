@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T13:05:53+04:00",
+  "generated_at": "2026-07-03T14:05:24+04:00",
   "context": {
     "as_of_date": "2026-07-03",
     "month_start": "2026-07-01",
@@ -212,16 +212,6 @@
       "gp_pct": 16.5
     },
     {
-      "derived_category": "ROADSHINE",
-      "derived_brand": "ROADSHINE",
-      "product_group": "ROADSHINE",
-      "product": "ROADSHINE",
-      "qty": 8.0,
-      "revenue_ex_vat": 7600.0,
-      "gross_profit": 2320.0,
-      "gp_pct": 30.5
-    },
-    {
       "derived_category": "V-GLORY",
       "derived_brand": "V-GLORY",
       "product_group": "V-GLORY",
@@ -230,6 +220,16 @@
       "revenue_ex_vat": 7600.0,
       "gross_profit": 1320.0,
       "gp_pct": 17.4
+    },
+    {
+      "derived_category": "ROADSHINE",
+      "derived_brand": "ROADSHINE",
+      "product_group": "ROADSHINE",
+      "product": "ROADSHINE",
+      "qty": 8.0,
+      "revenue_ex_vat": 7600.0,
+      "gross_profit": 2320.0,
+      "gp_pct": 30.5
     },
     {
       "derived_category": "BRIDGESTONE-PCR",
