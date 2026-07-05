@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T21:05:52+04:00",
+  "generated_at": "2026-07-05T22:05:40+04:00",
   "context": {
     "as_of_date": "2026-07-05",
     "month_start": "2026-07-01",
@@ -16,15 +16,15 @@
       "as_of_date": "2026-07-05",
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
-      "projected_amount": 861620.0,
+      "projected_amount": 1361620.0,
       "actual_sales": 368903.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
       "shortfall_to_budget": 7038597.0,
-      "shortfall_to_projection": 492717.0,
+      "shortfall_to_projection": 992717.0,
       "daily_required_for_budget": 270715.26923076925,
-      "daily_required_for_projection": 18950.653846153848
+      "daily_required_for_projection": 38181.42307692308
     },
     "gp_mtd": {
       "costed_revenue": 334271.0,
@@ -292,16 +292,6 @@
       "gp_pct": 16.5
     },
     {
-      "derived_category": "V-GLORY",
-      "derived_brand": "V-GLORY",
-      "product_group": "V-GLORY",
-      "product": "V-GLORY",
-      "qty": 8.0,
-      "revenue_ex_vat": 7600.0,
-      "gross_profit": 1320.0,
-      "gp_pct": 17.4
-    },
-    {
       "derived_category": "ROADSHINE",
       "derived_brand": "ROADSHINE",
       "product_group": "ROADSHINE",
@@ -310,6 +300,16 @@
       "revenue_ex_vat": 7600.0,
       "gross_profit": 2320.0,
       "gp_pct": 30.5
+    },
+    {
+      "derived_category": "V-GLORY",
+      "derived_brand": "V-GLORY",
+      "product_group": "V-GLORY",
+      "product": "V-GLORY",
+      "qty": 8.0,
+      "revenue_ex_vat": 7600.0,
+      "gross_profit": 1320.0,
+      "gp_pct": 17.4
     },
     {
       "derived_category": "TVS-OTR",
