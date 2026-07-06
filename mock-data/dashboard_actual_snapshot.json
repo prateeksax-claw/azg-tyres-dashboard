@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-07-06T11:06:09+04:00",
+  "generated_at": "2026-07-06T12:05:59+04:00",
   "context": {
-    "as_of_date": "2026-07-05",
+    "as_of_date": "2026-07-06",
     "month_start": "2026-07-01",
     "month_end": "2026-07-31",
-    "day_of_month": 5,
+    "day_of_month": 6,
     "days_in_month": 31,
-    "days_remaining_month": 26,
+    "days_remaining_month": 25,
     "month_key": "2026-07",
     "month_num": 7,
     "year_num": 2026
   },
   "command_center": {
     "shortfall_bridge": {
-      "as_of_date": "2026-07-05",
+      "as_of_date": "2026-07-06",
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 1361620.0,
-      "actual_sales": 368903.0,
+      "actual_sales": 432793.0,
       "lpo_amount": null,
       "confirmed_amount": null,
       "expectation_amount": null,
-      "shortfall_to_budget": 7038597.0,
-      "shortfall_to_projection": 992717.0,
-      "daily_required_for_budget": 270715.26923076925,
-      "daily_required_for_projection": 38181.42307692308
+      "shortfall_to_budget": 6974707.0,
+      "shortfall_to_projection": 928827.0,
+      "daily_required_for_budget": 278988.28,
+      "daily_required_for_projection": 37153.08
     },
     "gp_mtd": {
-      "costed_revenue": 334271.0,
-      "gross_profit": 76198.0,
-      "gp_pct": 22.8,
+      "costed_revenue": 398161.0,
+      "gross_profit": 90288.0,
+      "gp_pct": 22.7,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,26 +121,36 @@
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 368903.42,
-      "gp_costed_revenue": 334271.0,
-      "gp_value": 76198.0,
-      "gp_pct": 22.8
+      "revenue_ex_vat": 432793.42,
+      "gp_costed_revenue": 398161.0,
+      "gp_value": 90288.0,
+      "gp_pct": 22.7
     }
   ],
   "salesman_leaderboard": [],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 258103.22999999998,
-      "active_customers": 42
+      "revenue_ex_vat": 303243.23,
+      "active_customers": 45
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 108041.19,
-      "active_customers": 17
+      "revenue_ex_vat": 129291.19,
+      "active_customers": 21
     }
   ],
   "product_mix_top": [
+    {
+      "derived_category": "V-GLORY",
+      "derived_brand": "V-GLORY",
+      "product_group": "V-GLORY",
+      "product": "V-GLORY",
+      "qty": 48.0,
+      "revenue_ex_vat": 45600.0,
+      "gross_profit": 7920.0,
+      "gp_pct": 17.4
+    },
     {
       "derived_category": "WESTLAKE TBR",
       "derived_brand": "WESTLAKE TBR",
@@ -166,10 +176,10 @@
       "derived_brand": "HOTCURE",
       "product_group": "HOTCURE",
       "product": "HOTCURE",
-      "qty": 72.0,
-      "revenue_ex_vat": 30140.0,
-      "gross_profit": 11420.0,
-      "gp_pct": 37.9
+      "qty": 92.0,
+      "revenue_ex_vat": 38170.0,
+      "gross_profit": 14250.0,
+      "gp_pct": 37.3
     },
     {
       "derived_category": "LINEMAX",
@@ -212,6 +222,26 @@
       "gp_pct": 6.3
     },
     {
+      "derived_category": "DUNLOP-PCR",
+      "derived_brand": "DUNLOP-PCR",
+      "product_group": "DUNLOP-PCR",
+      "product": "DUNLOP-PCR",
+      "qty": 20.0,
+      "revenue_ex_vat": 12880.0,
+      "gross_profit": 2610.0,
+      "gp_pct": 20.3
+    },
+    {
+      "derived_category": "BRIDGESTONE-PCR",
+      "derived_brand": "BRIDGESTONE-PCR",
+      "product_group": "BRIDGESTONE-PCR",
+      "product": "BRIDGESTONE-PCR",
+      "qty": 20.0,
+      "revenue_ex_vat": 12420.0,
+      "gross_profit": 2220.0,
+      "gp_pct": 17.9
+    },
+    {
       "derived_category": "FIRELINE",
       "derived_brand": "FIRELINE",
       "product_group": "FIRELINE",
@@ -230,16 +260,6 @@
       "revenue_ex_vat": 10020.0,
       "gross_profit": 2360.0,
       "gp_pct": 23.6
-    },
-    {
-      "derived_category": "BRIDGESTONE-PCR",
-      "derived_brand": "BRIDGESTONE-PCR",
-      "product_group": "BRIDGESTONE-PCR",
-      "product": "BRIDGESTONE-PCR",
-      "qty": 16.0,
-      "revenue_ex_vat": 9880.0,
-      "gross_profit": 1760.0,
-      "gp_pct": 17.8
     },
     {
       "derived_category": "DOUBLE COIN-TBR",
@@ -272,14 +292,14 @@
       "gp_pct": 23.0
     },
     {
-      "derived_category": "DUNLOP-PCR",
-      "derived_brand": "DUNLOP-PCR",
-      "product_group": "DUNLOP-PCR",
-      "product": "DUNLOP-PCR",
-      "qty": 13.0,
-      "revenue_ex_vat": 8120.0,
-      "gross_profit": 1900.0,
-      "gp_pct": 23.4
+      "derived_category": "RETREAD",
+      "derived_brand": "RETREAD",
+      "product_group": "RETREAD",
+      "product": "RETREAD",
+      "qty": 27.0,
+      "revenue_ex_vat": 7773.0,
+      "gross_profit": 4723.0,
+      "gp_pct": 60.8
     },
     {
       "derived_category": "ITR-TBR",
@@ -290,16 +310,6 @@
       "revenue_ex_vat": 7650.0,
       "gross_profit": 1260.0,
       "gp_pct": 16.5
-    },
-    {
-      "derived_category": "V-GLORY",
-      "derived_brand": "V-GLORY",
-      "product_group": "V-GLORY",
-      "product": "V-GLORY",
-      "qty": 8.0,
-      "revenue_ex_vat": 7600.0,
-      "gross_profit": 1320.0,
-      "gp_pct": 17.4
     },
     {
       "derived_category": "ROADSHINE",
@@ -392,6 +402,16 @@
       "gp_pct": 15.4
     },
     {
+      "derived_category": "HUAAN",
+      "derived_brand": "HUAAN",
+      "product_group": "HUAAN",
+      "product": "HUAAN",
+      "qty": 4.0,
+      "revenue_ex_vat": 3000.0,
+      "gross_profit": -220.0,
+      "gp_pct": -7.3
+    },
+    {
       "derived_category": "AEOLUS OTR",
       "derived_brand": "AEOLUS OTR",
       "product_group": "AEOLUS OTR",
@@ -420,30 +440,22 @@
       "revenue_ex_vat": 2650.0,
       "gross_profit": 450.0,
       "gp_pct": 17.0
-    },
-    {
-      "derived_category": "POWERTRAC",
-      "derived_brand": "POWERTRAC",
-      "product_group": "POWERTRAC",
-      "product": "POWERTRAC",
-      "qty": 2.0,
-      "revenue_ex_vat": 2380.0,
-      "gross_profit": 916.0,
-      "gp_pct": 38.5
-    },
-    {
-      "derived_category": "PIRELLI-PCR",
-      "derived_brand": "PIRELLI-PCR",
-      "product_group": "PIRELLI-PCR",
-      "product": "PIRELLI-PCR",
-      "qty": 1.0,
-      "revenue_ex_vat": 2230.0,
-      "gross_profit": 330.0,
-      "gp_pct": 14.8
     }
   ],
   "customer_top": [],
   "gp_alerts_top": [
+    {
+      "alert_type": "NEGATIVE GP",
+      "severity": 5,
+      "salesman": "DEEPU",
+      "customer_name": "AL ATLAS GEN TRANSPORT",
+      "product_group": "HUAAN",
+      "product": "1200R24 24PR HUAAN",
+      "costed_revenue": 3000.0,
+      "gross_profit": -220.0,
+      "gp_pct": -7.333333333333333,
+      "uncosted_revenue": 0.0
+    },
     {
       "alert_type": "CRITICAL LOW GP",
       "severity": 4,
@@ -478,6 +490,18 @@
       "costed_revenue": 4500.0,
       "gross_profit": 450.0,
       "gp_pct": 10.0,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
+      "salesman": "INTERCOMPANY",
+      "customer_name": "SAEED AL ZAABI GEN TRADING L.L.C(CASH)",
+      "product_group": "VIKRANT",
+      "product": "1200R24 VIKRANT",
+      "costed_revenue": 2300.0,
+      "gross_profit": 256.0,
+      "gp_pct": 11.130434782608695,
       "uncosted_revenue": 0.0
     },
     {
