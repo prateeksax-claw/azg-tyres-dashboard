@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-07-06T23:06:14+04:00",
+  "generated_at": "2026-07-07T00:05:53+04:00",
   "context": {
-    "as_of_date": "2026-07-06",
+    "as_of_date": "2026-07-07",
     "month_start": "2026-07-01",
     "month_end": "2026-07-31",
-    "day_of_month": 6,
+    "day_of_month": 7,
     "days_in_month": 31,
-    "days_remaining_month": 25,
+    "days_remaining_month": 24,
     "month_key": "2026-07",
     "month_num": 7,
     "year_num": 2026
   },
   "command_center": {
     "shortfall_bridge": {
-      "as_of_date": "2026-07-06",
+      "as_of_date": "2026-07-07",
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 581318.0,
+      "actual_sales": 601497.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 6826182.0,
+      "shortfall_to_budget": 6806003.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 273047.28,
+      "daily_required_for_budget": 283583.4583333333,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 492811.0,
-      "gross_profit": 106134.0,
-      "gp_pct": 21.5,
+      "costed_revenue": 512990.0,
+      "gross_profit": 109705.0,
+      "gp_pct": 21.4,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,10 +121,10 @@
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 581318.42,
-      "gp_costed_revenue": 492811.0,
-      "gp_value": 106134.0,
-      "gp_pct": 21.5
+      "revenue_ex_vat": 601497.42,
+      "gp_costed_revenue": 512990.0,
+      "gp_value": 109705.0,
+      "gp_pct": 21.4
     }
   ],
   "salesman_leaderboard": [
@@ -133,9 +133,9 @@
       "projection_amount": 500000.0,
       "actual_sales": 5430.0,
       "projection_achievement_pct": 1.086,
-      "eto_close": 28055.0,
-      "eto_projection_variance": -471945.0,
-      "eto_projection_shortfall": 471945.0,
+      "eto_close": 24047.142857142855,
+      "eto_projection_variance": -475952.85714285716,
+      "eto_projection_shortfall": 475952.85714285716,
       "last_month_mtd_sales": 85820.0,
       "sales_change_vs_last_month": -80390.0,
       "sales_change_pct_vs_last_month": -93.67280354229783,
@@ -151,13 +151,13 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 392158.23,
-      "active_customers": 48
+      "revenue_ex_vat": 393537.23,
+      "active_customers": 49
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 188901.19,
-      "active_customers": 24
+      "revenue_ex_vat": 207701.19,
+      "active_customers": 25
     }
   ],
   "product_mix_top": [
@@ -220,6 +220,16 @@
       "revenue_ex_vat": 29240.0,
       "gross_profit": 5050.0,
       "gp_pct": 17.3
+    },
+    {
+      "derived_category": "TRUEFAST",
+      "derived_brand": "TRUEFAST",
+      "product_group": "TRUEFAST",
+      "product": "TRUEFAST",
+      "qty": 27.0,
+      "revenue_ex_vat": 23365.0,
+      "gross_profit": 4155.0,
+      "gp_pct": 17.8
     },
     {
       "derived_category": "LINEMAX",
@@ -400,16 +410,6 @@
       "revenue_ex_vat": 4600.0,
       "gross_profit": 720.0,
       "gp_pct": 15.7
-    },
-    {
-      "derived_category": "TRUEFAST",
-      "derived_brand": "TRUEFAST",
-      "product_group": "TRUEFAST",
-      "product": "TRUEFAST",
-      "qty": 7.0,
-      "revenue_ex_vat": 4565.0,
-      "gross_profit": 740.0,
-      "gp_pct": 16.2
     },
     {
       "derived_category": "ORNET-TBR",
@@ -1068,8 +1068,8 @@
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
-      "eto_close": 28055.0,
-      "eto_projection_variance": 28055.0,
+      "eto_close": 24047.142857142855,
+      "eto_projection_variance": 24047.142857142855,
       "eto_projection_shortfall": 0,
       "last_month_mtd_sales": 0.0,
       "sales_change_vs_last_month": 5430.0,
@@ -1217,6 +1217,18 @@
       "costed_revenue": 2300.0,
       "gross_profit": 256.0,
       "gp_pct": 11.130434782608695,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
+      "salesman": "NEWTYRE -OFFICE",
+      "customer_name": "CARD CUSTOMER",
+      "product_group": "ZEETEX-PCR",
+      "product": "265/70 R 16 ZEETEX",
+      "costed_revenue": 1360.0,
+      "gross_profit": 140.0,
+      "gp_pct": 10.294117647058822,
       "uncosted_revenue": 0.0
     },
     {
