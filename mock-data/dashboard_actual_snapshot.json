@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T11:06:28+04:00",
+  "generated_at": "2026-07-07T12:06:01+04:00",
   "context": {
     "as_of_date": "2026-07-07",
     "month_start": "2026-07-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 601497.0,
+      "actual_sales": 701972.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 6806003.0,
+      "shortfall_to_budget": 6705528.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 283583.4583333333,
+      "daily_required_for_budget": 279397.0,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 512990.0,
-      "gross_profit": 109705.0,
-      "gp_pct": 21.4,
+      "costed_revenue": 595625.0,
+      "gross_profit": 126745.0,
+      "gp_pct": 21.3,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,10 +121,10 @@
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 601497.42,
-      "gp_costed_revenue": 512990.0,
-      "gp_value": 109705.0,
-      "gp_pct": 21.4
+      "revenue_ex_vat": 701972.42,
+      "gp_costed_revenue": 595625.0,
+      "gp_value": 126745.0,
+      "gp_pct": 21.3
     }
   ],
   "salesman_leaderboard": [
@@ -151,13 +151,13 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 393537.23,
-      "active_customers": 49
+      "revenue_ex_vat": 459572.23,
+      "active_customers": 51
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 207701.19,
-      "active_customers": 25
+      "revenue_ex_vat": 242155.48,
+      "active_customers": 26
     }
   ],
   "product_mix_top": [
@@ -192,6 +192,26 @@
       "gp_pct": 28.5
     },
     {
+      "derived_category": "SPARE PARTS",
+      "derived_brand": "SPARE PARTS",
+      "product_group": "SPARE PARTS",
+      "product": "SPARE PARTS",
+      "qty": 209.0,
+      "revenue_ex_vat": 40673.0,
+      "gross_profit": 6721.0,
+      "gp_pct": 16.5
+    },
+    {
+      "derived_category": "TRACK MAX",
+      "derived_brand": "TRACK MAX",
+      "product_group": "TRACK MAX",
+      "product": "TRACK MAX",
+      "qty": 35.0,
+      "revenue_ex_vat": 39650.0,
+      "gross_profit": 7275.0,
+      "gp_pct": 18.3
+    },
+    {
       "derived_category": "HOTCURE",
       "derived_brand": "HOTCURE",
       "product_group": "HOTCURE",
@@ -200,16 +220,6 @@
       "revenue_ex_vat": 38170.0,
       "gross_profit": 14250.0,
       "gp_pct": 37.3
-    },
-    {
-      "derived_category": "SPARE PARTS",
-      "derived_brand": "SPARE PARTS",
-      "product_group": "SPARE PARTS",
-      "product": "SPARE PARTS",
-      "qty": 151.0,
-      "revenue_ex_vat": 36218.0,
-      "gross_profit": 5736.0,
-      "gp_pct": 15.8
     },
     {
       "derived_category": "BKT - OTR",
@@ -222,6 +232,16 @@
       "gp_pct": 17.3
     },
     {
+      "derived_category": "POWERTRAC",
+      "derived_brand": "POWERTRAC",
+      "product_group": "POWERTRAC",
+      "product": "POWERTRAC",
+      "qty": 27.0,
+      "revenue_ex_vat": 25255.0,
+      "gross_profit": 5491.0,
+      "gp_pct": 21.7
+    },
+    {
       "derived_category": "TRUEFAST",
       "derived_brand": "TRUEFAST",
       "product_group": "TRUEFAST",
@@ -230,6 +250,16 @@
       "revenue_ex_vat": 23365.0,
       "gross_profit": 4155.0,
       "gp_pct": 17.8
+    },
+    {
+      "derived_category": "ROADSHINE",
+      "derived_brand": "ROADSHINE",
+      "product_group": "ROADSHINE",
+      "product": "ROADSHINE",
+      "qty": 28.0,
+      "revenue_ex_vat": 22550.0,
+      "gross_profit": 7870.0,
+      "gp_pct": 34.9
     },
     {
       "derived_category": "LINEMAX",
@@ -242,6 +272,16 @@
       "gp_pct": 21.7
     },
     {
+      "derived_category": "DUNLOP-PCR",
+      "derived_brand": "DUNLOP-PCR",
+      "product_group": "DUNLOP-PCR",
+      "product": "DUNLOP-PCR",
+      "qty": 24.0,
+      "revenue_ex_vat": 16740.0,
+      "gross_profit": 3370.0,
+      "gp_pct": 20.1
+    },
+    {
       "derived_category": "FIREMAX",
       "derived_brand": "FIREMAX",
       "product_group": "FIREMAX",
@@ -252,16 +292,6 @@
       "gp_pct": 19.0
     },
     {
-      "derived_category": "ROADSHINE",
-      "derived_brand": "ROADSHINE",
-      "product_group": "ROADSHINE",
-      "product": "ROADSHINE",
-      "qty": 18.0,
-      "revenue_ex_vat": 14900.0,
-      "gross_profit": 4920.0,
-      "gp_pct": 33.0
-    },
-    {
       "derived_category": "FIRESTONE-TBR",
       "derived_brand": "FIRESTONE-TBR",
       "product_group": "FIRESTONE-TBR",
@@ -270,16 +300,6 @@
       "revenue_ex_vat": 13500.0,
       "gross_profit": 855.0,
       "gp_pct": 6.3
-    },
-    {
-      "derived_category": "DUNLOP-PCR",
-      "derived_brand": "DUNLOP-PCR",
-      "product_group": "DUNLOP-PCR",
-      "product": "DUNLOP-PCR",
-      "qty": 20.0,
-      "revenue_ex_vat": 12880.0,
-      "gross_profit": 2610.0,
-      "gp_pct": 20.3
     },
     {
       "derived_category": "BRIDGESTONE-PCR",
@@ -302,6 +322,16 @@
       "gp_pct": 12.8
     },
     {
+      "derived_category": "DEESTONE - PCR",
+      "derived_brand": "DEESTONE - PCR",
+      "product_group": "DEESTONE - PCR",
+      "product": "DEESTONE - PCR",
+      "qty": 30.0,
+      "revenue_ex_vat": 10340.0,
+      "gross_profit": 2380.0,
+      "gp_pct": 23.0
+    },
+    {
       "derived_category": "NEXEN-PCR",
       "derived_brand": "NEXEN-PCR",
       "product_group": "NEXEN-PCR",
@@ -310,16 +340,6 @@
       "revenue_ex_vat": 10020.0,
       "gross_profit": 2360.0,
       "gp_pct": 23.6
-    },
-    {
-      "derived_category": "DEESTONE - PCR",
-      "derived_brand": "DEESTONE - PCR",
-      "product_group": "DEESTONE - PCR",
-      "product": "DEESTONE - PCR",
-      "qty": 28.0,
-      "revenue_ex_vat": 9800.0,
-      "gross_profit": 2240.0,
-      "gp_pct": 22.9
     },
     {
       "derived_category": "DOUBLE COIN-TBR",
@@ -372,14 +392,24 @@
       "gp_pct": 17.3
     },
     {
-      "derived_category": "TRACK MAX",
-      "derived_brand": "TRACK MAX",
-      "product_group": "TRACK MAX",
-      "product": "TRACK MAX",
-      "qty": 5.0,
-      "revenue_ex_vat": 5750.0,
-      "gross_profit": 1125.0,
-      "gp_pct": 19.6
+      "derived_category": "PIRELLI-PCR",
+      "derived_brand": "PIRELLI-PCR",
+      "product_group": "PIRELLI-PCR",
+      "product": "PIRELLI-PCR",
+      "qty": 3.0,
+      "revenue_ex_vat": 5980.0,
+      "gross_profit": 930.0,
+      "gp_pct": 15.6
+    },
+    {
+      "derived_category": "YOKOHAMA-PCR",
+      "derived_brand": "YOKOHAMA-PCR",
+      "product_group": "YOKOHAMA-PCR",
+      "product": "YOKOHAMA-PCR",
+      "qty": 9.0,
+      "revenue_ex_vat": 5045.0,
+      "gross_profit": 780.0,
+      "gp_pct": 15.5
     },
     {
       "derived_category": "KUNLUN",
@@ -430,36 +460,6 @@
       "revenue_ex_vat": 3600.0,
       "gross_profit": 960.0,
       "gp_pct": 26.7
-    },
-    {
-      "derived_category": "YOKOHAMA --TBR",
-      "derived_brand": "YOKOHAMA --TBR",
-      "product_group": "YOKOHAMA --TBR",
-      "product": "YOKOHAMA --TBR",
-      "qty": 6.0,
-      "revenue_ex_vat": 3540.0,
-      "gross_profit": 690.0,
-      "gp_pct": 19.5
-    },
-    {
-      "derived_category": "GAZELLE",
-      "derived_brand": "GAZELLE",
-      "product_group": "GAZELLE",
-      "product": "GAZELLE",
-      "qty": 4.0,
-      "revenue_ex_vat": 3120.0,
-      "gross_profit": 480.0,
-      "gp_pct": 15.4
-    },
-    {
-      "derived_category": "HUAAN",
-      "derived_brand": "HUAAN",
-      "product_group": "HUAAN",
-      "product": "HUAAN",
-      "qty": 4.0,
-      "revenue_ex_vat": 3000.0,
-      "gross_profit": -220.0,
-      "gp_pct": -7.3
     }
   ],
   "customer_top": [
@@ -1194,6 +1194,18 @@
       "gross_profit": 2.0,
       "gp_pct": 4.25531914893617,
       "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "NEWTYRE -OFFICE",
+      "customer_name": "GLAZE GRANITE & MARBLE TR LLC SP",
+      "product_group": "DUMMY INV",
+      "product": "DUMMY",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 960.0
     },
     {
       "alert_type": "LOW GP",
