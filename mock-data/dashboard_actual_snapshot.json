@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T23:06:23+04:00",
+  "generated_at": "2026-07-08T00:05:53+04:00",
   "context": {
     "as_of_date": "2026-07-07",
     "month_start": "2026-07-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 983205.0,
+      "actual_sales": 1030440.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 6424295.0,
+      "shortfall_to_budget": 6377060.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 267678.9583333333,
+      "daily_required_for_budget": 265710.8333333333,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 884823.0,
-      "gross_profit": 184780.0,
-      "gp_pct": 20.9,
+      "costed_revenue": 928233.0,
+      "gross_profit": 196070.0,
+      "gp_pct": 21.1,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,10 +121,10 @@
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 983205.03,
-      "gp_costed_revenue": 884823.0,
-      "gp_value": 184780.0,
-      "gp_pct": 20.9
+      "revenue_ex_vat": 1030439.78,
+      "gp_costed_revenue": 928233.0,
+      "gp_value": 196070.0,
+      "gp_pct": 21.1
     }
   ],
   "salesman_leaderboard": [
@@ -151,12 +151,12 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 731224.13,
+      "revenue_ex_vat": 732849.13,
       "active_customers": 54
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 251745.71,
+      "revenue_ex_vat": 297370.45999999996,
       "active_customers": 28
     }
   ],
@@ -172,6 +172,16 @@
       "gp_pct": 20.0
     },
     {
+      "derived_category": "V-GLORY",
+      "derived_brand": "V-GLORY",
+      "product_group": "V-GLORY",
+      "product": "V-GLORY",
+      "qty": 85.0,
+      "revenue_ex_vat": 75275.0,
+      "gross_profit": 13062.0,
+      "gp_pct": 17.4
+    },
+    {
       "derived_category": "WESTLAKE TBR",
       "derived_brand": "WESTLAKE TBR",
       "product_group": "WESTLAKE TBR",
@@ -180,16 +190,6 @@
       "revenue_ex_vat": 60450.0,
       "gross_profit": 9950.0,
       "gp_pct": 16.5
-    },
-    {
-      "derived_category": "V-GLORY",
-      "derived_brand": "V-GLORY",
-      "product_group": "V-GLORY",
-      "product": "V-GLORY",
-      "qty": 53.0,
-      "revenue_ex_vat": 50475.0,
-      "gross_profit": 8870.0,
-      "gp_pct": 17.6
     },
     {
       "derived_category": "ITR - OTR",
@@ -342,6 +342,16 @@
       "gp_pct": 12.8
     },
     {
+      "derived_category": "BRIDGESTONE-HC",
+      "derived_brand": "BRIDGESTONE-HC",
+      "product_group": "BRIDGESTONE-HC",
+      "product": "BRIDGESTONE-HC",
+      "qty": 16.0,
+      "revenue_ex_vat": 10720.0,
+      "gross_profit": 4160.0,
+      "gp_pct": 38.8
+    },
+    {
       "derived_category": "DEESTONE - PCR",
       "derived_brand": "DEESTONE - PCR",
       "product_group": "DEESTONE - PCR",
@@ -392,6 +402,16 @@
       "gp_pct": 16.5
     },
     {
+      "derived_category": "MICHELIN-HC",
+      "derived_brand": "MICHELIN-HC",
+      "product_group": "MICHELIN-HC",
+      "product": "MICHELIN-HC",
+      "qty": 11.0,
+      "revenue_ex_vat": 7480.0,
+      "gross_profit": 2970.0,
+      "gp_pct": 39.7
+    },
+    {
       "derived_category": "TVS-OTR",
       "derived_brand": "TVS-OTR",
       "product_group": "TVS-OTR",
@@ -440,26 +460,6 @@
       "revenue_ex_vat": 5400.0,
       "gross_profit": 630.0,
       "gp_pct": 11.7
-    },
-    {
-      "derived_category": "KUNLUN",
-      "derived_brand": "KUNLUN",
-      "product_group": "KUNLUN",
-      "product": "KUNLUN",
-      "qty": 8.0,
-      "revenue_ex_vat": 4920.0,
-      "gross_profit": 1040.0,
-      "gp_pct": 21.1
-    },
-    {
-      "derived_category": "TUBE AND FLAP",
-      "derived_brand": "TUBE AND FLAP",
-      "product_group": "TUBE AND FLAP",
-      "product": "TUBE AND FLAP",
-      "qty": 90.0,
-      "revenue_ex_vat": 4719.0,
-      "gross_profit": 699.0,
-      "gp_pct": 14.8
     }
   ],
   "customer_top": [
