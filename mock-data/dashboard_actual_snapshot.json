@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T23:06:33+04:00",
+  "generated_at": "2026-07-09T00:06:11+04:00",
   "context": {
     "as_of_date": "2026-07-08",
     "month_start": "2026-07-01",
@@ -17,19 +17,19 @@
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 1166458.0,
+      "actual_sales": 1253008.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 6241042.0,
+      "shortfall_to_budget": 6154492.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 271349.652173913,
+      "daily_required_for_budget": 267586.60869565216,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 1062331.0,
-      "gross_profit": 219268.0,
-      "gp_pct": 20.6,
+      "costed_revenue": 1148881.0,
+      "gross_profit": 231098.0,
+      "gp_pct": 20.1,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,31 +121,31 @@
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 1166457.97,
-      "gp_costed_revenue": 1062331.0,
-      "gp_value": 219268.0,
-      "gp_pct": 20.6
+      "revenue_ex_vat": 1253007.97,
+      "gp_costed_revenue": 1148881.0,
+      "gp_value": 231098.0,
+      "gp_pct": 20.1
     }
   ],
   "salesman_leaderboard": [
     {
       "salesman": "SOHAIL",
       "projection_amount": 500000.0,
-      "actual_sales": 12990.0,
-      "projection_achievement_pct": 2.598,
-      "eto_close": 50336.25,
-      "eto_projection_variance": -449663.75,
-      "eto_projection_shortfall": 449663.75,
+      "actual_sales": 14790.0,
+      "projection_achievement_pct": 2.9579999999999997,
+      "eto_close": 57311.25,
+      "eto_projection_variance": -442688.75,
+      "eto_projection_shortfall": 442688.75,
       "last_month_mtd_sales": 85820.0,
-      "sales_change_vs_last_month": -72830.0,
-      "sales_change_pct_vs_last_month": -84.86366814262409,
-      "costed_revenue": 12990.0,
-      "gross_profit": 3301.25,
-      "gp_pct": 25.413779830638955,
+      "sales_change_vs_last_month": -71030.0,
+      "sales_change_pct_vs_last_month": -82.7662549522256,
+      "costed_revenue": 14790.0,
+      "gross_profit": 3681.25,
+      "gp_pct": 24.890128465179178,
       "last_month_costed_revenue": 54380.0,
       "last_month_gross_profit": 8783.5,
       "last_month_gp_pct": 16.152077969841855,
-      "gp_pct_change": 9.2617018607971
+      "gp_pct_change": 8.738050495337323
     }
   ],
   "region_current": [
@@ -156,8 +156,8 @@
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 333148.55,
-      "active_customers": 31
+      "revenue_ex_vat": 419698.55,
+      "active_customers": 32
     }
   ],
   "product_mix_top": [
@@ -170,6 +170,16 @@
       "revenue_ex_vat": 244150.0,
       "gross_profit": 48830.0,
       "gp_pct": 20.0
+    },
+    {
+      "derived_category": "MICHELIN-TBR",
+      "derived_brand": "MICHELIN-TBR",
+      "product_group": "MICHELIN-TBR",
+      "product": "MICHELIN-TBR",
+      "qty": 50.0,
+      "revenue_ex_vat": 84750.0,
+      "gross_profit": 11450.0,
+      "gp_pct": 13.5
     },
     {
       "derived_category": "V-GLORY",
@@ -412,6 +422,16 @@
       "gp_pct": 17.3
     },
     {
+      "derived_category": "YOKOHAMA-PCR",
+      "derived_brand": "YOKOHAMA-PCR",
+      "product_group": "YOKOHAMA-PCR",
+      "product": "YOKOHAMA-PCR",
+      "qty": 19.0,
+      "revenue_ex_vat": 7925.0,
+      "gross_profit": 1180.0,
+      "gp_pct": 14.9
+    },
+    {
       "derived_category": "RETREAD",
       "derived_brand": "RETREAD",
       "product_group": "RETREAD",
@@ -432,16 +452,6 @@
       "gp_pct": 39.7
     },
     {
-      "derived_category": "YOKOHAMA-PCR",
-      "derived_brand": "YOKOHAMA-PCR",
-      "product_group": "YOKOHAMA-PCR",
-      "product": "YOKOHAMA-PCR",
-      "qty": 17.0,
-      "revenue_ex_vat": 7245.0,
-      "gross_profit": 1000.0,
-      "gp_pct": 13.8
-    },
-    {
       "derived_category": "GOOD RIDE",
       "derived_brand": "GOOD RIDE",
       "product_group": "GOOD RIDE",
@@ -450,16 +460,6 @@
       "revenue_ex_vat": 7000.0,
       "gross_profit": 1500.0,
       "gp_pct": 21.4
-    },
-    {
-      "derived_category": "BRIDGESTONE-TBR",
-      "derived_brand": "BRIDGESTONE-TBR",
-      "product_group": "BRIDGESTONE-TBR",
-      "product": "BRIDGESTONE-TBR",
-      "qty": 8.0,
-      "revenue_ex_vat": 6760.0,
-      "gross_profit": 2080.0,
-      "gp_pct": 30.8
     }
   ],
   "customer_top": [
@@ -1082,19 +1082,19 @@
     {
       "salesman": "SOHAIL",
       "customer_name": "VENCO IMTIAZ CONTRACTING CO L.L.C",
-      "mtd_sales": 5430.0,
-      "gross_profit": 1081.25,
-      "gp_pct": 19.912523020257826,
+      "mtd_sales": 7230.0,
+      "gross_profit": 1461.25,
+      "gp_pct": 20.210926694329185,
       "outstanding_amount": 39868.5,
       "overdue_amount": 37117.5,
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
-      "eto_close": 21041.25,
-      "eto_projection_variance": 21041.25,
+      "eto_close": 28016.25,
+      "eto_projection_variance": 28016.25,
       "eto_projection_shortfall": 0,
       "last_month_mtd_sales": 0.0,
-      "sales_change_vs_last_month": 5430.0,
+      "sales_change_vs_last_month": 7230.0,
       "sales_change_pct_vs_last_month": null,
       "last_month_costed_revenue": 0.0,
       "last_month_gross_profit": 0.0,
