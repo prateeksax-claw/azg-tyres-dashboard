@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T17:05:39+04:00",
+  "generated_at": "2026-07-09T18:05:21+04:00",
   "context": {
     "as_of_date": "2026-07-09",
     "month_start": "2026-07-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 1325228.0,
+      "actual_sales": 1398510.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 6082272.0,
+      "shortfall_to_budget": 6008990.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 276466.9090909091,
+      "daily_required_for_budget": 273135.9090909091,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 1185901.0,
-      "gross_profit": 238785.0,
+      "costed_revenue": 1259183.0,
+      "gross_profit": 253127.0,
       "gp_pct": 20.1,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -116,14 +116,14 @@
       "month_key": "2026-06",
       "revenue_ex_vat": 6906207.52,
       "gp_costed_revenue": 6124481.0,
-      "gp_value": 1243253.0,
+      "gp_value": 1243249.0,
       "gp_pct": 20.3
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 1325227.97,
-      "gp_costed_revenue": 1185901.0,
-      "gp_value": 238785.0,
+      "revenue_ex_vat": 1398509.87,
+      "gp_costed_revenue": 1259183.0,
+      "gp_value": 253127.0,
       "gp_pct": 20.1
     }
   ],
@@ -151,13 +151,13 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 883101.13,
-      "active_customers": 60
+      "revenue_ex_vat": 904173.03,
+      "active_customers": 63
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 449568.55,
-      "active_customers": 36
+      "revenue_ex_vat": 501778.55,
+      "active_customers": 37
     }
   ],
   "product_mix_top": [
@@ -170,6 +170,16 @@
       "revenue_ex_vat": 244150.0,
       "gross_profit": 48830.0,
       "gp_pct": 20.0
+    },
+    {
+      "derived_category": "ITR-TBR",
+      "derived_brand": "ITR-TBR",
+      "product_group": "ITR-TBR",
+      "product": "ITR-TBR",
+      "qty": 96.0,
+      "revenue_ex_vat": 125150.0,
+      "gross_profit": 22910.0,
+      "gp_pct": 18.3
     },
     {
       "derived_category": "MICHELIN-TBR",
@@ -190,16 +200,6 @@
       "revenue_ex_vat": 75275.0,
       "gross_profit": 13062.0,
       "gp_pct": 17.4
-    },
-    {
-      "derived_category": "ITR-TBR",
-      "derived_brand": "ITR-TBR",
-      "product_group": "ITR-TBR",
-      "product": "ITR-TBR",
-      "qty": 56.0,
-      "revenue_ex_vat": 75150.0,
-      "gross_profit": 15510.0,
-      "gp_pct": 20.6
     },
     {
       "derived_category": "WESTLAKE TBR",
@@ -232,6 +232,16 @@
       "gp_pct": 28.5
     },
     {
+      "derived_category": "HOTCURE",
+      "derived_brand": "HOTCURE",
+      "product_group": "HOTCURE",
+      "product": "HOTCURE",
+      "qty": 101.0,
+      "revenue_ex_vat": 41920.0,
+      "gross_profit": 15660.0,
+      "gp_pct": 37.4
+    },
+    {
       "derived_category": "SPARE PARTS",
       "derived_brand": "SPARE PARTS",
       "product_group": "SPARE PARTS",
@@ -252,16 +262,6 @@
       "gp_pct": 18.3
     },
     {
-      "derived_category": "HOTCURE",
-      "derived_brand": "HOTCURE",
-      "product_group": "HOTCURE",
-      "product": "HOTCURE",
-      "qty": 94.0,
-      "revenue_ex_vat": 38990.0,
-      "gross_profit": 14550.0,
-      "gp_pct": 37.3
-    },
-    {
       "derived_category": "LINEMAX",
       "derived_brand": "LINEMAX",
       "product_group": "LINEMAX",
@@ -276,10 +276,10 @@
       "derived_brand": "ROADSHINE",
       "product_group": "ROADSHINE",
       "product": "ROADSHINE",
-      "qty": 40.0,
-      "revenue_ex_vat": 31550.0,
-      "gross_profit": 11230.0,
-      "gp_pct": 35.6
+      "qty": 43.0,
+      "revenue_ex_vat": 33800.0,
+      "gross_profit": 12070.0,
+      "gp_pct": 35.7
     },
     {
       "derived_category": "POWERTRAC",
@@ -382,6 +382,26 @@
       "gp_pct": 23.1
     },
     {
+      "derived_category": "KING HUNTER",
+      "derived_brand": "KING HUNTER",
+      "product_group": "KING HUNTER",
+      "product": "KING HUNTER",
+      "qty": 10.0,
+      "revenue_ex_vat": 12080.0,
+      "gross_profit": 2300.0,
+      "gp_pct": 19.0
+    },
+    {
+      "derived_category": "RETREAD",
+      "derived_brand": "RETREAD",
+      "product_group": "RETREAD",
+      "product": "RETREAD",
+      "qty": 40.0,
+      "revenue_ex_vat": 11773.0,
+      "gross_profit": 7073.0,
+      "gp_pct": 60.1
+    },
+    {
       "derived_category": "FIRELINE",
       "derived_brand": "FIRELINE",
       "product_group": "FIRELINE",
@@ -440,26 +460,6 @@
       "revenue_ex_vat": 7925.0,
       "gross_profit": 1180.0,
       "gp_pct": 14.9
-    },
-    {
-      "derived_category": "RETREAD",
-      "derived_brand": "RETREAD",
-      "product_group": "RETREAD",
-      "product": "RETREAD",
-      "qty": 27.0,
-      "revenue_ex_vat": 7773.0,
-      "gross_profit": 4723.0,
-      "gp_pct": 60.8
-    },
-    {
-      "derived_category": "MICHELIN-HC",
-      "derived_brand": "MICHELIN-HC",
-      "product_group": "MICHELIN-HC",
-      "product": "MICHELIN-HC",
-      "qty": 11.0,
-      "revenue_ex_vat": 7480.0,
-      "gross_profit": 2970.0,
-      "gp_pct": 39.7
     }
   ],
   "customer_top": [
