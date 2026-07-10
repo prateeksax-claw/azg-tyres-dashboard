@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T23:06:33+04:00",
+  "generated_at": "2026-07-11T00:06:20+04:00",
   "context": {
     "as_of_date": "2026-07-10",
     "month_start": "2026-07-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 1678870.0,
+      "actual_sales": 1700710.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 5728630.0,
+      "shortfall_to_budget": 5706790.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 272791.90476190473,
+      "daily_required_for_budget": 271751.90476190473,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 1360543.0,
-      "gross_profit": 272954.0,
+      "costed_revenue": 1382383.0,
+      "gross_profit": 277694.0,
       "gp_pct": 20.1,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -121,9 +121,9 @@
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 1678870.06,
-      "gp_costed_revenue": 1360543.0,
-      "gp_value": 272954.0,
+      "revenue_ex_vat": 1700710.06,
+      "gp_costed_revenue": 1382383.0,
+      "gp_value": 277694.0,
       "gp_pct": 20.1
     }
   ],
@@ -151,8 +151,8 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 1111737.03,
-      "active_customers": 67
+      "revenue_ex_vat": 1133577.03,
+      "active_customers": 68
     },
     {
       "region": "SHARJAH",
@@ -182,6 +182,16 @@
       "gp_pct": 18.3
     },
     {
+      "derived_category": "CEAT-TBR",
+      "derived_brand": "CEAT-TBR",
+      "product_group": "CEAT-TBR",
+      "product": "CEAT-TBR",
+      "qty": 72.0,
+      "revenue_ex_vat": 94650.0,
+      "gross_profit": 14800.0,
+      "gp_pct": 19.7
+    },
+    {
       "derived_category": "MICHELIN-TBR",
       "derived_brand": "MICHELIN-TBR",
       "product_group": "MICHELIN-TBR",
@@ -190,16 +200,6 @@
       "revenue_ex_vat": 84750.0,
       "gross_profit": 11450.0,
       "gp_pct": 13.5
-    },
-    {
-      "derived_category": "CEAT-TBR",
-      "derived_brand": "CEAT-TBR",
-      "product_group": "CEAT-TBR",
-      "product": "CEAT-TBR",
-      "qty": 60.0,
-      "revenue_ex_vat": 77250.0,
-      "gross_profit": 10900.0,
-      "gp_pct": 18.9
     },
     {
       "derived_category": "V-GLORY",
@@ -242,6 +242,16 @@
       "gp_pct": 28.5
     },
     {
+      "derived_category": "LINEMAX",
+      "derived_brand": "LINEMAX",
+      "product_group": "LINEMAX",
+      "product": "LINEMAX",
+      "qty": 56.0,
+      "revenue_ex_vat": 43220.0,
+      "gross_profit": 9620.0,
+      "gp_pct": 22.3
+    },
+    {
       "derived_category": "HOTCURE",
       "derived_brand": "HOTCURE",
       "product_group": "HOTCURE",
@@ -270,16 +280,6 @@
       "revenue_ex_vat": 39650.0,
       "gross_profit": 7275.0,
       "gp_pct": 18.3
-    },
-    {
-      "derived_category": "LINEMAX",
-      "derived_brand": "LINEMAX",
-      "product_group": "LINEMAX",
-      "product": "LINEMAX",
-      "qty": 50.0,
-      "revenue_ex_vat": 38780.0,
-      "gross_profit": 8780.0,
-      "gp_pct": 22.6
     },
     {
       "derived_category": "ROADSHINE",
