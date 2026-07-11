@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-07-11T11:06:58+04:00",
+  "generated_at": "2026-07-11T12:06:41+04:00",
   "context": {
-    "as_of_date": "2026-07-10",
+    "as_of_date": "2026-07-11",
     "month_start": "2026-07-01",
     "month_end": "2026-07-31",
-    "day_of_month": 10,
+    "day_of_month": 11,
     "days_in_month": 31,
-    "days_remaining_month": 21,
+    "days_remaining_month": 20,
     "month_key": "2026-07",
     "month_num": 7,
     "year_num": 2026
   },
   "command_center": {
     "shortfall_bridge": {
-      "as_of_date": "2026-07-10",
+      "as_of_date": "2026-07-11",
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 1700710.0,
+      "actual_sales": 1748643.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 5706790.0,
+      "shortfall_to_budget": 5658857.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 271751.90476190473,
+      "daily_required_for_budget": 282942.85,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 1382383.0,
-      "gross_profit": 277694.0,
-      "gp_pct": 20.1,
+      "costed_revenue": 1430317.0,
+      "gross_profit": 288885.0,
+      "gp_pct": 20.2,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
     }
@@ -121,10 +121,10 @@
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 1700710.06,
-      "gp_costed_revenue": 1382383.0,
-      "gp_value": 277694.0,
-      "gp_pct": 20.1
+      "revenue_ex_vat": 1748643.56,
+      "gp_costed_revenue": 1430317.0,
+      "gp_value": 288885.0,
+      "gp_pct": 20.2
     }
   ],
   "salesman_leaderboard": [
@@ -133,30 +133,30 @@
       "projection_amount": 500000.0,
       "actual_sales": 49100.0,
       "projection_achievement_pct": 9.82,
-      "eto_close": 152210.0,
-      "eto_projection_variance": -347790.0,
-      "eto_projection_shortfall": 347790.0,
-      "last_month_mtd_sales": 92450.0,
-      "sales_change_vs_last_month": -43350.0,
-      "sales_change_pct_vs_last_month": -46.890210924824224,
+      "eto_close": 138372.7272727273,
+      "eto_projection_variance": -361627.2727272727,
+      "eto_projection_shortfall": 361627.2727272727,
+      "last_month_mtd_sales": 109880.0,
+      "sales_change_vs_last_month": -60780.0,
+      "sales_change_pct_vs_last_month": -55.31488896978522,
       "costed_revenue": 49100.0,
       "gross_profit": 11076.25,
       "gp_pct": 22.55855397148676,
-      "last_month_costed_revenue": 61010.0,
-      "last_month_gross_profit": 9443.5,
-      "last_month_gp_pct": 15.478610063923949,
-      "gp_pct_change": 7.079943907562811
+      "last_month_costed_revenue": 78440.0,
+      "last_month_gross_profit": 12823.5,
+      "last_month_gp_pct": 16.348164201937788,
+      "gp_pct_change": 6.210389769548971
     }
   ],
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 1133577.03,
-      "active_customers": 68
+      "revenue_ex_vat": 1181040.53,
+      "active_customers": 71
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 574584.26,
+      "revenue_ex_vat": 575714.26,
       "active_customers": 40
     }
   ],
@@ -216,10 +216,20 @@
       "derived_brand": "WESTLAKE TBR",
       "product_group": "WESTLAKE TBR",
       "product": "WESTLAKE TBR",
-      "qty": 90.0,
-      "revenue_ex_vat": 72880.0,
-      "gross_profit": 11990.0,
+      "qty": 91.0,
+      "revenue_ex_vat": 73350.0,
+      "gross_profit": 12080.0,
       "gp_pct": 16.5
+    },
+    {
+      "derived_category": "LINEMAX",
+      "derived_brand": "LINEMAX",
+      "product_group": "LINEMAX",
+      "product": "LINEMAX",
+      "qty": 76.0,
+      "revenue_ex_vat": 57220.0,
+      "gross_profit": 11620.0,
+      "gp_pct": 20.3
     },
     {
       "derived_category": "BKT - OTR",
@@ -232,6 +242,16 @@
       "gp_pct": 17.9
     },
     {
+      "derived_category": "HOTCURE",
+      "derived_brand": "HOTCURE",
+      "product_group": "HOTCURE",
+      "product": "HOTCURE",
+      "qty": 116.0,
+      "revenue_ex_vat": 48220.0,
+      "gross_profit": 18060.0,
+      "gp_pct": 37.5
+    },
+    {
       "derived_category": "ITR - OTR",
       "derived_brand": "ITR - OTR",
       "product_group": "ITR - OTR",
@@ -242,33 +262,23 @@
       "gp_pct": 28.5
     },
     {
-      "derived_category": "LINEMAX",
-      "derived_brand": "LINEMAX",
-      "product_group": "LINEMAX",
-      "product": "LINEMAX",
-      "qty": 56.0,
-      "revenue_ex_vat": 43220.0,
-      "gross_profit": 9620.0,
-      "gp_pct": 22.3
-    },
-    {
-      "derived_category": "HOTCURE",
-      "derived_brand": "HOTCURE",
-      "product_group": "HOTCURE",
-      "product": "HOTCURE",
-      "qty": 101.0,
-      "revenue_ex_vat": 41920.0,
-      "gross_profit": 15660.0,
-      "gp_pct": 37.4
+      "derived_category": "ROADSHINE",
+      "derived_brand": "ROADSHINE",
+      "product_group": "ROADSHINE",
+      "product": "ROADSHINE",
+      "qty": 53.0,
+      "revenue_ex_vat": 41450.0,
+      "gross_profit": 15020.0,
+      "gp_pct": 36.2
     },
     {
       "derived_category": "SPARE PARTS",
       "derived_brand": "SPARE PARTS",
       "product_group": "SPARE PARTS",
       "product": "SPARE PARTS",
-      "qty": 209.0,
-      "revenue_ex_vat": 40673.0,
-      "gross_profit": 6721.0,
+      "qty": 210.0,
+      "revenue_ex_vat": 40953.0,
+      "gross_profit": 6764.0,
       "gp_pct": 16.5
     },
     {
@@ -282,14 +292,14 @@
       "gp_pct": 18.3
     },
     {
-      "derived_category": "ROADSHINE",
-      "derived_brand": "ROADSHINE",
-      "product_group": "ROADSHINE",
-      "product": "ROADSHINE",
-      "qty": 43.0,
-      "revenue_ex_vat": 33800.0,
-      "gross_profit": 12070.0,
-      "gp_pct": 35.7
+      "derived_category": "KING HUNTER",
+      "derived_brand": "KING HUNTER",
+      "product_group": "KING HUNTER",
+      "product": "KING HUNTER",
+      "qty": 34.0,
+      "revenue_ex_vat": 28760.0,
+      "gross_profit": 6560.0,
+      "gp_pct": 22.8
     },
     {
       "derived_category": "POWERTRAC",
@@ -352,16 +362,6 @@
       "gp_pct": 19.0
     },
     {
-      "derived_category": "KING HUNTER",
-      "derived_brand": "KING HUNTER",
-      "product_group": "KING HUNTER",
-      "product": "KING HUNTER",
-      "qty": 22.0,
-      "revenue_ex_vat": 16280.0,
-      "gross_profit": 3560.0,
-      "gp_pct": 21.9
-    },
-    {
       "derived_category": "ORNET-TBR",
       "derived_brand": "ORNET-TBR",
       "product_group": "ORNET-TBR",
@@ -382,6 +382,16 @@
       "gp_pct": 22.2
     },
     {
+      "derived_category": "YOKOHAMA-PCR",
+      "derived_brand": "YOKOHAMA-PCR",
+      "product_group": "YOKOHAMA-PCR",
+      "product": "YOKOHAMA-PCR",
+      "qty": 34.0,
+      "revenue_ex_vat": 15150.0,
+      "gross_profit": 2500.0,
+      "gp_pct": 16.5
+    },
+    {
       "derived_category": "FIRESTONE-TBR",
       "derived_brand": "FIRESTONE-TBR",
       "product_group": "FIRESTONE-TBR",
@@ -392,6 +402,16 @@
       "gp_pct": 6.3
     },
     {
+      "derived_category": "RETREAD",
+      "derived_brand": "RETREAD",
+      "product_group": "RETREAD",
+      "product": "RETREAD",
+      "qty": 56.0,
+      "revenue_ex_vat": 13373.0,
+      "gross_profit": 7873.0,
+      "gp_pct": 58.9
+    },
+    {
       "derived_category": "BRIDGESTONE-PCR",
       "derived_brand": "BRIDGESTONE-PCR",
       "product_group": "BRIDGESTONE-PCR",
@@ -400,26 +420,6 @@
       "revenue_ex_vat": 13220.0,
       "gross_profit": 2360.0,
       "gp_pct": 17.9
-    },
-    {
-      "derived_category": "YOKOHAMA-PCR",
-      "derived_brand": "YOKOHAMA-PCR",
-      "product_group": "YOKOHAMA-PCR",
-      "product": "YOKOHAMA-PCR",
-      "qty": 29.0,
-      "revenue_ex_vat": 12025.0,
-      "gross_profit": 2000.0,
-      "gp_pct": 16.6
-    },
-    {
-      "derived_category": "RETREAD",
-      "derived_brand": "RETREAD",
-      "product_group": "RETREAD",
-      "product": "RETREAD",
-      "qty": 40.0,
-      "revenue_ex_vat": 11773.0,
-      "gross_profit": 7073.0,
-      "gp_pct": 60.1
     },
     {
       "derived_category": "FIRELINE",
@@ -839,7 +839,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "LIGHT SPEED DIESEL (NEW)",
+      "customer_name": "2XL HOME (NEW)",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -905,51 +905,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "2XL HOME (NEW)",
-      "mtd_sales": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
-      "projected_amount": 10000.0,
-      "expectation_amount": 0.0,
-      "projection_achievement_pct": 0.0,
-      "eto_close": 0.0,
-      "eto_projection_variance": -10000.0,
-      "eto_projection_shortfall": 10000.0,
-      "last_month_mtd_sales": 0.0,
-      "sales_change_vs_last_month": 0.0,
-      "sales_change_pct_vs_last_month": null,
-      "last_month_costed_revenue": 0.0,
-      "last_month_gross_profit": 0.0,
-      "last_month_gp_pct": null,
-      "gp_pct_change": null
-    },
-    {
-      "salesman": "SOHAIL",
-      "customer_name": "TOP CONCRETE PRODUCTS FACTORY",
-      "mtd_sales": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "outstanding_amount": 33054.0,
-      "overdue_amount": 17955.0,
-      "projected_amount": 10000.0,
-      "expectation_amount": 0.0,
-      "projection_achievement_pct": 0.0,
-      "eto_close": 0.0,
-      "eto_projection_variance": -10000.0,
-      "eto_projection_shortfall": 10000.0,
-      "last_month_mtd_sales": 0.0,
-      "sales_change_vs_last_month": 0.0,
-      "sales_change_pct_vs_last_month": null,
-      "last_month_costed_revenue": 0.0,
-      "last_month_gross_profit": 0.0,
-      "last_month_gp_pct": null,
-      "gp_pct_change": null
-    },
-    {
-      "salesman": "SOHAIL",
-      "customer_name": "AL MADEENA INTERLOCK LLC",
+      "customer_name": "STG CONCRETE PRODUCT LLC (NEW)",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -993,6 +949,50 @@
     },
     {
       "salesman": "SOHAIL",
+      "customer_name": "AL MADEENA INTERLOCK LLC",
+      "mtd_sales": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
+      "projected_amount": 10000.0,
+      "expectation_amount": 0.0,
+      "projection_achievement_pct": 0.0,
+      "eto_close": 0.0,
+      "eto_projection_variance": -10000.0,
+      "eto_projection_shortfall": 10000.0,
+      "last_month_mtd_sales": 0.0,
+      "sales_change_vs_last_month": 0.0,
+      "sales_change_pct_vs_last_month": null,
+      "last_month_costed_revenue": 0.0,
+      "last_month_gross_profit": 0.0,
+      "last_month_gp_pct": null,
+      "gp_pct_change": null
+    },
+    {
+      "salesman": "SOHAIL",
+      "customer_name": "TOP CONCRETE PRODUCTS FACTORY",
+      "mtd_sales": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "outstanding_amount": 33054.0,
+      "overdue_amount": 17955.0,
+      "projected_amount": 10000.0,
+      "expectation_amount": 0.0,
+      "projection_achievement_pct": 0.0,
+      "eto_close": 0.0,
+      "eto_projection_variance": -10000.0,
+      "eto_projection_shortfall": 10000.0,
+      "last_month_mtd_sales": 0.0,
+      "sales_change_vs_last_month": 0.0,
+      "sales_change_pct_vs_last_month": null,
+      "last_month_costed_revenue": 0.0,
+      "last_month_gross_profit": 0.0,
+      "last_month_gp_pct": null,
+      "gp_pct_change": null
+    },
+    {
+      "salesman": "SOHAIL",
       "customer_name": "ELECTRON ELECTRO MECHANICAL",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
@@ -1015,7 +1015,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "STG CONCRETE PRODUCT LLC (NEW)",
+      "customer_name": "LIGHT SPEED DIESEL (NEW)",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -1068,8 +1068,8 @@
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
-      "eto_close": 77500.0,
-      "eto_projection_variance": 77500.0,
+      "eto_close": 70454.54545454544,
+      "eto_projection_variance": 70454.54545454544,
       "eto_projection_shortfall": 0,
       "last_month_mtd_sales": 32760.0,
       "sales_change_vs_last_month": -7760.0,
@@ -1090,16 +1090,16 @@
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
-      "eto_close": 23436.0,
-      "eto_projection_variance": 23436.0,
+      "eto_close": 21305.454545454544,
+      "eto_projection_variance": 21305.454545454544,
       "eto_projection_shortfall": 0,
-      "last_month_mtd_sales": 0.0,
-      "sales_change_vs_last_month": 7560.0,
-      "sales_change_pct_vs_last_month": null,
-      "last_month_costed_revenue": 0.0,
-      "last_month_gross_profit": 0.0,
-      "last_month_gp_pct": null,
-      "gp_pct_change": null
+      "last_month_mtd_sales": 7650.0,
+      "sales_change_vs_last_month": -90.0,
+      "sales_change_pct_vs_last_month": -1.1764705882352942,
+      "last_month_costed_revenue": 7650.0,
+      "last_month_gross_profit": 1250.0,
+      "last_month_gp_pct": 16.33986928104575,
+      "gp_pct_change": 13.025210084033617
     },
     {
       "salesman": "SOHAIL",
@@ -1112,8 +1112,8 @@
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
-      "eto_close": 22413.0,
-      "eto_projection_variance": 22413.0,
+      "eto_close": 20375.454545454544,
+      "eto_projection_variance": 20375.454545454544,
       "eto_projection_shortfall": 0,
       "last_month_mtd_sales": 0.0,
       "sales_change_vs_last_month": 7230.0,
@@ -1134,8 +1134,8 @@
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
-      "eto_close": 21576.0,
-      "eto_projection_variance": 21576.0,
+      "eto_close": 19614.545454545456,
+      "eto_projection_variance": 19614.545454545456,
       "eto_projection_shortfall": 0,
       "last_month_mtd_sales": 0.0,
       "sales_change_vs_last_month": 6960.0,
@@ -1156,8 +1156,8 @@
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
-      "eto_close": 7285.0,
-      "eto_projection_variance": 7285.0,
+      "eto_close": 6622.727272727272,
+      "eto_projection_variance": 6622.727272727272,
       "eto_projection_shortfall": 0,
       "last_month_mtd_sales": 0.0,
       "sales_change_vs_last_month": 2350.0,
@@ -1203,12 +1203,12 @@
       "eto_close": 0.0,
       "eto_projection_variance": 0.0,
       "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 2820.0,
-      "sales_change_vs_last_month": -2820.0,
+      "last_month_mtd_sales": 10080.0,
+      "sales_change_vs_last_month": -10080.0,
       "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 2820.0,
-      "last_month_gross_profit": 0.0,
-      "last_month_gp_pct": 0.0,
+      "last_month_costed_revenue": 10080.0,
+      "last_month_gross_profit": 1650.0,
+      "last_month_gp_pct": 16.36904761904762,
       "gp_pct_change": null
     },
     {
