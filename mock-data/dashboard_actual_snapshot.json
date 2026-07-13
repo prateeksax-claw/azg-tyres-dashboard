@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T09:03:52+04:00",
+  "generated_at": "2026-07-13T09:06:48+04:00",
   "context": {
     "as_of_date": "2026-07-13",
     "month_start": "2026-07-01",
@@ -116,7 +116,7 @@
       "month_key": "2026-06",
       "revenue_ex_vat": 6906207.52,
       "gp_costed_revenue": 6124481.0,
-      "gp_value": 1238196.0,
+      "gp_value": 1238192.0,
       "gp_pct": 20.2
     },
     {
