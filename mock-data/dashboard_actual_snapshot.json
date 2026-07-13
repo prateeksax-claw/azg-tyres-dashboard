@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T23:06:58+04:00",
+  "generated_at": "2026-07-14T00:06:33+04:00",
   "context": {
     "as_of_date": "2026-07-13",
     "month_start": "2026-07-01",
@@ -17,13 +17,13 @@
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 500000.0,
-      "actual_sales": 2162104.0,
+      "actual_sales": 2185404.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 5245396.0,
+      "shortfall_to_budget": 5222096.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 291410.8888888889,
+      "daily_required_for_budget": 290116.44444444444,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
@@ -121,7 +121,7 @@
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 2162103.83,
+      "revenue_ex_vat": 2185403.83,
       "gp_costed_revenue": 1734602.0,
       "gp_value": 369598.0,
       "gp_pct": 21.3
@@ -151,7 +151,7 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 1454650.3299999998,
+      "revenue_ex_vat": 1477950.3299999998,
       "active_customers": 79
     },
     {
