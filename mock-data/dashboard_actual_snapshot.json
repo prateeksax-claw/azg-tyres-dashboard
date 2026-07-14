@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T14:11:06+04:00",
+  "generated_at": "2026-07-14T15:06:56+04:00",
   "context": {
     "as_of_date": "2026-07-14",
     "month_start": "2026-07-01",
@@ -109,7 +109,7 @@
       "month_key": "2026-05",
       "revenue_ex_vat": 4858873.65,
       "gp_costed_revenue": 4205129.0,
-      "gp_value": 841724.0,
+      "gp_value": 841764.0,
       "gp_pct": 20.0
     },
     {
@@ -2502,7 +2502,7 @@
     },
     {
       "salesman": "RAJATH KUMAR",
-      "customer_name": "DESERT MAN TRANSPORT",
+      "customer_name": "UMI STEEL WORKS & WELDING WORKSHOP",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -2524,7 +2524,7 @@
     },
     {
       "salesman": "RAJATH KUMAR",
-      "customer_name": "UMI STEEL WORKS & WELDING WORKSHOP",
+      "customer_name": "DESERT MAN TRANSPORT",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
