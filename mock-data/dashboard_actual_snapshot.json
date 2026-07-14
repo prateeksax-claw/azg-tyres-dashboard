@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T14:06:37+04:00",
+  "generated_at": "2026-07-14T14:11:06+04:00",
   "context": {
     "as_of_date": "2026-07-14",
     "month_start": "2026-07-01",
@@ -509,14 +509,14 @@
       "gp_pct": 25.3
     },
     {
-      "derived_category": "CENTURY",
-      "derived_brand": "CENTURY",
-      "product_group": "CENTURY",
-      "product": "CENTURY",
-      "qty": 100.0,
+      "derived_category": "FIRESTONE-TBR",
+      "derived_brand": "FIRESTONE-TBR",
+      "product_group": "FIRESTONE-TBR",
+      "product": "FIRESTONE-TBR",
+      "qty": 10.0,
       "revenue_ex_vat": 13500.0,
-      "gross_profit": 5500.0,
-      "gp_pct": 40.7
+      "gross_profit": 855.0,
+      "gp_pct": 6.3
     }
   ],
   "customer_top": [
@@ -2502,7 +2502,7 @@
     },
     {
       "salesman": "RAJATH KUMAR",
-      "customer_name": "UMI STEEL WORKS & WELDING WORKSHOP",
+      "customer_name": "DESERT MAN TRANSPORT",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -2524,7 +2524,7 @@
     },
     {
       "salesman": "RAJATH KUMAR",
-      "customer_name": "DESERT MAN TRANSPORT",
+      "customer_name": "UMI STEEL WORKS & WELDING WORKSHOP",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
