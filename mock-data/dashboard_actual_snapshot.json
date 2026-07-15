@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T23:07:21+04:00",
+  "generated_at": "2026-07-16T00:07:03+04:00",
   "context": {
     "as_of_date": "2026-07-15",
     "month_start": "2026-07-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 2580440.0,
-      "actual_sales": 2678748.0,
+      "actual_sales": 2683128.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 4728752.0,
+      "shortfall_to_budget": 4724372.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 295547.0,
+      "daily_required_for_budget": 295273.25,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 2164686.0,
-      "gross_profit": 484520.0,
+      "costed_revenue": 2169066.0,
+      "gross_profit": 485970.0,
       "gp_pct": 22.4,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -121,9 +121,9 @@
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 2678747.82,
-      "gp_costed_revenue": 2164686.0,
-      "gp_value": 484520.0,
+      "revenue_ex_vat": 2683127.58,
+      "gp_costed_revenue": 2169066.0,
+      "gp_value": 485970.0,
       "gp_pct": 22.4
     }
   ],
@@ -208,12 +208,12 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 1867458.1299999997,
-      "active_customers": 86
+      "revenue_ex_vat": 1871733.1299999997,
+      "active_customers": 87
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 820554.24,
+      "revenue_ex_vat": 820659.0,
       "active_customers": 49
     }
   ],
@@ -293,10 +293,10 @@
       "derived_brand": "ITR - OTR",
       "product_group": "ITR - OTR",
       "product": "ITR - OTR",
-      "qty": 17.0,
-      "revenue_ex_vat": 78000.0,
-      "gross_profit": 18250.0,
-      "gp_pct": 23.4
+      "qty": 18.0,
+      "revenue_ex_vat": 81750.0,
+      "gross_profit": 19450.0,
+      "gp_pct": 23.8
     },
     {
       "derived_category": "LINEMAX",
@@ -4111,8 +4111,8 @@
     {
       "alert_type": "NEGATIVE GP",
       "severity": 5,
-      "salesman": "DEEPU",
-      "customer_name": "AL ATLAS GEN TRANSPORT",
+      "salesman": "ARUN RAJ",
+      "customer_name": "ORYX TRANSPORT AND EQUIPMENT MAINTENANCE LLC",
       "product_group": "HUAAN",
       "product": "1200R24 24PR HUAAN",
       "costed_revenue": 3000.0,
@@ -4123,8 +4123,8 @@
     {
       "alert_type": "NEGATIVE GP",
       "severity": 5,
-      "salesman": "ARUN RAJ",
-      "customer_name": "ORYX TRANSPORT AND EQUIPMENT MAINTENANCE LLC",
+      "salesman": "DEEPU",
+      "customer_name": "AL ATLAS GEN TRANSPORT",
       "product_group": "HUAAN",
       "product": "1200R24 24PR HUAAN",
       "costed_revenue": 3000.0,
