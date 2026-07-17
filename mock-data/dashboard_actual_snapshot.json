@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T14:07:38+04:00",
+  "generated_at": "2026-07-17T15:07:32+04:00",
   "context": {
     "as_of_date": "2026-07-17",
     "month_start": "2026-07-01",
@@ -4177,8 +4177,8 @@
     {
       "alert_type": "NEGATIVE GP",
       "severity": 5,
-      "salesman": "DEEPU",
-      "customer_name": "AL ATLAS GEN TRANSPORT",
+      "salesman": "ARUN RAJ",
+      "customer_name": "ORYX TRANSPORT AND EQUIPMENT MAINTENANCE LLC",
       "product_group": "HUAAN",
       "product": "1200R24 24PR HUAAN",
       "costed_revenue": 3000.0,
@@ -4189,8 +4189,8 @@
     {
       "alert_type": "NEGATIVE GP",
       "severity": 5,
-      "salesman": "ARUN RAJ",
-      "customer_name": "ORYX TRANSPORT AND EQUIPMENT MAINTENANCE LLC",
+      "salesman": "DEEPU",
+      "customer_name": "AL ATLAS GEN TRANSPORT",
       "product_group": "HUAAN",
       "product": "1200R24 24PR HUAAN",
       "costed_revenue": 3000.0,
