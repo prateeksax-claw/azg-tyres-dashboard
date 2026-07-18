@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T11:07:44+04:00",
+  "generated_at": "2026-07-18T11:07:54+04:00",
   "context": {
     "as_of_date": "2026-07-17",
     "month_start": "2026-07-01",
@@ -2194,7 +2194,7 @@
     },
     {
       "salesman": "RAJATH KUMAR",
-      "customer_name": "GRAND LIMO TRANSPORT",
+      "customer_name": "KANOO MACHINERY",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -2260,7 +2260,7 @@
     },
     {
       "salesman": "RAJATH KUMAR",
-      "customer_name": "KANOO MACHINERY",
+      "customer_name": "GRAND LIMO TRANSPORT",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -3140,28 +3140,6 @@
     },
     {
       "salesman": "RAJATH KUMAR",
-      "customer_name": "K SPAN GENERAL CONTRACTING LLC",
-      "mtd_sales": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "outstanding_amount": 34151.25,
-      "overdue_amount": 33122.25,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0,
-      "projection_achievement_pct": null,
-      "eto_close": 0.0,
-      "eto_projection_variance": 0.0,
-      "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 1640.0,
-      "sales_change_vs_last_month": -1640.0,
-      "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 1640.0,
-      "last_month_gross_profit": 300.0,
-      "last_month_gp_pct": 18.29268292682927,
-      "gp_pct_change": null
-    },
-    {
-      "salesman": "RAJATH KUMAR",
       "customer_name": "NUROL - L.L.C - O.P.C",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
@@ -3180,6 +3158,28 @@
       "last_month_costed_revenue": 3200.0,
       "last_month_gross_profit": 600.0,
       "last_month_gp_pct": 18.75,
+      "gp_pct_change": null
+    },
+    {
+      "salesman": "RAJATH KUMAR",
+      "customer_name": "K SPAN GENERAL CONTRACTING LLC",
+      "mtd_sales": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "outstanding_amount": 34151.25,
+      "overdue_amount": 33122.25,
+      "projected_amount": 0.0,
+      "expectation_amount": 0.0,
+      "projection_achievement_pct": null,
+      "eto_close": 0.0,
+      "eto_projection_variance": 0.0,
+      "eto_projection_shortfall": 0.0,
+      "last_month_mtd_sales": 1640.0,
+      "sales_change_vs_last_month": -1640.0,
+      "sales_change_pct_vs_last_month": -100.0,
+      "last_month_costed_revenue": 1640.0,
+      "last_month_gross_profit": 300.0,
+      "last_month_gp_pct": 18.29268292682927,
       "gp_pct_change": null
     },
     {
@@ -3448,7 +3448,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "AIMS GROUP",
+      "customer_name": "GREAT LAND TRANSPORT",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -3492,7 +3492,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "GREAT LAND TRANSPORT",
+      "customer_name": "AIMS GROUP",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -4177,8 +4177,8 @@
     {
       "alert_type": "NEGATIVE GP",
       "severity": 5,
-      "salesman": "ARUN RAJ",
-      "customer_name": "ORYX TRANSPORT AND EQUIPMENT MAINTENANCE LLC",
+      "salesman": "DEEPU",
+      "customer_name": "AL ATLAS GEN TRANSPORT",
       "product_group": "HUAAN",
       "product": "1200R24 24PR HUAAN",
       "costed_revenue": 3000.0,
@@ -4189,8 +4189,8 @@
     {
       "alert_type": "NEGATIVE GP",
       "severity": 5,
-      "salesman": "DEEPU",
-      "customer_name": "AL ATLAS GEN TRANSPORT",
+      "salesman": "ARUN RAJ",
+      "customer_name": "ORYX TRANSPORT AND EQUIPMENT MAINTENANCE LLC",
       "product_group": "HUAAN",
       "product": "1200R24 24PR HUAAN",
       "costed_revenue": 3000.0,
