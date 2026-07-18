@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T17:08:23+04:00",
+  "generated_at": "2026-07-18T18:08:10+04:00",
   "context": {
     "as_of_date": "2026-07-18",
     "month_start": "2026-07-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 3373640.0,
-      "actual_sales": 3226043.0,
+      "actual_sales": 3364832.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 4181457.0,
-      "shortfall_to_projection": 147597.0,
-      "daily_required_for_budget": 321650.53846153844,
-      "daily_required_for_projection": 11353.615384615385
+      "shortfall_to_budget": 4042668.0,
+      "shortfall_to_projection": 8808.0,
+      "daily_required_for_budget": 310974.46153846156,
+      "daily_required_for_projection": 677.5384615384615
     },
     "gp_mtd": {
-      "costed_revenue": 2558926.0,
-      "gross_profit": 581945.0,
+      "costed_revenue": 2691175.0,
+      "gross_profit": 610425.0,
       "gp_pct": 22.7,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -121,9 +121,9 @@
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 3226042.29,
-      "gp_costed_revenue": 2558926.0,
-      "gp_value": 581945.0,
+      "revenue_ex_vat": 3364832.19,
+      "gp_costed_revenue": 2691175.0,
+      "gp_value": 610425.0,
       "gp_pct": 22.7
     }
   ],
@@ -131,21 +131,21 @@
     {
       "salesman": "BIJOY",
       "projection_amount": 793200.0,
-      "actual_sales": 393395.0,
-      "projection_achievement_pct": 49.595940494200704,
-      "eto_close": 677513.6111111111,
-      "eto_projection_variance": -115686.38888888888,
-      "eto_projection_shortfall": 115686.38888888888,
+      "actual_sales": 406475.0,
+      "projection_achievement_pct": 51.244957135653046,
+      "eto_close": 700040.2777777778,
+      "eto_projection_variance": -93159.72222222225,
+      "eto_projection_shortfall": 93159.72222222225,
       "last_month_mtd_sales": 304005.0,
       "sales_change_vs_last_month": 89390.0,
       "sales_change_pct_vs_last_month": 29.404121642736143,
-      "costed_revenue": 370295.0,
-      "gross_profit": 85367.0,
-      "gp_pct": 23.05378144452396,
+      "costed_revenue": 376835.0,
+      "gross_profit": 86507.0,
+      "gp_pct": 22.956200989823135,
       "last_month_costed_revenue": 317445.0,
       "last_month_gross_profit": 78950.0,
       "last_month_gp_pct": 24.87044999921246,
-      "gp_pct_change": -1.8166685546885013
+      "gp_pct_change": -1.9142490093893265
     },
     {
       "salesman": "RAJATH KUMAR",
@@ -188,21 +188,21 @@
     {
       "salesman": "SOHAIL",
       "projection_amount": 500000.0,
-      "actual_sales": 105290.0,
-      "projection_achievement_pct": 21.058,
-      "eto_close": 181332.77777777778,
-      "eto_projection_variance": -318667.22222222225,
-      "eto_projection_shortfall": 318667.22222222225,
+      "actual_sales": 108260.0,
+      "projection_achievement_pct": 21.651999999999997,
+      "eto_close": 186447.77777777778,
+      "eto_projection_variance": -313552.22222222225,
+      "eto_projection_shortfall": 313552.22222222225,
       "last_month_mtd_sales": 165310.0,
-      "sales_change_vs_last_month": -60020.0,
-      "sales_change_pct_vs_last_month": -36.30754340330288,
-      "costed_revenue": 105290.0,
-      "gross_profit": 25338.25,
-      "gp_pct": 24.065200873777187,
+      "sales_change_vs_last_month": -57050.0,
+      "sales_change_pct_vs_last_month": -34.5109188796806,
+      "costed_revenue": 108260.0,
+      "gross_profit": 25998.25,
+      "gp_pct": 24.014640679844817,
       "last_month_costed_revenue": 121150.0,
       "last_month_gross_profit": 22298.0,
       "last_month_gp_pct": 18.405282707387535,
-      "gp_pct_change": 5.659918166389652
+      "gp_pct_change": 5.609357972457282
     },
     {
       "salesman": "NAZIM MIRZA",
@@ -227,13 +227,13 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 2105485.9299999997,
-      "active_customers": 95
+      "revenue_ex_vat": 2208130.829999999,
+      "active_customers": 99
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 1093300.9100000001,
-      "active_customers": 59
+      "revenue_ex_vat": 1116810.4300000002,
+      "active_customers": 62
     }
   ],
   "product_mix_top": [
@@ -258,6 +258,16 @@
       "gp_pct": 21.7
     },
     {
+      "derived_category": "WESTLAKE TBR",
+      "derived_brand": "WESTLAKE TBR",
+      "product_group": "WESTLAKE TBR",
+      "product": "WESTLAKE TBR",
+      "qty": 197.0,
+      "revenue_ex_vat": 169940.0,
+      "gross_profit": 32995.0,
+      "gp_pct": 19.4
+    },
+    {
       "derived_category": "ROCK HOLDER",
       "derived_brand": "ROCK HOLDER",
       "product_group": "ROCK HOLDER",
@@ -278,16 +288,6 @@
       "gp_pct": 37.0
     },
     {
-      "derived_category": "WESTLAKE TBR",
-      "derived_brand": "WESTLAKE TBR",
-      "product_group": "WESTLAKE TBR",
-      "product": "WESTLAKE TBR",
-      "qty": 159.0,
-      "revenue_ex_vat": 130040.0,
-      "gross_profit": 24855.0,
-      "gp_pct": 19.1
-    },
-    {
       "derived_category": "ITR-TBR",
       "derived_brand": "ITR-TBR",
       "product_group": "ITR-TBR",
@@ -298,6 +298,16 @@
       "gp_pct": 18.3
     },
     {
+      "derived_category": "ITR - OTR",
+      "derived_brand": "ITR - OTR",
+      "product_group": "ITR - OTR",
+      "product": "ITR - OTR",
+      "qty": 28.0,
+      "revenue_ex_vat": 117480.0,
+      "gross_profit": 29055.0,
+      "gp_pct": 24.7
+    },
+    {
       "derived_category": "V-GLORY",
       "derived_brand": "V-GLORY",
       "product_group": "V-GLORY",
@@ -306,16 +316,6 @@
       "revenue_ex_vat": 104825.0,
       "gross_profit": 19062.0,
       "gp_pct": 18.2
-    },
-    {
-      "derived_category": "ITR - OTR",
-      "derived_brand": "ITR - OTR",
-      "product_group": "ITR - OTR",
-      "product": "ITR - OTR",
-      "qty": 23.0,
-      "revenue_ex_vat": 97280.0,
-      "gross_profit": 24505.0,
-      "gp_pct": 25.2
     },
     {
       "derived_category": "BKT - OTR",
@@ -332,10 +332,20 @@
       "derived_brand": "LINEMAX",
       "product_group": "LINEMAX",
       "product": "LINEMAX",
-      "qty": 97.0,
-      "revenue_ex_vat": 73430.0,
-      "gross_profit": 15230.0,
-      "gp_pct": 20.7
+      "qty": 115.0,
+      "revenue_ex_vat": 86930.0,
+      "gross_profit": 17930.0,
+      "gp_pct": 20.6
+    },
+    {
+      "derived_category": "ORNET-TBR",
+      "derived_brand": "ORNET-TBR",
+      "product_group": "ORNET-TBR",
+      "product": "ORNET-TBR",
+      "qty": 74.0,
+      "revenue_ex_vat": 83180.0,
+      "gross_profit": 13990.0,
+      "gp_pct": 16.8
     },
     {
       "derived_category": "HOTCURE",
@@ -346,16 +356,6 @@
       "revenue_ex_vat": 72294.0,
       "gross_profit": 27054.0,
       "gp_pct": 37.4
-    },
-    {
-      "derived_category": "ORNET-TBR",
-      "derived_brand": "ORNET-TBR",
-      "product_group": "ORNET-TBR",
-      "product": "ORNET-TBR",
-      "qty": 64.0,
-      "revenue_ex_vat": 72180.0,
-      "gross_profit": 12340.0,
-      "gp_pct": 17.1
     },
     {
       "derived_category": "MICHELIN-TBR",
@@ -388,6 +388,16 @@
       "gp_pct": 22.0
     },
     {
+      "derived_category": "SPARE PARTS",
+      "derived_brand": "SPARE PARTS",
+      "product_group": "SPARE PARTS",
+      "product": "SPARE PARTS",
+      "qty": 447.0,
+      "revenue_ex_vat": 54912.0,
+      "gross_profit": 10630.0,
+      "gp_pct": 19.4
+    },
+    {
       "derived_category": "TRACK MAX",
       "derived_brand": "TRACK MAX",
       "product_group": "TRACK MAX",
@@ -396,16 +406,6 @@
       "revenue_ex_vat": 54630.0,
       "gross_profit": 10185.0,
       "gp_pct": 18.6
-    },
-    {
-      "derived_category": "SPARE PARTS",
-      "derived_brand": "SPARE PARTS",
-      "product_group": "SPARE PARTS",
-      "product": "SPARE PARTS",
-      "qty": 445.0,
-      "revenue_ex_vat": 53672.0,
-      "gross_profit": 10450.0,
-      "gp_pct": 19.5
     },
     {
       "derived_category": "MARAMAX",
@@ -432,10 +432,10 @@
       "derived_brand": "BRIDGESTONE-HC",
       "product_group": "BRIDGESTONE-HC",
       "product": "BRIDGESTONE-HC",
-      "qty": 50.0,
-      "revenue_ex_vat": 33730.0,
-      "gross_profit": 13230.0,
-      "gp_pct": 39.2
+      "qty": 55.0,
+      "revenue_ex_vat": 36730.0,
+      "gross_profit": 14180.0,
+      "gp_pct": 38.6
     },
     {
       "derived_category": "KING HUNTER",
@@ -462,10 +462,10 @@
       "derived_brand": "YOKOHAMA-PCR",
       "product_group": "YOKOHAMA-PCR",
       "product": "YOKOHAMA-PCR",
-      "qty": 55.0,
-      "revenue_ex_vat": 25275.0,
-      "gross_profit": 4560.0,
-      "gp_pct": 18.0
+      "qty": 59.0,
+      "revenue_ex_vat": 26675.0,
+      "gross_profit": 4960.0,
+      "gp_pct": 18.6
     },
     {
       "derived_category": "ROCK PILLER",
@@ -508,6 +508,16 @@
       "gp_pct": 34.7
     },
     {
+      "derived_category": "DOUBLE COIN-TBR",
+      "derived_brand": "DOUBLE COIN-TBR",
+      "product_group": "DOUBLE COIN-TBR",
+      "product": "DOUBLE COIN-TBR",
+      "qty": 36.0,
+      "revenue_ex_vat": 20890.0,
+      "gross_profit": 4276.0,
+      "gp_pct": 20.5
+    },
+    {
       "derived_category": "DEESTONE - PCR",
       "derived_brand": "DEESTONE - PCR",
       "product_group": "DEESTONE - PCR",
@@ -526,16 +536,6 @@
       "revenue_ex_vat": 20220.0,
       "gross_profit": 4460.0,
       "gp_pct": 22.1
-    },
-    {
-      "derived_category": "YOKOHAMA --TBR",
-      "derived_brand": "YOKOHAMA --TBR",
-      "product_group": "YOKOHAMA --TBR",
-      "product": "YOKOHAMA --TBR",
-      "qty": 34.0,
-      "revenue_ex_vat": 20010.0,
-      "gross_profit": 3860.0,
-      "gp_pct": 19.3
     }
   ],
   "customer_top": [
@@ -1377,28 +1377,6 @@
     },
     {
       "salesman": "ARUN RAJ",
-      "customer_name": "DUBAI PRECAST LLC",
-      "mtd_sales": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "outstanding_amount": 121868.25,
-      "overdue_amount": 121868.25,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0,
-      "projection_achievement_pct": null,
-      "eto_close": 0.0,
-      "eto_projection_variance": 0.0,
-      "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 36870.0,
-      "sales_change_vs_last_month": -36870.0,
-      "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 36870.0,
-      "last_month_gross_profit": 7834.0,
-      "last_month_gp_pct": 21.24762679685381,
-      "gp_pct_change": null
-    },
-    {
-      "salesman": "ARUN RAJ",
       "customer_name": "ADROIT TRANSPORT",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
@@ -1417,6 +1395,28 @@
       "last_month_costed_revenue": 23480.0,
       "last_month_gross_profit": 4420.0,
       "last_month_gp_pct": 18.82453151618399,
+      "gp_pct_change": null
+    },
+    {
+      "salesman": "ARUN RAJ",
+      "customer_name": "DUBAI PRECAST LLC",
+      "mtd_sales": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "outstanding_amount": 121868.25,
+      "overdue_amount": 121868.25,
+      "projected_amount": 0.0,
+      "expectation_amount": 0.0,
+      "projection_achievement_pct": null,
+      "eto_close": 0.0,
+      "eto_projection_variance": 0.0,
+      "eto_projection_shortfall": 0.0,
+      "last_month_mtd_sales": 36870.0,
+      "sales_change_vs_last_month": -36870.0,
+      "sales_change_pct_vs_last_month": -100.0,
+      "last_month_costed_revenue": 36870.0,
+      "last_month_gross_profit": 7834.0,
+      "last_month_gp_pct": 21.24762679685381,
       "gp_pct_change": null
     },
     {
@@ -2785,7 +2785,7 @@
     },
     {
       "salesman": "RAJATH KUMAR",
-      "customer_name": "AL RYUM GENERAL CONTRACTING",
+      "customer_name": "GRAND LIMO TRANSPORT",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -2829,7 +2829,7 @@
     },
     {
       "salesman": "RAJATH KUMAR",
-      "customer_name": "GRAND LIMO TRANSPORT",
+      "customer_name": "AL RYUM GENERAL CONTRACTING",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -3687,68 +3687,24 @@
     },
     {
       "salesman": "RAJATH KUMAR",
-      "customer_name": "SPECIALIZED ALUMINIUM & STEEL CO LLC",
+      "customer_name": "K SPAN GENERAL CONTRACTING LLC",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "outstanding_amount": 15193.5,
-      "overdue_amount": 15193.5,
+      "outstanding_amount": 34151.25,
+      "overdue_amount": 33122.25,
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
       "eto_close": 0.0,
       "eto_projection_variance": 0.0,
       "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 2330.0,
-      "sales_change_vs_last_month": -2330.0,
+      "last_month_mtd_sales": 1640.0,
+      "sales_change_vs_last_month": -1640.0,
       "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 2330.0,
-      "last_month_gross_profit": 680.0,
-      "last_month_gp_pct": 29.184549356223176,
-      "gp_pct_change": null
-    },
-    {
-      "salesman": "RAJATH KUMAR",
-      "customer_name": "NUROL - L.L.C - O.P.C",
-      "mtd_sales": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "outstanding_amount": 33526.5,
-      "overdue_amount": 33526.5,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0,
-      "projection_achievement_pct": null,
-      "eto_close": 0.0,
-      "eto_projection_variance": 0.0,
-      "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 3200.0,
-      "sales_change_vs_last_month": -3200.0,
-      "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 3200.0,
-      "last_month_gross_profit": 600.0,
-      "last_month_gp_pct": 18.75,
-      "gp_pct_change": null
-    },
-    {
-      "salesman": "RAJATH KUMAR",
-      "customer_name": "GRAND LIMO TRANSPORT LLC SPC",
-      "mtd_sales": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "outstanding_amount": 21924.0,
-      "overdue_amount": 7938.0,
-      "projected_amount": 0.0,
-      "expectation_amount": 0.0,
-      "projection_achievement_pct": null,
-      "eto_close": 0.0,
-      "eto_projection_variance": 0.0,
-      "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 5760.0,
-      "sales_change_vs_last_month": -5760.0,
-      "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 5760.0,
-      "last_month_gross_profit": 636.0,
-      "last_month_gp_pct": 11.041666666666666,
+      "last_month_costed_revenue": 1640.0,
+      "last_month_gross_profit": 300.0,
+      "last_month_gp_pct": 18.29268292682927,
       "gp_pct_change": null
     },
     {
@@ -3775,6 +3731,50 @@
     },
     {
       "salesman": "RAJATH KUMAR",
+      "customer_name": "GRAND LIMO TRANSPORT LLC SPC",
+      "mtd_sales": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "outstanding_amount": 21924.0,
+      "overdue_amount": 7938.0,
+      "projected_amount": 0.0,
+      "expectation_amount": 0.0,
+      "projection_achievement_pct": null,
+      "eto_close": 0.0,
+      "eto_projection_variance": 0.0,
+      "eto_projection_shortfall": 0.0,
+      "last_month_mtd_sales": 5760.0,
+      "sales_change_vs_last_month": -5760.0,
+      "sales_change_pct_vs_last_month": -100.0,
+      "last_month_costed_revenue": 5760.0,
+      "last_month_gross_profit": 636.0,
+      "last_month_gp_pct": 11.041666666666666,
+      "gp_pct_change": null
+    },
+    {
+      "salesman": "RAJATH KUMAR",
+      "customer_name": "NUROL - L.L.C - O.P.C",
+      "mtd_sales": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "outstanding_amount": 33526.5,
+      "overdue_amount": 33526.5,
+      "projected_amount": 0.0,
+      "expectation_amount": 0.0,
+      "projection_achievement_pct": null,
+      "eto_close": 0.0,
+      "eto_projection_variance": 0.0,
+      "eto_projection_shortfall": 0.0,
+      "last_month_mtd_sales": 3200.0,
+      "sales_change_vs_last_month": -3200.0,
+      "sales_change_pct_vs_last_month": -100.0,
+      "last_month_costed_revenue": 3200.0,
+      "last_month_gross_profit": 600.0,
+      "last_month_gp_pct": 18.75,
+      "gp_pct_change": null
+    },
+    {
+      "salesman": "RAJATH KUMAR",
       "customer_name": "PENTA GLOBAL ENGINEERING CONSTRUCTION CO LLC",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
@@ -3797,24 +3797,24 @@
     },
     {
       "salesman": "RAJATH KUMAR",
-      "customer_name": "K SPAN GENERAL CONTRACTING LLC",
+      "customer_name": "SPECIALIZED ALUMINIUM & STEEL CO LLC",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "outstanding_amount": 34151.25,
-      "overdue_amount": 33122.25,
+      "outstanding_amount": 15193.5,
+      "overdue_amount": 15193.5,
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
       "eto_close": 0.0,
       "eto_projection_variance": 0.0,
       "eto_projection_shortfall": 0.0,
-      "last_month_mtd_sales": 1640.0,
-      "sales_change_vs_last_month": -1640.0,
+      "last_month_mtd_sales": 2330.0,
+      "sales_change_vs_last_month": -2330.0,
       "sales_change_pct_vs_last_month": -100.0,
-      "last_month_costed_revenue": 1640.0,
-      "last_month_gross_profit": 300.0,
-      "last_month_gp_pct": 18.29268292682927,
+      "last_month_costed_revenue": 2330.0,
+      "last_month_gross_profit": 680.0,
+      "last_month_gp_pct": 29.184549356223176,
       "gp_pct_change": null
     },
     {
@@ -4017,7 +4017,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "AIMS GROUP",
+      "customer_name": "NEW FIVE STAR TRANSPORT",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -4061,7 +4061,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "NEW FIVE STAR TRANSPORT",
+      "customer_name": "AIMS GROUP",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -4105,7 +4105,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "DYNAMIC CONTRACTING",
+      "customer_name": "VENCO IMTIYAZ CONTRACTING COMPANY",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -4171,7 +4171,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "VENCO IMTIYAZ CONTRACTING COMPANY",
+      "customer_name": "DYNAMIC CONTRACTING",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -4281,12 +4281,12 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "2XL HOME (NEW)",
+      "customer_name": "TOP CONCRETE PRODUCTS FACTORY",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "outstanding_amount": 0.0,
-      "overdue_amount": 0.0,
+      "outstanding_amount": 33054.0,
+      "overdue_amount": 17955.0,
       "projected_amount": 10000.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": 0.0,
@@ -4369,12 +4369,12 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "TOP CONCRETE PRODUCTS FACTORY",
+      "customer_name": "AL MADEENA INTERLOCK LLC",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "outstanding_amount": 33054.0,
-      "overdue_amount": 17955.0,
+      "outstanding_amount": 0.0,
+      "overdue_amount": 0.0,
       "projected_amount": 10000.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": 0.0,
@@ -4391,7 +4391,7 @@
     },
     {
       "salesman": "SOHAIL",
-      "customer_name": "AL MADEENA INTERLOCK LLC",
+      "customer_name": "2XL HOME (NEW)",
       "mtd_sales": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
@@ -4458,19 +4458,19 @@
     {
       "salesman": "SOHAIL",
       "customer_name": "AVIS UAE RENT A CAR CO L.L.C",
-      "mtd_sales": 40440.0,
-      "gross_profit": 11804.0,
-      "gp_pct": 29.188921859545005,
+      "mtd_sales": 43410.0,
+      "gross_profit": 12464.0,
+      "gp_pct": 28.712278276894725,
       "outstanding_amount": 906628.75,
       "overdue_amount": 906628.75,
       "projected_amount": 0.0,
       "expectation_amount": 0.0,
       "projection_achievement_pct": null,
-      "eto_close": 69646.66666666666,
-      "eto_projection_variance": 69646.66666666666,
+      "eto_close": 74761.66666666666,
+      "eto_projection_variance": 74761.66666666666,
       "eto_projection_shortfall": 0,
       "last_month_mtd_sales": 0.0,
-      "sales_change_vs_last_month": 40440.0,
+      "sales_change_vs_last_month": 43410.0,
       "sales_change_pct_vs_last_month": null,
       "last_month_costed_revenue": 0.0,
       "last_month_gross_profit": 0.0,
@@ -4525,8 +4525,8 @@
       "salesman": "SOHAIL",
       "customer_name": "OC HOME L.L.C S.O.C",
       "mtd_sales": 8480.0,
-      "gross_profit": 1675.0,
-      "gp_pct": 19.75235849056604,
+      "gross_profit": 1395.0,
+      "gp_pct": 20.758928571428573,
       "outstanding_amount": 0.0,
       "overdue_amount": 0.0,
       "projected_amount": 0.0,
@@ -4933,6 +4933,18 @@
       "costed_revenue": 720.0,
       "gross_profit": 80.0,
       "gp_pct": 11.11111111111111,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "LOW GP",
+      "severity": 3,
+      "salesman": "INTERCOMPANY",
+      "customer_name": "SAEED AL ZAABI GEN TRADING L.L.C(CASH)",
+      "product_group": "KUNLUN",
+      "product": "215/75R17.5 KUNLUN",
+      "costed_revenue": 435.0,
+      "gross_profit": 50.0,
+      "gp_pct": 11.494252873563218,
       "uncosted_revenue": 0.0
     },
     {
