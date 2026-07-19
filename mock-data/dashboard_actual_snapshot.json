@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T14:09:13+04:00",
+  "generated_at": "2026-07-19T15:07:49+04:00",
   "context": {
     "as_of_date": "2026-07-19",
     "month_start": "2026-07-01",
@@ -4840,18 +4840,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "NEWTYRE -OFFICE",
-      "customer_name": "CASH CUSTOMER - FITMENT",
-      "product_group": "DUMMY INV",
-      "product": "DUMMY",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 709.5
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "BIJOY",
       "customer_name": "DUBAI READYMIX CONCRETE L.L.C",
       "product_group": "CEAT-TBR",
@@ -4860,6 +4848,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 19500.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "NEWTYRE -OFFICE",
+      "customer_name": "CASH CUSTOMER - FITMENT",
+      "product_group": "DUMMY INV",
+      "product": "DUMMY",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 709.5
     },
     {
       "alert_type": "LOW GP",
