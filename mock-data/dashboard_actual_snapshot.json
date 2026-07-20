@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T23:07:54+04:00",
+  "generated_at": "2026-07-21T00:07:45+04:00",
   "context": {
     "as_of_date": "2026-07-20",
     "month_start": "2026-07-01",
@@ -17,18 +17,18 @@
       "month_key": "2026-07",
       "budget_amount": 7407500.0,
       "projected_amount": 3373640.0,
-      "actual_sales": 3677824.0,
+      "actual_sales": 3680353.0,
       "lpo_amount": 0.0,
       "confirmed_amount": 0.0,
       "expectation_amount": 0.0,
-      "shortfall_to_budget": 3729676.0,
+      "shortfall_to_budget": 3727147.0,
       "shortfall_to_projection": 0,
-      "daily_required_for_budget": 339061.45454545453,
+      "daily_required_for_budget": 338831.54545454547,
       "daily_required_for_projection": 0.0
     },
     "gp_mtd": {
-      "costed_revenue": 2974627.0,
-      "gross_profit": 667339.0,
+      "costed_revenue": 2977156.0,
+      "gross_profit": 668186.0,
       "gp_pct": 22.4,
       "uncosted_revenue": 0,
       "basis": "command_function_profitability_monthly_trend"
@@ -121,9 +121,9 @@
     },
     {
       "month_key": "2026-07",
-      "revenue_ex_vat": 3677823.59,
-      "gp_costed_revenue": 2974627.0,
-      "gp_value": 667339.0,
+      "revenue_ex_vat": 3680353.09,
+      "gp_costed_revenue": 2977156.0,
+      "gp_value": 668186.0,
       "gp_pct": 22.4
     }
   ],
@@ -227,12 +227,12 @@
   "region_current": [
     {
       "region": "ABU DHABI",
-      "revenue_ex_vat": 2448799.229999999,
+      "revenue_ex_vat": 2448808.729999999,
       "active_customers": 100
     },
     {
       "region": "SHARJAH",
-      "revenue_ex_vat": 1207689.9500000002,
+      "revenue_ex_vat": 1210209.9500000002,
       "active_customers": 64
     }
   ],
