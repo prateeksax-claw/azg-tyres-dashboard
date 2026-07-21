@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T07:05:21+04:00",
+  "generated_at": "2026-07-21T07:05:34+04:00",
   "context": {
     "as_of_date": "2026-07-20",
     "month_start": "2026-07-01",
@@ -4812,8 +4812,8 @@
     {
       "alert_type": "NEGATIVE GP",
       "severity": 5,
-      "salesman": "DEEPU",
-      "customer_name": "AL ATLAS GEN TRANSPORT",
+      "salesman": "ARUN RAJ",
+      "customer_name": "ORYX TRANSPORT AND EQUIPMENT MAINTENANCE LLC",
       "product_group": "HUAAN",
       "product": "1200R24 24PR HUAAN",
       "costed_revenue": 3000.0,
@@ -4824,8 +4824,8 @@
     {
       "alert_type": "NEGATIVE GP",
       "severity": 5,
-      "salesman": "ARUN RAJ",
-      "customer_name": "ORYX TRANSPORT AND EQUIPMENT MAINTENANCE LLC",
+      "salesman": "DEEPU",
+      "customer_name": "AL ATLAS GEN TRANSPORT",
       "product_group": "HUAAN",
       "product": "1200R24 24PR HUAAN",
       "costed_revenue": 3000.0,
@@ -4896,18 +4896,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "BIJOY",
-      "customer_name": "DUBAI READYMIX CONCRETE L.L.C",
-      "product_group": "CEAT-TBR",
-      "product": "385/65R22.5 CEAT RD218",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 19500.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "RAJATH KUMAR",
       "customer_name": "AL MALIHI TRANSPORTING & CONTRACTING",
       "product_group": "DUMMY INV",
@@ -4916,6 +4904,18 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 25940.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "BIJOY",
+      "customer_name": "DUBAI READYMIX CONCRETE L.L.C",
+      "product_group": "CEAT-TBR",
+      "product": "385/65R22.5 CEAT RD218",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 19500.0
     },
     {
       "alert_type": "LOW GP",
