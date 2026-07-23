@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T18:08:19+04:00",
+  "generated_at": "2026-07-23T19:08:56+04:00",
   "context": {
     "as_of_date": "2026-07-23",
     "month_start": "2026-07-01",
@@ -80,43 +80,43 @@
     {
       "month_key": "2026-01",
       "revenue_ex_vat": 4846358.07,
-      "gp_costed_revenue": 4192834.0,
-      "gp_value": 755716.0,
+      "gp_costed_revenue": 4179834.0,
+      "gp_value": 754255.0,
       "gp_pct": 18.0
     },
     {
       "month_key": "2026-02",
       "revenue_ex_vat": 4757693.54,
-      "gp_costed_revenue": 4293816.0,
-      "gp_value": 766657.0,
+      "gp_costed_revenue": 4295002.0,
+      "gp_value": 766873.0,
       "gp_pct": 17.9
     },
     {
       "month_key": "2026-03",
       "revenue_ex_vat": 5475925.34,
-      "gp_costed_revenue": 4717369.0,
-      "gp_value": 895586.0,
-      "gp_pct": 19.0
+      "gp_costed_revenue": 4662169.0,
+      "gp_value": 895019.0,
+      "gp_pct": 19.2
     },
     {
       "month_key": "2026-04",
       "revenue_ex_vat": 5264902.29,
-      "gp_costed_revenue": 4599337.0,
-      "gp_value": 1030392.0,
+      "gp_costed_revenue": 4607957.0,
+      "gp_value": 1031760.0,
       "gp_pct": 22.4
     },
     {
       "month_key": "2026-05",
       "revenue_ex_vat": 4858873.65,
-      "gp_costed_revenue": 4205129.0,
-      "gp_value": 841724.0,
-      "gp_pct": 20.0
+      "gp_costed_revenue": 4205879.0,
+      "gp_value": 837756.0,
+      "gp_pct": 19.9
     },
     {
       "month_key": "2026-06",
-      "revenue_ex_vat": 6906347.52,
-      "gp_costed_revenue": 6124481.0,
-      "gp_value": 1238196.0,
+      "revenue_ex_vat": 6908657.52,
+      "gp_costed_revenue": 6130421.0,
+      "gp_value": 1236475.0,
       "gp_pct": 20.2
     },
     {
@@ -180,10 +180,10 @@
       "costed_revenue": 513328.79000000004,
       "gross_profit": 97246.79000000001,
       "gp_pct": 18.94434753990712,
-      "last_month_costed_revenue": 596095.0800000001,
-      "last_month_gross_profit": 96326.38,
-      "last_month_gp_pct": 16.159566356427568,
-      "gp_pct_change": 2.784781183479552
+      "last_month_costed_revenue": 600345.0800000001,
+      "last_month_gross_profit": 95926.38,
+      "last_month_gp_pct": 15.978540208907848,
+      "gp_pct_change": 2.9658073309992723
     },
     {
       "salesman": "SOHAIL",
@@ -1128,10 +1128,10 @@
       "last_month_mtd_sales": 44970.0,
       "sales_change_vs_last_month": 71894.75,
       "sales_change_pct_vs_last_month": 159.87269290638204,
-      "last_month_costed_revenue": 40720.0,
-      "last_month_gross_profit": 5810.0,
-      "last_month_gp_pct": 14.268172888015718,
-      "gp_pct_change": 11.232031407976018
+      "last_month_costed_revenue": 44970.0,
+      "last_month_gross_profit": 5410.0,
+      "last_month_gp_pct": 12.03024238381143,
+      "gp_pct_change": 13.469961912180306
     },
     {
       "salesman": "ARUN RAJ",
@@ -5074,6 +5074,18 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
+      "salesman": "ARUN RAJ",
+      "customer_name": "ORYX TRANSPORT AND EQUIPMENT MAINTENANCE LLC",
+      "product_group": "HUAAN",
+      "product": "1200R24 24PR HUAAN",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 3000.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
       "salesman": "RAJATH KUMAR",
       "customer_name": "AL MALIHI TRANSPORTING & CONTRACTING",
       "product_group": "DUMMY INV",
@@ -5082,18 +5094,6 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 25940.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "AL ATLAS GEN TRANSPORT",
-      "product_group": "HUAAN",
-      "product": "1200R24 24PR HUAAN",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 3000.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -5110,8 +5110,8 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "ARUN RAJ",
-      "customer_name": "ORYX TRANSPORT AND EQUIPMENT MAINTENANCE LLC",
+      "salesman": "DEEPU",
+      "customer_name": "AL ATLAS GEN TRANSPORT",
       "product_group": "HUAAN",
       "product": "1200R24 24PR HUAAN",
       "costed_revenue": 0.0,
