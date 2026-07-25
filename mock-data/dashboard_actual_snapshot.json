@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T14:05:42+04:00",
+  "generated_at": "2026-07-25T14:05:51+04:00",
   "context": {
     "as_of_date": "2026-07-25",
     "month_start": "2026-07-01",
@@ -5249,7 +5249,7 @@
       "salesman": "INTERCOMPANY",
       "customer_name": "SAEED AL ZAABI AUTO CARE CENTER LLC_",
       "product_group": "SPARE PARTS",
-      "product": "Z45046-09720 CTR TIE ROD END\n",
+      "product": "Z45047-09370 CTR TIE ROD END\n",
       "costed_revenue": 40.0,
       "gross_profit": 0.0,
       "gp_pct": 0.0,
@@ -5261,7 +5261,7 @@
       "salesman": "INTERCOMPANY",
       "customer_name": "SAEED AL ZAABI AUTO CARE CENTER LLC_",
       "product_group": "SPARE PARTS",
-      "product": "Z45047-09370 CTR TIE ROD END\n",
+      "product": "Z45046-09720 CTR TIE ROD END\n",
       "costed_revenue": 40.0,
       "gross_profit": 0.0,
       "gp_pct": 0.0,
@@ -5282,18 +5282,6 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "BADARAN",
-      "customer_name": "ROYAL PRINCE GENERAL TRADING LLC",
-      "product_group": "HYUNDAI",
-      "product": "N170AH HYUNDAI VIETNAM",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 2480.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
       "salesman": "DEEPU",
       "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
       "product_group": "HUAAN",
@@ -5302,18 +5290,6 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 3200.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "RAJATH KUMAR",
-      "customer_name": "AL MALIHI TRANSPORTING & CONTRACTING",
-      "product_group": "DUMMY INV",
-      "product": "DUMMY TYRE",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 25940.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -5338,6 +5314,30 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 3000.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "RAJATH KUMAR",
+      "customer_name": "AL MALIHI TRANSPORTING & CONTRACTING",
+      "product_group": "DUMMY INV",
+      "product": "DUMMY TYRE",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 25940.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "BADARAN",
+      "customer_name": "ROYAL PRINCE GENERAL TRADING LLC",
+      "product_group": "HYUNDAI",
+      "product": "N170AH HYUNDAI VIETNAM",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 2480.0
     },
     {
       "alert_type": "LOW GP",
