@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T18:08:38+04:00",
+  "generated_at": "2026-07-26T18:08:58+04:00",
   "context": {
     "as_of_date": "2026-07-26",
     "month_start": "2026-07-01",
@@ -5211,7 +5211,7 @@
       "salesman": "INTERCOMPANY",
       "customer_name": "SAEED AL ZAABI AUTO CARE CENTER LLC_",
       "product_group": "SPARE PARTS",
-      "product": "Z43550-0D050 POWERTECH WHEEL BEARING\n",
+      "product": "Z43560-0D050 POWERTECH WHEEL BEARING\n",
       "costed_revenue": 115.0,
       "gross_profit": 0.0,
       "gp_pct": 0.0,
@@ -5223,7 +5223,7 @@
       "salesman": "INTERCOMPANY",
       "customer_name": "SAEED AL ZAABI AUTO CARE CENTER LLC_",
       "product_group": "SPARE PARTS",
-      "product": "Z43560-0D050 POWERTECH WHEEL BEARING\n",
+      "product": "Z43550-0D050 POWERTECH WHEEL BEARING\n",
       "costed_revenue": 115.0,
       "gross_profit": 0.0,
       "gp_pct": 0.0,
@@ -5271,7 +5271,7 @@
       "salesman": "INTERCOMPANY",
       "customer_name": "SAEED AL ZAABI AUTO CARE CENTER LLC_",
       "product_group": "SPARE PARTS",
-      "product": "Z48819-52010 GDR STABILIZER LINK\n",
+      "product": "48815-0D190 BALANCE ROD BUSH FR",
       "costed_revenue": 60.0,
       "gross_profit": 0.0,
       "gp_pct": 0.0,
@@ -5283,7 +5283,7 @@
       "salesman": "INTERCOMPANY",
       "customer_name": "SAEED AL ZAABI AUTO CARE CENTER LLC_",
       "product_group": "SPARE PARTS",
-      "product": "48815-0D190 BALANCE ROD BUSH FR",
+      "product": "Z48819-52010 GDR STABILIZER LINK\n",
       "costed_revenue": 60.0,
       "gross_profit": 0.0,
       "gp_pct": 0.0,
@@ -5340,26 +5340,14 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
-      "product_group": "HUAAN",
-      "product": "1200R24 24PR HUAAN",
+      "salesman": "BADARAN",
+      "customer_name": "ROYAL PRINCE GENERAL TRADING LLC",
+      "product_group": "HYUNDAI",
+      "product": "N170AH HYUNDAI VIETNAM",
       "costed_revenue": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "uncosted_revenue": 3200.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "DEEPU",
-      "customer_name": "AL ATLAS GEN TRANSPORT",
-      "product_group": "HUAAN",
-      "product": "1200R24 24PR HUAAN",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 3000.0
+      "uncosted_revenue": 2480.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -5376,14 +5364,26 @@
     {
       "alert_type": "UNCOSTED REVENUE",
       "severity": 4,
-      "salesman": "BADARAN",
-      "customer_name": "ROYAL PRINCE GENERAL TRADING LLC",
-      "product_group": "HYUNDAI",
-      "product": "N170AH HYUNDAI VIETNAM",
+      "salesman": "DEEPU",
+      "customer_name": "AL ATLAS GEN TRANSPORT",
+      "product_group": "HUAAN",
+      "product": "1200R24 24PR HUAAN",
       "costed_revenue": 0.0,
       "gross_profit": 0.0,
       "gp_pct": null,
-      "uncosted_revenue": 2480.0
+      "uncosted_revenue": 3000.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "DEEPU",
+      "customer_name": "SAHRAA AL BADIER SAND & STONES TR",
+      "product_group": "HUAAN",
+      "product": "1200R24 24PR HUAAN",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 3200.0
     },
     {
       "alert_type": "LOW GP",
