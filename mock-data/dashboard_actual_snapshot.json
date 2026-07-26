@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T08:08:44+04:00",
+  "generated_at": "2026-07-26T09:08:32+04:00",
   "context": {
     "as_of_date": "2026-07-25",
     "month_start": "2026-07-01",
@@ -5227,18 +5227,6 @@
       "salesman": "INTERCOMPANY",
       "customer_name": "SAEED AL ZAABI AUTO CARE CENTER LLC_",
       "product_group": "SPARE PARTS",
-      "product": "Z48819-52010 GDR STABILIZER LINK\n",
-      "costed_revenue": 60.0,
-      "gross_profit": 0.0,
-      "gp_pct": 0.0,
-      "uncosted_revenue": 0.0
-    },
-    {
-      "alert_type": "CRITICAL LOW GP",
-      "severity": 4,
-      "salesman": "INTERCOMPANY",
-      "customer_name": "SAEED AL ZAABI AUTO CARE CENTER LLC_",
-      "product_group": "SPARE PARTS",
       "product": "48815-0D190 BALANCE ROD BUSH FR",
       "costed_revenue": 60.0,
       "gross_profit": 0.0,
@@ -5251,8 +5239,8 @@
       "salesman": "INTERCOMPANY",
       "customer_name": "SAEED AL ZAABI AUTO CARE CENTER LLC_",
       "product_group": "SPARE PARTS",
-      "product": "Z45046-09720 CTR TIE ROD END\n",
-      "costed_revenue": 40.0,
+      "product": "Z48819-52010 GDR STABILIZER LINK\n",
+      "costed_revenue": 60.0,
       "gross_profit": 0.0,
       "gp_pct": 0.0,
       "uncosted_revenue": 0.0
@@ -5275,11 +5263,35 @@
       "salesman": "INTERCOMPANY",
       "customer_name": "SAEED AL ZAABI AUTO CARE CENTER LLC_",
       "product_group": "SPARE PARTS",
+      "product": "Z45046-09720 CTR TIE ROD END\n",
+      "costed_revenue": 40.0,
+      "gross_profit": 0.0,
+      "gp_pct": 0.0,
+      "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "CRITICAL LOW GP",
+      "severity": 4,
+      "salesman": "INTERCOMPANY",
+      "customer_name": "SAEED AL ZAABI AUTO CARE CENTER LLC_",
+      "product_group": "SPARE PARTS",
       "product": "COOLANT 4LTR RED CHALLENGER",
       "costed_revenue": 14.29,
       "gross_profit": 0.0,
       "gp_pct": 0.0,
       "uncosted_revenue": 0.0
+    },
+    {
+      "alert_type": "UNCOSTED REVENUE",
+      "severity": 4,
+      "salesman": "BADARAN",
+      "customer_name": "ROYAL PRINCE GENERAL TRADING LLC",
+      "product_group": "HYUNDAI",
+      "product": "N170AH HYUNDAI VIETNAM",
+      "costed_revenue": 0.0,
+      "gross_profit": 0.0,
+      "gp_pct": null,
+      "uncosted_revenue": 2480.0
     },
     {
       "alert_type": "UNCOSTED REVENUE",
@@ -5328,18 +5340,6 @@
       "gross_profit": 0.0,
       "gp_pct": null,
       "uncosted_revenue": 3000.0
-    },
-    {
-      "alert_type": "UNCOSTED REVENUE",
-      "severity": 4,
-      "salesman": "BADARAN",
-      "customer_name": "ROYAL PRINCE GENERAL TRADING LLC",
-      "product_group": "HYUNDAI",
-      "product": "N170AH HYUNDAI VIETNAM",
-      "costed_revenue": 0.0,
-      "gross_profit": 0.0,
-      "gp_pct": null,
-      "uncosted_revenue": 2480.0
     },
     {
       "alert_type": "LOW GP",
